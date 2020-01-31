@@ -202,6 +202,9 @@ export class FigureBase {
 
         this._div_selection.classed(this.constructor.ident(), true);
         this._size = {width: width, height: height};
+
+        // Parameters used for profiling
+        this._fetch_start = 0;
         this._fetch_data_latency = 0;
 
         // List of hooks which may modify data received from api call
@@ -221,10 +224,6 @@ export class FigureBase {
         // Post url and body for fetching the graph data
         this._post_url = "";
         this._post_body = "";
-
-        // Parameters used for profiling
-        this._fetch_start = 0;
-        this._fetch_data_latency = 0;
     }
 
     subscribe_data_pre_processor_hook(func) {
@@ -252,6 +251,15 @@ export class FigureBase {
     unsubscribe_post_render_hook(func) {
         let idx = this._post_render_hooks.indexOf(func);
         this._post_render_hooks.splice(idx, 1);
+    }
+
+    subscribe_post_render(func) {
+        this._post_render_subscribers.push(func);
+    }
+
+    unsubscribe_post_render(func) {
+        let idx = this._post_render_subscribers.indexOf(func);
+        this._post_render_subscribers.splice(idx, 1);
     }
 
     get_update_interval() {
@@ -375,7 +383,7 @@ export class FigureBase {
 }
 
 
-// Class which handles the display of a tooltips
+// Class which handles the display of a tooltip
 export class FigureTooltip {
     constructor(div_selection) {
         this._setup_tooltip(div_selection);
@@ -385,15 +393,7 @@ export class FigureTooltip {
         this._tooltip = div_selection
             .append("div")
             .style("opacity", 0)
-            .attr("class", "tooltip")
-            // TODO: move styling to scss
-            .style("position", "absolute")
-            .style("pointer-events", "none")
-            .style("background-color", "white")
-            .style("border", "solid")
-            .style("border-width", "2px")
-            .style("border-radius", "5px")
-            .style("padding", "5px");
+            .classed("tooltip", true);
     }
 
     add_support(node) {
@@ -409,21 +409,29 @@ export class FigureTooltip {
             return;
 
         this._tooltip.style("opacity", 1);
-        d3.select(d3.event.target).style("stroke", "black")
-            .style("opacity", 0.8);
     }
 
     _mousemove(){
         let node_data = d3.select(d3.event.target).datum();
+        let parentWidth = this._tooltip.node().parentNode.clientWidth;
         this._tooltip.html(node_data.tooltip)
-            .style("left", (d3.event.layerX+20) + "px")
+            .style("left", ()=>{
+                if (d3.event.layerX < .5 * parentWidth) {
+                    return (d3.event.layerX + 20) + "px";
+                }
+                return "auto";
+            })
+            .style("right", ()=>{
+                if (d3.event.layerX > .5 * parentWidth) {
+                    return (parentWidth - d3.event.layerX + 30) + "px";
+                }
+                return "auto";
+            })
             .style("top", d3.event.layerY + "px");
     }
 
     _mouseleave(){
         this._tooltip.style("opacity", 0);
-        d3.select(d3.event.target).style("stroke", "none")
-            .style("opacity", null);
     }
 }
 

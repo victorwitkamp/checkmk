@@ -41,6 +41,7 @@ import * as dashboard from "dashboard";
 import * as cmk_figures from "cmk_figures";
 import "cmk_figure_plugins";
 
+import * as cmk_tabs from "cmk_tabs";
 
 import * as node_visualization from "node_visualization";
 import * as node_visualization_utils from "node_visualization_utils";
@@ -107,6 +108,7 @@ export const cmk_export = {
         node_visualization_viewport_layers: node_visualization_viewport_layers,
         node_visualization: node_visualization,
         figures: cmk_figures,
+        tabs: cmk_tabs,
     }
 };
 
