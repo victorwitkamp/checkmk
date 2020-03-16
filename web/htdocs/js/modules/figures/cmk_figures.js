@@ -306,7 +306,7 @@ export class FigureBase {
         }
         this._clear_error_info();
 
-        let data = api_response.result;
+        let data = api_response.result.data;
         this.process_data(data);
         this._fetch_data_latency = +(new Date() - this._fetch_start) / 1000;
     }
