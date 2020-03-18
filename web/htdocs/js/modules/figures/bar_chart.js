@@ -32,6 +32,7 @@ class BarChart extends cmk_figures.FigureBase {
 
         // Setup axis
         this._x_axis = this._bar_chart_g.append("g");
+        this._x_axis.append("svg");
         this._y_axis = this._bar_chart_g.append("g");
         this._y_axis.append("text")
             .classed("ylabel", true)
@@ -146,13 +147,14 @@ class BarChart extends cmk_figures.FigureBase {
         this._update_title(data);
 
         // Adjust axis
-        this._x_axis.attr("transform", "translate(0," + this._bar_height + ")")
+        this._x_axis.attr("transform", "translate(0," + this._bar_height + ")");
+        this._x_axis.select("svg")
             .call(d3.axisBottom(this._x_scale_time)
-//                .ticks(d3.timeMinute.filter(function(d) {
-//                    return d.getHours() % 6 === 0 && d.getMinutes() === 0;
-//                }))
                 .tickFormat(d=>{
-                    return d3.timeFormat("%H:%M:%S")(d);
+                    if (d.getHours() === 0 && d.getMinutes() === 0)
+                        return d3.timeFormat("%d %b")(d);
+                    else
+                        return d3.timeFormat("%H:%M")(d);
                 })
                 .ticks(6*this._last_zoom.k)
             );
@@ -298,6 +300,7 @@ cmk_figures.figure_registry.register(BarBarChart);
 
 
 
+// Unused experimental, do not commit in master
 class HorizonalBarChart extends cmk_figures.FigureBase {
     static ident() {
         return "horizontal_bar_chart";
