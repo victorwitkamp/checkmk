@@ -134,7 +134,6 @@ class BarChart extends cmk_figures.FigureBase {
         // Adjust scale to new values
         this._x_scale_time.range([0, this._inner_svg_width].map(d => this._last_zoom.applyX(d)));
         this._x_scale_time.domain([elements[0].date, new Date(1000 * (last_element.timestamp + last_element.timestep))]);
-        this._bandwidth = this._x_scale_time(elements[1].date) - this._x_scale_time(elements[0].date);
 
         this._y_scale.domain([0, this._get_y_max(data)]);
 
@@ -159,8 +158,6 @@ class BarChart extends cmk_figures.FigureBase {
                 .ticks(6*this._last_zoom.k)
             );
 
-
-
         this._y_axis.call(d3.axisLeft(this._y_scale).ticks(4));
         this._y_axis.select("text.ylabel").text(data.ylabel || "");
 
@@ -178,7 +175,10 @@ class BarChart extends cmk_figures.FigureBase {
             .merge(bars)
             // Update new and existing bars
             .attr("x", d=>this._x_scale_time(d.date))
-            .attr("width", this._bandwidth)
+            .attr("width", d=>{
+                return this._x_scale_time(new Date(1000 * (d.timestamp + d.timestep))) -
+                    this._x_scale_time(d.date);
+            })
             .each(function(d) { // Update classes
                 let rect = d3.select(this);
                 this.classList.forEach(classname=>{
@@ -231,7 +231,6 @@ class BarBarChart extends BarChart {
     update_data(data) {
         this._data = data;
         this._enclosing_bars = data.grouped_elements;
-        this._enclosing_bars.timestep = data.elements[1].timestamp - data.elements[0].timestamp;
         this._enclosing_bars.forEach(element=>{
             element.date = new Date(1000 * element.timestamp);
         });
@@ -247,7 +246,7 @@ class BarBarChart extends BarChart {
 
         BarChart.prototype.update_gui.call(this, data);
         // The already rendered bars have a higher resolution, hide them when zoomed out
-        let opacity_scale = d3.scaleLinear().range([0.6, 0.8]).domain([1, this._max_zoom]);
+        let opacity_scale = d3.scaleLinear().range([0.6, 0.9]).domain([1, this._max_zoom]);
         this._bar_chart_svg.selectAll("rect").attr("opacity", opacity_scale(this._last_zoom.k));
     }
 
@@ -270,9 +269,7 @@ class BarBarChart extends BarChart {
             .attr("opacity", opacity_scale(this._last_zoom.k))
             .attr("x", d=>this._x_scale_time(d.date))
             .attr("width", d=>{
-                let time_diff = (d.element_range[1] - d.element_range[0] + 1) *
-                    this._enclosing_bars.timestep;
-                return this._x_scale_time(new Date(1000 * (d.timestamp + time_diff))) -
+                return this._x_scale_time(new Date(1000 * (d.timestamp + d.timestep))) -
                     this._x_scale_time(d.date);
             })
             .each(function(d) { // Update classes

@@ -202,6 +202,11 @@ export class FigureBase {
 
         this._div_selection.classed(this.constructor.ident(), true);
         this._size = {width: width, height: height};
+        this._div_selection.append("img")
+            .classed("loading", true)
+            .attr("src", "themes/facelift/images/load_graph.png")
+            .style("margin-left", this._size.width / 2  - 24 + "px")
+            .style("margin-top", this._size.height / 3 + "px");
 
         // Parameters used for profiling
         this._fetch_start = 0;
@@ -253,15 +258,6 @@ export class FigureBase {
         this._post_render_hooks.splice(idx, 1);
     }
 
-    subscribe_post_render(func) {
-        this._post_render_subscribers.push(func);
-    }
-
-    unsubscribe_post_render(func) {
-        let idx = this._post_render_subscribers.indexOf(func);
-        this._post_render_subscribers.splice(idx, 1);
-    }
-
     get_update_interval() {
         return 10;
     }
@@ -299,8 +295,10 @@ export class FigureBase {
                 }
             }
         ).then(json_data=>this._process_api_response(json_data)).catch(
-            ()=>this._show_error_info("Error fetching data")
-        );
+            ()=> {
+                this._show_error_info("Error fetching data");
+                this._div_selection.selectAll("img.loading").remove();
+            });
     }
 
     _process_api_response(api_response) {
@@ -325,6 +323,7 @@ export class FigureBase {
         });
         this._call_pre_render_hooks(data);
         this.update_data(data);
+        this._div_selection.selectAll("img.loading").remove();
         this.update_gui(data);
         this._call_post_render_hooks(data);
     }

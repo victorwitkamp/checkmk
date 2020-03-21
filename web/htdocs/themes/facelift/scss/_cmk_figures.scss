@@ -104,6 +104,10 @@ div.cmk_tab {
 }
 
 div.barbar_chart {
+  svg.bars a, svg.barbars a {
+    outline: none;
+  }
+
   svg.bars rect.bar {
     fill: $success;
     stroke: rgba(0, 0, 0, .3);
@@ -118,6 +122,11 @@ div.barbar_chart {
     //fill: $grey-3;
     fill: darken($success, 25%);
     stroke: rgba(0, 0, 0, .3);
+
+    &:hover {
+      opacity: .8;
+      stroke: rgb(0, 0, 0);
+    }
   }
 
   div.tooltip {
