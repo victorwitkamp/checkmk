@@ -112,13 +112,13 @@ class TacticalOverviewSnapin(CustomizableSidebarSnapin):
             "show_sites_not_connected": True,
             "rows": [{
                 "query": ("hosts", {}),
-                "title": u"Hosts"
+                "title": "Hosts"
             }, {
                 'query': ('services', {}),
-                'title': u'Services'
+                'title': 'Services'
             }, {
                 'query': ('events', {}),
-                'title': u'Events'
+                'title': 'Events'
             }]
         }
 

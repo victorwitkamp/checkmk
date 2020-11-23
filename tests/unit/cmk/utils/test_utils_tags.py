@@ -19,8 +19,8 @@ def test_cfg():
     cfg.parse_config({
         "aux_tags": [{
             "id": "bla",
-            "topic": u"Bluna",
-            "title": u"bläää",
+            "topic": "Bluna",
+            "title": "bläää",
         }],
         'tag_groups': [
             {
@@ -30,25 +30,25 @@ def test_cfg():
                     {
                         'aux_tags': ["bla"],
                         'id': 'prod',
-                        'title': u'Productive system'
+                        'title': 'Productive system'
                     },
                     {
                         'aux_tags': [],
                         'id': 'critical',
-                        'title': u'Business critical'
+                        'title': 'Business critical'
                     },
                     {
                         'aux_tags': [],
                         'id': 'test',
-                        'title': u'Test system'
+                        'title': 'Test system'
                     },
                     {
                         'aux_tags': [],
                         'id': 'offline',
-                        'title': u'Do not monitor this host'
+                        'title': 'Do not monitor this host'
                     },
                 ],
-                'title': u'Criticality'
+                'title': 'Criticality'
             },
             {
                 'id': 'networking',
@@ -56,20 +56,20 @@ def test_cfg():
                     {
                         'aux_tags': [],
                         'id': 'lan',
-                        'title': u'Local network (low latency)'
+                        'title': 'Local network (low latency)'
                     },
                     {
                         'aux_tags': [],
                         'id': 'wan',
-                        'title': u'WAN (high latency)'
+                        'title': 'WAN (high latency)'
                     },
                     {
                         'aux_tags': [],
                         'id': 'dmz',
-                        'title': u'DMZ (low latency, secure access)'
+                        'title': 'DMZ (low latency, secure access)'
                     },
                 ],
-                'title': u'Networking Segment',
+                'title': 'Networking Segment',
             },
             {
                 'id': 'none_choice',
@@ -77,15 +77,15 @@ def test_cfg():
                     {
                         'aux_tags': ['bla'],
                         'id': None,
-                        'title': u'None'
+                        'title': 'None'
                     },
                     {
                         'aux_tags': [],
                         'id': 'none_val',
-                        'title': u'None value'
+                        'title': 'None value'
                     },
                 ],
-                'title': u'None choice',
+                'title': 'None choice',
             },
         ],
     })
@@ -95,20 +95,20 @@ def test_cfg():
 def test_convert_pre_16_tags():
     dict_config = tags.transform_pre_16_tags(
         [
-            ('criticality', u'Criticality', [
-                ('prod', u'Productive system', ['bla']),
+            ('criticality', 'Criticality', [
+                ('prod', 'Productive system', ['bla']),
             ]),
-            ('networking', u'Networking Segment', [
-                ('lan', u'Local network (low latency)', []),
+            ('networking', 'Networking Segment', [
+                ('lan', 'Local network (low latency)', []),
             ]),
         ],
-        [("bla", u"blüb")],
+        [("bla", "blüb")],
     )
 
     assert dict_config == {
         'aux_tags': [{
             'id': 'bla',
-            'title': u'bl\xfcb'
+            'title': 'bl\xfcb'
         }],
         'tag_groups': [
             {
@@ -116,18 +116,18 @@ def test_convert_pre_16_tags():
                 'tags': [{
                     'aux_tags': ["bla"],
                     'id': 'prod',
-                    'title': u'Productive system'
+                    'title': 'Productive system'
                 },],
-                'title': u'Criticality'
+                'title': 'Criticality'
             },
             {
                 'id': 'networking',
                 'tags': [{
                     'aux_tags': [],
                     'id': 'lan',
-                    'title': u'Local network (low latency)'
+                    'title': 'Local network (low latency)'
                 },],
-                'title': u'Networking Segment'
+                'title': 'Networking Segment'
             },
         ],
     }
@@ -158,7 +158,7 @@ def test_iadd_tag_config(test_cfg):
     aux_tags = test_cfg.get_aux_tags()
     assert len(aux_tags) == 2
     assert aux_tags[0].id == "bla"
-    assert aux_tags[0].title == u"bläää"
+    assert aux_tags[0].title == "bläää"
     assert aux_tags[1].id == "blub"
 
 
@@ -172,8 +172,8 @@ def test_tag_config_get_topic_choices(test_cfg):
 
 def test_tag_groups_by_topic(test_cfg):
     expected_groups = {
-        u"Blubberei": ["criticality"],
-        u'Tags': ["networking", "none_choice"],
+        "Blubberei": ["criticality"],
+        'Tags': ["networking", "none_choice"],
     }
 
     actual_groups = dict(test_cfg.get_tag_groups_by_topic())
@@ -205,9 +205,9 @@ def test_tag_config_remove_tag_group(test_cfg):
 
 def test_tag_config_get_tag_group_choices(test_cfg):
     assert test_cfg.get_tag_group_choices() == [
-        ('criticality', u'Blubberei / Criticality'),
-        ('networking', u'Networking Segment'),
-        ('none_choice', u'None choice'),
+        ('criticality', 'Blubberei / Criticality'),
+        ('networking', 'Networking Segment'),
+        ('none_choice', 'None choice'),
     ]
 
 
@@ -231,7 +231,7 @@ def test_tag_config_get_aux_tags_by_tag(test_cfg):
 
 def test_tag_config_get_aux_tags_by_topic(test_cfg):
     expected_groups = {
-        u"Bluna": ["bla"],
+        "Bluna": ["bla"],
     }
 
     actual_groups = dict(test_cfg.get_aux_tags_by_topic())

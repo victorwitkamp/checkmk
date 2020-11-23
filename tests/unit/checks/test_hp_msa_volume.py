@@ -55,19 +55,19 @@ def test_health_check_accepts_volume_name_and_durable_id_as_item():
     item_2nd = "V4"
     check = Check("hp_msa_volume")
     parsed = {
-        u'VMFS_01': {
-            u'durable-id': u'V3',
-            u'container-name': u'A',
-            u'health': u'OK',
-            u'item_type': u'volumes',
-            u'raidtype': u'RAID0',
+        'VMFS_01': {
+            'durable-id': 'V3',
+            'container-name': 'A',
+            'health': 'OK',
+            'item_type': 'volumes',
+            'raidtype': 'RAID0',
         },
-        u'V4': {
-            u'durable-id': u'V4',
-            u'container-name': u'B',
-            u'health': u'OK',
-            u'item_type': u'volumes',
-            u'raidtype': u'RAID0',
+        'V4': {
+            'durable-id': 'V4',
+            'container-name': 'B',
+            'health': 'OK',
+            'item_type': 'volumes',
+            'raidtype': 'RAID0',
         }
     }
     _, status_message_item_1st = check.run_check(item_1st, None, parsed)
@@ -94,19 +94,19 @@ def test_df_check():
     params = {'flex_levels': 'irrelevant'}
     check = Check("hp_msa_volume.df")
     parsed = {
-        u'VMFS_01': {
-            u'durable-id': u'V3',
-            u'virtual-disk-name': u'A',
-            u'total-size-numeric': u'4296482816',
-            u'allocated-size-numeric': u'2484011008',
-            u'raidtype': u'RAID0',
+        'VMFS_01': {
+            'durable-id': 'V3',
+            'virtual-disk-name': 'A',
+            'total-size-numeric': '4296482816',
+            'allocated-size-numeric': '2484011008',
+            'raidtype': 'RAID0',
         },
-        u'VMFS_02': {
-            u'durable-id': u'V4',
-            u'virtual-disk-name': u'A',
-            u'total-size-numeric': u'4296286208',
-            u'allocated-size-numeric': u'3925712896',
-            u'raidtype': u'RAID0',
+        'VMFS_02': {
+            'durable-id': 'V4',
+            'virtual-disk-name': 'A',
+            'total-size-numeric': '4296286208',
+            'allocated-size-numeric': '3925712896',
+            'raidtype': 'RAID0',
         }
     }
     expected_result = (0, '57.81% used (1.16 of 2.00 TB), trend: +2.43 TB / 24 hours', [
@@ -141,19 +141,19 @@ def test_io_check():
     params = {'flex_levels': 'irrelevant'}
     check = Check("hp_msa_volume.io")
     parsed = {
-        u'VMFS_01': {
-            u'durable-id': u'V3',
-            u'data-read-numeric': u'23719999539712',
-            u'data-written-numeric': u'18093374647808',
-            u'virtual-disk-name': u'A',
-            u'raidtype': u'RAID0',
+        'VMFS_01': {
+            'durable-id': 'V3',
+            'data-read-numeric': '23719999539712',
+            'data-written-numeric': '18093374647808',
+            'virtual-disk-name': 'A',
+            'raidtype': 'RAID0',
         },
-        u'VMFS_02': {
-            u'durable-id': u'V4',
-            u'data-read-numeric': u'49943891507200',
-            u'data-written-numeric': u'7384656100352',
-            u'virtual-disk-name': u'A',
-            u'raidtype': u'RAID0',
+        'VMFS_02': {
+            'durable-id': 'V4',
+            'data-read-numeric': '49943891507200',
+            'data-written-numeric': '7384656100352',
+            'virtual-disk-name': 'A',
+            'raidtype': 'RAID0',
         }
     }
     _, read, written = check.run_check(item_1st, params, parsed)

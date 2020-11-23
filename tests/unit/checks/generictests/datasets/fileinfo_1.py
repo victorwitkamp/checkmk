@@ -11,15 +11,15 @@
 checkname = "fileinfo"
 
 info = [
-    [u"1563288717"],
-    [u"[[[header]]]"],
-    [u"name", u"status", u"size", u"time"],
-    [u"[[[content]]]"],
-    [u"/var/log/syslog", u"ok", u"1307632", u"1563288713"],
-    [u"/var/log/syslog.1", u"ok", u"1235157", u"1563259976"],
-    [u"/var/log/aptitude", u"ok", u"0", u"1543826115"],
-    [u"/var/log/aptitude.2.gz", u"ok", u"3234", u"1539086721"],
-    [u"/tmp/20190716.txt", u"ok", u"1235157", u"1563259976"],
+    ["1563288717"],
+    ["[[[header]]]"],
+    ["name", "status", "size", "time"],
+    ["[[[content]]]"],
+    ["/var/log/syslog", "ok", "1307632", "1563288713"],
+    ["/var/log/syslog.1", "ok", "1235157", "1563259976"],
+    ["/var/log/aptitude", "ok", "0", "1543826115"],
+    ["/var/log/aptitude.2.gz", "ok", "3234", "1539086721"],
+    ["/tmp/20190716.txt", "ok", "1235157", "1563259976"],
 ]
 
 group_conf = [[("log", ("*syslog*", "")), ("today", ("/tmp/$DATE:%Y%m%d$.txt", ""))]]

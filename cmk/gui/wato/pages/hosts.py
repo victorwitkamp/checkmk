@@ -189,7 +189,7 @@ class ABCHostMode(WatoMode, metaclass=abc.ABCMeta):
             html.close_table()
             html.close_div()
 
-        lock_message = u""
+        lock_message = ""
         locked_hosts = watolib.Folder.current().locked_hosts()
         if locked_hosts:
             if locked_hosts is True:

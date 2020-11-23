@@ -1011,9 +1011,9 @@ def _get_multisite_custom_variable_names() -> List[str]:
 def _save_auth_serials(updated_profiles: Users) -> None:
     """Write out the users serials"""
     # Write out the users serials
-    serials = u""
+    serials = ""
     for user_id, user in updated_profiles.items():
-        serials += u'%s:%d\n' % (user_id, user.get('serial', 0))
+        serials += '%s:%d\n' % (user_id, user.get('serial', 0))
     store.save_file('%s/auth.serials' % os.path.dirname(cmk.utils.paths.htpasswd_file), serials)
 
 
@@ -1026,8 +1026,8 @@ def create_cmk_automation_user() -> None:
     secret = utils.gen_id()
 
     users = load_users(lock=True)
-    users[UserId(u"automation")] = {
-        'alias': u"Check_MK Automation - used for calling web services",
+    users[UserId("automation")] = {
+        'alias': "Check_MK Automation - used for calling web services",
         'contactgroups': [],
         'automation_secret': secret,
         'password': cmk.gui.plugins.userdb.htpasswd.hash_password(secret),

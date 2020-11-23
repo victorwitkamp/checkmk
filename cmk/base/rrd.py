@@ -44,9 +44,9 @@ def set_text_attr(node: ET.Element, attr_name: str, value: Optional[str]) -> Non
 
 def write_xml(element: ET.Element, filepath: str) -> None:
     with Path(filepath).open('w', encoding="utf-8") as fid:
-        fid.write(u'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
+        fid.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
         # TODO: Can be set to encoding="unicode" with Python3
-        fid.write(ensure_str(ET.tostring(element, method='html', encoding='UTF-8')) + u'\n')
+        fid.write(ensure_str(ET.tostring(element, method='html', encoding='UTF-8')) + '\n')
 
 
 def update_metric_pnp_xml_info_file(perfvar: MetricName, newvar: MetricName,

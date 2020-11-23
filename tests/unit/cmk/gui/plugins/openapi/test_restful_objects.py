@@ -14,7 +14,7 @@ def test_domain_object():
             'attributes': {
                 'meta_data': {
                     'created_at': 1583248090.277515,
-                    'created_by': u'test123-jinlc',
+                    'created_by': 'test123-jinlc',
                     'update_at': 1583248090.277516,
                     'updated_at': 1583248090.324114
                 }
@@ -64,7 +64,7 @@ def test_domain_object():
                 'memberType': 'action'
             }
         },
-        'title': u'foobar'
+        'title': 'foobar'
     })
 
     if errors:

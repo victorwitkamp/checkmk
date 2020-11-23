@@ -33,7 +33,7 @@ def site(tmp_path, monkeypatch):
 def test_backup_site_to_tarfile(site, tmp_path):
     # Write some file for testing the backup procedure
     with Path(site.dir + "/test123").open("w", encoding="utf-8") as f:
-        f.write(u"uftauftauftata")
+        f.write("uftauftauftata")
 
     tar_path = tmp_path / "backup.tar"
     with tar_path.open("wb") as backup_tar:

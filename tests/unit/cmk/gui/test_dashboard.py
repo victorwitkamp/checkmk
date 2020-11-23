@@ -430,7 +430,7 @@ def test_dashlet_context_inheritance(register_builtin_html):
         },
         'single_infos': [],
         'show_title': True,
-        'title': u'Host Statistics',
+        'title': 'Host Statistics',
         'refresh': 60,
         'add_context_to_title': True,
         'link_from': {},

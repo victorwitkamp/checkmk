@@ -79,13 +79,13 @@ def test_get_snmp_table(monkeypatch, snmp_info, expected_values):
 @pytest.mark.parametrize(
     "encoding,columns,expected",
     [
-        (None, [([b'\xc3\xbc'], "string")], [[u"ü"]]),  # utf-8
+        (None, [([b'\xc3\xbc'], "string")], [["ü"]]),  # utf-8
         (None, [([b'\xc3\xbc'], "binary")], [[[195, 188]]]),  # utf-8
-        (None, [([b"\xfc"], "string")], [[u"ü"]]),  # latin-1
+        (None, [([b"\xfc"], "string")], [["ü"]]),  # latin-1
         (None, [([b'\xfc'], "binary")], [[[252]]]),  # latin-1
-        ("utf-8", [([b'\xc3\xbc'], "string")], [[u"ü"]]),
-        ("latin1", [([b'\xfc'], "string")], [[u"ü"]]),
-        ("cp437", [([b'\x81'], "string")], [[u"ü"]]),
+        ("utf-8", [([b'\xc3\xbc'], "string")], [["ü"]]),
+        ("latin1", [([b'\xfc'], "string")], [["ü"]]),
+        ("cp437", [([b'\x81'], "string")], [["ü"]]),
     ])
 def test_sanitize_snmp_encoding(monkeypatch, encoding, columns, expected):
     ts = Scenario().add_host("localhost")

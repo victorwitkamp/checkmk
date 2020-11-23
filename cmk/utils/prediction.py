@@ -187,22 +187,22 @@ class TimeSeries:
 
 def lq_logic(filter_condition: str, values: List[str], join: str) -> str:
     """JOIN with (Or, And) FILTER_CONDITION the VALUES for a livestatus query"""
-    conditions = u"".join(u"%s %s\n" % (filter_condition, livestatus.lqencode(x)) for x in values)
-    connective = u"%s: %d\n" % (join, len(values)) if len(values) > 1 else u""
+    conditions = "".join("%s %s\n" % (filter_condition, livestatus.lqencode(x)) for x in values)
+    connective = "%s: %d\n" % (join, len(values)) if len(values) > 1 else ""
     return conditions + connective
 
 
 def livestatus_lql(host_names: List[HostName],
                    columns: List[str],
                    service_description: Optional[ServiceName] = None) -> str:
-    query_filter = u"Columns: %s\n" % u" ".join(columns)
-    query_filter += lq_logic(u"Filter: host_name =", [ensure_str(n) for n in host_names], u"Or")
+    query_filter = "Columns: %s\n" % " ".join(columns)
+    query_filter += lq_logic("Filter: host_name =", [ensure_str(n) for n in host_names], "Or")
     if service_description == "_HOST_" or service_description is None:
         what = 'host'
     else:
         what = 'service'
-        query_filter += lq_logic(u"Filter: service_description =",
-                                 [ensure_str(service_description)], u"Or")
+        query_filter += lq_logic("Filter: service_description =",
+                                 [ensure_str(service_description)], "Or")
     return "GET %ss\n%s" % (what, query_filter)
 
 

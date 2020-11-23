@@ -15,10 +15,10 @@ pytestmark = pytest.mark.checks
 def test_fileinfo_min_max_age_levels():
     check = Check("prism_containers")
 
-    item = u"prism-item"
+    item = "prism-item"
     parsed = check.run_parse([
-        [u'name', u'usage', u'capacity'],
-        [u'prism-item', u'5', u'10'],
+        ['name', 'usage', 'capacity'],
+        ['prism-item', '5', '10'],
     ])
 
     output_expected = [

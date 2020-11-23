@@ -170,18 +170,18 @@ def test_check_http_argument_parsing(params, expected_args):
 
 @pytest.mark.parametrize('params,expected_description', [
     (
-        (u'No SSL Test', {}),
-        u'HTTP No SSL Test',
+        ('No SSL Test', {}),
+        'HTTP No SSL Test',
     ),
     (
-        (u'Test with SSL', {
+        ('Test with SSL', {
             'ssl': "auto"
         }),
-        u'HTTPS Test with SSL',
+        'HTTPS Test with SSL',
     ),
     (
-        (u'^No Prefix Test', {}),
-        u'No Prefix Test',
+        ('^No Prefix Test', {}),
+        'No Prefix Test',
     ),
 ])
 @pytest.mark.usefixtures("config_load_all_checks")

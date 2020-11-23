@@ -51,7 +51,7 @@ discovery = {
 checks = {
     '': [
         (None, {}, [
-            (0, u'Daemon running on host klappson', []),
+            (0, 'Daemon running on host klappson', []),
             DEPRECATION_WARNING,
         ]),
     ],

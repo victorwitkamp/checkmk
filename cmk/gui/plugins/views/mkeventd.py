@@ -125,7 +125,7 @@ def _ec_filter_host_information_of_not_permitted_hosts(rows):
             elif isinstance(row[key], str):
                 row[key] = ""
             elif isinstance(row[key], str):
-                row[key] = u""
+                row[key] = ""
 
 
 permission_registry.register(
@@ -1678,7 +1678,7 @@ multisite_builtin_views['ec_event_mobile'] = {
     'column_headers': 'pergroup',
     'context': {},
     'datasource': 'mkeventd_events',
-    'description': u'Details about one event\n',
+    'description': 'Details about one event\n',
     'group_painters': [],
     'hidden': True,
     'hidebutton': False,
@@ -1716,8 +1716,8 @@ multisite_builtin_views['ec_event_mobile'] = {
     'public': True,
     'single_infos': ['event'],
     'sorters': [],
-    'title': u'Event Details',
-    'topic': u'Event Console',
+    'title': 'Event Details',
+    'topic': 'Event Console',
     'user_sortable': True
 }
 
@@ -1799,7 +1799,7 @@ multisite_builtin_views['ec_events_mobile'] = {
         }
     },
     'datasource': 'mkeventd_events',
-    'description': u'Table of all currently open events (handled and unhandled)\n',
+    'description': 'Table of all currently open events (handled and unhandled)\n',
     'group_painters': [],
     'hidden': False,
     'hidebutton': False,
@@ -1820,7 +1820,7 @@ multisite_builtin_views['ec_events_mobile'] = {
     'public': True,
     'single_infos': [],
     'sorters': [('event_last', False)],
-    'title': u'Events',
-    'topic': u'Event Console',
+    'title': 'Events',
+    'topic': 'Event Console',
     'user_sortable': True,
 }

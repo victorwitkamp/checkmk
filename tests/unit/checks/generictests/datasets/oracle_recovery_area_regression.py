@@ -12,13 +12,13 @@
 checkname = 'oracle_recovery_area'
 
 
-info = [[u'AIMDWHD1', u'300', u'51235', u'49000', u'300']]
+info = [['AIMDWHD1', '300', '51235', '49000', '300']]
 
 
-discovery = {'': [(u'AIMDWHD1', {})]}
+discovery = {'': [('AIMDWHD1', {})]}
 
 
-checks = {'': [(u'AIMDWHD1',
+checks = {'': [('AIMDWHD1',
                 {'levels': (70.0, 90.0)},
                 [(2,
                   '47.85 GB out of 50.03 GB used (95.1%, warn/crit at 70.0%/90.0%), 300.00 MB reclaimable',

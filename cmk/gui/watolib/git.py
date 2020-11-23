@@ -93,7 +93,7 @@ def _git_command(args):
 
     status = p.wait()
     if status != 0:
-        out = u"" if p.stdout is None else ensure_str(p.stdout.read())
+        out = "" if p.stdout is None else ensure_str(p.stdout.read())
         raise MKGeneralException(
             _("Error executing GIT command <tt>%s</tt>:<br><br>%s") %
             (subprocess.list2cmdline(command), out.replace("\n", "<br>\n")))

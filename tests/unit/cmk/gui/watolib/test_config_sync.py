@@ -71,12 +71,12 @@ def _create_test_sync_config(monkeypatch):
     conf_dir = Path(cmk.utils.paths.check_mk_config_dir, "wato")
     conf_dir.mkdir(parents=True, exist_ok=True)
     with conf_dir.joinpath("hosts.mk").open("w", encoding="utf-8") as f:
-        f.write(u"all_hosts = []\n")
+        f.write("all_hosts = []\n")
 
     gui_conf_dir = Path(cmk.utils.paths.default_config_dir) / "multisite.d" / "wato"
     gui_conf_dir.mkdir(parents=True, exist_ok=True)
     with gui_conf_dir.joinpath("global.mk").open("w", encoding="utf-8") as f:
-        f.write(u"# 123\n")
+        f.write("# 123\n")
 
     if cmk_version.is_managed_edition():
         monkeypatch.setattr(config,
@@ -93,7 +93,7 @@ def _get_activation_manager(monkeypatch):
     monkeypatch.setattr(
         config, "sites", {
             "unit": {
-                'alias': u'Der Master',
+                'alias': 'Der Master',
                 'disable_wato': True,
                 'disabled': False,
                 'insecure': False,
@@ -121,7 +121,7 @@ def _get_activation_manager(monkeypatch):
                 'insecure': False,
                 'disable_wato': True,
                 'disabled': False,
-                'alias': u'unit_remote_1',
+                'alias': 'unit_remote_1',
                 'secret': 'watosecret',
                 'replicate_mkps': False,
                 'proxy': {

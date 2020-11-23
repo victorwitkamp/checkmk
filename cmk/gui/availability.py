@@ -84,7 +84,7 @@ from cmk.gui.bi import BIManager
 #         {
 #            "from"       : 1238288548,
 #            "until"      : 1238292845,
-#            "text"       : u"Das ist ein Text über mehrere Zeilen, oder was weiß ich",
+#            "text"       : "Das ist ein Text über mehrere Zeilen, oder was weiß ich",
 #            "date"       : 12348854885, # Time of entry
 #            "author"     : "mk",
 #            "downtime"   : True, # Can also be False or None or missing. None is like missing
@@ -214,7 +214,7 @@ def get_av_display_options(what) -> AVOptionValueSpecs:
             filename="wato.py",
         )
         long_output_labelling = [
-            (u"timeline_long_output",
+            ("timeline_long_output",
              _("Display long output in timeline (<a href=\"%s\">Enable via WATO</a>)") %
              ruleset_search_url)
         ]
@@ -230,15 +230,15 @@ def get_av_display_options(what) -> AVOptionValueSpecs:
          ListChoice(
              title=_("Labelling Options"),
              choices=[
-                 (u"omit_headers", _("Do not display column headers")),
-                 (u"omit_host", _("Do not display the host name")),
-                 (u"show_alias", _("Display the host alias")),
-                 (u"use_display_name", _("Use alternative display name for services")),
-                 (u"omit_buttons", _("Do not display icons for history and timeline")),
-                 (u"omit_timeline_plugin_output", _("Do not display plugin output in timeline")),
+                 ("omit_headers", _("Do not display column headers")),
+                 ("omit_host", _("Do not display the host name")),
+                 ("show_alias", _("Display the host alias")),
+                 ("use_display_name", _("Use alternative display name for services")),
+                 ("omit_buttons", _("Do not display icons for history and timeline")),
+                 ("omit_timeline_plugin_output", _("Do not display plugin output in timeline")),
              ] + long_output_labelling + [
-                 (u"display_timeline_legend", _("Display legend for timeline")),
-                 (u"omit_av_levels", _("Do not display legend for availability levels")),
+                 ("display_timeline_legend", _("Display legend for timeline")),
+                 ("omit_av_levels", _("Do not display legend for availability levels")),
              ])),
 
         # Visual levels for the availability
@@ -1210,7 +1210,7 @@ def melt_short_intervals(entries, duration, dont_merge):
 #            "service_state"  : 1,
 #            "from"           : 1238288548,
 #            "until"          : 1238292845,
-#            "text"           : u"Das ist ein Text über mehrere Zeilen, oder was weiß ich",
+#            "text"           : "Das ist ein Text über mehrere Zeilen, oder was weiß ich",
 #            "date"           : 12348854885, # Time of entry
 #            "author"         : "mk",
 #            "downtime"       : True, # Can also be False or None or missing. None is like missing
@@ -1467,7 +1467,7 @@ def layout_availability_table(what: AVObjectType, group_title: _Optional[str],
                                 summary_counts[ssid] += x_cnt
                             cells.append((r, css))
                         else:
-                            cells.append((u"", ""))
+                            cells.append(("", ""))
 
             # If timeline == [] and states == {} then this objects has complete unmonitored state
             if entry["timeline"] == [] and entry["states"] == {}:

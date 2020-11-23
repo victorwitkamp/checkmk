@@ -117,7 +117,7 @@ class StructuredDataTree:
         store.save_bytes_to_file(filepath + ".gz", buf.getvalue())
 
         # Inform Livestatus about the latest inventory update
-        store.save_text_to_file("%s/.last" % path, u"")
+        store.save_text_to_file("%s/.last" % path, "")
 
     def load_from(self, filepath):
         raw_tree = store.load_object_from_file(filepath)
@@ -177,7 +177,7 @@ class StructuredDataTree:
     def _is_numeration(self, entries):
         for entry in entries:
             # Skipping invalid entries such as
-            # {u'KEY': [LIST OF STRINGS], ...}
+            # {'KEY': [LIST OF STRINGS], ...}
             try:
                 for v in entry.values():
                     if isinstance(v, list):

@@ -9,7 +9,7 @@
 
 checkname = 'tplink_poe_summary'
 
-info = [[u'150']]
+info = [['150']]
 
 discovery = {'': [(None, {})]}
 

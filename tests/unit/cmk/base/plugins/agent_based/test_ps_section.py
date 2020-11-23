@@ -162,26 +162,26 @@ result_parse = [
              "1"), "NOTEPAD.EXE"
         ],
     ]),
-    (24, [[(None,), u"[System Process]"],
+    (24, [[(None,), "[System Process]"],
           [
               ("unknown", "14484", "10608", "0", "4", "0", "0", "368895625000", "1227", "273", ""),
-              u"System"
+              "System"
           ],
           [
               ("unknown", "64", "24", "0", "0", "0", "0", "388621186093750", "0", "24", ""),
-              u"System Idle Process"
+              "System Idle Process"
           ],
           [
               ("unknown", "4576", "316", "0", "520", "0", "156250", "2031250", "53", "2", ""),
-              u"smss.exe"
+              "smss.exe"
           ],
           [
               ("unknown", "43444", "556", "0", "744", "1", "468750", "126562500", "85", "8", ""),
-              u"csrss.exe"
+              "csrss.exe"
           ],
           [
               ("unknown", "68500", "2848", "0", "680", "2", "2222031250", "10051718750", "679",
-               "10", ""), u"csrss.exe"
+               "10", ""), "csrss.exe"
           ]]),
     (1, [[
         ("root",), "/usr/sbin/xinetd", "-pidfile", "/var/run/xinetd.pid", "-stayalive",

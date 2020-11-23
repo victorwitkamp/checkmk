@@ -61,23 +61,23 @@ def test_host_custom_variables(default_cfg, site):
     assert len(rows) == 1
     custom_variables, tags = rows[0]
     assert custom_variables == {
-        u'ADDRESS_FAMILY': u'4',
-        u'TAGS': u'/wato/ auto-piggyback cmk-agent ip-v4 ip-v4-only lan no-snmp prod site:%s tcp' %
+        'ADDRESS_FAMILY': '4',
+        'TAGS': '/wato/ auto-piggyback cmk-agent ip-v4 ip-v4-only lan no-snmp prod site:%s tcp' %
                  site.id,
-        u'FILENAME': u'/wato/hosts.mk',
-        u'ADDRESS_4': u'127.0.0.1',
-        u'ADDRESS_6': u'',
+        'FILENAME': '/wato/hosts.mk',
+        'ADDRESS_4': '127.0.0.1',
+        'ADDRESS_6': '',
     }
     assert tags == {
-        u'address_family': u'ip-v4-only',
-        u'agent': u'cmk-agent',
-        u'criticality': u'prod',
-        u'ip-v4': u'ip-v4',
-        u'networking': u'lan',
-        u'piggyback': u'auto-piggyback',
-        u'site': str(site.id),
-        u'snmp_ds': u'no-snmp',
-        u'tcp': u'tcp',
+        'address_family': 'ip-v4-only',
+        'agent': 'cmk-agent',
+        'criticality': 'prod',
+        'ip-v4': 'ip-v4',
+        'networking': 'lan',
+        'piggyback': 'auto-piggyback',
+        'site': str(site.id),
+        'snmp_ds': 'no-snmp',
+        'tcp': 'tcp',
     }
 
 
@@ -87,7 +87,7 @@ host_equal_queries = {
                   "Columns: host_name\n"
                   "Filter: host_name = livestatus-test-host.domain\n"),
         "result": [{
-            u'name': u'livestatus-test-host.domain',
+            'name': 'livestatus-test-host.domain',
         },],
     },
     "cmc": {
@@ -95,7 +95,7 @@ host_equal_queries = {
                   "Columns: host_name\n"
                   "Filter: host_name = livestatus-test-host\n"),
         "result": [{
-            u'name': u'livestatus-test-host',
+            'name': 'livestatus-test-host',
         },],
     }
 }
@@ -160,7 +160,7 @@ def test_service_custom_variables(configure_service_tags, default_cfg, site):
     assert isinstance(rows, list)
     custom_variables, tags = rows[0]
     assert custom_variables == {}
-    assert tags == {u'criticality': u'prod'}
+    assert tags == {'criticality': 'prod'}
 
 
 @pytest.mark.usefixtures("default_cfg")
@@ -189,7 +189,7 @@ class TestCrashReport:
     def test_list_crash_report(self, site, component, uuid):
         rows = site.live.query("GET crashreports")
         assert rows
-        assert [u"component", u"id"] in rows
+        assert ["component", "id"] in rows
         assert [component, uuid] in rows
 
     def test_read_crash_report(self, site, component, uuid, crash_info):

@@ -23,25 +23,25 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
         # as no levels are checked, or the levels are OK.
         ((5, {}, "Foo"),
          {},
-         (0, u'5 \xb0C', [('temp', 5, None, None)])),
+         (0, '5 \xb0C', [('temp', 5, None, None)])),
 
         ((5, {'device_levels_handling': 'best'}, "Foo"),
          {'dev_status': 1},
-         (0, u'5 \xb0C', [('temp', 5, None, None)])),
+         (0, '5 \xb0C', [('temp', 5, None, None)])),
 
         ((5, {"device_levels_handling": "dev"}, "Foo"),
          {},
-         (0, u'5 \xb0C', [('temp', 5, None, None)])),
+         (0, '5 \xb0C', [('temp', 5, None, None)])),
 
         ((5, {"device_levels_handling": "dev"}, "Foo"),
          {
              'dev_levels_lower': (None, None)
          },
-         (0, u'5 \xb0C', [('temp', 5, None, None)])),
+         (0, '5 \xb0C', [('temp', 5, None, None)])),
 
         ((5, {"device_levels_handling": "dev"}, "Foo"),
          {'dev_levels_lower': (0, 0)},
-         (0, u'5 \xb0C', [('temp', 5, None, None)])),
+         (0, '5 \xb0C', [('temp', 5, None, None)])),
 
         ((5,
           {
@@ -51,13 +51,13 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
           },
           "Foo"),
          {'dev_status': 1},
-         (0, u'5 \xb0C', [('temp', 5, 6, 6)])),
+         (0, '5 \xb0C', [('temp', 5, 6, 6)])),
 
         # From here on, we will fail in different ways.
         # First, the device says it's borked.
         ((5, {}, "Foo"),
          {'dev_status': 1, 'dev_status_name': 'Borked'},
-         (1, u'5 \xb0C, Borked', [('temp', 5, None, None)])),
+         (1, '5 \xb0C, Borked', [('temp', 5, None, None)])),
 
         # Then the device says its borked but in a different mode.
         ((5,
@@ -68,7 +68,7 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
           },
           "Foo"),
          {'dev_status': 1},
-         (1, u'5 \xb0C', [('temp', 5, None, None)])),
+         (1, '5 \xb0C', [('temp', 5, None, None)])),
 
         # Now it fails and the levels fail in various modes.
         ((5,
@@ -79,7 +79,7 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
           },
           "Foo"),
          {'dev_status': 1},
-         (2, u'5 \xb0C (warn/crit at 4/4 \xb0C)', [('temp', 5, 4, 4)])),
+         (2, '5 \xb0C (warn/crit at 4/4 \xb0C)', [('temp', 5, 4, 4)])),
 
         ((5,
           {
@@ -89,11 +89,11 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
           },
           "Foo"),
          {'dev_status': 1},
-         (2, u'5 \xb0C (warn/crit below 6/6 \xb0C)', [('temp', 5, None, None)])),
+         (2, '5 \xb0C (warn/crit below 6/6 \xb0C)', [('temp', 5, None, None)])),
 
         ((5, {'device_levels_handling': 'best', 'levels': (4, 4)}, "Foo"),
          {'dev_status': 1},
-         (1, u'5 \xb0C (warn/crit at 4/4 \xb0C)', [('temp', 5, 4, 4)])),
+         (1, '5 \xb0C (warn/crit at 4/4 \xb0C)', [('temp', 5, 4, 4)])),
 
         ((5,
           {
@@ -102,7 +102,7 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
               'levels_lower': (4, 4)
           }, "Foo"),
          {'dev_status': 1, 'dev_levels': (4, 4), 'dev_levels_lower': (4, 4)},
-         (2, u'5 \xb0C (warn/crit at 4/4 \xb0C) (warn/crit below 4/4 \xb0C)', [('temp', 5, 4, 4)])),
+         (2, '5 \xb0C (warn/crit at 4/4 \xb0C) (warn/crit below 4/4 \xb0C)', [('temp', 5, 4, 4)])),
 
         ((5,
           {
@@ -111,7 +111,7 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
               'levels_lower': (4, 4)
           }, "Foo"),
          {'dev_status': 1, 'dev_levels': (4, 4), 'dev_levels_lower': (4, 4)},
-         (1, u'5 \xb0C (warn/crit at 5/6 \xb0C) (warn/crit below 4/4 \xb0C)', [('temp', 5, 5, 6)])),
+         (1, '5 \xb0C (warn/crit at 5/6 \xb0C) (warn/crit below 4/4 \xb0C)', [('temp', 5, 5, 6)])),
 
 
         ((5,
@@ -121,7 +121,7 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
               'levels_lower': (4, 4)
           }, "Foo"),
          {'dev_status': 1},
-         (2, u'5 \xb0C (warn/crit at 4/4 \xb0C) (warn/crit below 4/4 \xb0C)', [('temp', 5, 4, 4)])),
+         (2, '5 \xb0C (warn/crit at 4/4 \xb0C) (warn/crit below 4/4 \xb0C)', [('temp', 5, 4, 4)])),
 
         ((5,
           {
@@ -130,21 +130,21 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
               'levels_lower': (4, 4)
           }, "Foo"),
          {'dev_status': 1, 'dev_levels': (4, 4), 'dev_levels_lower': (4, 4)},
-         (2, u'5 \xb0C (warn/crit at 4/4 \xb0C) (warn/crit below 4/4 \xb0C) '
-             u'(device warn/crit at 4/4 \xb0C) (device warn/crit below 4/4 \xb0C)',
+         (2, '5 \xb0C (warn/crit at 4/4 \xb0C) (warn/crit below 4/4 \xb0C) '
+             '(device warn/crit at 4/4 \xb0C) (device warn/crit below 4/4 \xb0C)',
           [('temp', 5, 4, 4)])),
 
         ((5, {'device_levels_handling': 'worst'}, "Foo"),
          {'dev_status': 1},
-         (1, u'5 \xb0C', [('temp', 5, None, None)])),
+         (1, '5 \xb0C', [('temp', 5, None, None)])),
 
         ((5, {"device_levels_handling": "dev"}, "Foo"),
          {'dev_levels': (4, 4)},
-         (2, u'5 \xb0C (device warn/crit at 4/4 \xb0C)', [('temp', 5, 4, 4)])),
+         (2, '5 \xb0C (device warn/crit at 4/4 \xb0C)', [('temp', 5, 4, 4)])),
 
         ((5, {"device_levels_handling": "dev"}, "Foo"),
          {'dev_levels_lower': (6, 6)},
-         (2, u'5 \xb0C (device warn/crit below 6/6 \xb0C)', [('temp', 5, None, None)])),
+         (2, '5 \xb0C (device warn/crit below 6/6 \xb0C)', [('temp', 5, None, None)])),
 
         # Crashed previously
         ((5, {"device_levels_handling": "dev"}, "Foo"),
@@ -152,7 +152,7 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
              'dev_levels': (4, 4),
              'dev_levels_lower': (None, None),
          },
-         (2, u'5 \xb0C (device warn/crit at 4/4 \xb0C)', [('temp', 5, 4, 4)])),
+         (2, '5 \xb0C (device warn/crit at 4/4 \xb0C)', [('temp', 5, 4, 4)])),
 
         # Crashed as well
         ((5, {"device_levels_handling": "dev"}, "Foo"),
@@ -160,7 +160,7 @@ from checktestlib import MockItemState, assertCheckResultsEqual, CheckResult
              'dev_levels': (None, None),
              'dev_levels_lower': (6, 6),
          },
-         (2, u'5 \xb0C (device warn/crit below 6/6 \xb0C)', [('temp', 5, None, None)])),
+         (2, '5 \xb0C (device warn/crit below 6/6 \xb0C)', [('temp', 5, None, None)])),
     ],
 )
 @pytest.mark.usefixtures("config_load_all_checks")
@@ -272,7 +272,7 @@ def test_check_temperature_trend(test_case):
             growth=0.5,
             seconds_elapsed=10 * 60,
             wato_dict=_WATO_DICT,
-            expected=(0, u'5.5 \xb0C, rate: +0.2/5 min', [('temp', 5.5, 100.0, 100.0)]),
+            expected=(0, '5.5 \xb0C, rate: +0.2/5 min', [('temp', 5.5, 100.0, 100.0)]),
         ),
     ]
 )

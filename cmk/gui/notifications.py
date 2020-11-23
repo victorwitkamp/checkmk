@@ -53,7 +53,7 @@ def load_plugins(force):
         if name[0] == ".":
             continue
 
-        declare_permission("notification_plugin.%s" % name, _u(attrs["title"]), u"",
+        declare_permission("notification_plugin.%s" % name, _u(attrs["title"]), "",
                            ["admin", "user"])
 
 

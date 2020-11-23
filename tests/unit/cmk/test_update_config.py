@@ -69,7 +69,7 @@ def test_cleanup_version_specific_caches(uc):
         base_dir.mkdir(parents=True, exist_ok=True)
         cached_file = base_dir / "if"
         with cached_file.open("w", encoding="utf-8") as f:
-            f.write(u"\n")
+            f.write("\n")
         uc._cleanup_version_specific_caches()
         assert not cached_file.exists()
         assert base_dir.exists()
@@ -166,10 +166,10 @@ def _non_discovery_ignored_services_ruleset():
                 'condition': {
                     'service_description': [
                         {
-                            '$regex': u'Filesystem\\ \\/boot\\/efi$'
+                            '$regex': 'Filesystem\\ \\/boot\\/efi$'
                         },
                         {
-                            '$regex': u'\\(a\\)\\ b\\?\\ c\\!$'
+                            '$regex': '\\(a\\)\\ b\\?\\ c\\!$'
                         },
                     ],
                     'host_name': ['stable']
@@ -182,10 +182,10 @@ def _non_discovery_ignored_services_ruleset():
                 'condition': {
                     'service_description': [
                         {
-                            '$regex': u'Filesystem /boot/efi$'
+                            '$regex': 'Filesystem /boot/efi$'
                         },
                         {
-                            '$regex': u'\\(a\\) b\\? c!$'
+                            '$regex': '\\(a\\) b\\? c!$'
                         },
                     ],
                     'host_name': ['stable']

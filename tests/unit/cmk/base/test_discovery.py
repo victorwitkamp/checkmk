@@ -35,27 +35,27 @@ import cmk.base.autochecks as autochecks
 
 
 def test_discovered_service_init():
-    ser = discovery.Service(CheckPluginName("abc"), u"Item", u"ABC Item", None)
+    ser = discovery.Service(CheckPluginName("abc"), "Item", "ABC Item", None)
     assert ser.check_plugin_name == CheckPluginName("abc")
-    assert ser.item == u"Item"
-    assert ser.description == u"ABC Item"
+    assert ser.item == "Item"
+    assert ser.description == "ABC Item"
     assert ser.parameters is None
     assert ser.service_labels.to_dict() == {}
 
-    ser = discovery.Service(CheckPluginName("abc"), u"Item", u"ABC Item", None,
-                            DiscoveredServiceLabels(ServiceLabel(u"läbel", u"lübel")))
-    assert ser.service_labels.to_dict() == {u"läbel": u"lübel"}
+    ser = discovery.Service(CheckPluginName("abc"), "Item", "ABC Item", None,
+                            DiscoveredServiceLabels(ServiceLabel("läbel", "lübel")))
+    assert ser.service_labels.to_dict() == {"läbel": "lübel"}
 
     with pytest.raises(AttributeError):
         ser.xyz = "abc"  # type: ignore[attr-defined] # pylint: disable=assigning-non-slot
 
 
 def test_discovered_service_eq():
-    ser1 = discovery.Service(CheckPluginName("abc"), u"Item", u"ABC Item", None)
-    ser2 = discovery.Service(CheckPluginName("abc"), u"Item", u"ABC Item", None)
-    ser3 = discovery.Service(CheckPluginName("xyz"), u"Item", u"ABC Item", None)
-    ser4 = discovery.Service(CheckPluginName("abc"), u"Xtem", u"ABC Item", None)
-    ser5 = discovery.Service(CheckPluginName("abc"), u"Item", u"ABC Item", [])
+    ser1 = discovery.Service(CheckPluginName("abc"), "Item", "ABC Item", None)
+    ser2 = discovery.Service(CheckPluginName("abc"), "Item", "ABC Item", None)
+    ser3 = discovery.Service(CheckPluginName("xyz"), "Item", "ABC Item", None)
+    ser4 = discovery.Service(CheckPluginName("abc"), "Xtem", "ABC Item", None)
+    ser5 = discovery.Service(CheckPluginName("abc"), "Item", "ABC Item", [])
 
     assert ser1 == ser1  # pylint: disable=comparison-with-itself
     assert ser1 == ser2

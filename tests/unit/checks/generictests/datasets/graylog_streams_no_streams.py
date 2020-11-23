@@ -9,7 +9,7 @@
 
 checkname = 'graylog_streams'
 
-info = [[u'{"total": 5, "streams": []}']]
+info = [['{"total": 5, "streams": []}']]
 
 discovery = {'': [(None, {})]}
 

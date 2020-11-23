@@ -416,7 +416,7 @@ class RulesetOptimizer:
         This function assumes either all or no pattern is negated (like WATO creates the rules).
         """
         if not patterns:
-            return False, regex(u"")  # Match everything
+            return False, regex("")  # Match everything
 
         negate, patterns = parse_negated_condition_list(patterns)
 

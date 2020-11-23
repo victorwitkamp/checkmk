@@ -84,14 +84,14 @@ def print_ambient_light_v2(conn, settings, uid):
 def print_temperature(conn, settings, uid):
     from tinkerforge.bricklet_temperature import BrickletTemperature  # type: ignore[import] # pylint: disable=import-error,import-outside-toplevel
     br = BrickletTemperature(uid, conn)
-    print_generic(settings, "temperature", br.get_identity(), 0.01, u"\N{DEGREE SIGN}C",
+    print_generic(settings, "temperature", br.get_identity(), 0.01, "\N{DEGREE SIGN}C",
                   br.get_temperature())
 
 
 def print_temperature_ext(conn, settings, uid):
     from tinkerforge.bricklet_ptc import BrickletPTC  # type: ignore[import] # pylint: disable=import-error,import-outside-toplevel
     br = BrickletPTC(uid, conn)
-    print_generic(settings, "temperature.ext", br.get_identity(), 0.01, u"\N{DEGREE SIGN}C",
+    print_generic(settings, "temperature.ext", br.get_identity(), 0.01, "\N{DEGREE SIGN}C",
                   br.get_temperature())
 
 
@@ -148,7 +148,7 @@ def display_on_segment(conn, settings, text):
         "H": 0x74,
         "L": 0x38,
         "R": 0x50,
-        u"\N{DEGREE SIGN}": 0x63,
+        "\N{DEGREE SIGN}": 0x63,
     }
 
     from tinkerforge.bricklet_segment_display_4x7 import BrickletSegmentDisplay4x7  # type: ignore[import] # pylint: disable=import-error,import-outside-toplevel

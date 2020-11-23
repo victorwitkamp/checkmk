@@ -15,7 +15,7 @@ from cmk.gui.plugins.metrics import utils
 @pytest.mark.parametrize("data_string, result", [
     ("he lo", ["he", "lo"]),
     ("'há li'", ["há li"]),
-    (u"hé ßß", [u"hé", u"ßß"]),
+    ("hé ßß", ["hé", "ßß"]),
 ])
 def test_split_perf_data(data_string, result):
     assert utils._split_perf_data(data_string) == result
@@ -24,19 +24,19 @@ def test_split_perf_data(data_string, result):
 @pytest.mark.parametrize("perf_str, check_command, result", [
     ("", None, ([], "")),
     ("hi=6 [ihe]", "ter", ([("hi", 6, "", None, None, None, None)], "ihe")),
-    (u"hi=l6 [ihe]", "ter", ([], "ihe")),
-    (u"hi=6 [ihe]", "ter", ([("hi", 6, "", None, None, None, None)], "ihe")),
+    ("hi=l6 [ihe]", "ter", ([], "ihe")),
+    ("hi=6 [ihe]", "ter", ([("hi", 6, "", None, None, None, None)], "ihe")),
     ("hi=5 no=6", "test", ([
-        ("hi", 5, u"", None, None, None, None),
-        ("no", 6, u"", None, None, None, None),
+        ("hi", 5, "", None, None, None, None),
+        ("no", 6, "", None, None, None, None),
     ], "test")),
     ("hi=5;6;7;8;9 'not here'=6;5.6;;;", "test", ([
-        ("hi", 5, u"", 6, 7, 8, 9),
-        ("not_here", 6, u"", 5.6, None, None, None),
+        ("hi", 5, "", 6, 7, 8, 9),
+        ("not_here", 6, "", 5.6, None, None, None),
     ], "test")),
     ("hi=5G;;;; 'not here'=6M;5.6;;;", "test", ([
-        ("hi", 5, u"G", None, None, None, None),
-        ("not_here", 6, u"M", 5.6, None, None, None),
+        ("hi", 5, "G", None, None, None, None),
+        ("not_here", 6, "M", 5.6, None, None, None),
     ], "test")),
 ])
 def test_parse_perf_data(perf_str, check_command, result):
@@ -117,44 +117,44 @@ def test_reverse_translation_metric_name(monkeypatch, canonical_name, perf_data_
 @pytest.mark.parametrize(
     "metric_names, check_command, graph_ids",
     [
-        ([u'user', u'system', u'wait', u'util'], 'check_mk-kernel_util', ['cpu_utilization_5_util'
+        (['user', 'system', 'wait', 'util'], 'check_mk-kernel_util', ['cpu_utilization_5_util'
                                                                          ]),
-        ([u'util1', u'util15'], None, ['util_average_2']),
-        ([u'util'], None, ['util_fallback']),
-        ([u'util'], "check_mk-lxc_container_cpu", ['util_fallback']),
-        ([u'wait', u'util', 'user', 'system'
+        (['util1', 'util15'], None, ['util_average_2']),
+        (['util'], None, ['util_fallback']),
+        (['util'], "check_mk-lxc_container_cpu", ['util_fallback']),
+        (['wait', 'util', 'user', 'system'
          ], 'check_mk-lxc_container_cpu', ['cpu_utilization_5_util']),
-        ([u'util', u'util_average'], None, ['util_average_1']),
-        ([u'user', u'util_numcpu_as_max'], None, ['cpu_utilization_numcpus']),
-        ([u'user', u'util'], None, ['util_fallback', 'METRIC_user']),  # METRIC_user has no recipe
-        ([u'util'], 'check_mk-netapp_api_cpu_utilization', ['cpu_utilization_numcpus']),
-        ([u'user', u'util'], 'check_mk-winperf_processor_util', ['cpu_utilization_numcpus']),
-        ([u'user', u'system', u'idle', u'nice'], None, ['cpu_utilization_3']),
-        ([u'user', u'system', u'idle', u'io_wait'], None, ['cpu_utilization_4']),
-        ([u'user', u'system', u'io_wait'], None, ['cpu_utilization_5']),
+        (['util', 'util_average'], None, ['util_average_1']),
+        (['user', 'util_numcpu_as_max'], None, ['cpu_utilization_numcpus']),
+        (['user', 'util'], None, ['util_fallback', 'METRIC_user']),  # METRIC_user has no recipe
+        (['util'], 'check_mk-netapp_api_cpu_utilization', ['cpu_utilization_numcpus']),
+        (['user', 'util'], 'check_mk-winperf_processor_util', ['cpu_utilization_numcpus']),
+        (['user', 'system', 'idle', 'nice'], None, ['cpu_utilization_3']),
+        (['user', 'system', 'idle', 'io_wait'], None, ['cpu_utilization_4']),
+        (['user', 'system', 'io_wait'], None, ['cpu_utilization_5']),
         (['util_average', 'util', 'wait', 'user', 'system', 'guest'
          ], "check_mk-kernel_util", ['util_average_1', 'cpu_utilization_6_guest_util']),
-        ([u'user', u'system', u'io_wait', 'guest', 'steal'
+        (['user', 'system', 'io_wait', 'guest', 'steal'
          ], 'check_mk-statgrab_cpu', ['cpu_utilization_7']),
-        ([u'user', u'system', u'interrupt'], None, ['cpu_utilization_8']),
-        ([u'user', u'system', u'wait', u'util', u'cpu_entitlement', u'cpu_entitlement_util'
+        (['user', 'system', 'interrupt'], None, ['cpu_utilization_8']),
+        (['user', 'system', 'wait', 'util', 'cpu_entitlement', 'cpu_entitlement_util'
          ], 'check_mk-lparstat_aix_cpu_util', ['cpu_utilization_5_util', 'cpu_entitlement']),
-        ([u'ramused', u'swapused', u'memused'], 'check_mk-statgrab_mem', ['ram_swap_used']),
+        (['ramused', 'swapused', 'memused'], 'check_mk-statgrab_mem', ['ram_swap_used']),
         ([
-            u'aws_ec2_running_ondemand_instances_total',
-            u'aws_ec2_running_ondemand_instances_t2.micro',
-            u'aws_ec2_running_ondemand_instances_t2.nano'
+            'aws_ec2_running_ondemand_instances_total',
+            'aws_ec2_running_ondemand_instances_t2.micro',
+            'aws_ec2_running_ondemand_instances_t2.nano'
         ], 'check_mk-aws_ec2_limits', ['aws_ec2_running_ondemand_instances'])
     ])
 def test_get_graph_templates(load_plugins, metric_names, check_command, graph_ids):
-    perfdata: List[Tuple] = [(n, 0, u'', None, None, None, None) for n in metric_names]
+    perfdata: List[Tuple] = [(n, 0, '', None, None, None, None) for n in metric_names]
     translated_metrics = utils.translate_metrics(perfdata, check_command)
     templates = utils.get_graph_templates(translated_metrics)
     assert set(graph_ids) == set(t['id'] for t in templates)
 
 
 def test_replace_expression():
-    perfdata: List[Tuple] = [(n, len(n), u'', 120, 240, 0, 25) for n in ['load1']]
+    perfdata: List[Tuple] = [(n, len(n), '', 120, 240, 0, 25) for n in ['load1']]
     translated_metrics = utils.translate_metrics(perfdata, 'check_mk-cpu.loads')
     assert utils.replace_expressions("CPU Load - %(load1:max@count) CPU Cores",
                                      translated_metrics) == 'CPU Load - 25  CPU Cores'
@@ -171,11 +171,11 @@ def test_extract_rpn(text, out):
 
 
 def test_evaluate():
-    perfdata: List[Tuple] = [(n, len(n), u'', 120, 240, 0, 24) for n in ['in', 'out']]
+    perfdata: List[Tuple] = [(n, len(n), '', 120, 240, 0, 24) for n in ['in', 'out']]
     translated_metrics = utils.translate_metrics(perfdata, 'check_mk-openvpn_clients')
     assert utils.evaluate("if_in_octets,8,*@bits/s",
                           translated_metrics) == (16.0, utils.unit_info['bits/s'], '#00e060')
-    perfdata = [(n, len(n), u'', None, None, None, None) for n in ['/', 'fs_size']]
+    perfdata = [(n, len(n), '', None, None, None, None) for n in ['/', 'fs_size']]
     translated_metrics = utils.translate_metrics(perfdata, 'check_mk-df')
     assert utils.evaluate("fs_size,fs_used,-#e3fff9",
                           translated_metrics) == (6291456, utils.unit_info['bytes'], '#e3fff9')

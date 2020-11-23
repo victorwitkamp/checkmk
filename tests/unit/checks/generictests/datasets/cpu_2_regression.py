@@ -12,7 +12,7 @@ from cmk.base.plugins.agent_based.cpu import parse_cpu
 
 checkname = 'cpu'
 
-parsed = parse_cpu([[u'0.88', u'0.83', u'0.87', u'2/1748', u'21050', u'8'], [u'124069']])
+parsed = parse_cpu([['0.88', '0.83', '0.87', '2/1748', '21050', '8'], ['124069']])
 
 discovery = {
     'loads': [(None, 'cpuload_default_levels')],

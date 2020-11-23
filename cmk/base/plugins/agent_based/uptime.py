@@ -109,10 +109,10 @@ def parse_uptime(string_table: StringTable) -> Optional[uptime.Section]:
         is_solaris = False
         solaris_info = []
         for line in info:
-            if line[-1] == u'[uptime_solaris_start]':
+            if line[-1] == '[uptime_solaris_start]':
                 is_solaris = True
                 continue
-            if line[-1] == u'[uptime_solaris_end]':
+            if line[-1] == '[uptime_solaris_end]':
                 is_solaris = False
                 continue
 

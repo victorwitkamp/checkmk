@@ -1118,15 +1118,15 @@ class ABCEventsMode(WatoMode, metaclass=abc.ABCMeta):
                     "Note: You can only match on event types <a href=\"%s\">created by the core</a>."
                    ) % "wato.py?mode=edit_ruleset&varname=extra_host_conf%3Anotification_options"),
                  choices=[
-                     ('rd', _("UP") + u" ➤ " + _("DOWN")),
-                     ('ru', _("UP") + u" ➤ " + _("UNREACHABLE")),
-                     ('dr', _("DOWN") + u" ➤ " + _("UP")),
-                     ('du', _("DOWN") + u" ➤ " + _("UNREACHABLE")),
-                     ('ud', _("UNREACHABLE") + u" ➤ " + _("DOWN")),
-                     ('ur', _("UNREACHABLE") + u" ➤ " + _("UP")),
-                     ('?r', _("any") + u" ➤ " + _("UP")),
-                     ('?d', _("any") + u" ➤ " + _("DOWN")),
-                     ('?u', _("any") + u" ➤ " + _("UNREACHABLE")),
+                     ('rd', _("UP") + " ➤ " + _("DOWN")),
+                     ('ru', _("UP") + " ➤ " + _("UNREACHABLE")),
+                     ('dr', _("DOWN") + " ➤ " + _("UP")),
+                     ('du', _("DOWN") + " ➤ " + _("UNREACHABLE")),
+                     ('ud', _("UNREACHABLE") + " ➤ " + _("DOWN")),
+                     ('ur', _("UNREACHABLE") + " ➤ " + _("UP")),
+                     ('?r', _("any") + " ➤ " + _("UP")),
+                     ('?d', _("any") + " ➤ " + _("DOWN")),
+                     ('?u', _("any") + " ➤ " + _("UNREACHABLE")),
                  ] + add_choices,
                  default_value=[
                      'rd',
@@ -1143,23 +1143,23 @@ class ABCEventsMode(WatoMode, metaclass=abc.ABCMeta):
                      "Note: You can only match on event types <a href=\"%s\">created by the core</a>."
                  ) % "wato.py?mode=edit_ruleset&varname=extra_service_conf%3Anotification_options"),
                  choices=[
-                     ('rw', _("OK") + u" ➤ " + _("WARN")),
-                     ('rr', _("OK") + u" ➤ " + _("OK")),
-                     ('rc', _("OK") + u" ➤ " + _("CRIT")),
-                     ('ru', _("OK") + u" ➤ " + _("UNKNOWN")),
-                     ('wr', _("WARN") + u" ➤ " + _("OK")),
-                     ('wc', _("WARN") + u" ➤ " + _("CRIT")),
-                     ('wu', _("WARN") + u" ➤ " + _("UNKNOWN")),
-                     ('cr', _("CRIT") + u" ➤ " + _("OK")),
-                     ('cw', _("CRIT") + u" ➤ " + _("WARN")),
-                     ('cu', _("CRIT") + u" ➤ " + _("UNKNOWN")),
-                     ('ur', _("UNKNOWN") + u" ➤ " + _("OK")),
-                     ('uw', _("UNKNOWN") + u" ➤ " + _("WARN")),
-                     ('uc', _("UNKNOWN") + u" ➤ " + _("CRIT")),
-                     ('?r', _("any") + u" ➤ " + _("OK")),
-                     ('?w', _("any") + u" ➤ " + _("WARN")),
-                     ('?c', _("any") + u" ➤ " + _("CRIT")),
-                     ('?u', _("any") + u" ➤ " + _("UNKNOWN")),
+                     ('rw', _("OK") + " ➤ " + _("WARN")),
+                     ('rr', _("OK") + " ➤ " + _("OK")),
+                     ('rc', _("OK") + " ➤ " + _("CRIT")),
+                     ('ru', _("OK") + " ➤ " + _("UNKNOWN")),
+                     ('wr', _("WARN") + " ➤ " + _("OK")),
+                     ('wc', _("WARN") + " ➤ " + _("CRIT")),
+                     ('wu', _("WARN") + " ➤ " + _("UNKNOWN")),
+                     ('cr', _("CRIT") + " ➤ " + _("OK")),
+                     ('cw', _("CRIT") + " ➤ " + _("WARN")),
+                     ('cu', _("CRIT") + " ➤ " + _("UNKNOWN")),
+                     ('ur', _("UNKNOWN") + " ➤ " + _("OK")),
+                     ('uw', _("UNKNOWN") + " ➤ " + _("WARN")),
+                     ('uc', _("UNKNOWN") + " ➤ " + _("CRIT")),
+                     ('?r', _("any") + " ➤ " + _("OK")),
+                     ('?w', _("any") + " ➤ " + _("WARN")),
+                     ('?c', _("any") + " ➤ " + _("CRIT")),
+                     ('?u', _("any") + " ➤ " + _("UNKNOWN")),
                  ] + add_choices,
                  default_value=[
                      'rw',
@@ -1616,10 +1616,10 @@ def configure_attributes(new,
             #
 
             # in bulk mode we show inheritance only if *all* hosts inherit
-            explanation = u""
+            explanation = ""
             if for_what == "bulk":
                 if num_haveit == 0:
-                    explanation = u" (%s)" % inherited_from
+                    explanation = " (%s)" % inherited_from
                     value = inherited_value
                 elif not unique:
                     explanation = _("This value differs between the selected hosts.")

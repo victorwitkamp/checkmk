@@ -227,12 +227,12 @@ def test_get_ruleset(web):  # noqa: F811 # pylint: disable=redefined-outer-name
                 'id': 'b0ee8a51-703c-47e4-aec4-76430281604d',
                 'condition': {
                     'host_labels': {
-                        u'cmk/check_mk_server': u'yes',
+                        'cmk/check_mk_server': 'yes',
                     },
                 },
                 'value': {
                     'ignore_fs_types': ['tmpfs', 'nfs', 'smbfs', 'cifs', 'iso9660'],
-                    'never_ignore_mountpoints': [u'~.*/omd/sites/[^/]+/tmp$']
+                    'never_ignore_mountpoints': ['~.*/omd/sites/[^/]+/tmp$']
                 }
             }]
         },
@@ -256,7 +256,7 @@ def test_set_ruleset(web):  # noqa: F811 # pylint: disable=redefined-outer-name
                     }
                 },
                 'options': {
-                    'description': u'Hosts with the tag "snmp-v1" must not use bulkwalk'
+                    'description': 'Hosts with the tag "snmp-v1" must not use bulkwalk'
                 }
             }]
         },
@@ -418,7 +418,7 @@ def test_write_host_labels(web, site):  # noqa: F811 # pylint: disable=redefined
                      verify_set_attributes=False)
 
         hosts = web.get_all_hosts(effective_attributes=True)
-        assert hosts["test-host-lan"]["attributes"]["labels"] == {u'blä': u'blüb'}
+        assert hosts["test-host-lan"]["attributes"]["labels"] == {'blä': 'blüb'}
 
         cfg: Dict[str, Any] = {
             "FOLDER_PATH": "/",
@@ -432,7 +432,7 @@ def test_write_host_labels(web, site):  # noqa: F811 # pylint: disable=redefined
         exec(site.read_file("etc/check_mk/conf.d/wato/hosts.mk"), cfg, cfg)
 
         assert cfg["host_labels"]["test-host-lan"] == {
-            u"blä": u"blüb",
+            "blä": "blüb",
         }
 
         for label_id, label_value in cfg["host_labels"]["test-host-lan"].items():
@@ -837,101 +837,101 @@ def test_get_graph_notification_image(web, graph_test_config):  # noqa: F811 # p
 
 def test_get_graph_hover(web, graph_test_config):  # noqa: F811 # pylint: disable=redefined-outer-name
     metrics: List[Dict[str, Any]] = [{
-        u'color': u'#87f058',
-        u'line_type': u'stack',
-        u'expression': [
-            u'operator', u'+',
+        'color': '#87f058',
+        'line_type': 'stack',
+        'expression': [
+            'operator', '+',
             [[
-                u'rrd', u'test-host-get-graph', u'test-host-get-graph', u'Check_MK', u'user_time',
+                'rrd', 'test-host-get-graph', 'test-host-get-graph', 'Check_MK', 'user_time',
                 None, 1
             ],
              [
-                 u'rrd', u'test-host-get-graph', u'test-host-get-graph', u'Check_MK',
-                 u'children_user_time', None, 1
+                 'rrd', 'test-host-get-graph', 'test-host-get-graph', 'Check_MK',
+                 'children_user_time', None, 1
              ]]
         ],
-        u'unit': u's',
-        u'title': u'CPU time in user space'
+        'unit': 's',
+        'title': 'CPU time in user space'
     }, {
-        u'color': u'#ff8840',
-        u'line_type': u'stack',
-        u'expression': [
-            u'operator', u'+',
+        'color': '#ff8840',
+        'line_type': 'stack',
+        'expression': [
+            'operator', '+',
             [[
-                u'rrd', u'test-host-get-graph', u'test-host-get-graph', u'Check_MK', u'system_time',
+                'rrd', 'test-host-get-graph', 'test-host-get-graph', 'Check_MK', 'system_time',
                 None, 1
             ],
              [
-                 u'rrd', u'test-host-get-graph', u'test-host-get-graph', u'Check_MK',
-                 u'children_system_time', None, 1
+                 'rrd', 'test-host-get-graph', 'test-host-get-graph', 'Check_MK',
+                 'children_system_time', None, 1
              ]]
         ],
-        u'unit': u's',
-        u'title': u'CPU time in operating system'
+        'unit': 's',
+        'title': 'CPU time in operating system'
     }, {
-        u'color': u'#00b2ff',
-        u'line_type': u'stack',
-        u'expression': [
-            u'rrd', u'test-host-get-graph', u'test-host-get-graph', u'Check_MK', u'cmk_time_agent',
+        'color': '#00b2ff',
+        'line_type': 'stack',
+        'expression': [
+            'rrd', 'test-host-get-graph', 'test-host-get-graph', 'Check_MK', 'cmk_time_agent',
             None, 1
         ],
-        u'unit': u's',
-        u'title': u'Time spent waiting for Check_MK agent'
+        'unit': 's',
+        'title': 'Time spent waiting for Check_MK agent'
     }, {
-        u'color': u'#d080af',
-        u'line_type': u'line',
-        u'expression': [
-            u'rrd', u'test-host-get-graph', u'test-host-get-graph', u'Check_MK', u'execution_time',
+        'color': '#d080af',
+        'line_type': 'line',
+        'expression': [
+            'rrd', 'test-host-get-graph', 'test-host-get-graph', 'Check_MK', 'execution_time',
             None, 1
         ],
-        u'unit': u's',
-        u'title': u'Total execution time'
+        'unit': 's',
+        'title': 'Total execution time'
     }]
     graph_context = {
-        u'definition': {
-            u'explicit_vertical_range': [None, None],
-            u'title': u'Time usage by phase',
-            u'horizontal_rules': [],
-            u'specification': [
-                u'template', {
-                    u'service_description': u'Check_MK',
-                    u'site': web.site.id,
-                    u'graph_index': 0,
-                    u'host_name': u'test-host-get-graph'
+        'definition': {
+            'explicit_vertical_range': [None, None],
+            'title': 'Time usage by phase',
+            'horizontal_rules': [],
+            'specification': [
+                'template', {
+                    'service_description': 'Check_MK',
+                    'site': web.site.id,
+                    'graph_index': 0,
+                    'host_name': 'test-host-get-graph'
                 }
             ],
-            u'consolidation_function': u'max',
-            u'metrics': metrics,
-            u'omit_zero_metrics': False,
-            u'unit': u's'
+            'consolidation_function': 'max',
+            'metrics': metrics,
+            'omit_zero_metrics': False,
+            'unit': 's'
         },
-        u'graph_id': u'graph_0',
-        u'data_range': {
-            u'step': 20,
-            u"time_range": [time.time() - 3600, time.time()]
+        'graph_id': 'graph_0',
+        'data_range': {
+            'step': 20,
+            "time_range": [time.time() - 3600, time.time()]
         },
-        u'render_options': {
-            u'preview': False,
-            u'editing': False,
-            u'font_size': 8,
-            u'show_graph_time': True,
-            u'resizable': True,
-            u'show_time_axis': True,
-            u'fixed_timerange': False,
-            u'foreground_color': u'#000000',
-            u'title_format': u'plain',
-            u'canvas_color': u'#ffffff',
-            u'show_legend': True,
-            u'interaction': True,
-            u'show_time_range_previews': True,
-            u'show_title': True,
-            u'show_margin': True,
-            u'vertical_axis_width': u'fixed',
-            u'show_controls': True,
-            u'show_pin': True,
-            u'background_color': u'#f8f4f0',
-            u'show_vertical_axis': True,
-            u'size': [70, 16]
+        'render_options': {
+            'preview': False,
+            'editing': False,
+            'font_size': 8,
+            'show_graph_time': True,
+            'resizable': True,
+            'show_time_axis': True,
+            'fixed_timerange': False,
+            'foreground_color': '#000000',
+            'title_format': 'plain',
+            'canvas_color': '#ffffff',
+            'show_legend': True,
+            'interaction': True,
+            'show_time_range_previews': True,
+            'show_title': True,
+            'show_margin': True,
+            'vertical_axis_width': 'fixed',
+            'show_controls': True,
+            'show_pin': True,
+            'background_color': '#f8f4f0',
+            'show_vertical_axis': True,
+            'size': [70, 16]
         }
     }
 
@@ -971,17 +971,17 @@ def test_get_inventory(web):  # noqa: F811 # pylint: disable=redefined-outer-nam
 
         inv = web.get_inventory([host_name])
         assert inv[host_name] == {
-            u'hardware': {
-                u'memory': {
-                    u'foo': 1,
-                    u'ram': 10000
+            'hardware': {
+                'memory': {
+                    'foo': 1,
+                    'ram': 10000
                 },
-                u'blubb': 42
+                'blubb': 42
             }
         }
 
         inv = web.get_inventory([host_name], paths=['.hardware.memory.'])
-        assert inv[host_name] == {u'hardware': {u'memory': {u'foo': 1, u'ram': 10000}}}
+        assert inv[host_name] == {'hardware': {'memory': {'foo': 1, 'ram': 10000}}}
 
         inv = web.get_inventory([host_name], paths=['.hardware.mumpf.'])
         assert inv[host_name] == {}
@@ -1002,22 +1002,22 @@ def test_get_metrics_of_host(web, graph_test_config):  # noqa: F811 # pylint: di
     # Do not validate the whole response, just a sample entry
     response = web.get_metrics_of_host(request={"hostname": "test-host-get-graph"})
     assert response["CPU load"] == {
-        u'check_command': u'check_mk-cpu.loads',
-        u'metrics': {
-            u'load1': {
-                u'index': 1,
-                u'name': u'load1',
-                u'title': u'CPU load average of last minute'
+        'check_command': 'check_mk-cpu.loads',
+        'metrics': {
+            'load1': {
+                'index': 1,
+                'name': 'load1',
+                'title': 'CPU load average of last minute'
             },
-            u'load15': {
-                u'index': 0,
-                u'name': u'load15',
-                u'title': u'CPU load average of last 15 minutes'
+            'load15': {
+                'index': 0,
+                'name': 'load15',
+                'title': 'CPU load average of last 15 minutes'
             },
-            u'load5': {
-                u'index': 2,
-                u'name': u'load5',
-                u'title': u'CPU load average of last 5 minutes'
+            'load5': {
+                'index': 2,
+                'name': 'load5',
+                'title': 'CPU load average of last 5 minutes'
             }
         },
     }
@@ -1036,80 +1036,80 @@ def test_get_graph_recipes(web, graph_test_config):  # noqa: F811 # pylint: disa
             ],
         }) == [
             {
-                u'consolidation_function': u'max',
-                u'explicit_vertical_range': [None, None],
-                u'horizontal_rules': [],
-                u'metrics': [{
-                    u'color': u'#87f058',
-                    u'expression': [
-                        u'operator', u'+',
+                'consolidation_function': 'max',
+                'explicit_vertical_range': [None, None],
+                'horizontal_rules': [],
+                'metrics': [{
+                    'color': '#87f058',
+                    'expression': [
+                        'operator', '+',
                         [[
-                            u'rrd', web.site.id, u'test-host-get-graph', u'Check_MK', u'user_time',
+                            'rrd', web.site.id, 'test-host-get-graph', 'Check_MK', 'user_time',
                             'max', 1.0
                         ],
                          [
-                             u'rrd', web.site.id, u'test-host-get-graph', u'Check_MK',
-                             u'children_user_time', 'max', 1.0
+                             'rrd', web.site.id, 'test-host-get-graph', 'Check_MK',
+                             'children_user_time', 'max', 1.0
                          ]]
                     ],
-                    u'line_type': u'stack',
-                    u'title': u'CPU time in user space',
-                    u'unit': u's'
+                    'line_type': 'stack',
+                    'title': 'CPU time in user space',
+                    'unit': 's'
                 }, {
-                    u'color': u'#ff8840',
-                    u'expression': [
-                        u'operator', u'+',
+                    'color': '#ff8840',
+                    'expression': [
+                        'operator', '+',
                         [[
-                            u'rrd', web.site.id, u'test-host-get-graph', u'Check_MK',
-                            u'system_time', 'max', 1.0
+                            'rrd', web.site.id, 'test-host-get-graph', 'Check_MK',
+                            'system_time', 'max', 1.0
                         ],
                          [
-                             u'rrd', web.site.id, u'test-host-get-graph', u'Check_MK',
-                             u'children_system_time', 'max', 1.0
+                             'rrd', web.site.id, 'test-host-get-graph', 'Check_MK',
+                             'children_system_time', 'max', 1.0
                          ]]
                     ],
-                    u'line_type': u'stack',
-                    u'title': u'CPU time in operating system',
-                    u'unit': u's'
+                    'line_type': 'stack',
+                    'title': 'CPU time in operating system',
+                    'unit': 's'
                 }, {
-                    u'color': u'#0093ff',
-                    u'expression': [
-                        u'rrd', web.site.id, u'test-host-get-graph', u'Check_MK', u'cmk_time_agent',
+                    'color': '#0093ff',
+                    'expression': [
+                        'rrd', web.site.id, 'test-host-get-graph', 'Check_MK', 'cmk_time_agent',
                         'max', 1.0
                     ],
-                    u'line_type': u'stack',
-                    u'title': u'Time spent waiting for Checkmk agent',
-                    u'unit': u's'
+                    'line_type': 'stack',
+                    'title': 'Time spent waiting for Checkmk agent',
+                    'unit': 's'
                 }, {
-                    u'color': u'#00d1ff',
-                    u'expression': [
-                        u'rrd', web.site.id, u'test-host-get-graph', u'Check_MK', u'cmk_time_ds',
+                    'color': '#00d1ff',
+                    'expression': [
+                        'rrd', web.site.id, 'test-host-get-graph', 'Check_MK', 'cmk_time_ds',
                         'max', 1.0
                     ],
-                    u'line_type': u'stack',
-                    u'title': u'Time spent waiting for special agent',
-                    u'unit': u's'
+                    'line_type': 'stack',
+                    'title': 'Time spent waiting for special agent',
+                    'unit': 's'
                 }, {
-                    u'color': u'#d080af',
-                    u'expression': [
-                        u'rrd', web.site.id, u'test-host-get-graph', u'Check_MK', u'execution_time',
+                    'color': '#d080af',
+                    'expression': [
+                        'rrd', web.site.id, 'test-host-get-graph', 'Check_MK', 'execution_time',
                         'max', 1.0
                     ],
-                    u'line_type': u'line',
-                    u'title': u'Total execution time',
-                    u'unit': u's'
+                    'line_type': 'line',
+                    'title': 'Total execution time',
+                    'unit': 's'
                 }],
-                u'omit_zero_metrics': False,
-                u'specification': [
-                    u'template', {
-                        u'graph_index': 0,
-                        u'host_name': u'test-host-get-graph',
-                        u'service_description': u'Check_MK',
-                        u'site': web.site.id
+                'omit_zero_metrics': False,
+                'specification': [
+                    'template', {
+                        'graph_index': 0,
+                        'host_name': 'test-host-get-graph',
+                        'service_description': 'Check_MK',
+                        'site': web.site.id
                     }
                 ],
-                u'title': u'Time usage by phase',
-                u'unit': u's'
+                'title': 'Time usage by phase',
+                'unit': 's'
             },
         ]  # noqa: E123
 
@@ -1132,24 +1132,24 @@ def test_get_combined_graph_identifications(web, graph_test_config):  # noqa: F8
 
     assert result == [
         {
-            u'identification': [
-                u'combined', {
-                    u'context': {
-                        u'host': u'test-host-get-graph',
-                        u'service': {
-                            u'service': u'CPU load'
+            'identification': [
+                'combined', {
+                    'context': {
+                        'host': 'test-host-get-graph',
+                        'service': {
+                            'service': 'CPU load'
                         },
-                        u'site': {
-                            u'site': web.site.id,
+                        'site': {
+                            'site': web.site.id,
                         }
                     },
-                    u'datasource': u'services',
-                    u'graph_template': u'cpu_load',
-                    u'presentation': u'sum',
-                    u'single_infos': [u'host']
+                    'datasource': 'services',
+                    'graph_template': 'cpu_load',
+                    'presentation': 'sum',
+                    'single_infos': ['host']
                 }
             ],
-            u'title': u'CPU Load - %(load1:max@count) CPU Cores'
+            'title': 'CPU Load - %(load1:max@count) CPU Cores'
         },
     ]
 

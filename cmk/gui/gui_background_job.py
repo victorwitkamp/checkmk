@@ -411,7 +411,7 @@ class JobRenderer:
         runtime_info = ensure_str(cmk.utils.render.timespan(job_status.get("duration", 0)))
         if job_status["state"] == background_job.JobStatusStates.RUNNING \
             and job_status.get("estimated_duration") is not None:
-            runtime_info += u" (%s: %s)" % (
+            runtime_info += " (%s: %s)" % (
                 _("estimated duration"),
                 ensure_str(cmk.utils.render.timespan(job_status["estimated_duration"])))
         for left, right in [

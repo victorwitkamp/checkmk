@@ -23,23 +23,23 @@ def test_pre_16_cfg(monkeypatch):
     hosttags_mk = multisite_dir / "hosttags.mk"
 
     with hosttags_mk.open("w", encoding="utf-8") as f:
-        f.write(u"""# Created by WATO
+        f.write("""# Created by WATO
 # encoding: utf-8
 
 wato_host_tags += [
-    ('criticality', u'Criticality', [
-        ('prod', u'Productive system', ['bla']),
-        ('critical', u'Business critical', []),
-        ('test', u'Test system', []),
-        ('offline', u'Do not monitor this host', [])]),
-    ('networking', u'Networking Segment', [
-        ('lan', u'Local network (low latency)', []),
-        ('wan', u'WAN (high latency)', []),
-        ('dmz', u'DMZ (low latency, secure access)', []),
+    ('criticality', 'Criticality', [
+        ('prod', 'Productive system', ['bla']),
+        ('critical', 'Business critical', []),
+        ('test', 'Test system', []),
+        ('offline', 'Do not monitor this host', [])]),
+    ('networking', 'Networking Segment', [
+        ('lan', 'Local network (low latency)', []),
+        ('wan', 'WAN (high latency)', []),
+        ('dmz', 'DMZ (low latency, secure access)', []),
     ]),
 ]
 
-wato_aux_tags += [("bla", u"bläää")]
+wato_aux_tags += [("bla", "bläää")]
 """)
 
     cfg = tags.TagConfig()
@@ -58,14 +58,14 @@ def test_cfg(test_pre_16_cfg):
     hosttags_mk = multisite_dir / "hosttags.mk"
 
     with tags_mk.open("w", encoding="utf-8") as f:
-        f.write(u"""# Created by WATO
+        f.write("""# Created by WATO
 # encoding: utf-8
 
 wato_tags = %s
 """ % repr(test_pre_16_cfg.get_dict_format()))
 
     with hosttags_mk.open("w", encoding="utf-8") as f:
-        f.write(u"")
+        f.write("")
 
     cfg = tags.TagConfig()
     cfg.parse_config(TagConfigFile().load_for_reading())
@@ -80,19 +80,19 @@ def test_tag_config_load_pre_16(test_pre_16_cfg):
     assert len(test_pre_16_cfg.tag_groups) == 2
     tag_group = test_pre_16_cfg.tag_groups[0]
     assert tag_group.id == "criticality"
-    assert tag_group.title == u"Criticality"
+    assert tag_group.title == "Criticality"
     assert tag_group.topic is None
 
     tag_group = test_pre_16_cfg.tag_groups[1]
     assert tag_group.id == "networking"
-    assert tag_group.title == u"Networking Segment"
+    assert tag_group.title == "Networking Segment"
     assert tag_group.topic is None
 
     assert len(test_pre_16_cfg.aux_tag_list.get_tags()) == 1
     aux_tag = test_pre_16_cfg.aux_tag_list.get_tags()[0]
     assert aux_tag.topic is None
     assert aux_tag.id == "bla"
-    assert aux_tag.title == u"bläää"
+    assert aux_tag.title == "bläää"
 
 
 def test_tag_config_load(test_cfg):

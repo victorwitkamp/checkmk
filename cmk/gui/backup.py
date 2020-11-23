@@ -528,12 +528,12 @@ class Jobs(BackupEntityCollection):
             for job in self.objects.values():
                 cron_config = job.cron_config()
                 if cron_config:
-                    f.write(u"%s\n" % "\n".join(cron_config))
+                    f.write("%s\n" % "\n".join(cron_config))
 
         self._apply_cron_config()
 
     def _write_cronjob_header(self, f):
-        f.write(u"# Written by mkbackup configuration\n")
+        f.write("# Written by mkbackup configuration\n")
 
     def _apply_cron_config(self):
         pass

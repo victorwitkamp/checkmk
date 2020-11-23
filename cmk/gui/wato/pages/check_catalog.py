@@ -282,7 +282,7 @@ class ModeCheckPluginTopic(WatoMode):
             for subcat in subnode.values():
                 num_plugins += len(subcat)
 
-        text = u""
+        text = ""
         if num_cats > 1:
             text += "%d %s<br>" % (num_cats, _("sub categories"))
         text += "%d %s" % (num_plugins, _("check plugins"))

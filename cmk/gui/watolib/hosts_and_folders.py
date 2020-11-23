@@ -754,13 +754,13 @@ class CREFolder(WithPermissions, WithAttributes, WithUniqueIdentifier, BaseFolde
         return attributes
 
     # Old tag group trans:
-    #('agent', u'Agent type',
+    #('agent', 'Agent type',
     #    [
-    #        ('cmk-agent', u'Check_MK Agent (Server)', ['tcp']),
-    #        ('snmp-only', u'SNMP (Networking device, Appliance)', ['snmp']),
-    #        ('snmp-v1',   u'Legacy SNMP device (using V1)', ['snmp']),
-    #        ('snmp-tcp',  u'Dual: Check_MK Agent + SNMP', ['snmp', 'tcp']),
-    #        ('ping',      u'No Agent', []),
+    #        ('cmk-agent', 'Check_MK Agent (Server)', ['tcp']),
+    #        ('snmp-only', 'SNMP (Networking device, Appliance)', ['snmp']),
+    #        ('snmp-v1',   'Legacy SNMP device (using V1)', ['snmp']),
+    #        ('snmp-tcp',  'Dual: Check_MK Agent + SNMP', ['snmp', 'tcp']),
+    #        ('ping',      'No Agent', []),
     #    ],
     #)
     #
@@ -1213,7 +1213,7 @@ class CREFolder(WithPermissions, WithAttributes, WithUniqueIdentifier, BaseFolde
             return HTML(
                 escaping.escape_attribute("/".join(str(p) for p in self.title_path_without_root())))
 
-        title_prefix = (u"\u00a0" * 6 * current_depth) + u"\u2514\u2500 " if current_depth else ""
+        title_prefix = ("\u00a0" * 6 * current_depth) + "\u2514\u2500 " if current_depth else ""
         return HTML(title_prefix + escaping.escape_attribute(self.title()))
 
     def _walk_tree(self, results, current_depth, pretty):

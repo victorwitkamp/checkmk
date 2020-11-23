@@ -1009,10 +1009,10 @@ def _submit_check_result(
     # case then replace it with a Uniocode "Light vertical bar"
     if isinstance(infotext, str):
         # regular check results are unicode...
-        infotext = infotext.replace(u"|", u"\u2758")
+        infotext = infotext.replace("|", "\u2758")
     else:
         # ...crash dumps, and hard-coded outputs are regular strings
-        infotext = infotext.replace("|", u"\u2758".encode("utf8"))
+        infotext = infotext.replace("|", "\u2758".encode("utf8"))
 
     perftexts = [_convert_perf_data(p) for p in perfdata]
     if perftexts:

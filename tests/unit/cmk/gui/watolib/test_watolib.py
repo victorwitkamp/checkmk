@@ -278,28 +278,28 @@ def test_registered_configvars_types():
 
 def test_registered_configvar_groups():
     expected_groups = [
-        u'Administration Tool (WATO)',
-        u'Event Console: Generic',
-        u'Event Console: Logging & Diagnose',
-        u'Event Console: SNMP traps',
-        u'Execution of checks',
-        u'Notifications',
-        u'Service discovery',
-        u'Site Management',
-        u'User Interface',
-        u'User Management',
+        'Administration Tool (WATO)',
+        'Event Console: Generic',
+        'Event Console: Logging & Diagnose',
+        'Event Console: SNMP traps',
+        'Execution of checks',
+        'Notifications',
+        'Service discovery',
+        'Site Management',
+        'User Interface',
+        'User Management',
         'Support',
     ]
 
     if not cmk_version.is_raw_edition():
         expected_groups += [
-            u'Dynamic Configuration',
-            u'Automatic agent updates',
-            u'Alert Handlers',
-            u'Livestatus Proxy',
-            u'Reporting',
-            u'Monitoring Core',
-            u'Ntopng',
+            'Dynamic Configuration',
+            'Automatic agent updates',
+            'Alert Handlers',
+            'Livestatus Proxy',
+            'Reporting',
+            'Monitoring Core',
+            'Ntopng',
         ]
 
     registered = sorted(config_variable_group_registry.keys())

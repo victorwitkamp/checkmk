@@ -933,7 +933,7 @@ bi_packs['default'] = {
                          'hard_states': False,
                          'ID': 'default_aggregation',
                          'node_visualization': {}},
-                        [u'Hosts'],
+                        ['Hosts'],
                         FOREACH_HOST,
                         ['tcp'],
                         ALL_HOSTS,
@@ -1040,6 +1040,6 @@ bi_packs['default'] = {
                                       'CPU|Memory|Vmalloc|Kernel|Number of threads')],
                            'params': ['HOSTNAME'],
                            'title': 'Performance'}},
- 'title': u'Default Pack'
+ 'title': 'Default Pack'
 }
 """

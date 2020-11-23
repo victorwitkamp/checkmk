@@ -116,20 +116,20 @@ def test_format_link(template, url, text, expected_link):
 @pytest.mark.parametrize(
     "display_name, address, expected",
     [
-        (u'Harri Hirsch', '', ''),
-        (u'', 'harri.hirsch@test.com', 'harri.hirsch@test.com'),
-        (u'Harri Hirsch', u'harri.hirsch@test.com', u'Harri Hirsch <harri.hirsch@test.com>'),
+        ('Harri Hirsch', '', ''),
+        ('', 'harri.hirsch@test.com', 'harri.hirsch@test.com'),
+        ('Harri Hirsch', 'harri.hirsch@test.com', 'Harri Hirsch <harri.hirsch@test.com>'),
         # encoded words if non ASCII characters are present:
-        (u'Härri Hürsch', u'harri.hirsch@test.com',
-         u'=?utf-8?q?H=C3=A4rri H=C3=BCrsch?= <harri.hirsch@test.com>'),
+        ('Härri Hürsch', 'harri.hirsch@test.com',
+         '=?utf-8?q?H=C3=A4rri H=C3=BCrsch?= <harri.hirsch@test.com>'),
         # Surround the display name with double quotes if special characters like the '.' are present:
-        (u'Joe Q. Public', u'john.q.public@example.com',
-         u'"Joe Q. Public" <john.q.public@example.com>'),
+        ('Joe Q. Public', 'john.q.public@example.com',
+         '"Joe Q. Public" <john.q.public@example.com>'),
         # Double quotes and backslashes in the display name have to be quoted:
-        (u'Giant; "Big" Box', u'sysservices@example.net',
-         u'"Giant; \\"Big\\" Box" <sysservices@example.net>'),
-        (u'Jöe Q. "Big"', u'joe.q.big@test.com',
-         u'"=?utf-8?q?J=C3=B6e Q. \\"Big\\"?=" <joe.q.big@test.com>'),
+        ('Giant; "Big" Box', 'sysservices@example.net',
+         '"Giant; \\"Big\\" Box" <sysservices@example.net>'),
+        ('Jöe Q. "Big"', 'joe.q.big@test.com',
+         '"=?utf-8?q?J=C3=B6e Q. \\"Big\\"?=" <joe.q.big@test.com>'),
     ])
 def test_format_address(display_name, address, expected):
     actual = utils.format_address(display_name, address)

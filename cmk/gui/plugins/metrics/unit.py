@@ -160,8 +160,8 @@ unit_info["bytes/d"] = {
 
 unit_info["c"] = {
     "title": _("Degree Celsius"),
-    "symbol": u"°C",
-    "render": lambda v: "%s %s" % (cmk.utils.render.drop_dotzero(v), u"°C"),
+    "symbol": "°C",
+    "render": lambda v: "%s %s" % (cmk.utils.render.drop_dotzero(v), "°C"),
 }
 
 unit_info["a"] = {
@@ -259,8 +259,8 @@ unit_info['bytes/op'] = {
 
 unit_info['EUR'] = {
     "title": _("Euro"),
-    "symbol": u"€",
-    "render": lambda v: u"%s €" % v,
+    "symbol": "€",
+    "render": lambda v: "%s €" % v,
 }
 
 unit_info['RCU'] = {

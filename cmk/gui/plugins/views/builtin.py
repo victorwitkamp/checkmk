@@ -3666,7 +3666,7 @@ multisite_builtin_views.update({
         'show_checkboxes': None,
         'show_filters': [],
         'sorters': [],
-        'title': u'Single Aggregation',
+        'title': 'Single Aggregation',
         'topic': "bi",
         'user_sortable': None
     },
@@ -3706,7 +3706,7 @@ multisite_builtin_views.update({
         'show_checkboxes': None,
         'show_filters': [],
         'sorters': [],
-        'title': u'List of all Aggregations for simple API calls',
+        'title': 'List of all Aggregations for simple API calls',
         'topic': "bi",
         'user_sortable': None
     },
@@ -3743,7 +3743,7 @@ multisite_builtin_views.update({
         'show_checkboxes': None,
         'show_filters': [],
         'sorters': [],
-        'title': u'Single Aggregation for simple API calls',
+        'title': 'Single Aggregation for simple API calls',
         'topic': "bi",
         'user_sortable': None
     },
@@ -3777,7 +3777,7 @@ multisite_builtin_views.update({
         'show_checkboxes': None,
         'show_filters': [],
         'sorters': [],
-        'title': u'BI Aggregations Summary State',
+        'title': 'BI Aggregations Summary State',
         'topic': "bi",
         'user_sortable': 'on',
     },
@@ -3795,7 +3795,7 @@ multisite_builtin_views.update({
             },
         },
         'datasource': 'bi_hostnamebygroup_aggregations',
-        'description': u'Hostgroup with boxed BIs for each host\n',
+        'description': 'Hostgroup with boxed BIs for each host\n',
         'group_painters': [
             ('site_icon', '', None),
             ('sitealias', 'sitehosts', None),
@@ -3819,7 +3819,7 @@ multisite_builtin_views.update({
             ('site', False),
             ('site_host', False),
         ],
-        'title': u'Hostgroup with BI state',
+        'title': 'Hostgroup with BI state',
         'user_sortable': True
     },
 
@@ -4489,7 +4489,7 @@ multisite_builtin_views['cmk_servers'] = {
         }
     },
     'datasource': 'hosts',
-    'description': u'Displaying the overall state of Checkmk servers\n',
+    'description': 'Displaying the overall state of Checkmk servers\n',
     'force_checkboxes': False,
     'group_painters': [],
     'hidden': False,
@@ -4516,16 +4516,16 @@ multisite_builtin_views['cmk_servers'] = {
         (('inv_hardware_memory_total_ram_usable', {
             'use_short': True
         }), None, None),
-        ('perfometer', None, None, u'CPU utilization'),
-        ('perfometer', None, None, u'CPU load'),
-        ('perfometer', None, None, u'Memory'),
-        ('perfometer', None, None, u'Disk IO SUMMARY'),
+        ('perfometer', None, None, 'CPU utilization'),
+        ('perfometer', None, None, 'CPU load'),
+        ('perfometer', None, None, 'Memory'),
+        ('perfometer', None, None, 'Disk IO SUMMARY'),
     ],
     'play_sounds': False,
     'single_infos': [],
     'sorters': [('sitealias', False), ('host_name', False)],
     'user_sortable': True,
-    'title': u'Checkmk servers',
+    'title': 'Checkmk servers',
     "topic": "applications",
     "sort_index": 50,
 }
@@ -4586,7 +4586,7 @@ multisite_builtin_views['cmk_sites'] = {
         },
     },
     'datasource': 'invcmksites',
-    'description': u'Displaying the state of Checkmk sites\n',
+    'description': 'Displaying the state of Checkmk sites\n',
     'force_checkboxes': False,
     'group_painters': [],
     'hidden': False,
@@ -4602,7 +4602,7 @@ multisite_builtin_views['cmk_sites'] = {
     'single_infos': [],
     'sorters': [('sitealias', False), ('host_name', False)],
     'user_sortable': True,
-    'title': u'Checkmk sites',
+    'title': 'Checkmk sites',
     "topic": "applications",
     "sort_index": 60,
 }
@@ -4613,7 +4613,7 @@ multisite_builtin_views['cmk_sites_of_host'] = {
     'column_headers': 'pergroup',
     'context': {},
     'datasource': 'invcmksites',
-    'description': u'Displaying the state of Checkmk sites of the given host\n',
+    'description': 'Displaying the state of Checkmk sites of the given host\n',
     'force_checkboxes': False,
     'group_painters': [],
     'hidden': True,
@@ -4629,6 +4629,6 @@ multisite_builtin_views['cmk_sites_of_host'] = {
     'single_infos': ['host'],
     'sorters': [('sitealias', False), ('host_name', False)],
     'user_sortable': True,
-    'title': u'Checkmk sites of host',
+    'title': 'Checkmk sites of host',
     'topic': 'applications',
 }

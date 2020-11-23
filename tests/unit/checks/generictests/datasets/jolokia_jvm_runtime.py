@@ -13,17 +13,17 @@ freeze_time = '2019-10-11 08:32:51'
 
 info = [
     [
-        u'MyJIRA', u'java.lang:type=Runtime/Uptime,Name',
-        u'{"Uptime": 34502762, "Name": "1020@jira"}'
+        'MyJIRA', 'java.lang:type=Runtime/Uptime,Name',
+        '{"Uptime": 34502762, "Name": "1020@jira"}'
     ]
 ]
 
-discovery = {'': [(u'MyJIRA', {})]}
+discovery = {'': [('MyJIRA', {})]}
 
 checks = {
     '': [
         (
-            u'MyJIRA', {}, [
+            'MyJIRA', {}, [
                 (
                     0,
                     'Up since Fri Sep  7 02:26:49 2018, uptime: 399 days, 8:06:02',

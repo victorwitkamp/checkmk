@@ -9,32 +9,32 @@
 
 
 
-checkname = u'mssql_instance'
+checkname = 'mssql_instance'
 
 
-info = [[u'MSSQL_MSSQLSERVER', u'config', u'10.50.6000.34', u'Standard Edition', u''],
-        [u'MSSQL_ABC', u'config', u'10.50.6000.34', u'Standard Edition', u''],
-        [u'MSSQL_ABCDEV', u'config', u'10.50.6000.34', u'Standard Edition', u''],
-        [u'MSSQL_MSSQLSERVER', u'state', u'1', u''],
-        [u'MSSQL_ABC', u'state', u'1', u''],
-        [u'MSSQL_ABCDEV',
-         u'state',
-         u'0',
-         u'[DBNETLIB][ConnectionOpen (Connect()).]SQL Server existiert nicht oder Zugriff verweigert.'],
-        [u'Hier kommt eine laaaangre Fehlermeldung'],
-        [u'die sich ueber                mehrere             Zeilen ersteckt']]
+info = [['MSSQL_MSSQLSERVER', 'config', '10.50.6000.34', 'Standard Edition', ''],
+        ['MSSQL_ABC', 'config', '10.50.6000.34', 'Standard Edition', ''],
+        ['MSSQL_ABCDEV', 'config', '10.50.6000.34', 'Standard Edition', ''],
+        ['MSSQL_MSSQLSERVER', 'state', '1', ''],
+        ['MSSQL_ABC', 'state', '1', ''],
+        ['MSSQL_ABCDEV',
+         'state',
+         '0',
+         '[DBNETLIB][ConnectionOpen (Connect()).]SQL Server existiert nicht oder Zugriff verweigert.'],
+        ['Hier kommt eine laaaangre Fehlermeldung'],
+        ['die sich ueber                mehrere             Zeilen ersteckt']]
 
 
-discovery = {'': [(u'ABC', {}), (u'ABCDEV', {}), (u'MSSQLSERVER', {})]}
+discovery = {'': [('ABC', {}), ('ABCDEV', {}), ('MSSQLSERVER', {})]}
 
 
-checks = {'': [(u'ABC', {}, [(0, u'Version: 10.50.6000.34 - Standard Edition', [])]),
-               (u'ABCDEV',
+checks = {'': [('ABC', {}, [(0, 'Version: 10.50.6000.34 - Standard Edition', [])]),
+               ('ABCDEV',
                 {},
                 [(2,
-                  u'Failed to connect to database ([DBNETLIB][ConnectionOpen (Connect()).]SQL Server existiert nicht oder Zugriff verweigert.)',
+                  'Failed to connect to database ([DBNETLIB][ConnectionOpen (Connect()).]SQL Server existiert nicht oder Zugriff verweigert.)',
                   []),
-                 (0, u'Version: 10.50.6000.34 - Standard Edition', [])]),
-               (u'MSSQLSERVER',
+                 (0, 'Version: 10.50.6000.34 - Standard Edition', [])]),
+               ('MSSQLSERVER',
                 {},
-                [(0, u'Version: 10.50.6000.34 - Standard Edition', [])])]}
+                [(0, 'Version: 10.50.6000.34 - Standard Edition', [])])]}

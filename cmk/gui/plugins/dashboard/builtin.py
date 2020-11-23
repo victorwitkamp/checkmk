@@ -293,8 +293,8 @@ builtin_dashboards["cmk_overview"] = {
     "sort_index": 70,
     'name': 'cmk_overview',
     'hidebutton': False,
-    'title': u'Checkmk overview',
-    'description': u'Displays an overview of all Checkmk servers and instances\n',
+    'title': 'Checkmk overview',
+    'description': 'Displays an overview of all Checkmk servers and instances\n',
     'add_context_to_title': False,
     'link_from': {},
     'context': {},
@@ -314,7 +314,7 @@ builtin_dashboards["cmk_overview"] = {
         'size': (0, 0)
     }, {
         'name': 'cmk_sites',
-        'title': u'Site overview',
+        'title': 'Site overview',
         'show_title': True,
         'background': True,
         'add_context_to_title': True,
@@ -331,14 +331,14 @@ builtin_dashboards["cmk_overview"] = {
 
 builtin_dashboards['cmk_host'] = {
     'add_context_to_title': True,
-    'description': u'Display information relevant for the Checkmk performance\n',
+    'description': 'Display information relevant for the Checkmk performance\n',
     'link_from': {
         'single_infos': ['host'],
         'host_labels': {
             'cmk/check_mk_server': 'yes'
         }
     },
-    'title': u'Checkmk server',
+    'title': 'Checkmk server',
     'hidebutton': False,
     'dashlets': [{
         'show_title': True,
@@ -353,12 +353,12 @@ builtin_dashboards['cmk_host'] = {
         'name': 'cmk_sites_of_host'
     }, {
         'context': {
-            'service': u'CPU load'
+            'service': 'CPU load'
         },
         'link_from': {},
         'type': 'single_metric',
         'time_range': 'current',
-        'metric': u'load5',
+        'metric': 'load5',
         'add_context_to_title': True,
         'render_options': {
             'show_site': 'false',
@@ -378,7 +378,7 @@ builtin_dashboards['cmk_host'] = {
     }, {
         'add_context_to_title': True,
         'context': {
-            'service': u'Disk IO SUMMARY'
+            'service': 'Disk IO SUMMARY'
         },
         'background': True,
         'link_from': {},
@@ -408,7 +408,7 @@ builtin_dashboards['cmk_host'] = {
     }, {
         'add_context_to_title': True,
         'context': {
-            'service': u'Kernel Performance'
+            'service': 'Kernel Performance'
         },
         'background': True,
         'link_from': {},
@@ -438,7 +438,7 @@ builtin_dashboards['cmk_host'] = {
     }, {
         'add_context_to_title': True,
         'context': {
-            'service': u'Memory'
+            'service': 'Memory'
         },
         'link_from': {},
         'type': 'pnpgraph',
@@ -468,8 +468,8 @@ builtin_dashboards['cmk_host'] = {
     }, {
         'add_context_to_title': True,
         'context': {
-            'host': u'heute',
-            'service': u'Disk IO SUMMARY'
+            'host': 'heute',
+            'service': 'Disk IO SUMMARY'
         },
         'background': True,
         'link_from': {},
@@ -498,12 +498,12 @@ builtin_dashboards['cmk_host'] = {
         'size': (0, 14)
     }, {
         'context': {
-            'service': u'Filesystem /'
+            'service': 'Filesystem /'
         },
         'link_from': {},
         'type': 'single_metric',
         'time_range': 'current',
-        'metric': u'fs_used',
+        'metric': 'fs_used',
         'add_context_to_title': True,
         'render_options': {
             'show_site': 'false',
@@ -528,7 +528,7 @@ builtin_dashboards['cmk_host'] = {
         'size': (35, 28),
         'group_painters': [],
         'layout': 'table',
-        'title': u'Network',
+        'title': 'Network',
         'painters': [
             ('service_state', None, None),
             ('service_description', None, None),

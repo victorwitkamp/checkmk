@@ -160,18 +160,18 @@ def test_automation_discovery_not_existing_host(test_cfg, site):
     assert len(data) == 1
 
     assert data["results"] == {
-        u'xxxhost': {
-            u'clustered_new': 0,
-            u'clustered_old': 0,
-            u'clustered_vanished': 0,
-            u'diff_text': None,
-            u'error_text': u'',
-            u'self_kept': 0,
-            u'self_new': 0,
-            u'self_new_host_labels': 0,
-            u'self_removed': 0,
-            u'self_total': 0,
-            u'self_total_host_labels': 0,
+        'xxxhost': {
+            'clustered_new': 0,
+            'clustered_old': 0,
+            'clustered_vanished': 0,
+            'diff_text': None,
+            'error_text': '',
+            'self_kept': 0,
+            'self_new': 0,
+            'self_new_host_labels': 0,
+            'self_removed': 0,
+            'self_total': 0,
+            'self_total_host_labels': 0,
         }
     }
 
@@ -227,7 +227,7 @@ def test_automation_try_discovery_host(test_cfg, site):
 def test_automation_set_autochecks(test_cfg, site):
     new_items: SetAutochecksTable = {
         ("df", "xxx"): ("Filesystem xxx", {}, {
-            u"xyz": u"123"
+            "xyz": "123"
         }),
         ("uptime", None): ("Uptime", None, {}),
     }
@@ -246,8 +246,8 @@ def test_automation_set_autochecks(test_cfg, site):
         services = [((str(s.check_plugin_name), s.item), s.parameters, s.service_labels.to_dict())
                     for s in data]
         assert sorted(services) == [
-            (('df', u'xxx'), {}, {
-                u"xyz": u"123"
+            (('df', 'xxx'), {}, {
+                "xyz": "123"
             }),
             (('uptime', None), None, {}),
         ]
@@ -431,7 +431,7 @@ def test_automation_get_service_configurations(test_cfg, site):
     assert isinstance(data, dict)
     assert data["checkgroup_of_checks"]
     assert data["hosts"]["modes-test-host"]
-    assert ('apache_status', u'Apache 127.0.0.1:5000 Status',
+    assert ('apache_status', 'Apache 127.0.0.1:5000 Status',
             {}) in data["hosts"]["modes-test-host"]["checks"]
 
 

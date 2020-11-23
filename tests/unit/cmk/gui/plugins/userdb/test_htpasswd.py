@@ -12,7 +12,7 @@ def fixture_test_config(tmp_path):
 
     htpwd.save({
         "non-unicode": "non-unicode",
-        u"abcä": "bbbä",
+        "abcä": "bbbä",
     })
 
     return htpwd
@@ -20,13 +20,13 @@ def fixture_test_config(tmp_path):
 
 def test_load(test_config):
     assert test_config.load() == {
-        u"non-unicode": u"non-unicode",
-        u"abcä": u"bbbä",
+        "non-unicode": "non-unicode",
+        "abcä": "bbbä",
     }
 
 
 def test_exists(test_config):
-    assert test_config.exists(u"non-unicode")
+    assert test_config.exists("non-unicode")
     assert test_config.exists("non-unicode")
     assert not test_config.exists("not-existant")
     assert not test_config.exists("not-existant")
@@ -39,11 +39,11 @@ def test_save(tmp_path):
 
     htpwd.save({
         "non-unicode": "non-unicode",
-        u"abcä": "bbbä",
+        "abcä": "bbbä",
     })
 
     loaded = htpwd.load()
     assert loaded == {
-        u"non-unicode": u"non-unicode",
-        u"abcä": u"bbbä",
+        "non-unicode": "non-unicode",
+        "abcä": "bbbä",
     }

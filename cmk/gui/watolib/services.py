@@ -396,7 +396,7 @@ def checkbox_id(check_type, item):
 
     """
 
-    key = u"%s_%s" % (check_type, item)
+    key = "%s_%s" % (check_type, item)
     return sha256(key.encode('utf-8')).hexdigest()
 
 

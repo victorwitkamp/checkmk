@@ -669,7 +669,7 @@ def ajax_snapin():
                     newest = prog_start
             if newest <= since:
                 # no restart
-                snapin_code.append(u'')
+                snapin_code.append('')
                 continue
 
         with html.plugged():

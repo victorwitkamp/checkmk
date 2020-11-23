@@ -24,14 +24,14 @@ value_store_fixture = get_value_store_fixture(interfaces)
 @pytest.mark.parametrize('string_table, result', [
     (
         [
-            [u'[start_iplink]'],
+            ['[start_iplink]'],
             [
-                u'1:', u'wlp3s0:', u'<BROADCAST,MULTICAST>', u'mtu', u'1500', u'qdisc', u'fq_codel',
-                u'state', u'UP', u'mode', u'DORMANT', u'group', u'default', u'qlen', u'1000'
+                '1:', 'wlp3s0:', '<BROADCAST,MULTICAST>', 'mtu', '1500', 'qdisc', 'fq_codel',
+                'state', 'UP', 'mode', 'DORMANT', 'group', 'default', 'qlen', '1000'
             ],
-            [u'link/ether', u'AA:AA:AA:AA:AA:AA', u'brd', u'BB:BB:BB:BB:BB:BB'],
-            [u'[end_iplink]'],
-            [u'wlp3s0', u'130923553 201184 0 0 0 0 0 16078 23586281 142684 0 0 0 0 0 0'],
+            ['link/ether', 'AA:AA:AA:AA:AA:AA', 'brd', 'BB:BB:BB:BB:BB:BB'],
+            ['[end_iplink]'],
+            ['wlp3s0', '130923553 201184 0 0 0 0 0 16078 23586281 142684 0 0 0 0 0 0'],
         ],
         [
             '1', 'wlp3s0', 'wlp3s0', '6', 0, '2', 130923553, 217262, 16078, 0, 0, 0, 23586281,
@@ -40,15 +40,15 @@ value_store_fixture = get_value_store_fixture(interfaces)
     ),
     (
         [
-            [u'[start_iplink]'],
+            ['[start_iplink]'],
             [
-                u'1:', u'wlp3s0:', u'<BROADCAST,MULTICAST,UP>', u'mtu', u'1500', u'qdisc',
-                u'fq_codel', u'state', u'UP', u'mode', u'DORMANT', u'group', u'default', u'qlen',
-                u'1000'
+                '1:', 'wlp3s0:', '<BROADCAST,MULTICAST,UP>', 'mtu', '1500', 'qdisc',
+                'fq_codel', 'state', 'UP', 'mode', 'DORMANT', 'group', 'default', 'qlen',
+                '1000'
             ],
-            [u'link/ether', u'BB:BB:BB:BB:BB:BB', u'brd', u'BB:BB:BB:BB:BB:BB'],
-            [u'[end_iplink]'],
-            [u'wlp3s0', u'130923553 201184 0 0 0 0 0 16078 23586281 142684 0 0 0 0 0 0'],
+            ['link/ether', 'BB:BB:BB:BB:BB:BB', 'brd', 'BB:BB:BB:BB:BB:BB'],
+            ['[end_iplink]'],
+            ['wlp3s0', '130923553 201184 0 0 0 0 0 16078 23586281 142684 0 0 0 0 0 0'],
         ],
         [
             '1', 'wlp3s0', 'wlp3s0', '6', 0, '1', 130923553, 217262, 16078, 0, 0, 0, 23586281,
@@ -131,48 +131,48 @@ def test_cluster_check_lnx_if(monkeypatch, value_store):
 @pytest.mark.parametrize('string_table, discovery_results, items_params_results', [
     (
         [
-            [u'[start_iplink]'],
+            ['[start_iplink]'],
             [
-                u'1:', u'lo:', u'<LOOPBACK,UP,LOWER_UP>', u'mtu', u'65536', u'qdisc', u'noqueue',
-                u'state', u'UNKNOWN', u'mode', u'DEFAULT', u'group', u'default', u'qlen', u'1000'
+                '1:', 'lo:', '<LOOPBACK,UP,LOWER_UP>', 'mtu', '65536', 'qdisc', 'noqueue',
+                'state', 'UNKNOWN', 'mode', 'DEFAULT', 'group', 'default', 'qlen', '1000'
             ],
-            [u'link/loopback', u'00:00:00:00:00:00', u'brd', u'00:00:00:00:00:00'],
+            ['link/loopback', '00:00:00:00:00:00', 'brd', '00:00:00:00:00:00'],
             [
-                u'2:', u'wlp3s0:', u'<BROADCAST,MULTICAST,UP,LOWER_UP>', u'mtu', u'1500', u'qdisc',
-                u'fq_codel', u'state', u'UP', u'mode', u'DORMANT', u'group', u'default', u'qlen',
-                u'1000'
+                '2:', 'wlp3s0:', '<BROADCAST,MULTICAST,UP,LOWER_UP>', 'mtu', '1500', 'qdisc',
+                'fq_codel', 'state', 'UP', 'mode', 'DORMANT', 'group', 'default', 'qlen',
+                '1000'
             ],
-            [u'link/ether', u'AA:AA:AA:AA:AA:BB', u'brd', u'BB:BB:BB:BB:BB:BB'],
+            ['link/ether', 'AA:AA:AA:AA:AA:BB', 'brd', 'BB:BB:BB:BB:BB:BB'],
             [
-                u'3:', u'docker0:', u'<BROADCAST,MULTICAST,UP,LOWER_UP>', u'mtu', u'1500', u'qdisc',
-                u'noqueue', u'state', u'UP', u'mode', u'DEFAULT', u'group', u'default'
+                '3:', 'docker0:', '<BROADCAST,MULTICAST,UP,LOWER_UP>', 'mtu', '1500', 'qdisc',
+                'noqueue', 'state', 'UP', 'mode', 'DEFAULT', 'group', 'default'
             ],
-            [u'link/ether', u'AA:AA:AA:AA:AA:AA', u'brd', u'BB:BB:BB:BB:BB:BB'],
+            ['link/ether', 'AA:AA:AA:AA:AA:AA', 'brd', 'BB:BB:BB:BB:BB:BB'],
             [
-                u'5:', u'veth6a06585@if4:', u'<BROADCAST,MULTICAST,UP,LOWER_UP>', u'mtu', u'1500',
-                u'qdisc', u'noqueue', u'master', u'docker0', u'state', u'UP', u'mode', u'DEFAULT',
-                u'group', u'default'
-            ],
-            [
-                u'link/ether', u'AA:AA:AA:AA:AA:AA', u'brd', u'BB:BB:BB:BB:BB:BB', u'link-netnsid',
-                u'0'
-            ],
-            [u'[end_iplink]'],
-            [
-                u'lo',
-                u' 164379850  259656    0    0    0     0          0         0 164379850  259656    0    0    0     0       0          0'
+                '5:', 'veth6a06585@if4:', '<BROADCAST,MULTICAST,UP,LOWER_UP>', 'mtu', '1500',
+                'qdisc', 'noqueue', 'master', 'docker0', 'state', 'UP', 'mode', 'DEFAULT',
+                'group', 'default'
             ],
             [
-                u'wlp3s0',
-                u' 130923553  201184    0    0    0     0          0     16078 23586281  142684    0    0    0     0       0          0'
+                'link/ether', 'AA:AA:AA:AA:AA:AA', 'brd', 'BB:BB:BB:BB:BB:BB', 'link-netnsid',
+                '0'
+            ],
+            ['[end_iplink]'],
+            [
+                'lo',
+                ' 164379850  259656    0    0    0     0          0         0 164379850  259656    0    0    0     0       0          0'
             ],
             [
-                u'docker0',
-                u'       0       0    0    0    0     0          0         0    16250     184    0    0    0     0       0          0'
+                'wlp3s0',
+                ' 130923553  201184    0    0    0     0          0     16078 23586281  142684    0    0    0     0       0          0'
             ],
             [
-                u'veth6a06585',
-                u'       0       0    0    0    0     0          0         0    25963     287    0    0    0     0       0          0'
+                'docker0',
+                '       0       0    0    0    0     0          0         0    16250     184    0    0    0     0       0          0'
+            ],
+            [
+                'veth6a06585',
+                '       0       0    0    0    0     0          0         0    25963     287    0    0    0     0       0          0'
             ],
         ],
         [
@@ -218,63 +218,63 @@ def test_cluster_check_lnx_if(monkeypatch, value_store):
     ),
     (
         [
-            [u'[start_iplink]'],
+            ['[start_iplink]'],
             [
-                u'1:', u'lo:', u'<LOOPBACK,UP,LOWER_UP>', u'mtu', u'65536', u'qdisc', u'noqueue',
-                u'state', u'UNKNOWN', u'mode', u'DEFAULT', u'group', u'default', u'qlen', u'1000'
+                '1:', 'lo:', '<LOOPBACK,UP,LOWER_UP>', 'mtu', '65536', 'qdisc', 'noqueue',
+                'state', 'UNKNOWN', 'mode', 'DEFAULT', 'group', 'default', 'qlen', '1000'
             ],
-            [u'link/loopback', u'00:00:00:00:00:00', u'brd', u'00:00:00:00:00:00'],
+            ['link/loopback', '00:00:00:00:00:00', 'brd', '00:00:00:00:00:00'],
             [
-                u'2:', u'wlp3s0:', u'<BROADCAST,MULTICAST,UP,LOWER_UP>', u'mtu', u'1500', u'qdisc',
-                u'fq_codel', u'state', u'UP', u'mode', u'DORMANT', u'group', u'default', u'qlen',
-                u'1000'
+                '2:', 'wlp3s0:', '<BROADCAST,MULTICAST,UP,LOWER_UP>', 'mtu', '1500', 'qdisc',
+                'fq_codel', 'state', 'UP', 'mode', 'DORMANT', 'group', 'default', 'qlen',
+                '1000'
             ],
-            [u'link/ether', u'AA:AA:AA:AA:AA:AA', u'brd', u'BB:BB:BB:BB:BB:BB'],
+            ['link/ether', 'AA:AA:AA:AA:AA:AA', 'brd', 'BB:BB:BB:BB:BB:BB'],
             [
-                u'3:', u'docker0:', u'<BROADCAST,MULTICAST,UP,LOWER_UP>', u'mtu', u'1500', u'qdisc',
-                u'noqueue', u'state', u'UP', u'mode', u'DEFAULT', u'group', u'default'
+                '3:', 'docker0:', '<BROADCAST,MULTICAST,UP,LOWER_UP>', 'mtu', '1500', 'qdisc',
+                'noqueue', 'state', 'UP', 'mode', 'DEFAULT', 'group', 'default'
             ],
-            [u'link/ether', u'AA:AA:AA:AA:AA:AA', u'brd', u'BB:BB:BB:BB:BB:BB'],
+            ['link/ether', 'AA:AA:AA:AA:AA:AA', 'brd', 'BB:BB:BB:BB:BB:BB'],
             [
-                u'5:', u'veth6a06585@if4:', u'<BROADCAST,MULTICAST,UP,LOWER_UP>', u'mtu', u'1500',
-                u'qdisc', u'noqueue', u'master', u'docker0', u'state', u'UP', u'mode', u'DEFAULT',
-                u'group', u'default'
-            ],
-            [
-                u'link/ether', u'AA:AA:AA:AA:AA:AA', u'brd', u'BB:BB:BB:BB:BB:BB', u'link-netnsid',
-                u'0'
-            ],
-            [u'[end_iplink]'],
-            [
-                u'lo',
-                u' 164379850  259656    0    0    0     0          0         0 164379850  259656    0    0    0     0       0          0'
+                '5:', 'veth6a06585@if4:', '<BROADCAST,MULTICAST,UP,LOWER_UP>', 'mtu', '1500',
+                'qdisc', 'noqueue', 'master', 'docker0', 'state', 'UP', 'mode', 'DEFAULT',
+                'group', 'default'
             ],
             [
-                u'wlp3s0',
-                u' 130923553  201184    0    0    0     0          0     16078 23586281  142684    0    0    0     0       0          0'
+                'link/ether', 'AA:AA:AA:AA:AA:AA', 'brd', 'BB:BB:BB:BB:BB:BB', 'link-netnsid',
+                '0'
+            ],
+            ['[end_iplink]'],
+            [
+                'lo',
+                ' 164379850  259656    0    0    0     0          0         0 164379850  259656    0    0    0     0       0          0'
             ],
             [
-                u'docker0',
-                u'       0       0    0    0    0     0          0         0    16250     184    0    0    0     0       0          0'
+                'wlp3s0',
+                ' 130923553  201184    0    0    0     0          0     16078 23586281  142684    0    0    0     0       0          0'
             ],
             [
-                u'veth6a06585',
-                u'       0       0    0    0    0     0          0         0    25963     287    0    0    0     0       0          0'
+                'docker0',
+                '       0       0    0    0    0     0          0         0    16250     184    0    0    0     0       0          0'
             ],
-            [u'[lo]'],
-            [u'Link detected', u' yes'],
-            [u'Address', u' 00', u'00', u'00', u'00', u'00', u'00'],
-            [u'[docker0]'],
-            [u'Link detected', u' yes'],
-            [u'Address', u' AA', u'AA', u'AA', u'AA', u'AA', u'AA'],
-            [u'[veth6a06585]'],
-            [u'Speed', u' 10000Mb/s'],
-            [u'Duplex', u' Full'],
-            [u'Auto-negotiation', u' off'],
-            [u'Link detected', u' yes'],
-            [u'Address', u' AA', u'AA', u'AA', u'AA', u'AA', u'AA'],
-            [u'[wlp3s0]'],
-            [u'Address', u' AA', u'AA', u'AA', u'AA', u'AA', u'AA'],
+            [
+                'veth6a06585',
+                '       0       0    0    0    0     0          0         0    25963     287    0    0    0     0       0          0'
+            ],
+            ['[lo]'],
+            ['Link detected', ' yes'],
+            ['Address', ' 00', '00', '00', '00', '00', '00'],
+            ['[docker0]'],
+            ['Link detected', ' yes'],
+            ['Address', ' AA', 'AA', 'AA', 'AA', 'AA', 'AA'],
+            ['[veth6a06585]'],
+            ['Speed', ' 10000Mb/s'],
+            ['Duplex', ' Full'],
+            ['Auto-negotiation', ' off'],
+            ['Link detected', ' yes'],
+            ['Address', ' AA', 'AA', 'AA', 'AA', 'AA', 'AA'],
+            ['[wlp3s0]'],
+            ['Address', ' AA', 'AA', 'AA', 'AA', 'AA', 'AA'],
         ],
         [
             Service(item='2', parameters={
@@ -319,63 +319,63 @@ def test_cluster_check_lnx_if(monkeypatch, value_store):
     ),
     (
         [
-            [u'[start_iplink]'],
+            ['[start_iplink]'],
             [
-                u'1:', u'lo:', u'<LOOPBACK,UP,LOWER_UP>', u'mtu', u'65536', u'qdisc', u'noqueue',
-                u'state', u'UNKNOWN', u'mode', u'DEFAULT', u'group', u'default', u'qlen', u'1000'
+                '1:', 'lo:', '<LOOPBACK,UP,LOWER_UP>', 'mtu', '65536', 'qdisc', 'noqueue',
+                'state', 'UNKNOWN', 'mode', 'DEFAULT', 'group', 'default', 'qlen', '1000'
             ],
-            [u'link/loopback', u'00:00:00:00:00:00', u'brd', u'00:00:00:00:00:00'],
+            ['link/loopback', '00:00:00:00:00:00', 'brd', '00:00:00:00:00:00'],
             [
-                u'2:', u'wlp3s0:', u'<BROADCAST,MULTICAST,UP,LOWER_UP>', u'mtu', u'1500', u'qdisc',
-                u'fq_codel', u'state', u'UNKNOWN', u'mode', u'DORMANT', u'group', u'default',
-                u'qlen', u'1000'
+                '2:', 'wlp3s0:', '<BROADCAST,MULTICAST,UP,LOWER_UP>', 'mtu', '1500', 'qdisc',
+                'fq_codel', 'state', 'UNKNOWN', 'mode', 'DORMANT', 'group', 'default',
+                'qlen', '1000'
             ],
-            [u'link/ether', u'AA:AA:AA:AA:AA:AA', u'brd', u'BB:BB:BB:BB:BB:BB'],
+            ['link/ether', 'AA:AA:AA:AA:AA:AA', 'brd', 'BB:BB:BB:BB:BB:BB'],
             [
-                u'3:', u'docker0:', u'<BROADCAST,MULTICAST,UP,LOWER_UP>', u'mtu', u'1500', u'qdisc',
-                u'noqueue', u'state', u'UNKNOWN', u'mode', u'DEFAULT', u'group', u'default'
+                '3:', 'docker0:', '<BROADCAST,MULTICAST,UP,LOWER_UP>', 'mtu', '1500', 'qdisc',
+                'noqueue', 'state', 'UNKNOWN', 'mode', 'DEFAULT', 'group', 'default'
             ],
-            [u'link/ether', u'AA:AA:AA:AA:AA:AA', u'brd', u'BB:BB:BB:BB:BB:BB'],
+            ['link/ether', 'AA:AA:AA:AA:AA:AA', 'brd', 'BB:BB:BB:BB:BB:BB'],
             [
-                u'5:', u'veth6a06585@if4:', u'<BROADCAST,MULTICAST,UP,LOWER_UP>', u'mtu', u'1500',
-                u'qdisc', u'noqueue', u'master', u'docker0', u'state', u'UNKNOWN', u'mode',
-                u'DEFAULT', u'group', u'default'
-            ],
-            [
-                u'link/ether', u'AA:AA:AA:AA:AA:AA', u'brd', u'BB:BB:BB:BB:BB:BB', u'link-netnsid',
-                u'0'
-            ],
-            [u'[end_iplink]'],
-            [
-                u'lo',
-                u' 164379850  259656    0    0    0     0          0         0 164379850  259656    0    0    0     0       0          0'
+                '5:', 'veth6a06585@if4:', '<BROADCAST,MULTICAST,UP,LOWER_UP>', 'mtu', '1500',
+                'qdisc', 'noqueue', 'master', 'docker0', 'state', 'UNKNOWN', 'mode',
+                'DEFAULT', 'group', 'default'
             ],
             [
-                u'wlp3s0',
-                u' 130923553  201184    0    0    0     0          0     16078 23586281  142684    0    0    0     0       0          0'
+                'link/ether', 'AA:AA:AA:AA:AA:AA', 'brd', 'BB:BB:BB:BB:BB:BB', 'link-netnsid',
+                '0'
+            ],
+            ['[end_iplink]'],
+            [
+                'lo',
+                ' 164379850  259656    0    0    0     0          0         0 164379850  259656    0    0    0     0       0          0'
             ],
             [
-                u'docker0',
-                u'       0       0    0    0    0     0          0         0    16250     184    0    0    0     0       0          0'
+                'wlp3s0',
+                ' 130923553  201184    0    0    0     0          0     16078 23586281  142684    0    0    0     0       0          0'
             ],
             [
-                u'veth6a06585',
-                u'       0       0    0    0    0     0          0         0    25963     287    0    0    0     0       0          0'
+                'docker0',
+                '       0       0    0    0    0     0          0         0    16250     184    0    0    0     0       0          0'
             ],
-            [u'[lo]'],
-            [u'Link detected', u' yes'],
-            [u'Address', u' 00', u'00', u'00', u'00', u'00', u'00'],
-            [u'[docker0]'],
-            [u'Link detected', u' yes'],
-            [u'Address', u' AA', u'AA', u'AA', u'AA', u'AA', u'AA'],
-            [u'[veth6a06585]'],
-            [u'Speed', u' 10000Mb/s'],
-            [u'Duplex', u' Full'],
-            [u'Auto-negotiation', u' off'],
-            [u'Link detected', u' yes'],
-            [u'Address', u' AA', u'AA', u'AA', u'AA', u'AA', u'AA'],
-            [u'[wlp3s0]'],
-            [u'Address', u' AA', u'AA', u'AA', u'AA', u'AA', u'AA'],
+            [
+                'veth6a06585',
+                '       0       0    0    0    0     0          0         0    25963     287    0    0    0     0       0          0'
+            ],
+            ['[lo]'],
+            ['Link detected', ' yes'],
+            ['Address', ' 00', '00', '00', '00', '00', '00'],
+            ['[docker0]'],
+            ['Link detected', ' yes'],
+            ['Address', ' AA', 'AA', 'AA', 'AA', 'AA', 'AA'],
+            ['[veth6a06585]'],
+            ['Speed', ' 10000Mb/s'],
+            ['Duplex', ' Full'],
+            ['Auto-negotiation', ' off'],
+            ['Link detected', ' yes'],
+            ['Address', ' AA', 'AA', 'AA', 'AA', 'AA', 'AA'],
+            ['[wlp3s0]'],
+            ['Address', ' AA', 'AA', 'AA', 'AA', 'AA', 'AA'],
         ],
         [
             Service(item='2', parameters={
@@ -420,21 +420,21 @@ def test_cluster_check_lnx_if(monkeypatch, value_store):
     ),
     (
         [
-            [u'em0', u'376716785370 417455222 0 0 0 0 0 0 383578105955 414581956 0 0 0 0 0 0'],
-            [u'tun0', u'342545566242 0 259949262 0 0 0 0 0  0 19196 0 0  0 0'],
-            [u'tun1', u'2422824602 0 2357563 0 0 0 0 0  0 0 0 0  0 0'],
-            [u'[em0]'],
-            [u'Speed', u' 1000Mb/s'],
-            [u'Duplex', u' Full'],
-            [u'Auto-negotiation', u' on'],
-            [u'Link detected', u' yes'],
-            [u'Address', u' 00', u'AA', u'11', u'BB', u'22', u'CC'],
-            [u'[tun0]'],
-            [u'Link detected', u' yes'],
-            [u'Address', u' 123'],
-            [u'[tun1]'],
-            [u'Link detected', u' yes'],
-            [u'Address', u' 456'],
+            ['em0', '376716785370 417455222 0 0 0 0 0 0 383578105955 414581956 0 0 0 0 0 0'],
+            ['tun0', '342545566242 0 259949262 0 0 0 0 0  0 19196 0 0  0 0'],
+            ['tun1', '2422824602 0 2357563 0 0 0 0 0  0 0 0 0  0 0'],
+            ['[em0]'],
+            ['Speed', ' 1000Mb/s'],
+            ['Duplex', ' Full'],
+            ['Auto-negotiation', ' on'],
+            ['Link detected', ' yes'],
+            ['Address', ' 00', 'AA', '11', 'BB', '22', 'CC'],
+            ['[tun0]'],
+            ['Link detected', ' yes'],
+            ['Address', ' 123'],
+            ['[tun1]'],
+            ['Link detected', ' yes'],
+            ['Address', ' 456'],
         ],
         [
             Service(item='1',

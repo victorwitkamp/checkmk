@@ -22,7 +22,7 @@ checks = {
             None, {
                 'levels_ram': ('perc_used', (20.0, 30.0)),
             }, [
-                (1, u'Error: foobar', []),
+                (1, 'Error: foobar', []),
                 (
                     2, 'RAM: 78.09% - 47.89 GB of 61.33 GB (warn/crit at 20.0%/30.0% used)',
                         [
@@ -35,7 +35,7 @@ checks = {
                 (
                     0, 'Total virtual memory: 69.08% - 47.89 GB of 69.33 GB', []
                 ),
-                (0, u'Swap error: some error message', []),
+                (0, 'Swap error: some error message', []),
             ]
         )
     ]

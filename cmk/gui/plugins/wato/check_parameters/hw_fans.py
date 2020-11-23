@@ -30,8 +30,8 @@ def _parameter_valuespec_hw_fans():
                     help=_("Lower levels for the fan speed of a hardware device"),
                     title=_("Lower levels"),
                     elements=[
-                        Integer(title=_("warning if below"), unit=u"rpm"),
-                        Integer(title=_("critical if below"), unit=u"rpm"),
+                        Integer(title=_("warning if below"), unit="rpm"),
+                        Integer(title=_("critical if below"), unit="rpm"),
                     ],
                 ),
             ),
@@ -41,8 +41,8 @@ def _parameter_valuespec_hw_fans():
                     help=_("Upper levels for the fan speed of a hardware device"),
                     title=_("Upper levels"),
                     elements=[
-                        Integer(title=_("warning at"), unit=u"rpm"),
-                        Integer(title=_("critical at"), unit=u"rpm"),
+                        Integer(title=_("warning at"), unit="rpm"),
+                        Integer(title=_("critical at"), unit="rpm"),
                     ],
                 ),
             ),

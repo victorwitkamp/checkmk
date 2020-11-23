@@ -13,7 +13,7 @@ checkname = 'fortigate_memory_base'
 
 
 info = [
-    [u'19', u'1887424'],
+    ['19', '1887424'],
 ]
 
 

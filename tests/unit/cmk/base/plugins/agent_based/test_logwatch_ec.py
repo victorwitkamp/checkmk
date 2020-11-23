@@ -32,10 +32,10 @@ INFO1 = [
         Service(item='log5', parameters={'expected_logfiles': ['log5']}),
     ]),
     (INFO1, [{
-        'restrict_logfiles': [u'.*']
+        'restrict_logfiles': ['.*']
     }], []),
     (INFO1, [{
-        'restrict_logfiles': [u'.*'],
+        'restrict_logfiles': ['.*'],
         'separate_checks': True,
     }], [
         Service(item='log1', parameters={'expected_logfiles': ['log1']}),
@@ -43,14 +43,14 @@ INFO1 = [
         Service(item='log5', parameters={'expected_logfiles': ['log5']}),
     ]),
     (INFO1, [{
-        'restrict_logfiles': [u'.*'],
+        'restrict_logfiles': ['.*'],
         'separate_checks': False,
     }], []),
     (INFO1, [{
-        'restrict_logfiles': [u'.*'],
+        'restrict_logfiles': ['.*'],
     }], []),
     (INFO1, [{
-        'restrict_logfiles': [u'log1'],
+        'restrict_logfiles': ['log1'],
         'separate_checks': True,
         'method': 'pass me on!',
         'facility': 'pass me on!',
@@ -87,7 +87,7 @@ def test_logwatch_ec_inventory_single(monkeypatch, info, fwd_rule, expected_resu
         Service(parameters={'expected_logfiles': ['log1', 'log2', 'log5']}),
     ]),
     (INFO1, [{
-        'restrict_logfiles': [u'.*[12]'],
+        'restrict_logfiles': ['.*[12]'],
         'separate_checks': False
     }], [
         Service(parameters={'expected_logfiles': ['log1', 'log2']}),

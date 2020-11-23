@@ -25,14 +25,14 @@ pytestmark = pytest.mark.checks
 Size = namedtuple('Size', 'info,total,used,text')
 
 size1 = Size(
-    [u'491520', u'460182', u'460182', u'65536'],
+    ['491520', '460182', '460182', '65536'],
     491520 * 65536,
     491520 * 65536 - 460182 * 65536,
     "6.38% used (1.91 of 30.00 GB)",
 )
 
 size2 = Size(
-    [u'201326592', u'170803720', u'170803720', u'32768'],
+    ['201326592', '170803720', '170803720', '32768'],
     None,  # not in use
     None,  # not in use
     "15.16% used (931.48 GB of 6.00 TB)",
@@ -45,22 +45,22 @@ size2 = Size(
         (  # no info
             [], [], ()),
         (  # single mountpoint with data
-            [[u'/ABCshare', u'ok'] + size1.info], [('/ABCshare', {})], [
+            [['/ABCshare', 'ok'] + size1.info], [('/ABCshare', {})], [
                 ('/ABCshare', {}, BasicCheckResult(0, size1.text, None)),
             ]),
         (  # two mountpoints with empty data
-            [[u'/AB', u'ok', u'-', u'-', u'-', u'-'], [u'/ABC', u'ok', u'-', u'-', u'-', u'-']], [
+            [['/AB', 'ok', '-', '-', '-', '-'], ['/ABC', 'ok', '-', '-', '-', '-']], [
                 ('/AB', {}), ('/ABC', {})
             ], [('/AB', {}, BasicCheckResult(0, "Mount seems OK", None)),
                 ('/ABC', {}, BasicCheckResult(0, "Mount seems OK", None))]),
         (  # Mountpoint with spaces and permission denied
-            [[u'/var/dba', u'export', u'Permission',
-              u'denied'], [u'/var/dbaexport', u'ok'] + size2.info], [
+            [['/var/dba', 'export', 'Permission',
+              'denied'], ['/var/dbaexport', 'ok'] + size2.info], [
                   ('/var/dbaexport', {}), ('/var/dba export', {})
               ], [('/var/dba export', {}, BasicCheckResult(2, 'Permission denied', None)),
                   ('/var/dbaexport', {}, BasicCheckResult(0, size2.text, None))]),
         (  # with perfdata
-            [[u'/PERFshare', u'ok'] + size1.info], [('/PERFshare', {})], [
+            [['/PERFshare', 'ok'] + size1.info], [('/PERFshare', {})], [
                 ('/PERFshare', {
                     'has_perfdata': True
                 },
@@ -71,16 +71,16 @@ size2 = Size(
                  ]))
             ]),
         (  # state == 'hanging'
-            [[u'/test', u'hanging', u'hanging', u'0', u'0', u'0', u'0']
+            [['/test', 'hanging', 'hanging', '0', '0', '0', '0']
             ], [('/test hanging', {})], [('/test hanging', {
                 'has_perfdata': True
             }, BasicCheckResult(2, "Server not responding", None))]),
         (  # unknown state
-            [[u'/test', u'unknown', u'unknown', u'1', u'1', u'1', u'1']], [('/test unknown', {})], [
+            [['/test', 'unknown', 'unknown', '1', '1', '1', '1']], [('/test unknown', {})], [
                 ('/test unknown', {}, BasicCheckResult(2, "Unknown state: unknown", None))
             ]),
         (  # zero block size
-            [[u'/test', u'perfdata', u'ok', u'0', u'460182', u'460182', u'0']],
+            [['/test', 'perfdata', 'ok', '0', '460182', '460182', '0']],
             [('/test perfdata', {})],
             [(
                 '/test perfdata',

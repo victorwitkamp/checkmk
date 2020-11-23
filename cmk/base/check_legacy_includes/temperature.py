@@ -177,19 +177,19 @@ def check_temperature_trend(temp, params, output_unit, crit, crit_lower, unique_
 
         if crit_upper_trend is not None and trend > crit_upper_trend:
             combiner(
-                2, u"rising faster than %s/%g min(!!)" %
+                2, "rising faster than %s/%g min(!!)" %
                 (render_temp(crit_upper_trend, output_unit, True), trend_range_min))
         elif warn_upper_trend is not None and trend > warn_upper_trend:
             combiner(
-                1, u"rising faster than %s/%g min(!)" %
+                1, "rising faster than %s/%g min(!)" %
                 (render_temp(warn_upper_trend, output_unit, True), trend_range_min))
         elif crit_lower_trend is not None and trend < crit_lower_trend:
             combiner(
-                2, u"falling faster than %s/%g min(!!)" %
+                2, "falling faster than %s/%g min(!!)" %
                 (render_temp(crit_lower_trend, output_unit, True), trend_range_min))
         elif warn_lower_trend is not None and trend < warn_lower_trend:
             combiner(
-                1, u"falling faster than %s/%g min(!)" %
+                1, "falling faster than %s/%g min(!)" %
                 (render_temp(warn_lower_trend, output_unit, True), trend_range_min))
 
         if "trend_timeleft" in params:
@@ -330,10 +330,10 @@ def check_temperature(
 
     # In case of a non-OK status output the information about the levels
     if status != 0:
-        usr_levelstext = u""
-        usr_levelstext_lower = u""
-        dev_levelstext = u""
-        dev_levelstext_lower = u""
+        usr_levelstext = ""
+        usr_levelstext_lower = ""
+        dev_levelstext = ""
+        dev_levelstext_lower = ""
 
         if usr_warn is not None and usr_crit is not None:
             usr_levelstext = " (warn/crit at %s/%s %s)" % (render_temp(

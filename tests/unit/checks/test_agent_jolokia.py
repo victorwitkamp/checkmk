@@ -16,7 +16,7 @@ pytestmark = pytest.mark.checks
         'port': 8080
     }, ["--server", "address", "--port", "8080"]),
     ({
-        'instance': u'monitor',
+        'instance': 'monitor',
         'port': 8080
     }, ["--server", "address", "--port", "8080", "--instance", "monitor"]),
     ({

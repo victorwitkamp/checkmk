@@ -32,7 +32,7 @@ def test_next_network_scan_at(allowed, last_end, next_time):
                                 "network_scan": {
                                     'exclude_ranges': [],
                                     'ip_ranges': [('ip_range', ('10.3.1.1', '10.3.1.100'))],
-                                    'run_as': u'cmkadmin',
+                                    'run_as': 'cmkadmin',
                                     'scan_interval': 300,
                                     'set_ipaddress': True,
                                     'tag_criticality': 'offline',

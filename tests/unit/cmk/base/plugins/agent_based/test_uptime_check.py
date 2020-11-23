@@ -59,16 +59,16 @@ def test_uptime_check_zero():
 @pytest.mark.parametrize('info, reference', [
     (
         [
-            [u'22731'],
-            [u'[uptime_solaris_start]'],
-            [u'SunOS', u'unknown', u'5.10', u'Generic_147148-26', u'i86pc', u'i386', u'i86pc'],
-            [u'global'],
+            ['22731'],
+            ['[uptime_solaris_start]'],
+            ['SunOS', 'unknown', '5.10', 'Generic_147148-26', 'i86pc', 'i386', 'i86pc'],
+            ['global'],
             [
-                u'4:58pm', u'up', u'6:19,', u'2', u'users,', u'load', u'average:', u'0.18,',
-                u'0.06,', u'0.03'
+                '4:58pm', 'up', '6:19,', '2', 'users,', 'load', 'average:', '0.18,',
+                '0.06,', '0.03'
             ],
-            [u'unix:0:system_misc:snaptime', u'22737.886916295'],
-            [u'[uptime_solaris_end]'],
+            ['unix:0:system_misc:snaptime', '22737.886916295'],
+            ['[uptime_solaris_end]'],
         ],
         [
             Result(state=State.OK, summary='Up since Apr 15 2018 12:31:09'),
@@ -78,16 +78,16 @@ def test_uptime_check_zero():
     ),
     (
         [
-            [u'1122'],
-            [u'[uptime_solaris_start]'],
-            [u'SunOS', u'unknown', u'5.10', u'Generic_147148-26', u'i86pc', u'i386', u'i86pc'],
-            [u'global'],
+            ['1122'],
+            ['[uptime_solaris_start]'],
+            ['SunOS', 'unknown', '5.10', 'Generic_147148-26', 'i86pc', 'i386', 'i86pc'],
+            ['global'],
             [
-                u'4:23pm', u'up', u'19', u'min(s),', u'2', u'users,', u'load', u'average:',
-                u'0.03,', u'0.09,', u'0.09'
+                '4:23pm', 'up', '19', 'min(s),', '2', 'users,', 'load', 'average:',
+                '0.03,', '0.09,', '0.09'
             ],
-            [u'unix:0:system_misc:snaptime', u'1131.467157594'],
-            [u'[uptime_solaris_end]'],
+            ['unix:0:system_misc:snaptime', '1131.467157594'],
+            ['[uptime_solaris_end]'],
         ],
         [
             Result(state=State.OK, summary='Up since Apr 15 2018 18:31:18'),
@@ -96,12 +96,12 @@ def test_uptime_check_zero():
         ],
     ),
     (
-        [[u'1553086171'], [u'[uptime_solaris_start]'], [u'SunOS', u'Solaris', u'11.3', u'X86'],
-         [u'non-global', u'zone'],
+        [['1553086171'], ['[uptime_solaris_start]'], ['SunOS', 'Solaris', '11.3', 'X86'],
+         ['non-global', 'zone'],
          [
-             u'1:53pm', u'up', u'335', u'day(s),', u'23:13,', u'0', u'users,', u'load', u'average:',
-             u'0.36,', u'0.34,', u'0.34'
-         ], [u'unix:0:system_misc:snaptime', u'29027808.0471184'], [u'[uptime_solaris_end]']],
+             '1:53pm', 'up', '335', 'day(s),', '23:13,', '0', 'users,', 'load', 'average:',
+             '0.36,', '0.34,', '0.34'
+         ], ['unix:0:system_misc:snaptime', '29027808.0471184'], ['[uptime_solaris_end]']],
         [
             Result(state=State.OK, summary='Up since May 14 2017 19:33:11'),
             Result(state=State.OK, summary='Uptime: 335 days 23 hours'),
@@ -109,13 +109,13 @@ def test_uptime_check_zero():
         ],
     ),
     (
-        [[u'54043590'], [u'[uptime_solaris_start]'],
-         [u'SunOS', u'sveqdcmk01', u'5.10', u'Generic_150401-49', u'i86pc', u'i386', u'i86pc'],
-         [u'sveqdcmk01'],
+        [['54043590'], ['[uptime_solaris_start]'],
+         ['SunOS', 'sveqdcmk01', '5.10', 'Generic_150401-49', 'i86pc', 'i386', 'i86pc'],
+         ['sveqdcmk01'],
          [
-             u'1:50pm', u'up', u'420', u'day(s),', u'21:05,', u'43', u'users,', u'load',
-             u'average:', u'16.75,', u'19.66,', u'18.18'
-         ], [u'unix:0:system_misc:snaptime', u'54048049.7479652'], [u'[uptime_solaris_end]']],
+             '1:50pm', 'up', '420', 'day(s),', '21:05,', '43', 'users,', 'load',
+             'average:', '16.75,', '19.66,', '18.18'
+         ], ['unix:0:system_misc:snaptime', '54048049.7479652'], ['[uptime_solaris_end]']],
         [
             Result(
                 state=State.UNKNOWN,
@@ -126,13 +126,13 @@ def test_uptime_check_zero():
         ],
     ),
     (
-        [[u'1529194584'], [u'[uptime_solaris_start]'],
-         [u'SunOS', u'sc000338', u'5.10', u'Generic_150400-61', u'sun4v', u'sparc', u'SUNW'],
-         [u'sc000338'],
+        [['1529194584'], ['[uptime_solaris_start]'],
+         ['SunOS', 'sc000338', '5.10', 'Generic_150400-61', 'sun4v', 'sparc', 'SUNW'],
+         ['sc000338'],
          [
-             u'1:50pm', u'up', u'282', u'day(s),', u'13:40,', u'1', u'user,', u'load', u'average:',
-             u'3.38,', u'3.44,', u'3.49'
-         ], [u'unix:0:system_misc:snaptime', u'70236854.9797181'], [u'[uptime_solaris_end]']],
+             '1:50pm', 'up', '282', 'day(s),', '13:40,', '1', 'user,', 'load', 'average:',
+             '3.38,', '3.44,', '3.49'
+         ], ['unix:0:system_misc:snaptime', '70236854.9797181'], ['[uptime_solaris_end]']],
         [
             Result(
                 state=State.UNKNOWN,

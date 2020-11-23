@@ -13,7 +13,7 @@ pytestmark = pytest.mark.checks
 RA32E_POWER = "ra32e_power"
 
 
-@pytest.mark.parametrize("info,result", [([[u'']], None), ([[u'0']], [(None, {})])])
+@pytest.mark.parametrize("info,result", [([['']], None), ([['0']], [(None, {})])])
 @pytest.mark.usefixtures("config_load_all_checks")
 def test_ra32e_power_discovery(info, result):
     check = Check(RA32E_POWER)

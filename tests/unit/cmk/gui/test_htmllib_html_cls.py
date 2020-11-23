@@ -31,39 +31,39 @@ def test_render_help_html(register_builtin_html):
 
 
 def test_render_help_text(register_builtin_html):
-    assert compare_html(html.render_help(u"äbc"),
-                        HTML(u"<div style=\"display:none\" class=\"help\">äbc</div>"))
+    assert compare_html(html.render_help("äbc"),
+                        HTML("<div style=\"display:none\" class=\"help\">äbc</div>"))
 
 
 def test_render_help_visible(module_wide_request_context, register_builtin_html, monkeypatch):
     monkeypatch.setattr(config.LoggedInUser, "show_help", property(lambda s: True))
     assert config.user.show_help is True
-    assert compare_html(html.render_help(u"äbc"),
-                        HTML(u"<div style=\"display:block\" class=\"help\">äbc</div>"))
+    assert compare_html(html.render_help("äbc"),
+                        HTML("<div style=\"display:block\" class=\"help\">äbc</div>"))
 
 
 def test_add_manual_link(register_builtin_html):
     assert config.user.language is None
     assert compare_html(
-        html.render_help(u"[cms_introduction_docker|docker]"),
+        html.render_help("[cms_introduction_docker|docker]"),
         HTML(
-            u"<div style=\"display:none\" class=\"help\"><a href=\"https://checkmk.com/cms_introduction_docker.html\" target=\"_blank\">docker</a></div>"
+            "<div style=\"display:none\" class=\"help\"><a href=\"https://checkmk.com/cms_introduction_docker.html\" target=\"_blank\">docker</a></div>"
         ))
 
 
 def test_add_manual_link_localized(module_wide_request_context, monkeypatch):
     monkeypatch.setattr(config.user, "language", lambda: "de")
     assert compare_html(
-        html.render_help(u"[cms_introduction_docker|docker]"),
+        html.render_help("[cms_introduction_docker|docker]"),
         HTML(
-            u"<div style=\"display:none\" class=\"help\"><a href=\"https://checkmk.de/cms_introduction_docker.html\" target=\"_blank\">docker</a></div>"
+            "<div style=\"display:none\" class=\"help\"><a href=\"https://checkmk.de/cms_introduction_docker.html\" target=\"_blank\">docker</a></div>"
         ))
 
 
 def test_add_manual_link_anchor(module_wide_request_context, monkeypatch):
     monkeypatch.setattr(config.user, "language", lambda: "de")
     assert compare_html(
-        html.render_help(u"[cms_graphing#rrds|RRDs]"),
+        html.render_help("[cms_graphing#rrds|RRDs]"),
         HTML(
-            u"<div style=\"display:none\" class=\"help\"><a href=\"https://checkmk.de/cms_graphing.html#rrds\" target=\"_blank\">RRDs</a></div>"
+            "<div style=\"display:none\" class=\"help\"><a href=\"https://checkmk.de/cms_graphing.html#rrds\" target=\"_blank\">RRDs</a></div>"
         ))

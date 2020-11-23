@@ -87,7 +87,7 @@ def _create_php_file(callee, users, role_permissions, groups):
         user.setdefault('language', config.default_language)  # Set a language for all users
         user.pop('session_info', None)  # remove the SessionInfo object
 
-    content = u'''<?php
+    content = '''<?php
 // Created by Multisite UserDB Hook (%s)
 global $mk_users, $mk_roles, $mk_groups;
 $mk_users   = %s;

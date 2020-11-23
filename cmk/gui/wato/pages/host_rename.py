@@ -159,12 +159,12 @@ class ModeBulkRenameHost(WatoMode):
         )
         message += "<table>"
         for _folder, host_name, target_name in renamings:
-            message += u"<tr><td>%s</td><td> → %s</td></tr>" % (host_name, target_name)
+            message += "<tr><td>%s</td><td> → %s</td></tr>" % (host_name, target_name)
         message += "</table>"
 
         c = _confirm(_("Confirm renaming of %d hosts") % len(renamings), HTML(message))
         if c:
-            title = _("Renaming of %s") % ", ".join(u"%s → %s" % x[1:] for x in renamings)
+            title = _("Renaming of %s") % ", ".join("%s → %s" % x[1:] for x in renamings)
             host_renaming_job = RenameHostsBackgroundJob(title=title)
             host_renaming_job.set_function(rename_hosts_background_job, renamings)
 

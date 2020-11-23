@@ -120,27 +120,27 @@ notification_bulkdir = cmk.utils.paths.var_dir + "/notify/bulk"
 notification_log = cmk.utils.paths.log_dir + "/notify.log"
 
 notification_log_template = \
-    u"$CONTACTNAME$ - $NOTIFICATIONTYPE$ - " \
-    u"$HOSTNAME$ $HOSTSTATE$ - " \
-    u"$SERVICEDESC$ $SERVICESTATE$ "
+    "$CONTACTNAME$ - $NOTIFICATIONTYPE$ - " \
+    "$HOSTNAME$ $HOSTSTATE$ - " \
+    "$SERVICEDESC$ $SERVICESTATE$ "
 
-notification_mail_command = u"mail -s '$SUBJECT$' '$CONTACTEMAIL$'"
-notification_host_subject = u"Check_MK: $HOSTNAME$ - $NOTIFICATIONTYPE$"
-notification_service_subject = u"Check_MK: $HOSTNAME$/$SERVICEDESC$ $NOTIFICATIONTYPE$"
+notification_mail_command = "mail -s '$SUBJECT$' '$CONTACTEMAIL$'"
+notification_host_subject = "Check_MK: $HOSTNAME$ - $NOTIFICATIONTYPE$"
+notification_service_subject = "Check_MK: $HOSTNAME$/$SERVICEDESC$ $NOTIFICATIONTYPE$"
 
-notification_common_body = u"""Host:     $HOSTNAME$
+notification_common_body = """Host:     $HOSTNAME$
 Alias:    $HOSTALIAS$
 Address:  $HOSTADDRESS$
 """
 
-notification_host_body = u"""State:    $LASTHOSTSTATE$ -> $HOSTSTATE$ ($NOTIFICATIONTYPE$)
+notification_host_body = """State:    $LASTHOSTSTATE$ -> $HOSTSTATE$ ($NOTIFICATIONTYPE$)
 Command:  $HOSTCHECKCOMMAND$
 Output:   $HOSTOUTPUT$
 Perfdata: $HOSTPERFDATA$
 $LONGHOSTOUTPUT$
 """
 
-notification_service_body = u"""Service:  $SERVICEDESC$
+notification_service_body = """Service:  $SERVICEDESC$
 State:    $LASTSERVICESTATE$ -> $SERVICESTATE$ ($NOTIFICATIONTYPE$)
 Command:  $SERVICECHECKCOMMAND$
 Output:   $SERVICEOUTPUT$

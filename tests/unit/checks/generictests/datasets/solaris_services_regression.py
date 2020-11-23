@@ -12,12 +12,12 @@
 checkname = 'solaris_services'
 
 
-info = [[u'STATE', u'STIME', u'FMRI'],
-        [u'online', u'Jan_1', u'svc1:/cat1/name1:inst1'],
-        [u'online', u'Jan_1', u'0:00:00', u'svc2:/cat2/name2:inst2']]
+info = [['STATE', 'STIME', 'FMRI'],
+        ['online', 'Jan_1', 'svc1:/cat1/name1:inst1'],
+        ['online', 'Jan_1', '0:00:00', 'svc2:/cat2/name2:inst2']]
 
 
 discovery = {'': [], 'summary': [(None, {})]}
 
 
-checks = {'summary': [(None, {}, [(0, '2 services', []), (0, u'2 online', [])])]}
+checks = {'summary': [(None, {}, [(0, '2 services', []), (0, '2 online', [])])]}

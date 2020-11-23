@@ -542,7 +542,7 @@ def indent(s, skip_lines=0, spaces=2):
 
     Examples:
 
-        >>> text = u"blah1\\nblah2\\nblah3"
+        >>> text = "blah1\\nblah2\\nblah3"
         >>> indent(text, spaces=1)
         ' blah1\\n blah2\\n blah3'
 

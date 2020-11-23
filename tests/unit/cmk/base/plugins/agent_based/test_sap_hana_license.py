@@ -16,39 +16,39 @@ import cmk.base.plugins.agent_based.sap_hana_license as sap_hana_license
 
 SECTION = {
     'Y04 10': {
-        'enforced': sap_hana_license.SAP_HANA_MAYBE(bool=False, value=u'FALSE'),
-        'locked': sap_hana_license.SAP_HANA_MAYBE(bool=False, value=u'FALSE'),
-        'expiration_date': u'2020-08-02 23:59:59.999999000',
-        'permanent': sap_hana_license.SAP_HANA_MAYBE(bool=False, value=u'FALSE'),
+        'enforced': sap_hana_license.SAP_HANA_MAYBE(bool=False, value='FALSE'),
+        'locked': sap_hana_license.SAP_HANA_MAYBE(bool=False, value='FALSE'),
+        'expiration_date': '2020-08-02 23:59:59.999999000',
+        'permanent': sap_hana_license.SAP_HANA_MAYBE(bool=False, value='FALSE'),
         'limit': 2147483647,
-        'valid': sap_hana_license.SAP_HANA_MAYBE(bool=True, value=u'TRUE'),
+        'valid': sap_hana_license.SAP_HANA_MAYBE(bool=True, value='TRUE'),
         'size': 33
     },
     'H62 10': {
-        'enforced': sap_hana_license.SAP_HANA_MAYBE(bool=False, value=u'FALSE'),
-        'locked': sap_hana_license.SAP_HANA_MAYBE(bool=False, value=u'FALSE'),
-        'expiration_date': u'?',
-        'permanent': sap_hana_license.SAP_HANA_MAYBE(bool=True, value=u'TRUE'),
+        'enforced': sap_hana_license.SAP_HANA_MAYBE(bool=False, value='FALSE'),
+        'locked': sap_hana_license.SAP_HANA_MAYBE(bool=False, value='FALSE'),
+        'expiration_date': '?',
+        'permanent': sap_hana_license.SAP_HANA_MAYBE(bool=True, value='TRUE'),
         'limit': 12300,
-        'valid': sap_hana_license.SAP_HANA_MAYBE(bool=True, value=u'TRUE'),
+        'valid': sap_hana_license.SAP_HANA_MAYBE(bool=True, value='TRUE'),
         'size': 19
     },
     'X04 55': {
-        'enforced': sap_hana_license.SAP_HANA_MAYBE(bool=True, value=u'TRUE'),
-        'locked': sap_hana_license.SAP_HANA_MAYBE(bool=False, value=u'FALSE'),
-        'expiration_date': u'2020-08-02 23:59:59.999999000',
-        'permanent': sap_hana_license.SAP_HANA_MAYBE(bool=False, value=u'FALSE'),
+        'enforced': sap_hana_license.SAP_HANA_MAYBE(bool=True, value='TRUE'),
+        'locked': sap_hana_license.SAP_HANA_MAYBE(bool=False, value='FALSE'),
+        'expiration_date': '2020-08-02 23:59:59.999999000',
+        'permanent': sap_hana_license.SAP_HANA_MAYBE(bool=False, value='FALSE'),
         'limit': 10,
-        'valid': sap_hana_license.SAP_HANA_MAYBE(bool=True, value=u'TRUE'),
+        'valid': sap_hana_license.SAP_HANA_MAYBE(bool=True, value='TRUE'),
         'size': 5
     },
     'X00 00': {
-        'enforced': sap_hana_license.SAP_HANA_MAYBE(bool=True, value=u'TRUE'),
-        'locked': sap_hana_license.SAP_HANA_MAYBE(bool=False, value=u'FALSE'),
-        'expiration_date': u'2020-08-02 23:59:59.999999000',
-        'permanent': sap_hana_license.SAP_HANA_MAYBE(bool=False, value=u'FALSE'),
+        'enforced': sap_hana_license.SAP_HANA_MAYBE(bool=True, value='TRUE'),
+        'locked': sap_hana_license.SAP_HANA_MAYBE(bool=False, value='FALSE'),
+        'expiration_date': '2020-08-02 23:59:59.999999000',
+        'permanent': sap_hana_license.SAP_HANA_MAYBE(bool=False, value='FALSE'),
         'limit': 0,
-        'valid': sap_hana_license.SAP_HANA_MAYBE(bool=True, value=u'TRUE'),
+        'valid': sap_hana_license.SAP_HANA_MAYBE(bool=True, value='TRUE'),
         'size': 5
     }
 }

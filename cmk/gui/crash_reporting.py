@@ -78,7 +78,7 @@ def _show_crash_dump_message(crash: 'GUICrashReport', plain_text: bool, fail_sil
         show_crash_link = config.user.may("general.see_crash_reports")
 
     title = _("Internal error")
-    message = u"%s: %s<br>\n<br>\n" % (title, crash.crash_info["exc_value"])
+    message = "%s: %s<br>\n<br>\n" % (title, crash.crash_info["exc_value"])
     # Do not reveal crash context information to unauthenticated users or not permitted
     # users to prevent disclosure of internal information
     if not show_crash_link:

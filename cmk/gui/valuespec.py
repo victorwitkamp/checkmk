@@ -486,7 +486,7 @@ class Integer(ValueSpec):
 
 class Filesize(Integer):
     """Filesize in Byte, KByte, MByte, Gigabyte, Terabyte"""
-    _names = [u'Byte', u'KByte', u'MByte', u'GByte', u'TByte']
+    _names = ['Byte', 'KByte', 'MByte', 'GByte', 'TByte']
 
     def get_exponent(self, value: int) -> _Tuple[int, int]:
         for exp, count in ((exp, 1024**exp) for exp in reversed(range(len(self._names)))):
@@ -795,7 +795,7 @@ class RegExp(TextAscii):
             _("Read more about [cms_regexes|regular expression matching in Checkmk] in our user manual."
              ))
 
-        return u" ".join(u"%s" % h for h in help_text)
+        return " ".join("%s" % h for h in help_text)
 
     def _css_classes(self, case_sensitive, mode):
         classes = ["text", "regexp"]
@@ -1400,7 +1400,7 @@ class Url(TextAscii):
 
         # Remove trailing / if the url does not contain any path component
         if self._show_as_link:
-            return u"%s" % html.render_a(
+            return "%s" % html.render_a(
                 text, href=value, target=self._link_target if self._link_target else None)
 
         return value
@@ -1681,7 +1681,7 @@ class ListOfStrings(ValueSpec):
                   "then be split by these separators and the single parts are added into dedicated "
                   "input fields.") % self._split_separators)
 
-        return u" ".join(u"%s" % t for t in help_texts if t)
+        return " ".join("%s" % t for t in help_texts if t)
 
     def render_input(self, varprefix: str, value: List[str]) -> None:
         # Form already submitted?
@@ -1732,7 +1732,7 @@ class ListOfStrings(ValueSpec):
                 for v in value
             ]
             return "%s" % html.render_table(HTML().join(s))
-        return u", ".join([self._valuespec.value_to_text(v) for v in value])
+        return ", ".join([self._valuespec.value_to_text(v) for v in value])
 
     def from_html_vars(self, varprefix: str) -> List[str]:
         value: List[str] = []
@@ -3722,8 +3722,8 @@ class Timeofday(ValueSpec):
 
     def value_to_text(self, value: _Optional[TimeofdayValue]) -> str:
         if value is None:
-            return u""
-        return u"%02d:%02d" % value
+            return ""
+        return "%02d:%02d" % value
 
     def from_html_vars(self, varprefix: str) -> _Optional[TimeofdayValue]:
         # Fully specified
@@ -3817,7 +3817,7 @@ class TimeofdayRange(ValueSpec):
 
     def value_to_text(self, value: _Optional[TimeofdayRangeValue]) -> str:
         if value is None:
-            return u""
+            return ""
 
         return ensure_str(self._bounds[0].value_to_text(value[0]) + "-" +
                           self._bounds[1].value_to_text(value[1]))
@@ -4051,7 +4051,7 @@ class Timerange(CascadingDropdown):
             end = AbsoluteDate().value_to_text(until_time - 1)
             if start == end:
                 return start
-            return start + u" \u2014 " + end
+            return start + " \u2014 " + end
 
         def _month_edge_days(now: float, day_id: str) -> _Tuple[_Tuple[float, float], str]:
             # base time is current time rounded down to month
@@ -4141,7 +4141,7 @@ class Timerange(CascadingDropdown):
         prev_time_str: str = time.strftime("%B %Y", time.localtime(prev_time))
         end_time_str = time.strftime("%B %Y", time.localtime(from_time - 1))
         if prev_time_str != end_time_str:
-            prev_time_str += u" \u2014 " + end_time_str
+            prev_time_str += " \u2014 " + end_time_str
         if rangespec[0] == "y":
             prev_time_str = time.strftime("%Y", time.localtime(prev_time))
 
@@ -4337,7 +4337,7 @@ class Alternative(ValueSpec):
                 sel_option = str(nr)
             the_title = vs.title()
             options.append((str(nr), "???" if the_title is None else the_title))
-        onchange = u"cmk.valuespecs.cascading_change(this, '%s', %d);" % (varprefix, len(options))
+        onchange = "cmk.valuespecs.cascading_change(this, '%s', %d);" % (varprefix, len(options))
         if self._on_change:
             onchange += self._on_change
         if self._orientation == "horizontal":
@@ -5218,7 +5218,7 @@ class Password(TextAscii):
     def value_to_text(self, value: _Optional[str]) -> str:
         if value is None:
             return _("none")
-        return u'******'
+        return '******'
 
 
 class PasswordSpec(Password):
@@ -5456,7 +5456,7 @@ class Labels(ValueSpec):
 
     def help(self) -> Union[str, HTML, None]:
         h = super().help()
-        return (u"" if h is None else h) + _(
+        return ("" if h is None else h) + _(
             "Labels need to be in the format <tt>[KEY]:[VALUE]</tt>. For example <tt>os:windows</tt>."
         )
 
@@ -6020,16 +6020,16 @@ class CAorCAChain(UploadOrPasteTextFile):
 
     def value_to_text(self, value):
         cert_info = self.analyse_cert(value)
-        text = u"<table>"
+        text = "<table>"
         for what, title in [
             ("issuer", _("Issuer")),
             ("subject", _("Subject")),
         ]:
-            text += u"<tr><td>%s:</td><td>" % title
+            text += "<tr><td>%s:</td><td>" % title
             for title1, val in sorted(cert_info[what].items()):
-                text += u"%s: %s<br>" % (title1, val)
-            text += u"</tr>"
-        text += u"</table>"
+                text += "%s: %s<br>" % (title1, val)
+            text += "</tr>"
+        text += "</table>"
         return text
 
 

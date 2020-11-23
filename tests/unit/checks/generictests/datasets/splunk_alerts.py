@@ -12,7 +12,7 @@
 checkname = 'splunk_alerts'
 
 
-info = [[u'5']]
+info = [['5']]
 
 
 discovery = {'': [(None, {})]}

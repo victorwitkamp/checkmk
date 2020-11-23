@@ -95,7 +95,7 @@ def test_get_binary_input_type():
 
 @pytest.mark.usefixtures("set_vars")
 def test_get_binary_input_non_ascii():
-    assert html.request.get_binary_input("abc") == u"äbc".encode("utf-8")
+    assert html.request.get_binary_input("abc") == "äbc".encode("utf-8")
 
 
 @pytest.mark.usefixtures("set_vars")
@@ -112,7 +112,7 @@ def test_get_binary_input_mandatory_input_type():
 
 @pytest.mark.usefixtures("set_vars")
 def test_get_binary_input_mandatory_non_ascii():
-    assert html.request.get_binary_input_mandatory("abc") == u"äbc".encode("utf-8")
+    assert html.request.get_binary_input_mandatory("abc") == "äbc".encode("utf-8")
 
 
 @pytest.mark.usefixtures("set_vars")
@@ -171,29 +171,29 @@ def test_get_unicode_input_type():
 
 @pytest.mark.usefixtures("set_vars")
 def test_get_unicode_input_non_ascii():
-    assert html.request.get_unicode_input("abc") == u"äbc"
+    assert html.request.get_unicode_input("abc") == "äbc"
 
 
 @pytest.mark.usefixtures("set_vars")
 def test_get_unicode_input_default():
-    assert html.request.get_unicode_input("get_default", u"xyz") == u"xyz"
+    assert html.request.get_unicode_input("get_default", "xyz") == "xyz"
     assert html.request.get_unicode_input("zzz") is None
 
 
 @pytest.mark.usefixtures("set_vars")
 def test_get_unicode_input_mandatory_input_type():
-    assert html.request.get_unicode_input_mandatory("xyz") == u"x"
+    assert html.request.get_unicode_input_mandatory("xyz") == "x"
     assert isinstance(html.request.get_unicode_input_mandatory("xyz"), str)
 
 
 @pytest.mark.usefixtures("set_vars")
 def test_get_unicode_input_mandatory_non_ascii():
-    assert html.request.get_unicode_input_mandatory("abc") == u"äbc"
+    assert html.request.get_unicode_input_mandatory("abc") == "äbc"
 
 
 @pytest.mark.usefixtures("set_vars")
 def test_get_unicode_input_mandatory_default():
-    assert html.request.get_unicode_input_mandatory("get_default", u"xyz") == u"xyz"
+    assert html.request.get_unicode_input_mandatory("get_default", "xyz") == "xyz"
 
     with pytest.raises(MKUserError, match="is missing"):
         html.request.get_unicode_input_mandatory("zzz")
@@ -313,7 +313,7 @@ def test_pre_16_format_cookie_handling(monkeypatch):
     environ = dict(
         create_environ(),
         HTTP_COOKIE=
-        u"xyz=123; auth_stable=lärs:1534272374.61:1f59cac3fcd5bcc389e4f8397bed315b; abc=123".encode(
+        "xyz=123; auth_stable=lärs:1534272374.61:1f59cac3fcd5bcc389e4f8397bed315b; abc=123".encode(
             "utf-8"))
     request = http.Request(environ)
 

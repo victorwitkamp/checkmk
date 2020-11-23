@@ -40,14 +40,14 @@ def test_ABCHTMLGenerator(register_builtin_html):
             assert compare_html(html.drain(),
                                 "<div &lt;/div&gt;malicious_code&lt;div&gt;=trends>test</div>")
 
-        a = u"\u2665"
+        a = "\u2665"
         with html.plugged():
             assert html.render_a("test", href="www.test.case")
-            html.render_a(u"test", href="www.test.case")
-            html.render_a("test", href=u"www.test.case")
-            html.render_a(u"test", href=u"www.test.case")
+            html.render_a("test", href="www.test.case")
+            html.render_a("test", href="www.test.case")
+            html.render_a("test", href="www.test.case")
             try:
-                assert html.render_a(u"test",
+                assert html.render_a("test",
                                      href=str("www.test.case"),
                                      id_=str("something"),
                                      class_=str("test_%s") % a)

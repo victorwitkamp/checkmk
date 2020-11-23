@@ -22,7 +22,7 @@ from cmk.notification_plugins.utils import retrieve_from_passwordstore
 
 def main():
     context = utils.collect_context()
-    priority: Optional[str] = u'P3'
+    priority: Optional[str] = 'P3'
     teams_list = []
     tags_list = None
     action_list = None
@@ -41,10 +41,10 @@ def main():
     host_url = context.get("PARAMETER_URL")
 
     if context.get('PARAMETER_TAGSS'):
-        tags_list = None or context.get('PARAMETER_TAGSS', u'').split(" ")
+        tags_list = None or context.get('PARAMETER_TAGSS', '').split(" ")
 
     if context.get('PARAMETER_ACTIONSS'):
-        action_list = None or context.get('PARAMETER_ACTIONSS', u'').split(" ")
+        action_list = None or context.get('PARAMETER_ACTIONSS', '').split(" ")
 
     if context.get('PARAMETER_TEAMSS'):
         for team in context['PARAMETER_TEAMSS'].split(" "):

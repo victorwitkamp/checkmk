@@ -15,7 +15,7 @@ checkname = 'jenkins_queue'
 freeze_time = '2019-08-27T11:15:00'
 
 
-info = [[u'[{"task": {"color": "blue_anime", "_class": "org.jenkinsci.plugins.workflow.job.WorkflowJob", "name": "testbuild"}, "inQueueSince": 1566892922469, "why": "Build #475 is already in progress (ETA: 23 min)", "stuck": false, "_class": "hudson.model.Queue$BlockedItem", "buildableStartMilliseconds": 1566892928443, "id": 174702, "blocked": true, "pending": false}]']]
+info = [['[{"task": {"color": "blue_anime", "_class": "org.jenkinsci.plugins.workflow.job.WorkflowJob", "name": "testbuild"}, "inQueueSince": 1566892922469, "why": "Build #475 is already in progress (ETA: 23 min)", "stuck": false, "_class": "hudson.model.Queue$BlockedItem", "buildableStartMilliseconds": 1566892928443, "id": 174702, "blocked": true, "pending": false}]']]
 
 
 discovery = {'': [(None, {})]}
@@ -39,5 +39,5 @@ checks = {'': [(None,
                   [('jenkins_pending_tasks', 0, None, None, None, None)]),
                  (2, 'See long output for further information', []),
                  (0,
-                  u'\nID: 174702, Stuck: no, Blocked: yes, Pending: no, In queue since: 192 m (2019-08-27 10:02:02) (warn/crit at 60 m/120 m)(!!), Why kept: Build #475 is already in progress (ETA: 23 min)',
+                  '\nID: 174702, Stuck: no, Blocked: yes, Pending: no, In queue since: 192 m (2019-08-27 10:02:02) (warn/crit at 60 m/120 m)(!!), Why kept: Build #475 is already in progress (ETA: 23 min)',
                   [])])]}

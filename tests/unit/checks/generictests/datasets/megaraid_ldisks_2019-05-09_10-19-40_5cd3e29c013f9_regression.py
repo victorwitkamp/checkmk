@@ -9,7 +9,7 @@
 
 
 
-checkname = u'megaraid_ldisks'
+checkname = 'megaraid_ldisks'
 
 
 parsed = {'0/0': {}, '0/1': {}}

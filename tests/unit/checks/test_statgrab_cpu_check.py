@@ -16,14 +16,14 @@ from checktestlib import (
 pytestmark = pytest.mark.checks
 
 info_statgrab_cpu_hpux = [
-    [u'idle', u'300'],
-    [u'iowait', u'300'],
-    [u'kernel', u'300'],
-    [u'nice', u'300'],
-    [u'swap', u'0'],
-    [u'systime', u'300'],
-    [u'total', u'1800'],
-    [u'user', u'300'],
+    ['idle', '300'],
+    ['iowait', '300'],
+    ['kernel', '300'],
+    ['nice', '300'],
+    ['swap', '0'],
+    ['systime', '300'],
+    ['total', '1800'],
+    ['user', '300'],
 ]
 
 # If mock_state is a tuple, it is returned upon

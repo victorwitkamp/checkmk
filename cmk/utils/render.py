@@ -276,7 +276,7 @@ def physical_precision(v: float, precision: int, unit_symbol: str) -> str:
     scale_symbol, places_after_comma, scale_factor = calculate_physical_precision(v, precision)
 
     scaled_value = float(v) / scale_factor
-    return (u"%%.%df %%s%%s" % places_after_comma) % (scaled_value, scale_symbol, unit_symbol)
+    return ("%%.%df %%s%%s" % places_after_comma) % (scaled_value, scale_symbol, unit_symbol)
 
 
 def calculate_physical_precision(v: float, precision: int) -> Tuple[str, int, int]:
@@ -296,7 +296,7 @@ def calculate_physical_precision(v: float, precision: int) -> Tuple[str, int, in
         -5: "f",
         -4: "p",
         -3: "n",
-        -2: u"µ",
+        -2: "µ",
         -1: "m",
         0: "",
         1: "k",

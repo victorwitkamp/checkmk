@@ -41,13 +41,13 @@ def test_man_page_exists_only_shipped():
 
 def test_man_page_exists_both_dirs(tmp_path):
     f1 = tmp_path / "file1"
-    f1.write_text(u"x", encoding="utf-8")
+    f1.write_text("x", encoding="utf-8")
 
     assert man_pages.man_page_exists("file1") is True
     assert man_pages.man_page_exists("file2") is False
 
     f2 = tmp_path / "if"
-    f2.write_text(u"x", encoding="utf-8")
+    f2.write_text("x", encoding="utf-8")
 
     assert man_pages.man_page_exists("if") is True
 
@@ -59,13 +59,13 @@ def test_man_page_path_only_shipped():
 
 def test_man_page_path_both_dirs(tmp_path):
     f1 = tmp_path / "file1"
-    f1.write_text(u"x", encoding="utf-8")
+    f1.write_text("x", encoding="utf-8")
 
     assert man_pages.man_page_path("file1") == tmp_path / "file1"
     assert man_pages.man_page_path("file2") is None
 
     f2 = tmp_path / "if"
-    f2.write_text(u"x", encoding="utf-8")
+    f2.write_text("x", encoding="utf-8")
 
     assert man_pages.man_page_path("if") == tmp_path / "if"
 
@@ -78,9 +78,9 @@ def test_all_manpages_migrated(all_pages):
 
 
 def test_all_man_pages(tmp_path):
-    (tmp_path / ".asd").write_text(u"", encoding="utf-8")
-    (tmp_path / "asd~").write_text(u"", encoding="utf-8")
-    (tmp_path / "if").write_text(u"", encoding="utf-8")
+    (tmp_path / ".asd").write_text("", encoding="utf-8")
+    (tmp_path / "asd~").write_text("", encoding="utf-8")
+    (tmp_path / "if").write_text("", encoding="utf-8")
 
     pages = man_pages.all_man_pages()
 

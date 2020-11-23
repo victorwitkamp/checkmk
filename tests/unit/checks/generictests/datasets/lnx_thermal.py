@@ -35,7 +35,7 @@ checks = {
                 'device_levels_handling': 'devdefault',
                 'levels': (70.0, 80.0)
             },
-            [(0, u'57.0 \xb0C', [('temp', 57.0, 127.0, 127.0, None, None)])],
+            [(0, '57.0 \xb0C', [('temp', 57.0, 127.0, 127.0, None, None)])],
         ),
         (
             'Zone 1',
@@ -43,7 +43,7 @@ checks = {
                 'device_levels_handling': 'devdefault',
                 'levels': (70.0, 80.0)
             },
-            [(0, u'65.0 \xb0C', [('temp', 65.0, 95.5, 100.0, None, None)])],
+            [(0, '65.0 \xb0C', [('temp', 65.0, 95.5, 100.0, None, None)])],
         ),
         (
             'Zone 2',
@@ -51,7 +51,7 @@ checks = {
                 'device_levels_handling': 'devdefault',
                 'levels': (70.0, 80.0)
             },
-            [(0, u'44.0 \xb0C', [('temp', 44.0, 70.0, 80.0, None, None)])],
+            [(0, '44.0 \xb0C', [('temp', 44.0, 70.0, 80.0, None, None)])],
         ),
         (
             'Zone 3',
@@ -59,7 +59,7 @@ checks = {
                 'device_levels_handling': 'devdefault',
                 'levels': (70.0, 80.0)
             },
-            [(0, u'48.0 \xb0C', [('temp', 48.0, 77.0, 87.0, None, None)])],
+            [(0, '48.0 \xb0C', [('temp', 48.0, 77.0, 87.0, None, None)])],
         ),
         (
             'Zone 4',
@@ -67,7 +67,7 @@ checks = {
                 'device_levels_handling': 'devdefault',
                 'levels': (70.0, 80.0)
             },
-            [(0, u'20.0 \xb0C', [('temp', 20.0, 70.0, 80.0, None, None)])],
+            [(0, '20.0 \xb0C', [('temp', 20.0, 70.0, 80.0, None, None)])],
         ),
         (
             'Zone 5',
@@ -75,7 +75,7 @@ checks = {
                 'device_levels_handling': 'devdefault',
                 'levels': (70.0, 80.0)
             },
-            [(0, u'27.0 \xb0C', [('temp', 27.0, 70.0, 80.0, None, None)])],
+            [(0, '27.0 \xb0C', [('temp', 27.0, 70.0, 80.0, None, None)])],
         ),
         # test for an unknown item
         ('Zone 6', {

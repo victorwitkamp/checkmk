@@ -22,21 +22,21 @@ def _parameter_valuespec_eaton_enviroment():
         ("temp",
          Tuple(title=_("Temperature"),
                elements=[
-                   Integer(title=_("warning at"), unit=u"°C", default_value=26),
-                   Integer(title=_("critical at"), unit=u"°C", default_value=30),
+                   Integer(title=_("warning at"), unit="°C", default_value=26),
+                   Integer(title=_("critical at"), unit="°C", default_value=30),
                ])),
         ("remote_temp",
          Tuple(title=_("Remote Temperature"),
                elements=[
-                   Integer(title=_("warning at"), unit=u"°C", default_value=26),
-                   Integer(title=_("critical at"), unit=u"°C", default_value=30),
+                   Integer(title=_("warning at"), unit="°C", default_value=26),
+                   Integer(title=_("critical at"), unit="°C", default_value=30),
                ])),
         ("humidity",
          Tuple(
              title=_("Humidity"),
              elements=[
-                 Integer(title=_("warning at"), unit=u"%", default_value=60),
-                 Integer(title=_("critical at"), unit=u"%", default_value=75),
+                 Integer(title=_("warning at"), unit="%", default_value=60),
+                 Integer(title=_("critical at"), unit="%", default_value=75),
              ],
          )),
     ],)

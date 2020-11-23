@@ -114,7 +114,7 @@ def test_iter_config_lines(mk_logwatch, tmpdir):
 
     fake_config_file = os.path.join(fake_config_path, "logwatch.cfg")
     with open(fake_config_file, "wb") as f:
-        f.write(u"# this is a comment\nthis is a line   ".encode("utf-8"))
+        f.write("# this is a comment\nthis is a line   ".encode("utf-8"))
 
     files = [fake_config_file]
     read = list(mk_logwatch.iter_config_lines(files))
@@ -158,61 +158,61 @@ def test_read_config_cluster(mk_logwatch, config_lines, cluster_name, cluster_da
 @pytest.mark.parametrize("config_lines, logfiles_files, logfiles_patterns", [
     (
         [
-            u'/var/log/messages',
-            u' C Fail event detected on md device',
-            u' I mdadm.*: Rebuild.*event detected',
-            u' W mdadm\\[',
-            u' W ata.*hard resetting link',
-            u' W ata.*soft reset failed (.*FIS failed)',
-            u' W device-mapper: thin:.*reached low water mark',
-            u' C device-mapper: thin:.*no free space',
-            u' C Error: (.*)',
+            '/var/log/messages',
+            ' C Fail event detected on md device',
+            ' I mdadm.*: Rebuild.*event detected',
+            ' W mdadm\\[',
+            ' W ata.*hard resetting link',
+            ' W ata.*soft reset failed (.*FIS failed)',
+            ' W device-mapper: thin:.*reached low water mark',
+            ' C device-mapper: thin:.*no free space',
+            ' C Error: (.*)',
         ],
-        [u'/var/log/messages'],
+        ['/var/log/messages'],
         [
-            (u'C', u'Fail event detected on md device', [], []),
-            (u'I', u'mdadm.*: Rebuild.*event detected', [], []),
-            (u'W', u'mdadm\\[', [], []),
-            (u'W', u'ata.*hard resetting link', [], []),
-            (u'W', u'ata.*soft reset failed (.*FIS failed)', [], []),
-            (u'W', u'device-mapper: thin:.*reached low water mark', [], []),
-            (u'C', u'device-mapper: thin:.*no free space', [], []),
-            (u'C', u'Error: (.*)', [], []),
+            ('C', 'Fail event detected on md device', [], []),
+            ('I', 'mdadm.*: Rebuild.*event detected', [], []),
+            ('W', 'mdadm\\[', [], []),
+            ('W', 'ata.*hard resetting link', [], []),
+            ('W', 'ata.*soft reset failed (.*FIS failed)', [], []),
+            ('W', 'device-mapper: thin:.*reached low water mark', [], []),
+            ('C', 'device-mapper: thin:.*no free space', [], []),
+            ('C', 'Error: (.*)', [], []),
         ],
     ),
     (
         [
-            u'/var/log/auth.log',
-            u' W sshd.*Corrupted MAC on input',
+            '/var/log/auth.log',
+            ' W sshd.*Corrupted MAC on input',
         ],
-        [u'/var/log/auth.log'],
-        [(u'W', u'sshd.*Corrupted MAC on input', [], [])],
+        ['/var/log/auth.log'],
+        [('W', 'sshd.*Corrupted MAC on input', [], [])],
     ),
     (
         [
-            u'"c:\\a path\\with spaces" "d:\\another path\\with spaces"',
-            u' I registered panic notifier',
-            u' C panic',
-            u' C Oops',
-            u' W generic protection rip',
-            u' W .*Unrecovered read error - auto reallocate failed',
+            '"c:\\a path\\with spaces" "d:\\another path\\with spaces"',
+            ' I registered panic notifier',
+            ' C panic',
+            ' C Oops',
+            ' W generic protection rip',
+            ' W .*Unrecovered read error - auto reallocate failed',
         ],
-        [u'c:\\a path\\with spaces', u'd:\\another path\\with spaces'],
+        ['c:\\a path\\with spaces', 'd:\\another path\\with spaces'],
         [
-            (u'I', u'registered panic notifier', [], []),
-            (u'C', u'panic', [], []),
-            (u'C', u'Oops', [], []),
-            (u'W', u'generic protection rip', [], []),
-            (u'W', u'.*Unrecovered read error - auto reallocate failed', [], []),
+            ('I', 'registered panic notifier', [], []),
+            ('C', 'panic', [], []),
+            ('C', 'Oops', [], []),
+            ('W', 'generic protection rip', [], []),
+            ('W', '.*Unrecovered read error - auto reallocate failed', [], []),
         ],
     ),
     (
         [
-            u'/var/log/äumlaut.log',
-            u' W sshd.*Corrupted MAC on input',
+            '/var/log/äumlaut.log',
+            ' W sshd.*Corrupted MAC on input',
         ],
-        [u'/var/log/äumlaut.log'],
-        [(u'W', u'sshd.*Corrupted MAC on input', [], [])],
+        ['/var/log/äumlaut.log'],
+        [('W', 'sshd.*Corrupted MAC on input', [], [])],
     ),
 ])
 def test_read_config_logfiles(mk_logwatch, config_lines, logfiles_files, logfiles_patterns,
@@ -267,9 +267,9 @@ def test_get_status_filename(mk_logwatch, env_var, istty, statusfile, monkeypatc
 
 
 @pytest.mark.parametrize("state_data, state_dict", [
-    ((u"/var/log/messages|7767698|32455445\n"
-      u"/var/foo|42\n"
-      u"/var/test/x12134.log|12345"), {
+    (("/var/log/messages|7767698|32455445\n"
+      "/var/foo|42\n"
+      "/var/test/x12134.log|12345"), {
           '/var/log/messages': {
               "file": "/var/log/messages",
               "offset": 7767698,
@@ -286,9 +286,9 @@ def test_get_status_filename(mk_logwatch, env_var, istty, statusfile, monkeypatc
               "inode": -1,
           }
       }),
-    ((u"{'file': '/var/log/messages', 'offset': 7767698, 'inode': 32455445}\n"
-      u"{'file': '/var/foo', 'offset': 42, 'inode': -1}\n"
-      u"{'file': '/var/test/x12134.log', 'offset': 12345, 'inode': -1}\n"), {
+    (("{'file': '/var/log/messages', 'offset': 7767698, 'inode': 32455445}\n"
+      "{'file': '/var/foo', 'offset': 42, 'inode': -1}\n"
+      "{'file': '/var/test/x12134.log', 'offset': 12345, 'inode': -1}\n"), {
           '/var/log/messages': {
               "file": "/var/log/messages",
               "offset": 7767698,
@@ -305,16 +305,16 @@ def test_get_status_filename(mk_logwatch, env_var, istty, statusfile, monkeypatc
               "inode": -1,
           }
       }),
-    (u"{'file': 'I/am/a/byte/\\x89', 'offset': 23, 'inode': 42}\n", {
+    ("{'file': 'I/am/a/byte/\\x89', 'offset': 23, 'inode': 42}\n", {
         'I/am/a/byte/\x89': {
             "file": "I/am/a/byte/\x89",
             "offset": 23,
             "inode": 42,
         },
     }),
-    (u"{'file': u'I/am/unicode\\u203d', 'offset': 23, 'inode': 42}\n", {
-        u'I/am/unicode\u203d': {
-            "file": u"I/am/unicode‽",
+    ("{'file': 'I/am/unicode\\u203d', 'offset': 23, 'inode': 42}\n", {
+        'I/am/unicode\u203d': {
+            "file": "I/am/unicode‽",
             "offset": 23,
             "inode": 42,
         },
@@ -373,21 +373,21 @@ def test_state_write(mk_logwatch, tmpdir, state_dict):
 
 
 STAR_FILES = [
-    (b"/file.log", u"/file.log"),
-    (b"/hard_link_to_file.log", u"/hard_link_to_file.log"),
-    (b"/hard_linked_file.log", u"/hard_linked_file.log"),
-    (b"/oh-no-\x89", u"/oh-no-\uFFFD"),  # unicode replace char
-    (b"/symlink_to_file.log", u"/symlink_to_file.log"),
-    (b"/wat\xe2\x80\xbd", u"/wat\u203D"),  # actual interobang
+    (b"/file.log", "/file.log"),
+    (b"/hard_link_to_file.log", "/hard_link_to_file.log"),
+    (b"/hard_linked_file.log", "/hard_linked_file.log"),
+    (b"/oh-no-\x89", "/oh-no-\uFFFD"),  # unicode replace char
+    (b"/symlink_to_file.log", "/symlink_to_file.log"),
+    (b"/wat\xe2\x80\xbd", "/wat\u203D"),  # actual interobang
 ]
 
 
 @pytest.mark.parametrize("pattern_suffix, file_suffixes", [
-    (u"/*", STAR_FILES),
-    (u"/**", STAR_FILES),
-    (u"/subdir/*", [(b"/subdir/symlink_to_file.log", u"/subdir/symlink_to_file.log")]),
-    (u"/symlink_to_dir/*", [
-        (b"/symlink_to_dir/yet_another_file.log", u"/symlink_to_dir/yet_another_file.log")
+    ("/*", STAR_FILES),
+    ("/**", STAR_FILES),
+    ("/subdir/*", [(b"/subdir/symlink_to_file.log", "/subdir/symlink_to_file.log")]),
+    ("/symlink_to_dir/*", [
+        (b"/symlink_to_dir/yet_another_file.log", "/symlink_to_dir/yet_another_file.log")
     ]),
 ])
 def test_find_matching_logfiles(mk_logwatch, fake_filesystem, pattern_suffix, file_suffixes):
@@ -438,12 +438,12 @@ def test_log_lines_iter(mk_logwatch):
 
         line = log_iter.next_line()
         assert isinstance(line, text_type())
-        assert line == u"# This file is part of Checkmk (https://checkmk.com). It is subject to the terms and\n"
+        assert line == "# This file is part of Checkmk (https://checkmk.com). It is subject to the terms and\n"
         assert log_iter.get_position() == 206
 
-        log_iter.push_back_line(u'Täke this!')
+        log_iter.push_back_line('Täke this!')
         assert log_iter.get_position() == 195
-        assert log_iter.next_line() == u'Täke this!'
+        assert log_iter.next_line() == 'Täke this!'
 
         log_iter.skip_remaining()
         assert log_iter.next_line() is None
@@ -456,32 +456,32 @@ def test_log_lines_iter(mk_logwatch):
         # UTF-8 encoding works by default
         (None, [
             b"abc1",
-            u"äbc2".encode("utf-8"),
+            "äbc2".encode("utf-8"),
             b"abc3",
         ], [
-            u"abc1\n",
-            u"äbc2\n",
-            u"abc3\n",
+            "abc1\n",
+            "äbc2\n",
+            "abc3\n",
         ]),
         # Replace characters that can not be decoded
         (None, [
             b"abc1",
-            u"äbc2".encode("latin-1"),
+            "äbc2".encode("latin-1"),
             b"abc3",
         ], [
-            u"abc1\n",
-            u"\ufffdbc2\n",
-            u"abc3\n",
+            "abc1\n",
+            "\ufffdbc2\n",
+            "abc3\n",
         ]),
         # Set custom encoding
         ("latin-1", [
             b"abc1",
-            u"äbc2".encode("latin-1"),
+            "äbc2".encode("latin-1"),
             b"abc3",
         ], [
-            u"abc1\n",
-            u"äbc2\n",
-            u"abc3\n",
+            "abc1\n",
+            "äbc2\n",
+            "abc3\n",
         ]),
     ])
 def test_non_ascii_line_processing(mk_logwatch, tmpdir, monkeypatch, use_specific_encoding, lines,
@@ -517,8 +517,8 @@ class MockStdout(object):  # pylint: disable=useless-object-inheritance
         (
             __file__,
             [
-                ('W', re.compile(u'^[^u]*W.*I match only myself', re.UNICODE), [], []),
-                ('I', re.compile(u'.*', re.UNICODE), [], []),
+                ('W', re.compile('^[^u]*W.*I match only myself', re.UNICODE), [], []),
+                ('I', re.compile('.*', re.UNICODE), [], []),
             ],
             {
                 'nocontext': True
@@ -527,39 +527,39 @@ class MockStdout(object):  # pylint: disable=useless-object-inheritance
                 'offset': 0,
             },
             [
-                u"[[[%s]]]\n" % __file__,
-                u"W                 ('W', re.compile(u'^[^u]*W.*I match only myself', re.UNICODE), [], []),\n"
+                "[[[%s]]]\n" % __file__,
+                "W                 ('W', re.compile('^[^u]*W.*I match only myself', re.UNICODE), [], []),\n"
             ],
         ),
         (
             __file__,
             [
-                ('W', re.compile(u'I don\'t match anything at all!', re.UNICODE), [], []),
+                ('W', re.compile('I don\'t match anything at all!', re.UNICODE), [], []),
             ],
             {},
             {
                 'offset': 0,
             },
             [
-                u"[[[%s]]]\n" % __file__,
+                "[[[%s]]]\n" % __file__,
             ],
         ),
         (
             __file__,
             [
-                ('W', re.compile(u'.*', re.UNICODE), [], []),
+                ('W', re.compile('.*', re.UNICODE), [], []),
             ],
             {},
             {},
             [  # nothing for new files
-                u"[[[%s]]]\n" % __file__,
+                "[[[%s]]]\n" % __file__,
             ],
         ),
         (
             __file__,
             [
-                ('C', re.compile(u'äöü', re.UNICODE), [], []),
-                ('I', re.compile(u'.*', re.UNICODE), [], []),
+                ('C', re.compile('äöü', re.UNICODE), [], []),
+                ('I', re.compile('.*', re.UNICODE), [], []),
             ],
             {
                 'nocontext': True
@@ -568,11 +568,11 @@ class MockStdout(object):  # pylint: disable=useless-object-inheritance
                 'offset': 0,
             },
             [  # match umlauts
-                u"[[[%s]]]\n" % __file__,
-                u"C                 ('C', re.compile(u'\xe4\xf6\xfc', re.UNICODE), [], []),\n",
+                "[[[%s]]]\n" % __file__,
+                "C                 ('C', re.compile('\xe4\xf6\xfc', re.UNICODE), [], []),\n",
             ],
         ),
-        ('locked door', [], {}, {}, [u"[[[locked door:cannotopen]]]\n"]),
+        ('locked door', [], {}, {}, ["[[[locked door:cannotopen]]]\n"]),
     ])
 def test_process_logfile(mk_logwatch, monkeypatch, logfile, patterns, opt_raw, state,
                          expected_output):

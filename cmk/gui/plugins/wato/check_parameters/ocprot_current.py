@@ -20,8 +20,8 @@ from cmk.gui.plugins.wato import (
 
 def _parameter_valuespec_ocprot_current():
     return Tuple(elements=[
-        Float(title=_("Warning at"), unit=u"A", default_value=14.0),
-        Float(title=_("Critical at"), unit=u"A", default_value=15.0),
+        Float(title=_("Warning at"), unit="A", default_value=14.0),
+        Float(title=_("Critical at"), unit="A", default_value=15.0),
     ],)
 
 

@@ -115,9 +115,9 @@ def _render_temp_with_unit(temp: float, unit: str) -> str:
 
 
 temp_unitsym = {
-    "c": u"°C",
-    "f": u"°F",
-    "k": u"K",
+    "c": "°C",
+    "f": "°F",
+    "k": "K",
 }
 
 

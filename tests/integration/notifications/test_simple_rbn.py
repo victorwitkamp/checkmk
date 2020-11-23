@@ -35,7 +35,7 @@ def test_log_fixture(request, web, site, fake_sendmail):  # noqa: F811 # pylint:
         "hh": {
             "alias": "Harry Hirsch",
             "password": "1234",
-            "email": u"%s@localhost" % web.site.id,
+            "email": "%s@localhost" % web.site.id,
             'contactgroups': ['all'],
         },
     }

@@ -22,10 +22,10 @@ def test_fileinfo_min_max_age_levels():
     # the service state is also '0'.
 
     check = Check("fileinfo")
-    item = u'c:\\filetest\\check_mk.txt'
+    item = 'c:\\filetest\\check_mk.txt'
     parsed = check.run_parse([
-        [u'8'],
-        [u'c:\\filetest\\check_mk.txt', u'7', u'5'],
+        ['8'],
+        ['c:\\filetest\\check_mk.txt', '7', '5'],
     ])
 
     size_result = BasicCheckResult(
@@ -104,9 +104,9 @@ def test_fileinfo_min_max_age_levels():
         (
             [
                 # legacy format
-                [u"1563288717"],
-                [u"[[[header]]]"],
-                [u"name", u"status", u"size", u"time"],
+                ["1563288717"],
+                ["[[[header]]]"],
+                ["name", "status", "size", "time"],
             ],
             {
                 'reftime': 1563288717,
@@ -127,7 +127,7 @@ def test_fileinfo_min_max_age_levels():
         ),
         (
             [
-                [u"1563288717"],
+                ["1563288717"],
             ],
             {
                 'reftime': 1563288717,
@@ -162,12 +162,12 @@ def test_check_fileinfo_group_no_files(info, parsed, expected_result):
         (
             [
                 # legacy format
-                [u"1563288717"],
-                [u"[[[header]]]"],
-                [u"name", u"status", u"size", u"time"],
-                [u"[[[content]]]"],
-                [u'/bar/foo', 'ok', '384', '1465079135'],
-                [u'/foo/bar', 'ok', '384', '1465079135'],
+                ["1563288717"],
+                ["[[[header]]]"],
+                ["name", "status", "size", "time"],
+                ["[[[content]]]"],
+                ['/bar/foo', 'ok', '384', '1465079135'],
+                ['/foo/bar', 'ok', '384', '1465079135'],
             ],
             {
                 'reftime': 1563288717,
@@ -186,9 +186,9 @@ def test_check_fileinfo_group_no_files(info, parsed, expected_result):
         ),
         (
             [
-                [u"1563288717"],
-                [u'/bar/foo', '384', '1465079135'],
-                [u'/foo/bar', '384', '1465079135'],
+                ["1563288717"],
+                ['/bar/foo', '384', '1465079135'],
+                ['/foo/bar', '384', '1465079135'],
             ],
             {
                 'reftime': 1563288717,
@@ -228,9 +228,9 @@ def test_check_fileinfo_group_no_matching_files(info, parsed, expected_result):
     [
         (
             [
-                [u"1563288717"],
-                [u'/var/log/syslog', '384', '1465079135'],
-                [u'/var/log/syslog1', '384', '1465079135'],
+                ["1563288717"],
+                ['/var/log/syslog', '384', '1465079135'],
+                ['/var/log/syslog1', '384', '1465079135'],
             ],
             {
                 # current format
@@ -251,9 +251,9 @@ def test_check_fileinfo_group_no_matching_files(info, parsed, expected_result):
         ),
         (
             [
-                [u"1563288717"],
-                [u'/var/log/syslog', '384', '1465079135'],
-                [u'/var/log/syslog1', '384', '1465079135'],
+                ["1563288717"],
+                ['/var/log/syslog', '384', '1465079135'],
+                ['/var/log/syslog1', '384', '1465079135'],
             ],
             {
                 # legacy format
@@ -273,9 +273,9 @@ def test_check_fileinfo_group_no_matching_files(info, parsed, expected_result):
         ),
         (
             [
-                [u"1563288717"],
-                [u'/var/log/syslog', '384', '1465079135'],
-                [u'/var/log/syslog1', '384', '1465079135'],
+                ["1563288717"],
+                ['/var/log/syslog', '384', '1465079135'],
+                ['/var/log/syslog1', '384', '1465079135'],
             ],
             {},
             [
@@ -285,7 +285,7 @@ def test_check_fileinfo_group_no_matching_files(info, parsed, expected_result):
         ),
         (
             [
-                [u"1563288717"],
+                ["1563288717"],
             ],
             {},
             [
@@ -295,9 +295,9 @@ def test_check_fileinfo_group_no_matching_files(info, parsed, expected_result):
         ),
         (
             [
-                [u"1563288717"],
-                [u'/var/log/syslog', '384', '1465079135'],
-                [u'/var/log/syslog1', '384', '1465079135'],
+                ["1563288717"],
+                ['/var/log/syslog', '384', '1465079135'],
+                ['/var/log/syslog1', '384', '1465079135'],
             ],
             {
                 # current format
@@ -331,10 +331,10 @@ def test_check_fileinfo_group_patterns(info, group_pattern, expected_result):
 @pytest.mark.parametrize('info, expected_result', [
     (
         [
-            [u"1563288717"],
-            [u'/var/log/syslog', '384', '1465079135'],
-            [u'/var/log/syslog1', '384', '1465079135'],
-            [u'/var/log/banana', '1', '1465079135'],
+            ["1563288717"],
+            ['/var/log/syslog', '384', '1465079135'],
+            ['/var/log/syslog1', '384', '1465079135'],
+            ['/var/log/banana', '1', '1465079135'],
         ],
         [
             (0, 'Count: 3', [('count', 3, None, None)]),
@@ -360,9 +360,9 @@ def test_check_fileinfo_group_patterns(info, group_pattern, expected_result):
     ),
     (
         [
-            [u"1563288717"],
-            [u'/var/log/syslog', '384', '1465079135'],
-            [u'/var/log/syslog1', '384', '1465079135'],
+            ["1563288717"],
+            ['/var/log/syslog', '384', '1465079135'],
+            ['/var/log/syslog1', '384', '1465079135'],
         ],
         [
             (0, 'Count: 2', [('count', 2, None, None)]),
@@ -382,8 +382,8 @@ def test_check_fileinfo_group_patterns(info, group_pattern, expected_result):
     ),
     (
         [
-            [u"1563288717"],
-            [u'/var/log/banana', '1', '1465079135'],
+            ["1563288717"],
+            ['/var/log/banana', '1', '1465079135'],
         ],
         [
             (0, 'Count: 1', [('count', 1, None, None)]),
@@ -399,7 +399,7 @@ def test_check_fileinfo_group_patterns(info, group_pattern, expected_result):
     ),
     (
         [
-            [u"1563288717"],
+            ["1563288717"],
         ],
         [
             (0, 'Count: 0', [('count', 0, None, None)]),

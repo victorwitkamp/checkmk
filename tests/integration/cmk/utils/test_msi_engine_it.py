@@ -108,14 +108,14 @@ def test_copy_or_create(tmp_path: Path) -> None:
     dst_file = tmp_path / "temp.x.out"
 
     # file doesn't exist, check file created
-    msi_engine.copy_or_create(src_file, dst_file, u"!!!")
+    msi_engine.copy_or_create(src_file, dst_file, "!!!")
     assert dst_file.exists()
     content = dst_file.read_text()
     assert content == "!!!"
 
     # files exists check file copied
-    src_file.write_text(u"+++")
-    msi_engine.copy_or_create(src_file, dst_file, u"!!!")
+    src_file.write_text("+++")
+    msi_engine.copy_or_create(src_file, dst_file, "!!!")
     assert dst_file.exists()
     content = dst_file.read_text()
     assert content == "+++"

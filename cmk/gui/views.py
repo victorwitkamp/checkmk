@@ -2706,7 +2706,7 @@ def get_sorter_title_for_choices(sorter: Sorter) -> str:
     if sorter.columns == ["site"]:
         info_title = _("Site")
 
-    return u"%s: %s" % (info_title, sorter.title)
+    return "%s: %s" % (info_title, sorter.title)
 
 
 def get_painter_title_for_choices(painter: Painter) -> str:
@@ -2720,7 +2720,7 @@ def get_painter_title_for_choices(painter: Painter) -> str:
         info_title = _("Site")
 
     dummy_cell = Cell(View("", {}, {}), PainterSpec(painter.ident))
-    return u"%s: %s" % (info_title, painter.list_title(dummy_cell))
+    return "%s: %s" % (info_title, painter.list_title(dummy_cell))
 
 
 #.
@@ -3095,7 +3095,7 @@ class PageRescheduleCheck(AjaxPage):
             spec = "%s;%s" % (host, service)
 
             if wait_svc:
-                wait_spec = u'%s;%s' % (host, wait_svc)
+                wait_spec = '%s;%s' % (host, wait_svc)
                 add_filter = "Filter: service_description = %s\n" % livestatus.lqencode(wait_svc)
             else:
                 wait_spec = spec
@@ -3112,7 +3112,7 @@ class PageRescheduleCheck(AjaxPage):
             "[%d] SCHEDULE_FORCED_%s_CHECK;%s;%d" % (now, cmd, livestatus.lqencode(spec), now),
             site)
 
-        query = u"GET %ss\n" \
+        query = "GET %ss\n" \
                  "WaitObject: %s\n" \
                  "WaitCondition: last_check >= %d\n" \
                  "WaitTimeout: %d\n" \

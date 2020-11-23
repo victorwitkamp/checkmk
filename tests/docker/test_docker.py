@@ -97,30 +97,30 @@ def _build(request, client, version, add_args=None):
     config = attrs["Config"]
 
     assert config["Labels"] == {
-        u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-        u'org.opencontainers.image.version': version.version,
-        u'maintainer': u'feedback@checkmk.com',
-        u'org.opencontainers.image.description': u'Checkmk is a leading tool for Infrastructure & Application Monitoring',
-        u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-        u'org.opencontainers.image.title': u'Checkmk',
-        u'org.opencontainers.image.url': u'https://checkmk.com/'
+        'org.opencontainers.image.vendor': 'tribe29 GmbH',
+        'org.opencontainers.image.version': version.version,
+        'maintainer': 'feedback@checkmk.com',
+        'org.opencontainers.image.description': 'Checkmk is a leading tool for Infrastructure & Application Monitoring',
+        'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+        'org.opencontainers.image.title': 'Checkmk',
+        'org.opencontainers.image.url': 'https://checkmk.com/'
     }
 
     assert config["Env"] == [
-        u'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
-        u'CMK_SITE_ID=cmk',
-        u'CMK_LIVESTATUS_TCP=',
-        u'CMK_PASSWORD=',
-        u'MAIL_RELAY_HOST=',
+        'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+        'CMK_SITE_ID=cmk',
+        'CMK_LIVESTATUS_TCP=',
+        'CMK_PASSWORD=',
+        'MAIL_RELAY_HOST=',
     ]
 
     assert "Healthcheck" in config
 
-    assert attrs["ContainerConfig"]["Entrypoint"] == [u'/docker-entrypoint.sh']
+    assert attrs["ContainerConfig"]["Entrypoint"] == ['/docker-entrypoint.sh']
 
     assert attrs["ContainerConfig"]["ExposedPorts"] == {
-        u'5000/tcp': {},
-        u'6557/tcp': {},
+        '5000/tcp': {},
+        '6557/tcp': {},
     }
 
     # 2018-11-14: 900 -> 920

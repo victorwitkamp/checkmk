@@ -112,10 +112,10 @@ def _ldap_tree():
             "cn": ["admins"],
             "member": ["cn=admin,ou=users,dc=check-mk,dc=org",],
         },
-        u"cn=älle,ou=groups,dc=check-mk,dc=org": {
+        "cn=älle,ou=groups,dc=check-mk,dc=org": {
             "objectclass": ["group"],
             "objectcategory": ["group"],
-            "dn": [u"cn=älle,ou=groups,dc=check-mk,dc=org"],
+            "dn": ["cn=älle,ou=groups,dc=check-mk,dc=org"],
             "cn": ["alle"],
             "member": [
                 "cn=admin,ou=users,dc=check-mk,dc=org",
@@ -244,8 +244,8 @@ def user_files():
     profile_dir = Path(cmk.utils.paths.var_dir, "web", "admin")
     profile_dir.mkdir(parents=True, exist_ok=True)
     with (profile_dir / "cached_profile.mk").open("w", encoding="utf-8") as f:
-        f.write(u"%r" % {
-            "alias": u"admin",
+        f.write("%r" % {
+            "alias": "admin",
             "connector": "default",
         })
 
@@ -334,7 +334,7 @@ def test_check_credentials_success(register_builtin_html, mocked_ldap):
     assert isinstance(result, str)
     assert result == "admin"
 
-    result = mocked_ldap.check_credentials(u"admin", "ldap-test")
+    result = mocked_ldap.check_credentials("admin", "ldap-test")
     assert isinstance(result, str)
     assert result == "admin"
     _check_restored_bind_user(mocked_ldap)
@@ -409,24 +409,24 @@ def test_get_users(mocked_ldap):
     users = mocked_ldap.get_users()
     assert len(users) == 3
 
-    assert u"härry" in users
+    assert "härry" in users
     assert "admin" in users
     assert "sync-user" in users
 
-    assert users[u"härry"] == {
-        'dn': u'cn=h\xe4rry,ou=users,dc=check-mk,dc=org',
-        'mail': [u'h\xe4rry@check-mk.org'],
-        'samaccountname': [u'h\xe4rry'],
-        'cn': [u'H\xe4rry H\xf6rsch']
+    assert users["härry"] == {
+        'dn': 'cn=h\xe4rry,ou=users,dc=check-mk,dc=org',
+        'mail': ['h\xe4rry@check-mk.org'],
+        'samaccountname': ['h\xe4rry'],
+        'cn': ['H\xe4rry H\xf6rsch']
     }
 
 
 @pytest.mark.parametrize("nested", [True, False])
 def test_get_group_memberships_simple(mocked_ldap, nested):
     assert mocked_ldap.get_group_memberships(["admins"], nested=nested) == {
-        u'cn=admins,ou=groups,dc=check-mk,dc=org': {
-            'cn': u'admins',
-            'members': [u'cn=admin,ou=users,dc=check-mk,dc=org'],
+        'cn=admins,ou=groups,dc=check-mk,dc=org': {
+            'cn': 'admins',
+            'members': ['cn=admin,ou=users,dc=check-mk,dc=org'],
         }
     }
 
@@ -439,8 +439,8 @@ def test_get_group_memberships_flat_out_of_scope(mocked_ldap, nested):
 # TODO: Currently failing. Need to fix the code.
 #def test_get_group_memberships_out_of_scope_member(mocked_ldap):
 #    assert mocked_ldap.get_group_memberships(["member-out-of-scope"]) == {
-#        u'cn=member-out-of-scope,ou=groups,dc=check-mk,dc=org': {
-#            'cn': u'member-out-of-scope',
+#        'cn=member-out-of-scope,ou=groups,dc=check-mk,dc=org': {
+#            'cn': 'member-out-of-scope',
 #            'members': [
 #            ],
 #        }
@@ -449,10 +449,10 @@ def test_get_group_memberships_flat_out_of_scope(mocked_ldap, nested):
 #
 #def test_get_group_memberships_flat_skip_group(mocked_ldap):
 #    assert mocked_ldap.get_group_memberships(["top-level"]) == {
-#        u'cn=top-level,ou=groups,dc=check-mk,dc=org': {
-#            'cn': u'top-level',
+#        'cn=top-level,ou=groups,dc=check-mk,dc=org': {
+#            'cn': 'top-level',
 #            'members': [
-#                u"cn=sync-user,ou=users,dc=check-mk,dc=org",
+#                "cn=sync-user,ou=users,dc=check-mk,dc=org",
 #            ],
 #        }
 #    }
@@ -461,11 +461,11 @@ def test_get_group_memberships_flat_out_of_scope(mocked_ldap, nested):
 @pytest.mark.parametrize("nested", [True, False])
 def test_get_group_memberships_with_non_ascii(mocked_ldap, nested):
     assert mocked_ldap.get_group_memberships(["alle"], nested=nested) == {
-        u'cn=älle,ou=groups,dc=check-mk,dc=org': {
-            'cn': u'alle',
+        'cn=älle,ou=groups,dc=check-mk,dc=org': {
+            'cn': 'alle',
             'members': [
-                u'cn=admin,ou=users,dc=check-mk,dc=org',
-                u'cn=härry,ou=users,dc=check-mk,dc=org',
+                'cn=admin,ou=users,dc=check-mk,dc=org',
+                'cn=härry,ou=users,dc=check-mk,dc=org',
             ],
         }
     }
@@ -483,35 +483,35 @@ def test_get_group_memberships_nested(mocked_ldap):
     assert len(memberships) == 5
 
     needed_groups = [
-        (u'cn=empty,ou=groups,dc=check-mk,dc=org', {
-            'cn': u'empty',
+        ('cn=empty,ou=groups,dc=check-mk,dc=org', {
+            'cn': 'empty',
             'members': [],
         }),
-        (u'cn=level2,ou=groups,dc=check-mk,dc=org', {
-            'cn': u'level2',
+        ('cn=level2,ou=groups,dc=check-mk,dc=org', {
+            'cn': 'level2',
             'members': [
-                u"cn=admin,ou=users,dc=check-mk,dc=org",
-                u"cn=härry,ou=users,dc=check-mk,dc=org",
+                "cn=admin,ou=users,dc=check-mk,dc=org",
+                "cn=härry,ou=users,dc=check-mk,dc=org",
             ],
         }),
-        (u'cn=level1,ou=groups,dc=check-mk,dc=org', {
-            'cn': u'level1',
+        ('cn=level1,ou=groups,dc=check-mk,dc=org', {
+            'cn': 'level1',
             'members': [
-                u"cn=admin,ou=users,dc=check-mk,dc=org",
-                u"cn=härry,ou=users,dc=check-mk,dc=org",
+                "cn=admin,ou=users,dc=check-mk,dc=org",
+                "cn=härry,ou=users,dc=check-mk,dc=org",
             ],
         }),
-        (u'cn=top-level,ou=groups,dc=check-mk,dc=org', {
-            'cn': u'top-level',
+        ('cn=top-level,ou=groups,dc=check-mk,dc=org', {
+            'cn': 'top-level',
             'members': [
-                u"cn=admin,ou=users,dc=check-mk,dc=org",
-                u"cn=härry,ou=users,dc=check-mk,dc=org",
-                u"cn=sync-user,ou=users,dc=check-mk,dc=org",
+                "cn=admin,ou=users,dc=check-mk,dc=org",
+                "cn=härry,ou=users,dc=check-mk,dc=org",
+                "cn=sync-user,ou=users,dc=check-mk,dc=org",
             ],
         }),
-        (u'cn=selfref,ou=groups,dc=check-mk,dc=org', {
-            'cn': u'selfref',
-            'members': [u"cn=admin,ou=users,dc=check-mk,dc=org",],
+        ('cn=selfref,ou=groups,dc=check-mk,dc=org', {
+            'cn': 'selfref',
+            'members': ["cn=admin,ou=users,dc=check-mk,dc=org",],
         }),
     ]
 

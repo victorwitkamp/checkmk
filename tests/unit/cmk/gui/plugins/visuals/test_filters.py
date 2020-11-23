@@ -325,12 +325,12 @@ filter_tests = [
     FilterTest(
         ident="hostalias",
         request_vars=[('hostalias', "häääa")],
-        expected_filters=u"Filter: host_alias ~~ häääa\n",
+        expected_filters="Filter: host_alias ~~ häääa\n",
     ),
     FilterTest(
         ident="hostalias",
         request_vars=[('hostalias', "häääa"), ('neg_hostalias', "on")],
-        expected_filters=u"Filter: host_alias !~~ häääa\n",
+        expected_filters="Filter: host_alias !~~ häääa\n",
     ),
     # Testing base class FilterGroupSelection
     FilterTest(
@@ -595,10 +595,10 @@ filter_table_tests = [
         request_vars=[('aggr_group', 'blä')],
         rows=[
             {"aggr_group": "blub"},
-            {"aggr_group": u"blä"},
+            {"aggr_group": "blä"},
         ],
         expected_rows=[
-            {"aggr_group": u"blä"},
+            {"aggr_group": "blä"},
         ],
     ),
     FilterTableTest(

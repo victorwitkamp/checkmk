@@ -97,7 +97,7 @@ def _build_url(url_params: HTTPVariables) -> str:
 
 class ABCQuicksearchConductor(metaclass=abc.ABCMeta):
     def __init__(self, used_filters: UsedFilters, filter_behaviour: FilterBehaviour) -> None:
-        # used_filters:     {u'h': [u'heute'], u's': [u'Check_MK']}
+        # used_filters:     {'h': ['heute'], 's': ['Check_MK']}
         self._used_filters = used_filters
         self._filter_behaviour = filter_behaviour
 

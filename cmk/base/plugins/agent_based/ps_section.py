@@ -148,8 +148,8 @@ def parse_process_entries(pre_parsed) -> List[Tuple[ps.ps_info, List[str]]]:
             cmd_line = line
 
         # Filter out any lines where no process command line is available, e.g.
-        # [None, u'(<defunct>,,,)']
-        # [None, u'(<defunct>,,,)', u'']
+        # [None, '(<defunct>,,,)']
+        # [None, '(<defunct>,,,)', '']
         if cmd_line and cmd_line[0]:
             parsed.append((process_info, cmd_line))
 
@@ -159,7 +159,7 @@ def parse_process_entries(pre_parsed) -> List[Tuple[ps.ps_info, List[str]]]:
 def parse_ps(string_table: StringTable,) -> ps.Section:
     # Produces a list of Tuples where each sub list is built as follows:
     # [
-    #     [(u'root', u'35156', u'4372', u'00:00:05/2-14:14:49', u'1'), u'/sbin/init'],
+    #     [('root', '35156', '4372', '00:00:05/2-14:14:49', '1'), '/sbin/init'],
     # ]
     # First element: The process info tuple (see ps.include: check_ps_common() for details on the elements)
     # second element:  The process command line

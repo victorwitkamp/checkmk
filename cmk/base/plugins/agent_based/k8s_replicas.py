@@ -13,7 +13,7 @@ from .utils import k8s
 
 def host_labels(section: Dict) -> HostLabelGenerator:
     if section['ready_replicas'] is not None and section['replicas'] is not None:
-        yield HostLabel(u'cmk/kubernetes_object', u'deployment')
+        yield HostLabel('cmk/kubernetes_object', 'deployment')
 
 
 register.agent_section(

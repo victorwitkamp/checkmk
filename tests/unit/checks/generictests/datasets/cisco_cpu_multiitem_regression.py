@@ -12,14 +12,14 @@
 checkname = 'cisco_cpu_multiitem'
 
 
-info = [[[u'0', u'24']],
+info = [[['0', '24']],
         []]
 
 
-discovery = {'': [(u'0', {})]}
+discovery = {'': [('0', {})]}
 
 
-checks = {'': [(u'0',
+checks = {'': [('0',
                 {'levels': (80.0, 90.0)},
                 [(0,
                     'Utilization in the last 5 minutes: 24.0%',

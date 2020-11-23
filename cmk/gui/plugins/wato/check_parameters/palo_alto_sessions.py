@@ -24,8 +24,8 @@ def _parameter_valuespec_palo_alto_sessions():
          Tuple(
              title=_("Levels for sessions used"),
              elements=[
-                 Integer(title=_("Warning at"), default_value=60, unit=u"%"),
-                 Integer(title=_("Critical at"), default_value=70, unit=u"%"),
+                 Integer(title=_("Warning at"), default_value=60, unit="%"),
+                 Integer(title=_("Critical at"), default_value=70, unit="%"),
              ],
          )),
     ],)

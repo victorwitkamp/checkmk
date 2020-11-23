@@ -462,13 +462,13 @@ def _migrate_old_sample_config_tag_groups(host_tags, aux_tags_):
 def _remove_old_sample_config_tag_groups(host_tags, aux_tags_):
     legacy_tag_group_default = (
         'agent',
-        u'Agent type',
+        'Agent type',
         [
-            ('cmk-agent', u'Check_MK Agent (Server)', ['tcp']),
-            ('snmp-only', u'SNMP (Networking device, Appliance)', ['snmp']),
-            ('snmp-v1', u'Legacy SNMP device (using V1)', ['snmp']),
-            ('snmp-tcp', u'Dual: Check_MK Agent + SNMP', ['snmp', 'tcp']),
-            ('ping', u'No Agent', []),
+            ('cmk-agent', 'Check_MK Agent (Server)', ['tcp']),
+            ('snmp-only', 'SNMP (Networking device, Appliance)', ['snmp']),
+            ('snmp-v1', 'Legacy SNMP device (using V1)', ['snmp']),
+            ('snmp-tcp', 'Dual: Check_MK Agent + SNMP', ['snmp', 'tcp']),
+            ('ping', 'No Agent', []),
         ],
     )
 
@@ -501,14 +501,14 @@ def _extend_user_modified_tag_groups(host_tags):
     Basically host_tags is a list of configured tag groups. Each tag group is represented by a tuple like this:
 
     # tag_group_id, tag_group_title, tag_choices
-    ('agent', u'Agent type',
+    ('agent', 'Agent type',
         [
             # tag_id, tag_title, aux_tag_ids
-            ('cmk-agent', u'Check_MK Agent (Server)', ['tcp']),
-            ('snmp-only', u'SNMP (Networking device, Appliance)', ['snmp']),
-            ('snmp-v1',   u'Legacy SNMP device (using V1)', ['snmp']),
-            ('snmp-tcp',  u'Dual: Check_MK Agent + SNMP', ['snmp', 'tcp']),
-            ('ping',      u'No Agent', []),
+            ('cmk-agent', 'Check_MK Agent (Server)', ['tcp']),
+            ('snmp-only', 'SNMP (Networking device, Appliance)', ['snmp']),
+            ('snmp-v1',   'Legacy SNMP device (using V1)', ['snmp']),
+            ('snmp-tcp',  'Dual: Check_MK Agent + SNMP', ['snmp', 'tcp']),
+            ('ping',      'No Agent', []),
         ],
     )
     """
@@ -597,7 +597,7 @@ def _export_hosttags_to_php(cfg):
 
     auxtags_dict = dict(tag_config.aux_tag_list.get_choices())
 
-    content = u'''<?php
+    content = '''<?php
 // Created by WATO
 global $mk_hosttags, $mk_auxtags;
 $mk_hosttags = %s;

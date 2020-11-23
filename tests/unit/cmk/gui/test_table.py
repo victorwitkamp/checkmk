@@ -55,7 +55,7 @@ def test_basic(register_builtin_html):
             table.cell("C", "4")
 
         written_text = "".join(html.drain())
-    assert read_out_simple_table(written_text) == [[u'A', u'B'], [u'1', u'2'], [u'1', u'4']]
+    assert read_out_simple_table(written_text) == [['A', 'B'], ['1', '2'], ['1', '4']]
 
 
 def test_plug(register_builtin_html):
@@ -76,7 +76,7 @@ def test_plug(register_builtin_html):
             html.write("c")
 
         written_text = "".join(html.drain())
-    assert read_out_simple_table(written_text) == [[u'A', u'B'], [u'1a', u'2b'], [u'1a', u'4c']]
+    assert read_out_simple_table(written_text) == [['A', 'B'], ['1a', '2b'], ['1a', '4c']]
 
 
 def test_context(register_builtin_html):

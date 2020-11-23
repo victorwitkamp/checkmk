@@ -304,28 +304,28 @@ def _create_get_config_sync_file_infos_test_config(base_dir):
 
     base_dir.joinpath("etc/d3").mkdir(parents=True, exist_ok=True)
     with base_dir.joinpath("etc/d3").joinpath("xyz").open("w", encoding="utf-8") as f:
-        f.write(u"Däng")
+        f.write("Däng")
 
     base_dir.joinpath("etc/d4").mkdir(parents=True, exist_ok=True)
     with base_dir.joinpath("etc/d4").joinpath("x1").open("w", encoding="utf-8") as f:
-        f.write(u"Däng1")
+        f.write("Däng1")
     with base_dir.joinpath("etc/d4").joinpath("x2").open("w", encoding="utf-8") as f:
-        f.write(u"Däng2")
+        f.write("Däng2")
     base_dir.joinpath("etc/d4/layer1/layer2").mkdir(parents=True, exist_ok=True)
     with base_dir.joinpath("etc/d4/layer1/layer2").joinpath("x3.xyz").open("w",
                                                                            encoding="utf-8") as f:
-        f.write(u"Däng2")
+        f.write("Däng2")
 
     with base_dir.joinpath("etc/d4/layer1/layer2").joinpath("x4.xyz").open("w",
                                                                            encoding="utf-8") as f:
-        f.write(u"Däng2")
+        f.write("Däng2")
 
     with base_dir.joinpath("etc/f1").open("w", encoding="utf-8") as f:
-        f.write(u"Ef-eins")
+        f.write("Ef-eins")
 
     base_dir.joinpath("bla/blub").mkdir(parents=True, exist_ok=True)
     with base_dir.joinpath("bla/blub/f2").open("w", encoding="utf-8") as f:
-        f.write(u"Ef-zwei")
+        f.write("Ef-zwei")
 
     base_dir.joinpath("links").mkdir(parents=True, exist_ok=True)
     base_dir.joinpath("links/broken-symlink").symlink_to("eeg")
@@ -490,17 +490,17 @@ def test_get_sync_archive(tmp_path):
 def _get_test_sync_archive(tmp_path):
     tmp_path.joinpath("etc").mkdir(parents=True, exist_ok=True)
     with tmp_path.joinpath("etc/abc").open("w", encoding="utf-8") as f:
-        f.write(u"gä")
+        f.write("gä")
 
     tmp_path.joinpath("file-to-dir").mkdir(parents=True, exist_ok=True)
     with tmp_path.joinpath("file-to-dir/aaa").open("w", encoding="utf-8") as f:
-        f.write(u"gä")
+        f.write("gä")
 
     with tmp_path.joinpath("dir-to-file").open("w", encoding="utf-8") as f:
-        f.write(u"di")
+        f.write("di")
 
     with tmp_path.joinpath("ding").open("w", encoding="utf-8") as f:
-        f.write(u"dong")
+        f.write("dong")
 
     tmp_path.joinpath("broken-symlink").symlink_to("eeg")
     tmp_path.joinpath("working-symlink").symlink_to("ding")
@@ -528,20 +528,20 @@ def test_automation_receive_config_sync(monkeypatch, tmp_path):
     dir_to_symlink_file = remote_path.joinpath("working-symlink/file")
     dir_to_symlink_file.parent.mkdir(parents=True, exist_ok=True)
     with dir_to_symlink_file.open("w", encoding="utf-8") as f:
-        f.write(u"ig")
+        f.write("ig")
 
     dir_to_file = remote_path.joinpath("dir-to-file/file")
     dir_to_file.parent.mkdir(parents=True, exist_ok=True)
     with dir_to_file.open("w", encoding="utf-8") as f:
-        f.write(u"fi")
+        f.write("fi")
 
     file_to_dir = remote_path.joinpath("file-to-dir")
     with file_to_dir.open("w", encoding="utf-8") as f:
-        f.write(u"za")
+        f.write("za")
 
     to_delete_path = remote_path.joinpath("to_delete")
     with to_delete_path.open("w", encoding="utf-8") as f:
-        f.write(u"äää")
+        f.write("äää")
 
     assert to_delete_path.exists()
     assert not remote_path.joinpath("etc/abc").exists()
@@ -589,11 +589,11 @@ def test_remove_site_config_directory():
 
     site1_dir.mkdir(parents=True, exist_ok=True)
     with site1_dir.joinpath("xyz").open("w", encoding="utf-8") as f:
-        f.write(u"ä")
+        f.write("ä")
 
     site2_dir.mkdir(parents=True, exist_ok=True)
     with site2_dir.joinpath("xyz").open("w", encoding="utf-8") as f:
-        f.write(u"b")
+        f.write("b")
 
     activate_changes.remove_site_config_directory("site1")
 

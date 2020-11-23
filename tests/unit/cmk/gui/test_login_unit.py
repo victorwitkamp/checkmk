@@ -47,7 +47,7 @@ def fixture_pre_16_cookie():
     environ = dict(
         create_environ(),
         HTTP_COOKIE=
-        u"xyz=123; auth_stable=lärs:1534272374.61:1f59cac3fcd5bcc389e4f8397bed315b; abc=123".encode(
+        "xyz=123; auth_stable=lärs:1534272374.61:1f59cac3fcd5bcc389e4f8397bed315b; abc=123".encode(
             "utf-8"))
 
     with AppContext(DummyApplication(environ, None)), \
@@ -60,7 +60,7 @@ def fixture_pre_20_cookie():
     environ = dict(
         create_environ(),
         HTTP_COOKIE=
-        u"xyz=123; auth_stable=lärs:1534272374.61:1f59cac3fcd5bcc389e4f8397bed315b; abc=123".encode(
+        "xyz=123; auth_stable=lärs:1534272374.61:1f59cac3fcd5bcc389e4f8397bed315b; abc=123".encode(
             "utf-8"))
 
     with AppContext(DummyApplication(environ, None)), \

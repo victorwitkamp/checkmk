@@ -210,7 +210,7 @@ def check_fjdarye_disks_summary(index, params, parsed):
 def inventory_fjdarye_rluns(info):
     for line in info:
         rawdata = line[1]
-        if rawdata[3] == u'\xa0':  # RLUN is present
+        if rawdata[3] == '\xa0':  # RLUN is present
             yield line[0], "", None
 
 
@@ -218,17 +218,17 @@ def check_fjdarye_rluns(item, _no_params, info):
     for line in info:
         if item == line[0]:
             rawdata = line[1]
-            if rawdata[3] != u'\xa0':
+            if rawdata[3] != '\xa0':
                 return (2, "RLUN is not present")
-            elif rawdata[2] == u'\x08':
+            elif rawdata[2] == '\x08':
                 return (1, "RLUN is rebuilding")
-            elif rawdata[2] == u'\x07':
+            elif rawdata[2] == '\x07':
                 return (1, "RLUN copyback in progress")
-            elif rawdata[2] == u'\x41':
+            elif rawdata[2] == '\x41':
                 return (1, "RLUN spare is in use")
-            elif rawdata[2] == u'B':
+            elif rawdata[2] == 'B':
                 return (0, "RLUN is in RAID0 state")  # assumption state 42
-            elif rawdata[2] == u'\x00':
+            elif rawdata[2] == '\x00':
                 return (0, "RLUN is in normal state")  # assumption
             return (2, "RLUN in unknown state %02x" % ord(rawdata[2]))
 

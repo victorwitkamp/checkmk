@@ -158,7 +158,7 @@ def _create_simple_test_package(pacname):
 def _create_test_file(name):
     check_path = cmk.utils.paths.local_checks_dir.joinpath(name)
     with check_path.open("w", encoding="utf-8") as f:
-        f.write(u"lala\n")
+        f.write("lala\n")
 
 
 def test_create():
@@ -311,11 +311,11 @@ def test_unpackaged_files():
 
     p = cmk.utils.paths.local_doc_dir.joinpath("docxx")
     with p.open("w", encoding="utf-8") as f:
-        f.write(u"lala\n")
+        f.write("lala\n")
 
     p = cmk.utils.paths.local_agent_based_plugins_dir.joinpath("dada")
     with p.open("w", encoding="utf-8") as f:
-        f.write(u"huhu\n")
+        f.write("huhu\n")
 
     assert packaging.unpackaged_files() == {
         'agent_based': ['dada'],

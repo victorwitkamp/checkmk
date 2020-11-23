@@ -26,8 +26,8 @@ def test_ruleset_match_object_host_name():
 
 
 def test_ruleset_match_object_service_description():
-    obj = RulesetMatchObject(host_name=None, service_description=u"Ümlaut")
-    assert obj.service_description == u"Ümlaut"
+    obj = RulesetMatchObject(host_name=None, service_description="Ümlaut")
+    assert obj.service_description == "Ümlaut"
 
 
 ruleset = [
@@ -437,7 +437,7 @@ service_label_ruleset = [
         "value": "os_linux",
         "condition": {
             "service_labels": {
-                u"os": u"linux",
+                "os": "linux",
             },
         },
         "options": {},
@@ -447,8 +447,8 @@ service_label_ruleset = [
         "value": "abc",
         "condition": {
             "service_labels": {
-                u"os": u"linux",
-                u"abc": u"xä",
+                "os": "linux",
+                "abc": "xä",
             },
         },
         "options": {},
@@ -458,8 +458,8 @@ service_label_ruleset = [
         "value": "hu",
         "condition": {
             "service_labels": {
-                u"hu": {
-                    "$ne": u"ha"
+                "hu": {
+                    "$ne": "ha"
                 }
             }
         },
@@ -489,9 +489,9 @@ def test_ruleset_matcher_get_service_ruleset_values_labels(monkeypatch, hostname
                 "CPU load",
                 "{}",
                 service_labels=DiscoveredServiceLabels(
-                    ServiceLabel(u"os", u"linux"),
-                    ServiceLabel(u"abc", u"xä"),
-                    ServiceLabel(u"hu", u"ha"),
+                    ServiceLabel("os", "linux"),
+                    ServiceLabel("abc", "xä"),
+                    ServiceLabel("hu", "ha"),
                 ))
     ])
 

@@ -487,12 +487,12 @@ SUBSECTIONS1 = {
 }
 
 EXPECTED_IMAGES1 = {
-    u'096300fde75d': {
-        u'Created': u'2018-09-13 08:15:30 +0200 CEST',
-        u'RepoTags': [u'checkmk/check-mk-enterprise:1.5.0-2018.09.13'],
-        u'VirtualSize': 818000000,
-        u'amount_containers': 0,
-        u'Labels': {
+    '096300fde75d': {
+        'Created': '2018-09-13 08:15:30 +0200 CEST',
+        'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-2018.09.13'],
+        'VirtualSize': 818000000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -502,12 +502,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "1.5.0-2018.09.13",
         },
     },
-    u'2e89feac7533': {
-        u'Created': u'2018-09-13 08:27:42 +0200 CEST',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.13:latest'],
-        u'VirtualSize': 831400000,
-        u'amount_containers': 0,
-        u'Labels': {
+    '2e89feac7533': {
+        'Created': '2018-09-13 08:27:42 +0200 CEST',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.13:latest'],
+        'VirtualSize': 831400000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -517,12 +517,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "2018.09.13"
         },
     },
-    u'44a5d6d15272': {
-        u'Created': u'2018-09-14 12:45:50 +0200 CEST',
-        u'RepoTags': [u'checkmk/check-mk-enterprise:1.5.0-daily'],
-        u'VirtualSize': 818000000,
-        u'amount_containers': 0,
-        u'Labels': {
+    '44a5d6d15272': {
+        'Created': '2018-09-14 12:45:50 +0200 CEST',
+        'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-daily'],
+        'VirtualSize': 818000000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -532,18 +532,18 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "1.5.0-2018.09.14"
         },
     },
-    u'44e19a16bde1': {
-        u'Created': u'2018-09-04 23:21:34 +0200 CEST',
-        u'RepoTags': ['debian:stretch-slim'],
-        u'VirtualSize': 55270000,
-        u'amount_containers': 0,
+    '44e19a16bde1': {
+        'Created': '2018-09-04 23:21:34 +0200 CEST',
+        'RepoTags': ['debian:stretch-slim'],
+        'VirtualSize': 55270000,
+        'amount_containers': 0,
     },
-    u'4a77be28f8e5': {
-        u'Created': u'2018-09-28 23:54:16 +0200 CEST',
-        u'RepoTags': ['checkmk/check-mk-raw:1.5.0p5'],
-        u'VirtualSize': 751900000,
-        u'amount_containers': 1,
-        u'Labels': {
+    '4a77be28f8e5': {
+        'Created': '2018-09-28 23:54:16 +0200 CEST',
+        'RepoTags': ['checkmk/check-mk-raw:1.5.0p5'],
+        'VirtualSize': 751900000,
+        'amount_containers': 1,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -553,12 +553,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "1.5.0p5"
         },
     },
-    u'5182e96772bf': {
-        u'Created': u'2018-08-06 21:21:48 +0200 CEST',
-        u'RepoTags': ['centos:7'],
-        u'VirtualSize': 199700000,
-        u'amount_containers': 0,
-        u'Labels': {
+    '5182e96772bf': {
+        'Created': '2018-08-06 21:21:48 +0200 CEST',
+        'RepoTags': ['centos:7'],
+        'VirtualSize': 199700000,
+        'amount_containers': 0,
+        'Labels': {
             "org.label-schema.build-date": "20180804",
             "org.label-schema.license": "GPLv2",
             "org.label-schema.name": "CentOS Base Image",
@@ -566,18 +566,18 @@ EXPECTED_IMAGES1 = {
             "org.label-schema.vendor": "CentOS"
         },
     },
-    u'6143303a8e14': {
-        u'Created': u'2018-09-10 17:36:25 +0200 CEST',
-        u'RepoTags': ['hadolint/hadolint:latest'],
-        u'VirtualSize': 3645000,
-        u'amount_containers': 0,
+    '6143303a8e14': {
+        'Created': '2018-09-10 17:36:25 +0200 CEST',
+        'RepoTags': ['hadolint/hadolint:latest'],
+        'VirtualSize': 3645000,
+        'amount_containers': 0,
     },
-    u'6c97da45403a': {
-        u'Created': u'2018-10-12 11:12:15 +0200 CEST',
-        u'RepoTags': ['local/c7-systemd:latest'],
-        u'VirtualSize': 199700000,
-        u'amount_containers': 0,
-        u'Labels': {
+    '6c97da45403a': {
+        'Created': '2018-10-12 11:12:15 +0200 CEST',
+        'RepoTags': ['local/c7-systemd:latest'],
+        'VirtualSize': 199700000,
+        'amount_containers': 0,
+        'Labels': {
             "org.label-schema.build-date": "20180804",
             "org.label-schema.license": "GPLv2",
             "org.label-schema.name": "CentOS Base Image",
@@ -585,12 +585,12 @@ EXPECTED_IMAGES1 = {
             "org.label-schema.vendor": "CentOS"
         },
     },
-    u'8ca14ae84dd9': {
-        u'Created': u'2018-09-14 13:08:54 +0200 CEST',
-        u'RepoTags': ['checkmk/check-mk-enterprise:daily'],
-        u'VirtualSize': 972300000,
-        u'amount_containers': 0,
-        u'Labels': {
+    '8ca14ae84dd9': {
+        'Created': '2018-09-14 13:08:54 +0200 CEST',
+        'RepoTags': ['checkmk/check-mk-enterprise:daily'],
+        'VirtualSize': 972300000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -600,12 +600,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "2018.09.14"
         },
     },
-    u'8d463a5f7635': {
-        u'Created': u'2018-09-12 21:15:47 +0200 CEST',
-        u'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-2018.09.12'],
-        u'VirtualSize': 814900000,
-        u'amount_containers': 0,
-        u'Labels': {
+    '8d463a5f7635': {
+        'Created': '2018-09-12 21:15:47 +0200 CEST',
+        'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-2018.09.12'],
+        'VirtualSize': 814900000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -615,12 +615,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "1.5.0-2018.09.12"
         },
     },
-    u'91152cc1c4bc': {
-        u'Created': u'2018-09-14 14:47:41 +0200 CEST',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.14:latest'],
-        u'VirtualSize': 831400000,
-        u'amount_containers': 0,
-        u'Labels': {
+    '91152cc1c4bc': {
+        'Created': '2018-09-14 14:47:41 +0200 CEST',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.14:latest'],
+        'VirtualSize': 831400000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -630,12 +630,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "2018.09.14"
         },
     },
-    u'a1f15f9a2b16': {
-        u'Created': u'2018-09-12 19:49:54 +0200 CEST',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.12:latest'],
-        u'VirtualSize': 828400000,
-        u'amount_containers': 0,
-        u'Labels': {
+    'a1f15f9a2b16': {
+        'Created': '2018-09-12 19:49:54 +0200 CEST',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.12:latest'],
+        'VirtualSize': 828400000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -645,12 +645,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "2018.09.12"
         },
     },
-    u'c0582f734ad1': {
-        u'Created': u'2018-09-14 16:52:00 +0200 CEST',
-        u'RepoTags': ['checkmk/check-mk-enterprise:2018.09.14'],
-        u'VirtualSize': 831400000,
-        u'amount_containers': 0,
-        u'Labels': {
+    'c0582f734ad1': {
+        'Created': '2018-09-14 16:52:00 +0200 CEST',
+        'RepoTags': ['checkmk/check-mk-enterprise:2018.09.14'],
+        'VirtualSize': 831400000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -660,12 +660,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "2018.09.14"
         },
     },
-    u'df118e583614': {
-        u'Created': u'2018-10-10 08:37:26 +0200 CEST',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-1.5.0p5:latest'],
-        u'VirtualSize': 817600000,
-        u'amount_containers': 0,
-        u'Labels': {
+    'df118e583614': {
+        'Created': '2018-10-10 08:37:26 +0200 CEST',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-1.5.0p5:latest'],
+        'VirtualSize': 817600000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -675,12 +675,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "1.5.0p5"
         },
     },
-    u'ed55e8b95336': {
-        u'Created': u'2018-10-12 11:13:11 +0200 CEST',
-        u'RepoTags': ['local/c7-systemd-httpd:latest'],
-        u'VirtualSize': 254200000,
-        u'amount_containers': 2,
-        u'Labels': {
+    'ed55e8b95336': {
+        'Created': '2018-10-12 11:13:11 +0200 CEST',
+        'RepoTags': ['local/c7-systemd-httpd:latest'],
+        'VirtualSize': 254200000,
+        'amount_containers': 2,
+        'Labels': {
             "org.label-schema.build-date": "20180804",
             "org.label-schema.license": "GPLv2",
             "org.label-schema.name": "CentOS Base Image",
@@ -688,12 +688,12 @@ EXPECTED_IMAGES1 = {
             "org.label-schema.vendor": "CentOS"
         },
     },
-    u'ed5d6b154e97': {
-        u'Created': u'2018-10-10 08:40:21 +0200 CEST',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.10.10:latest'],
-        u'VirtualSize': 844300000,
-        u'amount_containers': 0,
-        u'Labels': {
+    'ed5d6b154e97': {
+        'Created': '2018-10-10 08:40:21 +0200 CEST',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.10.10:latest'],
+        'VirtualSize': 844300000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -703,12 +703,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "2018.10.10"
         },
     },
-    u'ee5124a3adb5': {
-        u'Created': u'2018-09-12 09:33:22 +0200 CEST',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.11:latest'],
-        u'VirtualSize': 828400000,
-        u'amount_containers': 0,
-        u'Labels': {
+    'ee5124a3adb5': {
+        'Created': '2018-09-12 09:33:22 +0200 CEST',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.11:latest'],
+        'VirtualSize': 828400000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -718,12 +718,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "2018.09.11"
         },
     },
-    u'f4bfbb70768f': {
-        u'Created': u'2018-09-17 09:47:56 +0200 CEST',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-1.5.0p3:latest'],
-        u'VirtualSize': 817400000,
-        u'amount_containers': 0,
-        u'Labels': {
+    'f4bfbb70768f': {
+        'Created': '2018-09-17 09:47:56 +0200 CEST',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-1.5.0p3:latest'],
+        'VirtualSize': 817400000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -733,12 +733,12 @@ EXPECTED_IMAGES1 = {
             "org.opencontainers.image.version": "1.5.0p3"
         },
     },
-    u'ff19a3911e0a': {
-        u'Created': u'2018-09-17 09:45:08 +0200 CEST',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.17:latest'],
-        u'VirtualSize': 831400000,
-        u'amount_containers': 0,
-        u'Labels': {
+    'ff19a3911e0a': {
+        'Created': '2018-09-17 09:45:08 +0200 CEST',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.17:latest'],
+        'VirtualSize': 831400000,
+        'amount_containers': 0,
+        'Labels': {
             "maintainer": "feedback@checkmk.com",
             "org.opencontainers.image.description": "Check_MK is a leading tool for Infrastructure & Application Monitoring",
             "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
@@ -751,284 +751,284 @@ EXPECTED_IMAGES1 = {
 }
 
 EXPECTED_CONTAINERS1 = {
-    u'0d7e34ebb911': {
-        u'Created': u'2018-10-10 08:40:20 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.10.10'
+    '0d7e34ebb911': {
+        'Created': '2018-10-10 08:40:20 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.10.10'
         },
-        u'Name': u'youthful_pare',
-        u'Status': u'Created',
+        'Name': 'youthful_pare',
+        'Status': 'Created',
     },
-    u'10d6b884f348': {
-        u'Created': u'2018-10-10 08:34:55 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '10d6b884f348': {
+        'Created': '2018-10-10 08:34:55 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'wizardly_ritchie',
-        u'Status': u'Created',
+        'Name': 'wizardly_ritchie',
+        'Status': 'Created',
     },
-    u'24772268cc09': {
-        u'Created': u'2018-10-10 08:37:25 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    '24772268cc09': {
+        'Created': '2018-10-10 08:37:25 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'Name': u'zen_bartik',
-        u'Status': u'Created',
+        'Name': 'zen_bartik',
+        'Status': 'Created',
     },
-    u'4a6806b168b1': {
-        u'Created': u'2018-10-10 08:39:29 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '4a6806b168b1': {
+        'Created': '2018-10-10 08:39:29 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'festive_fermi',
-        u'Status': u'Exited (0) 2 days ago',
+        'Name': 'festive_fermi',
+        'Status': 'Exited (0) 2 days ago',
     },
-    u'4d4d9f3be74b': {
-        u'Created': u'2018-10-10 08:34:58 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '4d4d9f3be74b': {
+        'Created': '2018-10-10 08:34:58 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'pensive_spence',
-        u'Status': u'Exited (0) 2 days ago',
+        'Name': 'pensive_spence',
+        'Status': 'Exited (0) 2 days ago',
     },
-    u'55632dca94c8': {
-        u'Created': u'2018-10-10 08:34:55 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '55632dca94c8': {
+        'Created': '2018-10-10 08:34:55 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'stoic_perlman',
-        u'Status': u'Created',
+        'Name': 'stoic_perlman',
+        'Status': 'Created',
     },
-    u'580a7b4bd20a': {
-        u'Created': u'2018-10-10 08:40:20 +0200 CEST',
-        u'Labels': {
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.10.10',
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk'
+    '580a7b4bd20a': {
+        'Created': '2018-10-10 08:40:20 +0200 CEST',
+        'Labels': {
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.10.10',
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk'
         },
-        u'Name': u'reverent_proskuriakova',
-        u'Status': u'Created',
+        'Name': 'reverent_proskuriakova',
+        'Status': 'Created',
     },
-    u'6cae82f879ff': {
-        u'Created': u'2018-10-10 08:34:57 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '6cae82f879ff': {
+        'Created': '2018-10-10 08:34:57 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'elated_poitras',
-        u'Status': u'Created',
+        'Name': 'elated_poitras',
+        'Status': 'Created',
     },
-    u'6fe73b950209': {
-        u'Created': u'2018-10-10 08:37:26 +0200 CEST',
-        u'Labels': {
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5',
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk'
+    '6fe73b950209': {
+        'Created': '2018-10-10 08:37:26 +0200 CEST',
+        'Labels': {
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5',
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk'
         },
-        u'Name': u'admiring_haibt',
-        u'Status': u'Created',
+        'Name': 'admiring_haibt',
+        'Status': 'Created',
     },
-    u'73237ecc5183': {
-        u'Created': u'2018-10-10 08:40:20 +0200 CEST',
-        u'Labels': {
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.10.10',
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk'
+    '73237ecc5183': {
+        'Created': '2018-10-10 08:40:20 +0200 CEST',
+        'Labels': {
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.10.10',
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk'
         },
-        u'Name': u'festive_stallman',
-        u'Status': u'Created',
+        'Name': 'festive_stallman',
+        'Status': 'Created',
     },
-    u'7d32581dd10f': {
-        u'Created': u'2018-10-12 11:13:18 +0200 CEST',
-        u'Labels': {
-            u'org.label-schema.vendor': u'CentOS',
-            u'org.label-schema.build-date': u'20180804',
-            u'org.label-schema.license': u'GPLv2',
-            u'org.label-schema.name': u'CentOS Base Image',
-            u'org.label-schema.schema-version': u'1.0'
+    '7d32581dd10f': {
+        'Created': '2018-10-12 11:13:18 +0200 CEST',
+        'Labels': {
+            'org.label-schema.vendor': 'CentOS',
+            'org.label-schema.build-date': '20180804',
+            'org.label-schema.license': 'GPLv2',
+            'org.label-schema.name': 'CentOS Base Image',
+            'org.label-schema.schema-version': '1.0'
         },
-        u'Name': u'sad_austin',
-        u'Status': u'Created',
+        'Name': 'sad_austin',
+        'Status': 'Created',
     },
-    u'860d8dfff4f6': {
-        u'Created': u'2018-10-10 08:34:58 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '860d8dfff4f6': {
+        'Created': '2018-10-10 08:34:58 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'dazzling_meninsky',
-        u'Status': u'Created',
+        'Name': 'dazzling_meninsky',
+        'Status': 'Created',
     },
-    u'8f8ded35fc90': {
-        u'Created': u'2018-10-10 08:37:25 +0200 CEST',
-        u'Labels': {
-            u'org.opencontainers.image.version': u'1.5.0p5',
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH'
+    '8f8ded35fc90': {
+        'Created': '2018-10-10 08:37:25 +0200 CEST',
+        'Labels': {
+            'org.opencontainers.image.version': '1.5.0p5',
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH'
         },
-        u'Name': u'keen_cori',
-        u'Status': u'Created',
+        'Name': 'keen_cori',
+        'Status': 'Created',
     },
-    u'93e0c88a69fa': {
-        u'Created': u'2018-10-10 08:37:43 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '93e0c88a69fa': {
+        'Created': '2018-10-10 08:37:43 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'objective_darwin',
-        u'Status': u'Exited (0) 2 days ago',
+        'Name': 'objective_darwin',
+        'Status': 'Exited (0) 2 days ago',
     },
-    u'9b08cf26da8c': {
-        u'Created': u'2018-10-10 08:34:56 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '9b08cf26da8c': {
+        'Created': '2018-10-10 08:34:56 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'pensive_swartz',
-        u'Status': u'Created',
+        'Name': 'pensive_swartz',
+        'Status': 'Created',
     },
-    u'a073bb9adfbe': {
-        u'Created': u'2018-10-10 08:36:45 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'a073bb9adfbe': {
+        'Created': '2018-10-10 08:36:45 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'jovial_archimedes',
-        u'Status': u'Exited (0) 2 days ago',
+        'Name': 'jovial_archimedes',
+        'Status': 'Exited (0) 2 days ago',
     },
-    u'a17f21f95383': {
-        u'Created': u'2018-10-10 08:34:57 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'a17f21f95383': {
+        'Created': '2018-10-10 08:34:57 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'serene_poincare',
-        u'Status': u'Created',
+        'Name': 'serene_poincare',
+        'Status': 'Created',
     },
-    u'aad80d524200': {
-        u'Created': u'2018-10-10 08:34:57 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'aad80d524200': {
+        'Created': '2018-10-10 08:34:57 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'competent_keller',
-        u'Status': u'Created',
+        'Name': 'competent_keller',
+        'Status': 'Created',
     },
-    u'b17185d5dcc5': {
-        u'Created': u'2018-10-10 08:40:21 +0200 CEST',
-        u'Labels': {
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.10.10',
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk'
+    'b17185d5dcc5': {
+        'Created': '2018-10-10 08:40:21 +0200 CEST',
+        'Labels': {
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.10.10',
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk'
         },
-        u'Name': u'friendly_banach',
-        u'Status': u'Created',
+        'Name': 'friendly_banach',
+        'Status': 'Created',
     },
-    u'bfdb64ccf0ba': {
-        u'Created': u'2018-10-10 08:37:26 +0200 CEST',
-        u'Labels': {
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5',
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring'
+    'bfdb64ccf0ba': {
+        'Created': '2018-10-10 08:37:26 +0200 CEST',
+        'Labels': {
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5',
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring'
         },
-        u'Name': u'lucid_bohr',
-        u'Status': u'Created',
+        'Name': 'lucid_bohr',
+        'Status': 'Created',
     },
-    u'c04099ed3f18': {
-        u'Created': u'2018-10-10 08:34:56 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'c04099ed3f18': {
+        'Created': '2018-10-10 08:34:56 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'dreamy_thompson',
-        u'Status': u'Created',
+        'Name': 'dreamy_thompson',
+        'Status': 'Created',
     },
-    u'cdc7e1e4a24e': {
-        u'Created': u'2018-10-10 08:34:56 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'cdc7e1e4a24e': {
+        'Created': '2018-10-10 08:34:56 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'lucid_brown',
-        u'Status': u'Created',
+        'Name': 'lucid_brown',
+        'Status': 'Created',
     },
-    u'd1c70f4690b5': {
-        u'Created': u'2018-10-10 08:34:56 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'd1c70f4690b5': {
+        'Created': '2018-10-10 08:34:56 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'trusting_panini',
-        u'Status': u'Created',
+        'Name': 'trusting_panini',
+        'Status': 'Created',
     },
-    u'd37198a74c08': {
-        u'Created': u'2018-10-10 08:34:55 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'd37198a74c08': {
+        'Created': '2018-10-10 08:34:55 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'distracted_mccarthy',
-        u'Status': u'Created',
+        'Name': 'distracted_mccarthy',
+        'Status': 'Created',
     },
-    u'df44340ed121': {
-        u'Created': u'2018-10-10 08:34:58 +0200 CEST',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'df44340ed121': {
+        'Created': '2018-10-10 08:34:58 +0200 CEST',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'unruffled_hopper',
-        u'Status': u'Created',
+        'Name': 'unruffled_hopper',
+        'Status': 'Created',
     },
-    u'f1641e401237': {
-        u'Created': u'2018-10-12 11:13:24 +0200 CEST',
-        u'Labels': {
-            u'org.label-schema.build-date': u'20180804',
-            u'org.label-schema.license': u'GPLv2',
-            u'org.label-schema.name': u'CentOS Base Image',
-            u'funny.value.with.commas': u'This is really, really stupid.',
-            u'org.label-schema.schema-version': u'1.0',
-            u'org.label-schema.vendor': u'CentOS'
+    'f1641e401237': {
+        'Created': '2018-10-12 11:13:24 +0200 CEST',
+        'Labels': {
+            'org.label-schema.build-date': '20180804',
+            'org.label-schema.license': 'GPLv2',
+            'org.label-schema.name': 'CentOS Base Image',
+            'funny.value.with.commas': 'This is really, really stupid.',
+            'org.label-schema.schema-version': '1.0',
+            'org.label-schema.vendor': 'CentOS'
         },
-        u'Name': u'sad_stonebraker',
-        u'Status': u'Up 5 hours',
+        'Name': 'sad_stonebraker',
+        'Status': 'Up 5 hours',
     },
-    u'fdd04795069e': {
-        u'Created': u'2018-10-12 09:17:54 +0200 CEST',
-        u'Labels': {
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5',
-            u'maintainer': u'feedback@checkmk.com'
+    'fdd04795069e': {
+        'Created': '2018-10-12 09:17:54 +0200 CEST',
+        'Labels': {
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5',
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'Name': u'monitoringx',
-        u'Status': u'Created',
+        'Name': 'monitoringx',
+        'Status': 'Created',
     }
 }
 
@@ -1576,982 +1576,982 @@ SUBSECTIONS2 = {
 }
 
 EXPECTED_CONTAINERS2 = {
-    u'0d7e34ebb911': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:40:20 +0200 CEST',
-        u'Id': u'0d7e34ebb911',
-        u'Image': u'03d98e475cd6',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.10.10'
+    '0d7e34ebb911': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:40:20 +0200 CEST',
+        'Id': '0d7e34ebb911',
+        'Image': '03d98e475cd6',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.10.10'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'youthful_pare',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'youthful_pare',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'10d6b884f348': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:55 +0200 CEST',
-        u'Id': u'10d6b884f348',
-        u'Image': u'a0a951b126eb',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '10d6b884f348': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:55 +0200 CEST',
+        'Id': '10d6b884f348',
+        'Image': 'a0a951b126eb',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'wizardly_ritchie',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'wizardly_ritchie',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'11893c5d9694': {
-        u'Command': u'"/docker-entrypoint.\u2026"',
-        u'Created': u'2018-10-12 16:12:02 +0200 CEST',
-        u'Id': u'11893c5d9694',
-        u'Image': u'559214f8c758',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    '11893c5d9694': {
+        'Command': '"/docker-entrypoint.\u2026"',
+        'Created': '2018-10-12 16:12:02 +0200 CEST',
+        'Id': '11893c5d9694',
+        'Image': '559214f8c758',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'affectionate_shannon',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'3 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'affectionate_shannon',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '3 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'24772268cc09': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:37:25 +0200 CEST',
-        u'Id': u'24772268cc09',
-        u'Image': u'6e66f5473958',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    '24772268cc09': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:37:25 +0200 CEST',
+        'Id': '24772268cc09',
+        'Image': '6e66f5473958',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'zen_bartik',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'zen_bartik',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'249ca074445f': {
-        u'Command': u'"/bin/sh -c \'set -e \u2026"',
-        u'Created': u'2018-10-12 16:09:34 +0200 CEST',
-        u'Id': u'249ca074445f',
-        u'Image': u'010bad2c964b',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '249ca074445f': {
+        'Command': '"/bin/sh -c \'set -e \u2026"',
+        'Created': '2018-10-12 16:09:34 +0200 CEST',
+        'Id': '249ca074445f',
+        'Image': '010bad2c964b',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'infallible_goodall',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'3 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (0) 3 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'infallible_goodall',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '3 days ago',
+        'Size': '0B',
+        'Status': 'Exited (0) 3 days ago',
     },
-    u'4a6806b168b1': {
-        u'Command': u'"/bin/sh -c \'set -e \u2026"',
-        u'Created': u'2018-10-10 08:39:29 +0200 CEST',
-        u'Id': u'4a6806b168b1',
-        u'Image': u'089108b69108',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '4a6806b168b1': {
+        'Command': '"/bin/sh -c \'set -e \u2026"',
+        'Created': '2018-10-10 08:39:29 +0200 CEST',
+        'Id': '4a6806b168b1',
+        'Image': '089108b69108',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'festive_fermi',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (0) 6 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'festive_fermi',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Exited (0) 6 days ago',
     },
-    u'4d4d9f3be74b': {
-        u'Command': u'"/bin/sh -c \'set -e \u2026"',
-        u'Created': u'2018-10-10 08:34:58 +0200 CEST',
-        u'Id': u'4d4d9f3be74b',
-        u'Image': u'b16a30c66821',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '4d4d9f3be74b': {
+        'Command': '"/bin/sh -c \'set -e \u2026"',
+        'Created': '2018-10-10 08:34:58 +0200 CEST',
+        'Id': '4d4d9f3be74b',
+        'Image': 'b16a30c66821',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'pensive_spence',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (0) 6 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'pensive_spence',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Exited (0) 6 days ago',
     },
-    u'55632dca94c8': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:55 +0200 CEST',
-        u'Id': u'55632dca94c8',
-        u'Image': u'1919d446eafa',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '55632dca94c8': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:55 +0200 CEST',
+        'Id': '55632dca94c8',
+        'Image': '1919d446eafa',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'stoic_perlman',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'stoic_perlman',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'580a7b4bd20a': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:40:20 +0200 CEST',
-        u'Id': u'580a7b4bd20a',
-        u'Image': u'3e0dd44b22e4',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.10.10'
+    '580a7b4bd20a': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:40:20 +0200 CEST',
+        'Id': '580a7b4bd20a',
+        'Image': '3e0dd44b22e4',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.10.10'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'reverent_proskuriakova',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'reverent_proskuriakova',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'58ea2160fe8f': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-12 16:12:01 +0200 CEST',
-        u'Id': u'58ea2160fe8f',
-        u'Image': u'3bd4e802a09f',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    '58ea2160fe8f': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-12 16:12:01 +0200 CEST',
+        'Id': '58ea2160fe8f',
+        'Image': '3bd4e802a09f',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'lucid_kowalevski',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'3 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'lucid_kowalevski',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '3 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'63c0ad8e9eb7': {
-        u'Command': u'"/bin/sh -c \'set -e \u2026"',
-        u'Created': u'2018-10-12 16:07:29 +0200 CEST',
-        u'Id': u'63c0ad8e9eb7',
-        u'Image': u'0983f5184ce7',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '63c0ad8e9eb7': {
+        'Command': '"/bin/sh -c \'set -e \u2026"',
+        'Created': '2018-10-12 16:07:29 +0200 CEST',
+        'Id': '63c0ad8e9eb7',
+        'Image': '0983f5184ce7',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'ecstatic_babbage',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'3 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (1) 3 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'ecstatic_babbage',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '3 days ago',
+        'Size': '0B',
+        'Status': 'Exited (1) 3 days ago',
     },
-    u'6cae82f879ff': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:57 +0200 CEST',
-        u'Id': u'6cae82f879ff',
-        u'Image': u'1d9b21b9e019',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '6cae82f879ff': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:57 +0200 CEST',
+        'Id': '6cae82f879ff',
+        'Image': '1d9b21b9e019',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'elated_poitras',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'elated_poitras',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'6fe73b950209': {
-        u'Command': u'"/docker-entrypoint.\u2026"',
-        u'Created': u'2018-10-10 08:37:26 +0200 CEST',
-        u'Id': u'6fe73b950209',
-        u'Image': u'd4c95e27986c',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    '6fe73b950209': {
+        'Command': '"/docker-entrypoint.\u2026"',
+        'Created': '2018-10-10 08:37:26 +0200 CEST',
+        'Id': '6fe73b950209',
+        'Image': 'd4c95e27986c',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'admiring_haibt',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'admiring_haibt',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'73237ecc5183': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:40:20 +0200 CEST',
-        u'Id': u'73237ecc5183',
-        u'Image': u'd27276979703',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.10.10'
+    '73237ecc5183': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:40:20 +0200 CEST',
+        'Id': '73237ecc5183',
+        'Image': 'd27276979703',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.10.10'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'festive_stallman',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'festive_stallman',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'74ee5065acb2': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-12 16:12:01 +0200 CEST',
-        u'Id': u'74ee5065acb2',
-        u'Image': u'a0529d041d12',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    '74ee5065acb2': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-12 16:12:01 +0200 CEST',
+        'Id': '74ee5065acb2',
+        'Image': 'a0529d041d12',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'peaceful_joliot',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'3 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'peaceful_joliot',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '3 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'7d32581dd10f': {
-        u'Command': u'"/usr/sbin/init"',
-        u'Created': u'2018-10-12 11:13:18 +0200 CEST',
-        u'Id': u'7d32581dd10f',
-        u'Image': u'local/c7-systemd-httpd',
-        u'Labels': {
-            u'org.label-schema.build-date': u'20180804',
-            u'org.label-schema.license': u'GPLv2',
-            u'org.label-schema.name': u'CentOS Base Image',
-            u'org.label-schema.schema-version': u'1.0',
-            u'org.label-schema.vendor': u'CentOS'
+    '7d32581dd10f': {
+        'Command': '"/usr/sbin/init"',
+        'Created': '2018-10-12 11:13:18 +0200 CEST',
+        'Id': '7d32581dd10f',
+        'Image': 'local/c7-systemd-httpd',
+        'Labels': {
+            'org.label-schema.build-date': '20180804',
+            'org.label-schema.license': 'GPLv2',
+            'org.label-schema.name': 'CentOS Base Image',
+            'org.label-schema.schema-version': '1.0',
+            'org.label-schema.vendor': 'CentOS'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'/sys/fs/cgroup',
-        u'Name': u'sad_austin',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'4 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '/sys/fs/cgroup',
+        'Name': 'sad_austin',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '4 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'7db7baa17fee': {
-        u'Command': u'"/bin/sh -c \'set -e \u2026"',
-        u'Created': u'2018-10-12 16:11:24 +0200 CEST',
-        u'Id': u'7db7baa17fee',
-        u'Image': u'fd98c3cc9762',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '7db7baa17fee': {
+        'Command': '"/bin/sh -c \'set -e \u2026"',
+        'Created': '2018-10-12 16:11:24 +0200 CEST',
+        'Id': '7db7baa17fee',
+        'Image': 'fd98c3cc9762',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'stoic_jennings',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'3 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (0) 3 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'stoic_jennings',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '3 days ago',
+        'Size': '0B',
+        'Status': 'Exited (0) 3 days ago',
     },
-    u'802786d33cfb': {
-        u'Command': u'"/bin/sh -c \'set -e \u2026"',
-        u'Created': u'2018-10-12 16:12:19 +0200 CEST',
-        u'Id': u'802786d33cfb',
-        u'Image': u'010bad2c964b',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '802786d33cfb': {
+        'Command': '"/bin/sh -c \'set -e \u2026"',
+        'Created': '2018-10-12 16:12:19 +0200 CEST',
+        'Id': '802786d33cfb',
+        'Image': '010bad2c964b',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'boring_cori',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'3 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (100) 3 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'boring_cori',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '3 days ago',
+        'Size': '0B',
+        'Status': 'Exited (100) 3 days ago',
     },
-    u'85a41e54b0cc': {
-        u'Command': u'"/bin/bash"',
-        u'Created': u'2018-09-27 19:06:07 +0200 CEST',
-        u'Id': u'85a41e54b0cc',
-        u'Image': u'centos:7',
-        u'Labels': {
-            u'org.label-schema.build-date': u'20180804',
-            u'org.label-schema.license': u'GPLv2',
-            u'org.label-schema.name': u'CentOS Base Image',
-            u'org.label-schema.schema-version': u'1.0',
-            u'org.label-schema.vendor': u'CentOS'
+    '85a41e54b0cc': {
+        'Command': '"/bin/bash"',
+        'Created': '2018-09-27 19:06:07 +0200 CEST',
+        'Id': '85a41e54b0cc',
+        'Image': 'centos:7',
+        'Labels': {
+            'org.label-schema.build-date': '20180804',
+            'org.label-schema.license': 'GPLv2',
+            'org.label-schema.name': 'CentOS Base Image',
+            'org.label-schema.schema-version': '1.0',
+            'org.label-schema.vendor': 'CentOS'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'vigorous_pare',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'2 weeks ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (137) 2 weeks ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'vigorous_pare',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '2 weeks ago',
+        'Size': '0B',
+        'Status': 'Exited (137) 2 weeks ago',
     },
-    u'860d8dfff4f6': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:58 +0200 CEST',
-        u'Id': u'860d8dfff4f6',
-        u'Image': u'7e7f944ba518',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '860d8dfff4f6': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:58 +0200 CEST',
+        'Id': '860d8dfff4f6',
+        'Image': '7e7f944ba518',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'dazzling_meninsky',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'dazzling_meninsky',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'8f8ded35fc90': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:37:25 +0200 CEST',
-        u'Id': u'8f8ded35fc90',
-        u'Image': u'6bccd8c3ed71',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    '8f8ded35fc90': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:37:25 +0200 CEST',
+        'Id': '8f8ded35fc90',
+        'Image': '6bccd8c3ed71',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'keen_cori',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'keen_cori',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'93e0c88a69fa': {
-        u'Command': u'"/bin/sh -c \'set -e \u2026"',
-        u'Created': u'2018-10-10 08:37:43 +0200 CEST',
-        u'Id': u'93e0c88a69fa',
-        u'Image': u'b16a30c66821',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '93e0c88a69fa': {
+        'Command': '"/bin/sh -c \'set -e \u2026"',
+        'Created': '2018-10-10 08:37:43 +0200 CEST',
+        'Id': '93e0c88a69fa',
+        'Image': 'b16a30c66821',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'objective_darwin',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (0) 6 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'objective_darwin',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Exited (0) 6 days ago',
     },
-    u'95796d6d26db': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-12 16:12:02 +0200 CEST',
-        u'Id': u'95796d6d26db',
-        u'Image': u'fcd54dfcb5b8',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    '95796d6d26db': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-12 16:12:02 +0200 CEST',
+        'Id': '95796d6d26db',
+        'Image': 'fcd54dfcb5b8',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'distracted_heisenberg',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'3 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'distracted_heisenberg',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '3 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'9b08cf26da8c': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:56 +0200 CEST',
-        u'Id': u'9b08cf26da8c',
-        u'Image': u'164429e47a3f',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    '9b08cf26da8c': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:56 +0200 CEST',
+        'Id': '9b08cf26da8c',
+        'Image': '164429e47a3f',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'pensive_swartz',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'pensive_swartz',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'a073bb9adfbe': {
-        u'Command': u'"/bin/sh -c \'set -e \u2026"',
-        u'Created': u'2018-10-10 08:36:45 +0200 CEST',
-        u'Id': u'a073bb9adfbe',
-        u'Image': u'7aa4b82c92ae',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'a073bb9adfbe': {
+        'Command': '"/bin/sh -c \'set -e \u2026"',
+        'Created': '2018-10-10 08:36:45 +0200 CEST',
+        'Id': 'a073bb9adfbe',
+        'Image': '7aa4b82c92ae',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'jovial_archimedes',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (0) 6 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'jovial_archimedes',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Exited (0) 6 days ago',
     },
-    u'a17f21f95383': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:57 +0200 CEST',
-        u'Id': u'a17f21f95383',
-        u'Image': u'a2a187fcaa76',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'a17f21f95383': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:57 +0200 CEST',
+        'Id': 'a17f21f95383',
+        'Image': 'a2a187fcaa76',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'serene_poincare',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'serene_poincare',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'aad80d524200': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:57 +0200 CEST',
-        u'Id': u'aad80d524200',
-        u'Image': u'e002e37aec84',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'aad80d524200': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:57 +0200 CEST',
+        'Id': 'aad80d524200',
+        'Image': 'e002e37aec84',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'competent_keller',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'competent_keller',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'b17185d5dcc5': {
-        u'Command': u'"/docker-entrypoint.\u2026"',
-        u'Created': u'2018-10-10 08:40:21 +0200 CEST',
-        u'Id': u'b17185d5dcc5',
-        u'Image': u'94f49a7afedb',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.10.10'
+    'b17185d5dcc5': {
+        'Command': '"/docker-entrypoint.\u2026"',
+        'Created': '2018-10-10 08:40:21 +0200 CEST',
+        'Id': 'b17185d5dcc5',
+        'Image': '94f49a7afedb',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.10.10'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'friendly_banach',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'friendly_banach',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'bfdb64ccf0ba': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:37:26 +0200 CEST',
-        u'Id': u'bfdb64ccf0ba',
-        u'Image': u'21b2f3d5e6c0',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    'bfdb64ccf0ba': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:37:26 +0200 CEST',
+        'Id': 'bfdb64ccf0ba',
+        'Image': '21b2f3d5e6c0',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'lucid_bohr',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'lucid_bohr',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'c04099ed3f18': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:56 +0200 CEST',
-        u'Id': u'c04099ed3f18',
-        u'Image': u'd1a41c564864',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'c04099ed3f18': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:56 +0200 CEST',
+        'Id': 'c04099ed3f18',
+        'Image': 'd1a41c564864',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'dreamy_thompson',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'dreamy_thompson',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'cdc7e1e4a24e': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:56 +0200 CEST',
-        u'Id': u'cdc7e1e4a24e',
-        u'Image': u'999fc035fc76',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'cdc7e1e4a24e': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:56 +0200 CEST',
+        'Id': 'cdc7e1e4a24e',
+        'Image': '999fc035fc76',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'lucid_brown',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'lucid_brown',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'd1c70f4690b5': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:56 +0200 CEST',
-        u'Id': u'd1c70f4690b5',
-        u'Image': u'0b5da1249a04',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'd1c70f4690b5': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:56 +0200 CEST',
+        'Id': 'd1c70f4690b5',
+        'Image': '0b5da1249a04',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'trusting_panini',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'trusting_panini',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'd37198a74c08': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:55 +0200 CEST',
-        u'Id': u'd37198a74c08',
-        u'Image': u'caac4aa6ac57',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'd37198a74c08': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:55 +0200 CEST',
+        'Id': 'd37198a74c08',
+        'Image': 'caac4aa6ac57',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'distracted_mccarthy',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'distracted_mccarthy',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'd91a2be75e8b': {
-        u'Command': u'"/bin/sh -c \'set -e \u2026"',
-        u'Created': u'2018-10-12 16:05:44 +0200 CEST',
-        u'Id': u'd91a2be75e8b',
-        u'Image': u'010bad2c964b',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'd91a2be75e8b': {
+        'Command': '"/bin/sh -c \'set -e \u2026"',
+        'Created': '2018-10-12 16:05:44 +0200 CEST',
+        'Id': 'd91a2be75e8b',
+        'Image': '010bad2c964b',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'jovial_bardeen',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'3 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (0) 3 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'jovial_bardeen',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '3 days ago',
+        'Size': '0B',
+        'Status': 'Exited (0) 3 days ago',
     },
-    u'df44340ed121': {
-        u'Command': u'"/bin/sh -c \'#(nop) \u2026"',
-        u'Created': u'2018-10-10 08:34:58 +0200 CEST',
-        u'Id': u'df44340ed121',
-        u'Image': u'1b013e043efa',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+    'df44340ed121': {
+        'Command': '"/bin/sh -c \'#(nop) \u2026"',
+        'Created': '2018-10-10 08:34:58 +0200 CEST',
+        'Id': 'df44340ed121',
+        'Image': '1b013e043efa',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'',
-        u'Name': u'unruffled_hopper',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'6 days ago',
-        u'Size': u'0B',
-        u'Status': u'Created',
+        'LocalVolumes': '0',
+        'Mounts': '',
+        'Name': 'unruffled_hopper',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '6 days ago',
+        'Size': '0B',
+        'Status': 'Created',
     },
-    u'f1641e401237': {
-        u'Command': u'"/usr/sbin/init"',
-        u'Created': u'2018-10-12 11:13:24 +0200 CEST',
-        u'Id': u'f1641e401237',
-        u'Image': u'local/c7-systemd-httpd',
-        u'Labels': {
-            u'org.label-schema.build-date': u'20180804',
-            u'org.label-schema.license': u'GPLv2',
-            u'org.label-schema.name': u'CentOS Base Image',
-            u'org.label-schema.schema-version': u'1.0',
-            u'org.label-schema.vendor': u'CentOS'
+    'f1641e401237': {
+        'Command': '"/usr/sbin/init"',
+        'Created': '2018-10-12 11:13:24 +0200 CEST',
+        'Id': 'f1641e401237',
+        'Image': 'local/c7-systemd-httpd',
+        'Labels': {
+            'org.label-schema.build-date': '20180804',
+            'org.label-schema.license': 'GPLv2',
+            'org.label-schema.name': 'CentOS Base Image',
+            'org.label-schema.schema-version': '1.0',
+            'org.label-schema.vendor': 'CentOS'
         },
-        u'LocalVolumes': u'0',
-        u'Mounts': u'/sys/fs/cgroup',
-        u'Name': u'sad_stonebraker',
-        u'Networks': u'bridge',
-        u'Ports': u'',
-        u'RunningFor': u'4 days ago',
-        u'Size': u'0B',
-        u'Status': u'Exited (137) 3 days ago',
+        'LocalVolumes': '0',
+        'Mounts': '/sys/fs/cgroup',
+        'Name': 'sad_stonebraker',
+        'Networks': 'bridge',
+        'Ports': '',
+        'RunningFor': '4 days ago',
+        'Size': '0B',
+        'Status': 'Exited (137) 3 days ago',
     },
-    u'fdd04795069e': {
-        u'Command': u'"/docker-entrypoint.\u2026"',
-        u'Created': u'2018-10-12 09:17:54 +0200 CEST',
-        u'Id': u'fdd04795069e',
-        u'Image': u'checkmk/check-mk-raw:1.5.0p5',
-        u'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+    'fdd04795069e': {
+        'Command': '"/docker-entrypoint.\u2026"',
+        'Created': '2018-10-12 09:17:54 +0200 CEST',
+        'Id': 'fdd04795069e',
+        'Image': 'checkmk/check-mk-raw:1.5.0p5',
+        'Labels': {
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
-        u'LocalVolumes': u'1',
-        u'Mounts': u'/etc/localtime,10b7c962177bf2\u2026',
-        u'Name': u'monitoringx',
-        u'Networks': u'bridge',
-        u'Ports': u'6557/tcp, 0.0.0.0:8080->5000/tcp',
-        u'RunningFor': u'4 days ago',
-        u'Size': u'0B',
-        u'Status': u'Up 6 hours (healthy)',
+        'LocalVolumes': '1',
+        'Mounts': '/etc/localtime,10b7c962177bf2\u2026',
+        'Name': 'monitoringx',
+        'Networks': 'bridge',
+        'Ports': '6557/tcp, 0.0.0.0:8080->5000/tcp',
+        'RunningFor': '4 days ago',
+        'Size': '0B',
+        'Status': 'Up 6 hours (healthy)',
     }
 }
 
 EXPECTED_IMAGES2 = {
-    u'096300fde75d': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-13 08:15:30 +0200 CEST',
-        u'CreatedSince': u'4 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'096300fde75d',
-        u'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-2018.09.13'],
-        u'SharedSize': u'N/A',
-        u'Size': u'818MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 818000000,
+    '096300fde75d': {
+        'Containers': 'N/A',
+        'Created': '2018-09-13 08:15:30 +0200 CEST',
+        'CreatedSince': '4 weeks ago',
+        'Digest': '<none>',
+        'Id': '096300fde75d',
+        'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-2018.09.13'],
+        'SharedSize': 'N/A',
+        'Size': '818MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 818000000,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0-2018.09.13'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0-2018.09.13'
         },
         'amount_containers': 0
     },
-    u'0983f5184ce7': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-10-12 16:07:29 +0200 CEST',
-        u'CreatedSince': u'3 days ago',
-        u'Digest': u'<none>',
-        u'Id': u'0983f5184ce7',
-        u'SharedSize': u'N/A',
-        u'Size': u'312MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 312400000,
+    '0983f5184ce7': {
+        'Containers': 'N/A',
+        'Created': '2018-10-12 16:07:29 +0200 CEST',
+        'CreatedSince': '3 days ago',
+        'Digest': '<none>',
+        'Id': '0983f5184ce7',
+        'SharedSize': 'N/A',
+        'Size': '312MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 312400000,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+            'maintainer': 'feedback@checkmk.com'
         },
         'amount_containers': 1
     },
-    u'2e89feac7533': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-13 08:27:42 +0200 CEST',
-        u'CreatedSince': u'4 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'2e89feac7533',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.13:latest'],
-        u'SharedSize': u'N/A',
-        u'Size': u'831MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 831400000,
+    '2e89feac7533': {
+        'Containers': 'N/A',
+        'Created': '2018-09-13 08:27:42 +0200 CEST',
+        'CreatedSince': '4 weeks ago',
+        'Digest': '<none>',
+        'Id': '2e89feac7533',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.13:latest'],
+        'SharedSize': 'N/A',
+        'Size': '831MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 831400000,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.09.13'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.09.13'
         },
         'amount_containers': 0
     },
-    u'44a5d6d15272': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-14 12:45:50 +0200 CEST',
-        u'CreatedSince': u'4 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'44a5d6d15272',
-        u'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-daily'],
-        u'SharedSize': u'N/A',
-        u'Size': u'818MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 818000000,
+    '44a5d6d15272': {
+        'Containers': 'N/A',
+        'Created': '2018-09-14 12:45:50 +0200 CEST',
+        'CreatedSince': '4 weeks ago',
+        'Digest': '<none>',
+        'Id': '44a5d6d15272',
+        'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-daily'],
+        'SharedSize': 'N/A',
+        'Size': '818MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 818000000,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0-2018.09.14'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0-2018.09.14'
         },
         'amount_containers': 0
     },
-    u'44e19a16bde1': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-04 23:21:34 +0200 CEST',
-        u'CreatedSince': u'5 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'44e19a16bde1',
-        u'RepoTags': ['debian:stretch-slim'],
-        u'SharedSize': u'N/A',
-        u'Size': u'55.3MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 55270000,
+    '44e19a16bde1': {
+        'Containers': 'N/A',
+        'Created': '2018-09-04 23:21:34 +0200 CEST',
+        'CreatedSince': '5 weeks ago',
+        'Digest': '<none>',
+        'Id': '44e19a16bde1',
+        'RepoTags': ['debian:stretch-slim'],
+        'SharedSize': 'N/A',
+        'Size': '55.3MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 55270000,
         'amount_containers': 0
     },
-    u'485933207afd': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-10-12 16:12:03 +0200 CEST',
-        u'CreatedSince': u'3 days ago',
-        u'Digest': u'<none>',
-        u'Id': u'485933207afd',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-1.5.0p5:latest'],
-        u'SharedSize': u'N/A',
-        u'Size': u'818MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 817600000,
+    '485933207afd': {
+        'Containers': 'N/A',
+        'Created': '2018-10-12 16:12:03 +0200 CEST',
+        'CreatedSince': '3 days ago',
+        'Digest': '<none>',
+        'Id': '485933207afd',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-1.5.0p5:latest'],
+        'SharedSize': 'N/A',
+        'Size': '818MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 817600000,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
         'amount_containers': 0
     },
-    u'4a77be28f8e5': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-28 23:54:16 +0200 CEST',
-        u'CreatedSince': u'2 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'4a77be28f8e5',
-        u'RepoTags': ['checkmk/check-mk-raw:1.5.0p5'],
-        u'SharedSize': u'N/A',
-        u'Size': u'752MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 751900000,
+    '4a77be28f8e5': {
+        'Containers': 'N/A',
+        'Created': '2018-09-28 23:54:16 +0200 CEST',
+        'CreatedSince': '2 weeks ago',
+        'Digest': '<none>',
+        'Id': '4a77be28f8e5',
+        'RepoTags': ['checkmk/check-mk-raw:1.5.0p5'],
+        'SharedSize': 'N/A',
+        'Size': '752MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 751900000,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
-        },
-        'amount_containers': 1
-    },
-    u'5182e96772bf': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-08-06 21:21:48 +0200 CEST',
-        u'CreatedSince': u'2 months ago',
-        u'Digest': u'<none>',
-        u'Id': u'5182e96772bf',
-        u'RepoTags': ['centos:7'],
-        u'SharedSize': u'N/A',
-        u'Size': u'200MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 199700000,
-        'Labels': {
-            u'org.label-schema.build-date': u'20180804',
-            u'org.label-schema.license': u'GPLv2',
-            u'org.label-schema.name': u'CentOS Base Image',
-            u'org.label-schema.schema-version': u'1.0',
-            u'org.label-schema.vendor': u'CentOS'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
         'amount_containers': 1
     },
-    u'6143303a8e14': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-10 17:36:25 +0200 CEST',
-        u'CreatedSince': u'5 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'6143303a8e14',
-        u'RepoTags': ['hadolint/hadolint:latest'],
-        u'SharedSize': u'N/A',
-        u'Size': u'3.64MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 3645000,
+    '5182e96772bf': {
+        'Containers': 'N/A',
+        'Created': '2018-08-06 21:21:48 +0200 CEST',
+        'CreatedSince': '2 months ago',
+        'Digest': '<none>',
+        'Id': '5182e96772bf',
+        'RepoTags': ['centos:7'],
+        'SharedSize': 'N/A',
+        'Size': '200MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 199700000,
+        'Labels': {
+            'org.label-schema.build-date': '20180804',
+            'org.label-schema.license': 'GPLv2',
+            'org.label-schema.name': 'CentOS Base Image',
+            'org.label-schema.schema-version': '1.0',
+            'org.label-schema.vendor': 'CentOS'
+        },
+        'amount_containers': 1
+    },
+    '6143303a8e14': {
+        'Containers': 'N/A',
+        'Created': '2018-09-10 17:36:25 +0200 CEST',
+        'CreatedSince': '5 weeks ago',
+        'Digest': '<none>',
+        'Id': '6143303a8e14',
+        'RepoTags': ['hadolint/hadolint:latest'],
+        'SharedSize': 'N/A',
+        'Size': '3.64MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 3645000,
         'amount_containers': 0
     },
-    u'6c97da45403a': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-10-12 11:12:15 +0200 CEST',
-        u'CreatedSince': u'4 days ago',
-        u'Digest': u'<none>',
-        u'Id': u'6c97da45403a',
-        u'RepoTags': ['local/c7-systemd:latest'],
-        u'SharedSize': u'N/A',
-        u'Size': u'200MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 199700000,
+    '6c97da45403a': {
+        'Containers': 'N/A',
+        'Created': '2018-10-12 11:12:15 +0200 CEST',
+        'CreatedSince': '4 days ago',
+        'Digest': '<none>',
+        'Id': '6c97da45403a',
+        'RepoTags': ['local/c7-systemd:latest'],
+        'SharedSize': 'N/A',
+        'Size': '200MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 199700000,
         'Labels': {
-            u'org.label-schema.build-date': u'20180804',
-            u'org.label-schema.license': u'GPLv2',
-            u'org.label-schema.name': u'CentOS Base Image',
-            u'org.label-schema.schema-version': u'1.0',
-            u'org.label-schema.vendor': u'CentOS'
+            'org.label-schema.build-date': '20180804',
+            'org.label-schema.license': 'GPLv2',
+            'org.label-schema.name': 'CentOS Base Image',
+            'org.label-schema.schema-version': '1.0',
+            'org.label-schema.vendor': 'CentOS'
         },
         'amount_containers': 0
     },
-    u'8ca14ae84dd9': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-14 13:08:54 +0200 CEST',
-        u'CreatedSince': u'4 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'8ca14ae84dd9',
-        u'RepoTags': ['checkmk/check-mk-enterprise:daily'],
-        u'SharedSize': u'N/A',
-        u'Size': u'972MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 972300000,
+    '8ca14ae84dd9': {
+        'Containers': 'N/A',
+        'Created': '2018-09-14 13:08:54 +0200 CEST',
+        'CreatedSince': '4 weeks ago',
+        'Digest': '<none>',
+        'Id': '8ca14ae84dd9',
+        'RepoTags': ['checkmk/check-mk-enterprise:daily'],
+        'SharedSize': 'N/A',
+        'Size': '972MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 972300000,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.09.14'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.09.14'
         },
         'amount_containers': 0
     },
-    u'8d463a5f7635': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-12 21:15:47 +0200 CEST',
-        u'CreatedSince': u'4 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'8d463a5f7635',
-        u'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-2018.09.12'],
-        u'SharedSize': u'N/A',
-        u'Size': u'815MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 814900000,
+    '8d463a5f7635': {
+        'Containers': 'N/A',
+        'Created': '2018-09-12 21:15:47 +0200 CEST',
+        'CreatedSince': '4 weeks ago',
+        'Digest': '<none>',
+        'Id': '8d463a5f7635',
+        'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-2018.09.12'],
+        'SharedSize': 'N/A',
+        'Size': '815MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 814900000,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0-2018.09.12'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0-2018.09.12'
         },
         'amount_containers': 0
     },
-    u'91152cc1c4bc': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-14 14:47:41 +0200 CEST',
-        u'CreatedSince': u'4 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'91152cc1c4bc',
-        u'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.14:latest'],
-        u'SharedSize': u'N/A',
-        u'Size': u'831MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 831400000,
+    '91152cc1c4bc': {
+        'Containers': 'N/A',
+        'Created': '2018-09-14 14:47:41 +0200 CEST',
+        'CreatedSince': '4 weeks ago',
+        'Digest': '<none>',
+        'Id': '91152cc1c4bc',
+        'RepoTags': ['docker-tests/check-mk-enterprise-master-2018.09.14:latest'],
+        'SharedSize': 'N/A',
+        'Size': '831MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 831400000,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.09.14'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.09.14'
         },
         'amount_containers': 0
     },
@@ -4607,186 +4607,186 @@ SUBSECTIONS3 = {
 EXPECTED_CONTAINERS3 = EXPECTED_CONTAINERS2
 
 EXPECTED_IMAGES3 = {
-    u'096300fde75d': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-13T06:15:30.34090448Z',
-        u'CreatedSince': u'4 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'096300fde75d',
-        u'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-2018.09.13'],
-        u'SharedSize': u'N/A',
-        u'Size': u'818MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 817961530,
+    '096300fde75d': {
+        'Containers': 'N/A',
+        'Created': '2018-09-13T06:15:30.34090448Z',
+        'CreatedSince': '4 weeks ago',
+        'Digest': '<none>',
+        'Id': '096300fde75d',
+        'RepoTags': ['checkmk/check-mk-enterprise:1.5.0-2018.09.13'],
+        'SharedSize': 'N/A',
+        'Size': '818MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 817961530,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0-2018.09.13'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0-2018.09.13'
         },
         'amount_containers': 0
     },
-    u'0983f5184ce7': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-10-12T14:07:29.732808446Z',
-        u'CreatedSince': u'3 days ago',
-        u'Digest': u'<none>',
-        u'Id': u'0983f5184ce7',
-        u'SharedSize': u'N/A',
-        u'Size': u'312MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 312404556,
+    '0983f5184ce7': {
+        'Containers': 'N/A',
+        'Created': '2018-10-12T14:07:29.732808446Z',
+        'CreatedSince': '3 days ago',
+        'Digest': '<none>',
+        'Id': '0983f5184ce7',
+        'SharedSize': 'N/A',
+        'Size': '312MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 312404556,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com'
+            'maintainer': 'feedback@checkmk.com'
         },
         'amount_containers': 1
     },
-    u'2e89feac7533': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-13T06:27:42.955259674Z',
-        u'CreatedSince': u'4 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'2e89feac7533',
-        u'SharedSize': u'N/A',
-        u'Size': u'831MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 831418094,
+    '2e89feac7533': {
+        'Containers': 'N/A',
+        'Created': '2018-09-13T06:27:42.955259674Z',
+        'CreatedSince': '4 weeks ago',
+        'Digest': '<none>',
+        'Id': '2e89feac7533',
+        'SharedSize': 'N/A',
+        'Size': '831MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 831418094,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'2018.09.13'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '2018.09.13'
         },
         'amount_containers': 0
     },
-    u'44a5d6d15272': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-14T10:45:50.232853938Z',
-        u'CreatedSince': u'4 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'44a5d6d15272',
-        u'SharedSize': u'N/A',
-        u'Size': u'818MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 817965472,
+    '44a5d6d15272': {
+        'Containers': 'N/A',
+        'Created': '2018-09-14T10:45:50.232853938Z',
+        'CreatedSince': '4 weeks ago',
+        'Digest': '<none>',
+        'Id': '44a5d6d15272',
+        'SharedSize': 'N/A',
+        'Size': '818MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 817965472,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0-2018.09.14'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0-2018.09.14'
         },
         'amount_containers': 0
     },
-    u'44e19a16bde1': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-04T21:21:34.566479261Z',
-        u'CreatedSince': u'5 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'44e19a16bde1',
-        u'SharedSize': u'N/A',
-        u'Size': u'55.3MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 55270217,
+    '44e19a16bde1': {
+        'Containers': 'N/A',
+        'Created': '2018-09-04T21:21:34.566479261Z',
+        'CreatedSince': '5 weeks ago',
+        'Digest': '<none>',
+        'Id': '44e19a16bde1',
+        'SharedSize': 'N/A',
+        'Size': '55.3MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 55270217,
         'amount_containers': 0
     },
-    u'485933207afd': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-10-12T14:12:03.009245184Z',
-        u'CreatedSince': u'3 days ago',
-        u'Digest': u'<none>',
-        u'Id': u'485933207afd',
-        u'SharedSize': u'N/A',
-        u'Size': u'818MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 817562729,
+    '485933207afd': {
+        'Containers': 'N/A',
+        'Created': '2018-10-12T14:12:03.009245184Z',
+        'CreatedSince': '3 days ago',
+        'Digest': '<none>',
+        'Id': '485933207afd',
+        'SharedSize': 'N/A',
+        'Size': '818MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 817562729,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
         'amount_containers': 0
     },
-    u'4a77be28f8e5': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-28T21:54:16.702903575Z',
-        u'CreatedSince': u'2 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'4a77be28f8e5',
-        u'SharedSize': u'N/A',
-        u'Size': u'752MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 751885817,
+    '4a77be28f8e5': {
+        'Containers': 'N/A',
+        'Created': '2018-09-28T21:54:16.702903575Z',
+        'CreatedSince': '2 weeks ago',
+        'Digest': '<none>',
+        'Id': '4a77be28f8e5',
+        'SharedSize': 'N/A',
+        'Size': '752MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 751885817,
         'Labels': {
-            u'maintainer': u'feedback@checkmk.com',
-            u'org.opencontainers.image.description': u'Check_MK is a leading tool for Infrastructure & Application Monitoring',
-            u'org.opencontainers.image.source': u'https://github.com/tribe29/checkmk',
-            u'org.opencontainers.image.title': u'Checkmk',
-            u'org.opencontainers.image.url': u'https://checkmk.com/',
-            u'org.opencontainers.image.vendor': u'tribe29 GmbH',
-            u'org.opencontainers.image.version': u'1.5.0p5'
-        },
-        'amount_containers': 1
-    },
-    u'5182e96772bf': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-08-06T19:21:48.235227329Z',
-        u'CreatedSince': u'2 months ago',
-        u'Digest': u'<none>',
-        u'Id': u'5182e96772bf',
-        u'SharedSize': u'N/A',
-        u'Size': u'200MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 199723824,
-        'Labels': {
-            u'org.label-schema.build-date': u'20180804',
-            u'org.label-schema.license': u'GPLv2',
-            u'org.label-schema.name': u'CentOS Base Image',
-            u'org.label-schema.schema-version': u'1.0',
-            u'org.label-schema.vendor': u'CentOS'
+            'maintainer': 'feedback@checkmk.com',
+            'org.opencontainers.image.description': 'Check_MK is a leading tool for Infrastructure & Application Monitoring',
+            'org.opencontainers.image.source': 'https://github.com/tribe29/checkmk',
+            'org.opencontainers.image.title': 'Checkmk',
+            'org.opencontainers.image.url': 'https://checkmk.com/',
+            'org.opencontainers.image.vendor': 'tribe29 GmbH',
+            'org.opencontainers.image.version': '1.5.0p5'
         },
         'amount_containers': 1
     },
-    u'6143303a8e14': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-09-10T15:36:25.80531779Z',
-        u'CreatedSince': u'5 weeks ago',
-        u'Digest': u'<none>',
-        u'Id': u'6143303a8e14',
-        u'SharedSize': u'N/A',
-        u'Size': u'3.64MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 3644760,
+    '5182e96772bf': {
+        'Containers': 'N/A',
+        'Created': '2018-08-06T19:21:48.235227329Z',
+        'CreatedSince': '2 months ago',
+        'Digest': '<none>',
+        'Id': '5182e96772bf',
+        'SharedSize': 'N/A',
+        'Size': '200MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 199723824,
+        'Labels': {
+            'org.label-schema.build-date': '20180804',
+            'org.label-schema.license': 'GPLv2',
+            'org.label-schema.name': 'CentOS Base Image',
+            'org.label-schema.schema-version': '1.0',
+            'org.label-schema.vendor': 'CentOS'
+        },
+        'amount_containers': 1
+    },
+    '6143303a8e14': {
+        'Containers': 'N/A',
+        'Created': '2018-09-10T15:36:25.80531779Z',
+        'CreatedSince': '5 weeks ago',
+        'Digest': '<none>',
+        'Id': '6143303a8e14',
+        'SharedSize': 'N/A',
+        'Size': '3.64MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 3644760,
         'amount_containers': 0
     },
-    u'6c97da45403a': {
-        u'Containers': u'N/A',
-        u'Created': u'2018-10-12T09:12:15.613593451Z',
-        u'CreatedSince': u'4 days ago',
-        u'Digest': u'<none>',
-        u'Id': u'6c97da45403a',
-        u'SharedSize': u'N/A',
-        u'Size': u'200MB',
-        u'UniqueSize': u'N/A',
-        u'VirtualSize': 199723824,
+    '6c97da45403a': {
+        'Containers': 'N/A',
+        'Created': '2018-10-12T09:12:15.613593451Z',
+        'CreatedSince': '4 days ago',
+        'Digest': '<none>',
+        'Id': '6c97da45403a',
+        'SharedSize': 'N/A',
+        'Size': '200MB',
+        'UniqueSize': 'N/A',
+        'VirtualSize': 199723824,
         'Labels': {
-            u'org.label-schema.build-date': u'20180804',
-            u'org.label-schema.license': u'GPLv2',
-            u'org.label-schema.name': u'CentOS Base Image',
-            u'org.label-schema.schema-version': u'1.0',
-            u'org.label-schema.vendor': u'CentOS'
+            'org.label-schema.build-date': '20180804',
+            'org.label-schema.license': 'GPLv2',
+            'org.label-schema.name': 'CentOS Base Image',
+            'org.label-schema.schema-version': '1.0',
+            'org.label-schema.vendor': 'CentOS'
         },
         'amount_containers': 0
     },

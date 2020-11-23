@@ -504,7 +504,7 @@ class FilterGroupCombo(Filter):
     def display(self) -> None:
         choices: Choices = list(sites.all_groups(self.what.split("_")[-1]))
         if not self.enforce:
-            empty_choices: Choices = [("", u"")]
+            empty_choices: Choices = [("", "")]
             choices = empty_choices + choices
         html.dropdown(self.htmlvars[0], choices, ordered=True)
         if not self.enforce:
@@ -862,7 +862,7 @@ class FilterQueryDropdown(Filter):
 
     def display(self) -> None:
         selection = sites.live().query_column_unique(self.query)
-        empty_choices: Choices = [("", u"")]
+        empty_choices: Choices = [("", "")]
         sel: Choices = [(x, x) for x in selection]
         html.dropdown(self.ident, empty_choices + sel, ordered=True)
 
@@ -1892,12 +1892,12 @@ class TagFilter(Filter):
         groups = config.tags.get_tag_group_choices()
         operators: Choices = [
             ("is", "="),
-            ("isnot", u"≠"),
+            ("isnot", "≠"),
         ]
 
         grouped: Dict[str, Choices] = {}
         for tag_group in config.tags.tag_groups:
-            grouped.setdefault(tag_group.id, [("", u"")])
+            grouped.setdefault(tag_group.id, [("", "")])
 
             for grouped_tag in tag_group.tags:
                 tag_id = "" if grouped_tag.id is None else grouped_tag.id
@@ -2226,7 +2226,7 @@ class FilterECServiceLevelRange(Filter):
         else:
             match_upper = lambda val, hi=0: True
 
-        filterline = u"Filter: %s_custom_variable_names >= EC_SL\n" % self.info
+        filterline = "Filter: %s_custom_variable_names >= EC_SL\n" % self.info
 
         filterline_values = [
             str(value)
@@ -2276,7 +2276,7 @@ class FilterStarred(FilterTristate):
             aand, oor, eq = "Or", "And", "!="
 
         stars = config.user.stars
-        filters = u""
+        filters = ""
         count = 0
         if self.what == "host":
             for star in stars:
@@ -2447,7 +2447,7 @@ class FilterAggrGroupTree(Filter):
         def _get_selection_entry(tree, index, prefix=None):
             path = tree["__path__"]
             if prefix:
-                title_prefix = (u"\u00a0" * 6 * index) + u"\u2514\u2500 "
+                title_prefix = ("\u00a0" * 6 * index) + "\u2514\u2500 "
             else:
                 title_prefix = ""
             return ("/".join(path), title_prefix + path[index])

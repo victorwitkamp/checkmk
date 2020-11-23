@@ -47,7 +47,7 @@ def test_get_ip_lookup_cache_not_existing(_cache_file):
 
 def test_get_ip_lookup_cache_invalid_syntax(_cache_file):
     with _cache_file.open(mode="w", encoding="utf-8") as f:
-        f.write(u"{...")
+        f.write("{...")
 
     ip_lookup_cache = ip_lookup._get_ip_lookup_cache()
 
@@ -57,7 +57,7 @@ def test_get_ip_lookup_cache_invalid_syntax(_cache_file):
 def test_get_ip_lookup_cache_existing(_cache_file):
     cache_id1 = "host1", 4
     with _cache_file.open(mode="w", encoding="utf-8") as f:
-        f.write(u"%r" % {cache_id1: "1"})
+        f.write("%r" % {cache_id1: "1"})
 
     ip_lookup_cache = ip_lookup._get_ip_lookup_cache()
 
@@ -94,7 +94,7 @@ def test_update_ip_lookup_cache_update_existing_entry(_cache_file):
     cache_id2 = "host2", 4
 
     with _cache_file.open(mode="w", encoding="utf-8") as f:
-        f.write(u"%r" % {cache_id1: "1", cache_id2: "2"})
+        f.write("%r" % {cache_id1: "1", cache_id2: "2"})
 
     ip_lookup_cache = ip_lookup._get_ip_lookup_cache()
     ip_lookup_cache.update_cache(cache_id1, "127.0.0.1")
@@ -120,7 +120,7 @@ def test_load_legacy_lookup_cache(_cache_file):
     cache_id2 = "host2", 4
 
     with _cache_file.open("w", encoding="utf-8") as f:
-        f.write(u"%r" % {"host1": "127.0.0.1", "host2": "127.0.0.2"})
+        f.write("%r" % {"host1": "127.0.0.1", "host2": "127.0.0.2"})
 
     cache = ip_lookup._load_ip_lookup_cache(lock=False)
     assert cache[cache_id1] == "127.0.0.1"
@@ -155,7 +155,7 @@ def test_update_dns_cache(monkeypatch, _cache_file):
 
 def test_clear_ip_lookup_cache(_cache_file):
     with _cache_file.open(mode="w", encoding="utf-8") as f:
-        f.write(u"%r" % {("host1", 4): "127.0.0.1"})
+        f.write("%r" % {("host1", 4): "127.0.0.1"})
 
     ip_lookup_cache = ip_lookup._get_ip_lookup_cache()
     assert ip_lookup_cache[("host1", 4)] == "127.0.0.1"

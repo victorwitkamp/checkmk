@@ -13,7 +13,7 @@ CHECK_NAME = "alcatel_cpu"
 
 
 @pytest.mark.parametrize("info, result_expected", [
-    ([[u'doesnt matter', u'doesent matter'], [u'doesnt matter']
+    ([['doesnt matter', 'doesent matter'], ['doesnt matter']
      ], [(None, "alcatel_cpu_default_levels")]),
 ])
 @pytest.mark.usefixtures("config_load_all_checks")
@@ -24,10 +24,10 @@ def test_inventory_function(info, result_expected):
 
 
 @pytest.mark.parametrize("parameters, info, state_expected, infotext_expected, perfdata_expected", [
-    ((30, 40), [[u'29']], 0, 'total: 29.0%', [('util', 29, 30, 40, 0, 100)]),
-    ((30, 40), [[u'31']
+    ((30, 40), [['29']], 0, 'total: 29.0%', [('util', 29, 30, 40, 0, 100)]),
+    ((30, 40), [['31']
                ], 1, 'total: 31.0% (warn/crit at 30.0%/40.0%)', [('util', 31, 30, 40, 0, 100)]),
-    ((30, 40), [[u'41']
+    ((30, 40), [['41']
                ], 2, 'total: 41.0% (warn/crit at 30.0%/40.0%)', [('util', 41, 30, 40, 0, 100)]),
 ])
 @pytest.mark.usefixtures("config_load_all_checks")

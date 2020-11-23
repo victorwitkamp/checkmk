@@ -42,15 +42,15 @@ def test_load_group_information(tmp_path):
 
 if type(define_contactgroups) != dict:
     define_contactgroups = {}
-define_contactgroups.update({'all': u'Everything'})
+define_contactgroups.update({'all': 'Everything'})
 
 if type(define_hostgroups) != dict:
     define_hostgroups = {}
-define_hostgroups.update({'all_hosts': u'All hosts :-)'})
+define_hostgroups.update({'all_hosts': 'All hosts :-)'})
 
 if type(define_servicegroups) != dict:
     define_servicegroups = {}
-define_servicegroups.update({'all_services': u'All särvices'})
+define_servicegroups.update({'all_services': 'All särvices'})
 """)
 
     with open(cmk.utils.paths.default_config_dir + "/multisite.d/wato/groups.mk", "w") as f:
@@ -81,19 +81,19 @@ multisite_contactgroups = {
         assert groups.load_group_information() == {
             'contact': {
                 'all': {
-                    'alias': u'Everything',
+                    'alias': 'Everything',
                     "d!ng": "dong",
                 }
             },
             'host': {
                 'all_hosts': {
-                    'alias': u'All hosts :-)',
+                    'alias': 'All hosts :-)',
                     "ding": "dong",
                 }
             },
             'service': {
                 'all_services': {
-                    'alias': u'All s\xe4rvices',
+                    'alias': 'All s\xe4rvices',
                     "d1ng": "dong",
                 }
             },
@@ -101,21 +101,21 @@ multisite_contactgroups = {
 
         assert groups.load_contact_group_information() == {
             'all': {
-                'alias': u'Everything',
+                'alias': 'Everything',
                 "d!ng": "dong",
             }
         }
 
         assert gui_groups.load_host_group_information() == {
             'all_hosts': {
-                'alias': u'All hosts :-)',
+                'alias': 'All hosts :-)',
                 "ding": "dong",
             }
         }
 
         assert gui_groups.load_service_group_information() == {
             'all_services': {
-                'alias': u'All s\xe4rvices',
+                'alias': 'All s\xe4rvices',
                 "d1ng": "dong",
             }
         }

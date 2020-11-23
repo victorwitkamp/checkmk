@@ -28,10 +28,10 @@ def _parameter_valuespec_airflow_deviation():
     return Tuple(
         help=_("Levels for Airflow Deviation measured at airflow sensors "),
         elements=[
-            Float(title=_("critical if below or equal"), unit=u"%", default_value=-20),
-            Float(title=_("warning if below or equal"), unit=u"%", default_value=-20),
-            Float(title=_("warning if above or equal"), unit=u"%", default_value=20),
-            Float(title=_("critical if above or equal"), unit=u"%", default_value=20),
+            Float(title=_("critical if below or equal"), unit="%", default_value=-20),
+            Float(title=_("warning if below or equal"), unit="%", default_value=-20),
+            Float(title=_("warning if above or equal"), unit="%", default_value=20),
+            Float(title=_("critical if above or equal"), unit="%", default_value=20),
         ],
     )
 

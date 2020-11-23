@@ -79,7 +79,7 @@ def _get_test_file(fname):
 
 def test_patch_package_code_by_state_file(conf_dir):
     # prepare file to tests
-    fname = u"test_bin.tst"
+    fname = "test_bin.tst"
     src = _get_test_file(fname=fname)
 
     uuid = msi_patch.generate_uuid()
@@ -103,7 +103,7 @@ def test_patch_package_code_by_state_file(conf_dir):
 
 def test_patch_package_code_with_state(conf_dir):
     # prepare file to tests
-    fname = u"test_bin.tst"
+    fname = "test_bin.tst"
     src = _get_test_file(fname=fname)
 
     uuid = msi_patch.generate_uuid()
@@ -179,7 +179,7 @@ def test_uuid_base():
 
 def test_patch_package_code_by_marker(conf_dir):
     # prepare file to tests
-    fname = u"test_bin.tst"
+    fname = "test_bin.tst"
     src = _get_test_file(fname=fname)
 
     uuid = msi_patch.generate_uuid()
@@ -218,7 +218,7 @@ def test_patch_package_code_by_marker(conf_dir):
 
 def test_patch_package_code(conf_dir):
     # prepare file to tests
-    fname = u"test_bin.tst"
+    fname = "test_bin.tst"
     src = _get_test_file(fname=fname)
 
     uuid = msi_patch.generate_uuid()

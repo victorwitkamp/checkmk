@@ -407,7 +407,7 @@ class ModeAjaxDiagHost(AjaxPage):
             raise MKGeneralException(_('Invalid test.'))
 
         # TODO: Use ModeDiagHost._vs_rules() for processing/validation?
-        args: List[str] = [u""] * 13
+        args: List[str] = [""] * 13
         for idx, what in enumerate([
                 'ipaddress',
                 'snmp_community',
@@ -416,40 +416,40 @@ class ModeAjaxDiagHost(AjaxPage):
                 'snmp_retries',
                 'tcp_connect_timeout',
         ]):
-            args[idx] = request.get(what, u"")
+            args[idx] = request.get(what, "")
 
         if config.user.may('wato.add_or_modify_executables'):
             args[6] = request.get("datasource_program", "")
 
         if request.get("snmpv3_use"):
             snmpv3_use = {
-                u"0": u"noAuthNoPriv",
-                u"1": u"authNoPriv",
-                u"2": u"authPriv",
-            }.get(request.get("snmpv3_use", u""), u"")
+                "0": "noAuthNoPriv",
+                "1": "authNoPriv",
+                "2": "authPriv",
+            }.get(request.get("snmpv3_use", ""), "")
 
             args[7] = snmpv3_use
-            if snmpv3_use != u"noAuthNoPriv":
+            if snmpv3_use != "noAuthNoPriv":
                 snmpv3_auth_proto = {
-                    str(DropdownChoice.option_id("md5")): u"md5",
-                    str(DropdownChoice.option_id("sha")): u"sha"
-                }.get(request.get("snmpv3_auth_proto", u""), u"")
+                    str(DropdownChoice.option_id("md5")): "md5",
+                    str(DropdownChoice.option_id("sha")): "sha"
+                }.get(request.get("snmpv3_auth_proto", ""), "")
 
                 args[8] = snmpv3_auth_proto
-                args[9] = request.get("snmpv3_security_name", u"")
-                args[10] = request.get("snmpv3_security_password", u"")
+                args[9] = request.get("snmpv3_security_name", "")
+                args[10] = request.get("snmpv3_security_password", "")
 
                 if snmpv3_use == "authPriv":
                     snmpv3_privacy_proto = {
-                        str(DropdownChoice.option_id("DES")): u"DES",
-                        str(DropdownChoice.option_id("AES")): u"AES"
-                    }.get(request.get("snmpv3_privacy_proto", u""), u"")
+                        str(DropdownChoice.option_id("DES")): "DES",
+                        str(DropdownChoice.option_id("AES")): "AES"
+                    }.get(request.get("snmpv3_privacy_proto", ""), "")
 
                     args[11] = snmpv3_privacy_proto
 
-                    args[12] = request.get("snmpv3_privacy_password", u"")
+                    args[12] = request.get("snmpv3_privacy_password", "")
             else:
-                args[9] = request.get("snmpv3_security_name", u"")
+                args[9] = request.get("snmpv3_security_name", "")
 
         result = watolib.check_mk_automation(host.site_id(), "diag-host", [hostname, _test] + args)
         return {

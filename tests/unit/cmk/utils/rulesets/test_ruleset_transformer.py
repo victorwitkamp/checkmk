@@ -710,7 +710,7 @@ def test_get_tag_to_group_map(monkeypatch):
     tag_config.parse_config({
         'aux_tags': [{
             'id': 'bla',
-            'title': u'bl\xfcb'
+            'title': 'bl\xfcb'
         }],
         'tag_groups': [
             {
@@ -718,18 +718,18 @@ def test_get_tag_to_group_map(monkeypatch):
                 'tags': [{
                     'aux_tags': ["bla"],
                     'id': 'prod',
-                    'title': u'Productive system'
+                    'title': 'Productive system'
                 },],
-                'title': u'Criticality'
+                'title': 'Criticality'
             },
             {
                 'id': 'networking',
                 'tags': [{
                     'aux_tags': [],
                     'id': 'lan',
-                    'title': u'Local network (low latency)'
+                    'title': 'Local network (low latency)'
                 },],
-                'title': u'Networking Segment'
+                'title': 'Networking Segment'
             },
         ],
     })

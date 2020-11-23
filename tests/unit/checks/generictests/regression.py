@@ -99,7 +99,7 @@ class WritableDataset:
         self.info = init_dict.get('info', None)
         freeze_time = init_dict.get('freeze_time', None)
         if freeze_time == "":
-            freeze_time = time.strftime(u"%Y-%m-%d %H:%M:%S")
+            freeze_time = time.strftime("%Y-%m-%d %H:%M:%S")
         self.freeze_time = freeze_time
         self.parsed = init_dict.get('parsed', None)
         self.discovery = init_dict.get('discovery', {})
@@ -124,7 +124,7 @@ class WritableDataset:
             value = getattr(self, attr)
             if not value:
                 continue
-            content.append(u"%s = %r" % (attr, value))
+            content.append("%s = %r" % (attr, value))
             imports |= self.get_imports(value)
 
         if not content:
@@ -149,14 +149,14 @@ class WritableDataset:
             #   ''
             #   '# yapf: disable'
             comments = [
-                u'#!/usr/bin/env python3\n',
-                u'# -*- encoding: utf-8 -*-\n',
-                u'# Copyright (C) 2019 tribe29 GmbH - License: GNU General Public License v2\n',
-                u'# This file is part of Checkmk (https://checkmk.com). It is subject to the terms and\n',
-                u'# conditions defined in the file COPYING, which is part of this source code package.\n',
-                u'\n',
-                u'# yapf: disable\n',
-                u'# type: ignore\n',
+                '#!/usr/bin/env python3\n',
+                '# -*- encoding: utf-8 -*-\n',
+                '# Copyright (C) 2019 tribe29 GmbH - License: GNU General Public License v2\n',
+                '# This file is part of Checkmk (https://checkmk.com). It is subject to the terms and\n',
+                '# conditions defined in the file COPYING, which is part of this source code package.\n',
+                '\n',
+                '# yapf: disable\n',
+                '# type: ignore\n',
             ]
             handle.writelines(comments)
             handle.write(yapfed_content)
@@ -173,7 +173,7 @@ class WritableDataset:
         elif isinstance(value, (tuple, list)):
             iterate = value
         else:
-            return {u"from %s import %s" % (value.__module__, value.__class__.__name__)}
+            return {"from %s import %s" % (value.__module__, value.__class__.__name__)}
 
         imports = set()
         for val in iterate:

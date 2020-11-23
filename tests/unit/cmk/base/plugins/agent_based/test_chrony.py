@@ -9,26 +9,26 @@ from cmk.base.plugins.agent_based import chrony
 
 
 def test_chrony_parse_errmsg():
-    assert chrony.parse_chrony([[u'506', u'Cannot', u'talk', u'to', u'daemon']]) == {
+    assert chrony.parse_chrony([['506', 'Cannot', 'talk', 'to', 'daemon']]) == {
         "error": "506 Cannot talk to daemon",
     }
 
 
 def test_chrony_parse_valid():
     assert chrony.parse_chrony([
-        [u'Reference', u'ID', u':', u'55DCBEF6', u'(kaesekuchen.ok)'],
-        [u'Stratum', u':', u'3'],
-        [u'Ref', u'time', u'(UTC)', u':', u'Tue', u'Jul', u'09', u'08:01:06', u'2019'],
-        [u'System', u'time', u':', u'0.000275117', u'seconds', u'slow', u'of', u'NTP', u'time'],
-        [u'Last', u'offset', u':', u'-0.000442775', u'seconds'],
-        [u'RMS', u'offset', u':', u'0.000999328', u'seconds'],
-        [u'Frequency', u':', u'2.054', u'ppm', u'fast'],
-        [u'Residual', u'freq', u':', u'-0.004', u'ppm'],
-        [u'Skew', u':', u'0.182', u'ppm'],
-        [u'Root', u'delay', u':', u'0.023675382', u'seconds'],
-        [u'Root', u'dispersion', u':', u'0.001886752', u'seconds'],
-        [u'Update', u'interval', u':', u'1042.2', u'seconds'],
-        [u'Leap', u'status', u':', u'Normal'],
+        ['Reference', 'ID', ':', '55DCBEF6', '(kaesekuchen.ok)'],
+        ['Stratum', ':', '3'],
+        ['Ref', 'time', '(UTC)', ':', 'Tue', 'Jul', '09', '08:01:06', '2019'],
+        ['System', 'time', ':', '0.000275117', 'seconds', 'slow', 'of', 'NTP', 'time'],
+        ['Last', 'offset', ':', '-0.000442775', 'seconds'],
+        ['RMS', 'offset', ':', '0.000999328', 'seconds'],
+        ['Frequency', ':', '2.054', 'ppm', 'fast'],
+        ['Residual', 'freq', ':', '-0.004', 'ppm'],
+        ['Skew', ':', '0.182', 'ppm'],
+        ['Root', 'delay', ':', '0.023675382', 'seconds'],
+        ['Root', 'dispersion', ':', '0.001886752', 'seconds'],
+        ['Update', 'interval', ':', '1042.2', 'seconds'],
+        ['Leap', 'status', ':', 'Normal'],
     ]) == {
         "Reference ID": '55DCBEF6 (kaesekuchen.ok)',
         "Stratum": 3,

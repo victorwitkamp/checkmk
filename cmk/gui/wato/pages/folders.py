@@ -1220,13 +1220,13 @@ def _create_wato_foldername(title, in_folder=None):
 def _convert_title_to_filename(title):
     converted = ""
     for c in title.lower():
-        if c == u'ä':
+        if c == 'ä':
             converted += 'ae'
-        elif c == u'ö':
+        elif c == 'ö':
             converted += 'oe'
-        elif c == u'ü':
+        elif c == 'ü':
             converted += 'ue'
-        elif c == u'ß':
+        elif c == 'ß':
             converted += 'ss'
         elif c in "abcdefghijklmnopqrstuvwxyz0123456789-_":
             converted += c

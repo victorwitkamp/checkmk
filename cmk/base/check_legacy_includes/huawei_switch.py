@@ -40,19 +40,19 @@ def parse_huawei_physical_entity_values(info, entity_name_start=huawei_mpu_board
 
     The first list has a structure like this:
     [
-        [u'67108867', u'HUAWEI S6720 Routing Switch'],
-        [u'67108869', u'Board slot 0'],
-        [u'68157445', u'Board slot 1'],
-        [u'68157449', u'MPU Board 1'],
-        [u'68173836', u'Card slot 1/1'],
-        [u'68190220', u'Card slot 1/2'],
-        [u'68206604', u'Card slot 1/3'],
-        [u'68222988', u'Card slot 1/4'],
-        [u'68239372', u'Card slot 1/5'],
-        [u'68239373', u'POWER Card 1/PWR1'],
-        [u'68255756', u'Card slot 1/6'],
-        [u'68255757', u'POWER Card 1/PWR2'],
-        [u'69206025', u'MPU Board 2'],
+        ['67108867', 'HUAWEI S6720 Routing Switch'],
+        ['67108869', 'Board slot 0'],
+        ['68157445', 'Board slot 1'],
+        ['68157449', 'MPU Board 1'],
+        ['68173836', 'Card slot 1/1'],
+        ['68190220', 'Card slot 1/2'],
+        ['68206604', 'Card slot 1/3'],
+        ['68222988', 'Card slot 1/4'],
+        ['68239372', 'Card slot 1/5'],
+        ['68239373', 'POWER Card 1/PWR1'],
+        ['68255756', 'Card slot 1/6'],
+        ['68255757', 'POWER Card 1/PWR2'],
+        ['69206025', 'MPU Board 2'],
         ...
     ]
 
@@ -65,14 +65,14 @@ def parse_huawei_physical_entity_values(info, entity_name_start=huawei_mpu_board
     The second list contains the values and has a structure like this:
 
     [
-        [u'67108867', u'0'],
-        [u'67108869', u'0'],
-        [u'68157445', u'0'],
-        [u'68157449', u'22'],
-        [u'68173836', u'0'],
-        [u'69206021', u'0'],
-        [u'69206025', u'52'],
-        [u'69222412', u'0'],
+        ['67108867', '0'],
+        ['67108869', '0'],
+        ['68157445', '0'],
+        ['68157449', '22'],
+        ['68173836', '0'],
+        ['69206021', '0'],
+        ['69206025', '52'],
+        ['69222412', '0'],
         ...
     ]
 

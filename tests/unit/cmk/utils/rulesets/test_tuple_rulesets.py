@@ -227,7 +227,7 @@ def test_in_extraconf_hostlist():
 
 
 def test_get_rule_options_regular_rule():
-    options = {'description': u'Put all hosts into the contact group "all"'}
+    options = {'description': 'Put all hosts into the contact group "all"'}
     entry: Tuple[str, List[str], List[str], Dict] = ('all', [], tuple_rulesets.ALL_HOSTS, options)
     assert tuple_rulesets.get_rule_options(entry) == (entry[:-1], options)
 

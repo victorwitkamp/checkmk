@@ -28,7 +28,7 @@ def test_add_to_fstab_not_existing(tmp_fstab, site_context):
 
 
 def test_add_to_fstab(tmp_path, tmp_fstab, site_context):
-    tmp_fstab.open("w", encoding="utf-8").write(u"# system fstab bla\n")
+    tmp_fstab.open("w", encoding="utf-8").write("# system fstab bla\n")
     add_to_fstab(site_context)
     assert tmp_fstab.open().read() == (
         "# system fstab bla\n"
@@ -37,7 +37,7 @@ def test_add_to_fstab(tmp_path, tmp_fstab, site_context):
 
 
 def test_add_to_fstab_with_size(tmp_path, tmp_fstab, site_context):
-    tmp_fstab.open("w", encoding="utf-8").write(u"# system fstab bla\n")
+    tmp_fstab.open("w", encoding="utf-8").write("# system fstab bla\n")
     add_to_fstab(site_context, tmpfs_size="1G")
     assert tmp_fstab.open().read() == (
         "# system fstab bla\n"
@@ -46,7 +46,7 @@ def test_add_to_fstab_with_size(tmp_path, tmp_fstab, site_context):
 
 
 def test_add_to_fstab_no_newline_at_end(tmp_path, tmp_fstab, site_context):
-    tmp_fstab.open("w", encoding="utf-8").write(u"# system fstab bla")
+    tmp_fstab.open("w", encoding="utf-8").write("# system fstab bla")
     add_to_fstab(site_context)
     assert tmp_fstab.open().read() == (
         "# system fstab bla\n"
@@ -55,7 +55,7 @@ def test_add_to_fstab_no_newline_at_end(tmp_path, tmp_fstab, site_context):
 
 
 def test_add_to_fstab_empty(tmp_path, tmp_fstab, site_context):
-    tmp_fstab.open("w", encoding="utf-8").write(u"")
+    tmp_fstab.open("w", encoding="utf-8").write("")
     add_to_fstab(site_context)
     assert tmp_fstab.open().read() == (
         "tmpfs  %s/opt/omd/sites/unit/tmp tmpfs noauto,user,mode=755,uid=unit,gid=unit 0 0\n" %

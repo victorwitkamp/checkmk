@@ -61,7 +61,7 @@ def escape_attribute(value: EscapableEntity) -> str:
     """
     attr_type = type(value)
     if value is None:
-        return u''
+        return ''
     if attr_type == int:
         return str(value)
     if isinstance(value, HTML):
@@ -127,7 +127,7 @@ def escape_text(text: EscapableEntity) -> str:
             unescaped_tag = "<a href=\"%s\">" % href
 
         text = text.replace(a_href.group(0), unescaped_tag)
-    return text.replace("&amp;nbsp;", u"&nbsp;")
+    return text.replace("&amp;nbsp;", "&nbsp;")
 
 
 def strip_scripts(ht: str) -> str:
@@ -191,7 +191,7 @@ def strip_tags(ht: EscapableEntity) -> str:
         ht = ht.__html__()
 
     if not isinstance(ht, str):
-        return u"%s" % ht
+        return "%s" % ht
 
     ht = ensure_str(ht)
 

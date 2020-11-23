@@ -24,8 +24,8 @@ class ValueTypedDictOpenAPIConverter(marshmallow.OpenAPIConverter):
         ref_dict = self.get_ref_dict(schema_instance)
 
         return {
-            u'type': u'object',
-            u'additionalProperties': ref_dict,
+            'type': 'object',
+            'additionalProperties': ref_dict,
         }
 
 

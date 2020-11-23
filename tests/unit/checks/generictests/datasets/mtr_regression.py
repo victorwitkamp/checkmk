@@ -11,23 +11,23 @@ checkname = 'mtr'
 
 info = [
     [
-        u'foo.bar.1', u'1578427995', u'2', u'baz-1', u'0.0%', u'10', u'0.3',
-        u'0.2', u'0.2', u'0.3', u'0.0', u'???', u'100.0', u'10', u'0.0',
-        u'0.0', u'0.0', u'0.0', u'0.0'
+        'foo.bar.1', '1578427995', '2', 'baz-1', '0.0%', '10', '0.3',
+        '0.2', '0.2', '0.3', '0.0', '???', '100.0', '10', '0.0',
+        '0.0', '0.0', '0.0', '0.0'
     ],
     [
-        u'foo.bar.2', u'1578427995', u'2', u'baz-2', u'0.0%', u'10', u'0.3',
-        u'0.2', u'0.2', u'0.3', u'0.0', u'???', u'0.0', u'10', u'0.0', u'0.0',
-        u'0.0', u'0.0', u'0.0'
+        'foo.bar.2', '1578427995', '2', 'baz-2', '0.0%', '10', '0.3',
+        '0.2', '0.2', '0.3', '0.0', '???', '0.0', '10', '0.0', '0.0',
+        '0.0', '0.0', '0.0'
     ]
 ]
 
-discovery = {'': [(u'foo.bar.1', {}), (u'foo.bar.2', {})]}
+discovery = {'': [('foo.bar.1', {}), ('foo.bar.2', {})]}
 
 checks = {
     '': [
         (
-            u'foo.bar.1', {
+            'foo.bar.1', {
                 'rtstddev': (150, 250),
                 'rta': (150, 250),
                 'pl': (10, 25)
@@ -47,7 +47,7 @@ checks = {
                 ),
                 (
                     2,
-                    u'Packet loss 100.0%(!!) (warn/crit at 10%/25%), Round trip average 0.0ms, Standard deviation 0.0ms\r\nHops in last check:\nHop 1: baz-1\nHop 2: ???\n',
+                    'Packet loss 100.0%(!!) (warn/crit at 10%/25%), Round trip average 0.0ms, Standard deviation 0.0ms\r\nHops in last check:\nHop 1: baz-1\nHop 2: ???\n',
                     [
                         ('hop_1_rta', 0.0002, None, None, None, None),
                         ('hop_1_rtmin', 0.0002, None, None, None, None),
@@ -68,7 +68,7 @@ checks = {
             ]
         ),
         (
-            u'foo.bar.2', {
+            'foo.bar.2', {
                 'rtstddev': (150, 250),
                 'rta': (150, 250),
                 'pl': (10, 25)
@@ -88,7 +88,7 @@ checks = {
                 ),
                 (
                     0,
-                    u'Packet loss 0.0%, Round trip average 0.0ms, Standard deviation 0.0ms\r\nHops in last check:\nHop 1: baz-2\nHop 2: ???\n',
+                    'Packet loss 0.0%, Round trip average 0.0ms, Standard deviation 0.0ms\r\nHops in last check:\nHop 1: baz-2\nHop 2: ???\n',
                     [
                         ('hop_1_rta', 0.0002, None, None, None, None),
                         ('hop_1_rtmin', 0.0002, None, None, None, None),

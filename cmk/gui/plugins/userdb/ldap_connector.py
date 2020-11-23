@@ -699,19 +699,19 @@ class LDAPUserConnector(UserConnector):
         # compatibility reasons. FIXME TODO Remove this one day.
         if umlauts == 'replace':
             user_id = user_id.translate({
-                ord(u'ü'): u'ue',
-                ord(u'ö'): u'oe',
-                ord(u'ä'): u'ae',
-                ord(u'ß'): u'ss',
-                ord(u'Ü'): u'UE',
-                ord(u'Ö'): u'OE',
-                ord(u'Ä'): u'AE',
-                ord(u'å'): u'aa',
-                ord(u'Å'): u'Aa',
-                ord(u'Ø'): u'Oe',
-                ord(u'ø'): u'oe',
-                ord(u'Æ'): u'Ae',
-                ord(u'æ'): u'ae',
+                ord('ü'): 'ue',
+                ord('ö'): 'oe',
+                ord('ä'): 'ae',
+                ord('ß'): 'ss',
+                ord('Ü'): 'UE',
+                ord('Ö'): 'OE',
+                ord('Ä'): 'AE',
+                ord('å'): 'aa',
+                ord('Å'): 'Aa',
+                ord('Ø'): 'Oe',
+                ord('ø'): 'oe',
+                ord('Æ'): 'Ae',
+                ord('æ'): 'ae',
             })
 
         return user_id

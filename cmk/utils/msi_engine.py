@@ -94,7 +94,7 @@ def patch_msi_files(dir_name, version_build):
 
     with (use_dir / (name + ".new")).open('w', newline='', encoding='utf8') as out_file:
         # first three lines of the table write back
-        to_write = u"".join(lines_file_idt[:3])
+        to_write = "".join(lines_file_idt[:3])
         out_file.write(to_write)
 
         for l in lines_file_idt[3:]:
@@ -114,7 +114,7 @@ def patch_msi_files(dir_name, version_build):
 
             # The version of this file is different from the msi installer version !
             words[4] = version_build if words[4] else ''
-            out_file.write(u"\t".join(words))
+            out_file.write("\t".join(words))
 
 
 def patch_msi_components(dir_name):
@@ -124,7 +124,7 @@ def patch_msi_components(dir_name):
     lines_component_idt = read_file_as_lines(use_dir / name)
 
     with (use_dir / (name + ".new")).open('w', newline='', encoding='utf8') as out_file:
-        out_file.write(u"".join(lines_component_idt[:3]))
+        out_file.write("".join(lines_component_idt[:3]))
 
         for l in lines_component_idt[3:]:
             words = l.split("\t")
@@ -139,7 +139,7 @@ def patch_msi_properties(dir_name, product_code, version_build):
     name = "Property.idt"
     lines_property_idt = read_file_as_lines(use_dir / name)
     with (use_dir / (name + ".new")).open('w', newline='', encoding='utf8') as out_file:
-        out_file.write(u"".join(lines_property_idt[:3]))
+        out_file.write("".join(lines_property_idt[:3]))
 
         for line in lines_property_idt[3:]:
             tokens = line.split("\t")
@@ -295,7 +295,7 @@ def msi_update_core(msi_file_name, src_dir, revision_text, version, package_code
         yml_file = Path(src_dir, "check_mk.install.yml")
         yml_target = Path(file_dir, "check_mk_install_yml")
         copy_or_create(yml_file, yml_target,
-                       u"# test file\r\nglobal:\r\n  enabled: yes\r\n  install: no\r\n")
+                        "# test file\r\nglobal:\r\n  enabled: yes\r\n  install: no\r\n")
 
         if src_dir != file_dir:
             shutil.copy(src_dir + "/checkmk.dat", file_dir + "/checkmk.dat")

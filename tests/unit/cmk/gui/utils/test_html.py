@@ -79,9 +79,9 @@ def test_class_HTML():
     assert isinstance(A, HTML), type(A)
     #    assert isinstance(A, str), type(A)
     assert not isinstance(A, str), type(A)
-    assert isinstance(u"%s" % A, str), u"%s" % A
+    assert isinstance("%s" % A, str), "%s" % A
     # One day we will fix this!
-    assert isinstance(u"%s" % A, str), u"%s" % A
+    assert isinstance("%s" % A, str), "%s" % A
     assert isinstance(A + B, HTML), type(A + B)
     assert isinstance(HTML('').join([A, B]), HTML)
     assert isinstance(HTML().join([A, B]), HTML)
@@ -139,7 +139,7 @@ def test_class_HTML():
 
     assert D == d
     assert "%s" % D == "%s" % d
-    assert isinstance(u"%s" % D, str)
+    assert isinstance("%s" % D, str)
     assert isinstance("%s" % D, str)
 
     E = A + B

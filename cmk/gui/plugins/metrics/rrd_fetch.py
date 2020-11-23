@@ -157,7 +157,7 @@ def rrd_columns(metrics: List[Tuple[str, Optional[str], float]], rrd_consolidati
     Include scaling of metric directly in query"""
 
     for perfvar, cf, scale in metrics:
-        cf = rrd_consolidation or cf or u"max"
+        cf = rrd_consolidation or cf or "max"
         rpn = "%s.%s" % (perfvar, cf)
         if scale != 1.0:
             rpn += ",%f,*" % scale

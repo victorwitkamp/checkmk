@@ -28,7 +28,7 @@ def create_fetcher_crash_dump(
     of the check. The GUI (cmk.gui.crash_reporting) is able to parse it and send it to
     the Checkmk team.
     """
-    text = u"fetcher failed - please submit a crash report!"
+    text = "fetcher failed - please submit a crash report!"
     try:
         crash = CMKFetcherCrashReport.from_exception_and_context(
             host=host,

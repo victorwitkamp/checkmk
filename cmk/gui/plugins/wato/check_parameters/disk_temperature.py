@@ -25,8 +25,8 @@ def _item_spec_disk_temperature():
 def _parameter_valuespec_disk_temperature():
     return Tuple(help=_("Temperature levels for hard disks, that is determined e.g. via SMART"),
                  elements=[
-                     Integer(title=_("warning at"), unit=u"°C", default_value=35),
-                     Integer(title=_("critical at"), unit=u"°C", default_value=40),
+                     Integer(title=_("warning at"), unit="°C", default_value=35),
+                     Integer(title=_("critical at"), unit="°C", default_value=40),
                  ])
 
 

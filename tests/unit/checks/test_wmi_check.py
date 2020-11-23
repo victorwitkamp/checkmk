@@ -26,300 +26,300 @@ pytestmark = pytest.mark.checks
 #   |                                                                      |
 #   '----------------------------------------------------------------------'
 
-info_wmi_timeout = [[u'WMItimeout']]
+info_wmi_timeout = [['WMItimeout']]
 
 info_subsection_wmi_timeout = [
-    [u'[system_perf]'],
-    [u'WMItimeout'],
-    [u'[computer_system]'],
-    [u'name', u'unimportant', u'data'],
+    ['[system_perf]'],
+    ['WMItimeout'],
+    ['[computer_system]'],
+    ['name', 'unimportant', 'data'],
 ]
 
 info_wmi_cpuload_1 = [
-    [u'[system_perf]'],
+    ['[system_perf]'],
     [
-        u'AlignmentFixupsPersec', u'Caption', u'ContextSwitchesPersec', u'Description',
-        u'ExceptionDispatchesPersec', u'FileControlBytesPersec', u'FileControlOperationsPersec',
-        u'FileDataOperationsPersec', u'FileReadBytesPersec', u'FileReadOperationsPersec',
-        u'FileWriteBytesPersec', u'FileWriteOperationsPersec', u'FloatingEmulationsPersec',
-        u'Frequency_Object', u'Frequency_PerfTime', u'Frequency_Sys100NS', u'Name',
-        u'PercentRegistryQuotaInUse', u'PercentRegistryQuotaInUse_Base', u'Processes',
-        u'ProcessorQueueLength', u'SystemCallsPersec', u'SystemUpTime', u'Threads',
-        u'Timestamp_Object', u'Timestamp_PerfTime', u'Timestamp_Sys100NS'
+        'AlignmentFixupsPersec', 'Caption', 'ContextSwitchesPersec', 'Description',
+        'ExceptionDispatchesPersec', 'FileControlBytesPersec', 'FileControlOperationsPersec',
+        'FileDataOperationsPersec', 'FileReadBytesPersec', 'FileReadOperationsPersec',
+        'FileWriteBytesPersec', 'FileWriteOperationsPersec', 'FloatingEmulationsPersec',
+        'Frequency_Object', 'Frequency_PerfTime', 'Frequency_Sys100NS', 'Name',
+        'PercentRegistryQuotaInUse', 'PercentRegistryQuotaInUse_Base', 'Processes',
+        'ProcessorQueueLength', 'SystemCallsPersec', 'SystemUpTime', 'Threads',
+        'Timestamp_Object', 'Timestamp_PerfTime', 'Timestamp_Sys100NS'
     ],
     [
-        u'0', u'', u'469922985', u'', u'222849', u'6503221217', u'72494625', u'75272330',
-        u'111617810637', u'68676492', u'34750951332', u'6595838', u'0', u'10000000', u'2156247',
-        u'10000000', u'', u'250803278', u'-1', u'384', u'0', u'2144858950', u'131983188065000000',
-        u'5534', u'131983336220258827', u'31947393930', u'131983372220250000'
-    ], [u'[computer_system]'],
+        '0', '', '469922985', '', '222849', '6503221217', '72494625', '75272330',
+        '111617810637', '68676492', '34750951332', '6595838', '0', '10000000', '2156247',
+        '10000000', '', '250803278', '-1', '384', '0', '2144858950', '131983188065000000',
+        '5534', '131983336220258827', '31947393930', '131983372220250000'
+    ], ['[computer_system]'],
     [
-        u'AdminPasswordStatus', u'AutomaticManagedPagefile', u'AutomaticResetBootOption',
-        u'AutomaticResetCapability', u'BootOptionOnLimit', u'BootOptionOnWatchDog',
-        u'BootROMSupported', u'BootStatus', u'BootupState', u'Caption', u'ChassisBootupState',
-        u'ChassisSKUNumber', u'CreationClassName', u'CurrentTimeZone', u'DaylightInEffect',
-        u'Description', u'DNSHostName', u'Domain', u'DomainRole', u'EnableDaylightSavingsTime',
-        u'FrontPanelResetStatus', u'HypervisorPresent', u'InfraredSupported', u'InitialLoadInfo',
-        u'InstallDate', u'KeyboardPasswordStatus', u'LastLoadInfo', u'Manufacturer', u'Model',
-        u'Name', u'NameFormat', u'NetworkServerModeEnabled', u'NumberOfLogicalProcessors',
-        u'NumberOfProcessors', u'OEMLogoBitmap', u'OEMStringArray', u'PartOfDomain',
-        u'PauseAfterReset', u'PCSystemType', u'PCSystemTypeEx', u'PowerManagementCapabilities',
-        u'PowerManagementSupported', u'PowerOnPasswordStatus', u'PowerState', u'PowerSupplyState',
-        u'PrimaryOwnerContact', u'PrimaryOwnerName', u'ResetCapability', u'ResetCount',
-        u'ResetLimit', u'Roles', u'Status', u'SupportContactDescription', u'SystemFamily',
-        u'SystemSKUNumber', u'SystemStartupDelay', u'SystemStartupOptions', u'SystemStartupSetting',
-        u'SystemType', u'ThermalState', u'TotalPhysicalMemory', u'UserName', u'WakeUpType',
-        u'Workgroup'
+        'AdminPasswordStatus', 'AutomaticManagedPagefile', 'AutomaticResetBootOption',
+        'AutomaticResetCapability', 'BootOptionOnLimit', 'BootOptionOnWatchDog',
+        'BootROMSupported', 'BootStatus', 'BootupState', 'Caption', 'ChassisBootupState',
+        'ChassisSKUNumber', 'CreationClassName', 'CurrentTimeZone', 'DaylightInEffect',
+        'Description', 'DNSHostName', 'Domain', 'DomainRole', 'EnableDaylightSavingsTime',
+        'FrontPanelResetStatus', 'HypervisorPresent', 'InfraredSupported', 'InitialLoadInfo',
+        'InstallDate', 'KeyboardPasswordStatus', 'LastLoadInfo', 'Manufacturer', 'Model',
+        'Name', 'NameFormat', 'NetworkServerModeEnabled', 'NumberOfLogicalProcessors',
+        'NumberOfProcessors', 'OEMLogoBitmap', 'OEMStringArray', 'PartOfDomain',
+        'PauseAfterReset', 'PCSystemType', 'PCSystemTypeEx', 'PowerManagementCapabilities',
+        'PowerManagementSupported', 'PowerOnPasswordStatus', 'PowerState', 'PowerSupplyState',
+        'PrimaryOwnerContact', 'PrimaryOwnerName', 'ResetCapability', 'ResetCount',
+        'ResetLimit', 'Roles', 'Status', 'SupportContactDescription', 'SystemFamily',
+        'SystemSKUNumber', 'SystemStartupDelay', 'SystemStartupOptions', 'SystemStartupSetting',
+        'SystemType', 'ThermalState', 'TotalPhysicalMemory', 'UserName', 'WakeUpType',
+        'Workgroup'
     ],
     [
-        u'3', u'1', u'1', u'1', u'', u'', u'1', u'<array>', u'Normal boot', u'SERG-DELL', u'3',
-        u'Notebook', u'Win32_ComputerSystem', u'60', u'0', u'AT/AT COMPATIBLE', u'SERG-DELL',
-        u'WORKGROUP', u'0', u'1', u'3', u'0', u'0', u'', u'', u'3', u'', u'Dell Inc.',
-        u'XPS 15 9570', u'SERG-DELL', u'', u'1', u'12', u'1', u'', u'<array>', u'0', u'-1', u'2',
-        u'2', u'', u'', u'3', u'0', u'3', u'', u'sk', u'1', u'-1', u'-1', u'<array>', u'OK', u'',
-        u'XPS', u'087C', u'', u'', u'', u'x64-based PC', u'3', u'34077048832', u'SERG-DELL\\sk',
-        u'6', u'WORKGROUP'
+        '3', '1', '1', '1', '', '', '1', '<array>', 'Normal boot', 'SERG-DELL', '3',
+        'Notebook', 'Win32_ComputerSystem', '60', '0', 'AT/AT COMPATIBLE', 'SERG-DELL',
+        'WORKGROUP', '0', '1', '3', '0', '0', '', '', '3', '', 'Dell Inc.',
+        'XPS 15 9570', 'SERG-DELL', '', '1', '12', '1', '', '<array>', '0', '-1', '2',
+        '2', '', '', '3', '0', '3', '', 'sk', '1', '-1', '-1', '<array>', 'OK', '',
+        'XPS', '087C', '', '', '', 'x64-based PC', '3', '34077048832', 'SERG-DELL\\sk',
+        '6', 'WORKGROUP'
     ]
 ]
 
 info_wmi_cpuload_2 = [
-    [u'[system_perf]'], [u'WMItimeout'], [u'[computer_system]'],
+    ['[system_perf]'], ['WMItimeout'], ['[computer_system]'],
     [
-        u'AdminPasswordStatus', u'AutomaticManagedPagefile', u'AutomaticResetBootOption',
-        u'AutomaticResetCapability', u'BootOptionOnLimit', u'BootOptionOnWatchDog',
-        u'BootROMSupported', u'BootStatus', u'BootupState', u'Caption', u'ChassisBootupState',
-        u'ChassisSKUNumber', u'CreationClassName', u'CurrentTimeZone', u'DaylightInEffect',
-        u'Description', u'DNSHostName', u'Domain', u'DomainRole', u'EnableDaylightSavingsTime',
-        u'FrontPanelResetStatus', u'HypervisorPresent', u'InfraredSupported', u'InitialLoadInfo',
-        u'InstallDate', u'KeyboardPasswordStatus', u'LastLoadInfo', u'Manufacturer', u'Model',
-        u'Name', u'NameFormat', u'NetworkServerModeEnabled', u'NumberOfLogicalProcessors',
-        u'NumberOfProcessors', u'OEMLogoBitmap', u'OEMStringArray', u'PartOfDomain',
-        u'PauseAfterReset', u'PCSystemType', u'PCSystemTypeEx', u'PowerManagementCapabilities',
-        u'PowerManagementSupported', u'PowerOnPasswordStatus', u'PowerState', u'PowerSupplyState',
-        u'PrimaryOwnerContact', u'PrimaryOwnerName', u'ResetCapability', u'ResetCount',
-        u'ResetLimit', u'Roles', u'Status', u'SupportContactDescription', u'SystemFamily',
-        u'SystemSKUNumber', u'SystemStartupDelay', u'SystemStartupOptions', u'SystemStartupSetting',
-        u'SystemType', u'ThermalState', u'TotalPhysicalMemory', u'UserName', u'WakeUpType',
-        u'Workgroup'
+        'AdminPasswordStatus', 'AutomaticManagedPagefile', 'AutomaticResetBootOption',
+        'AutomaticResetCapability', 'BootOptionOnLimit', 'BootOptionOnWatchDog',
+        'BootROMSupported', 'BootStatus', 'BootupState', 'Caption', 'ChassisBootupState',
+        'ChassisSKUNumber', 'CreationClassName', 'CurrentTimeZone', 'DaylightInEffect',
+        'Description', 'DNSHostName', 'Domain', 'DomainRole', 'EnableDaylightSavingsTime',
+        'FrontPanelResetStatus', 'HypervisorPresent', 'InfraredSupported', 'InitialLoadInfo',
+        'InstallDate', 'KeyboardPasswordStatus', 'LastLoadInfo', 'Manufacturer', 'Model',
+        'Name', 'NameFormat', 'NetworkServerModeEnabled', 'NumberOfLogicalProcessors',
+        'NumberOfProcessors', 'OEMLogoBitmap', 'OEMStringArray', 'PartOfDomain',
+        'PauseAfterReset', 'PCSystemType', 'PCSystemTypeEx', 'PowerManagementCapabilities',
+        'PowerManagementSupported', 'PowerOnPasswordStatus', 'PowerState', 'PowerSupplyState',
+        'PrimaryOwnerContact', 'PrimaryOwnerName', 'ResetCapability', 'ResetCount',
+        'ResetLimit', 'Roles', 'Status', 'SupportContactDescription', 'SystemFamily',
+        'SystemSKUNumber', 'SystemStartupDelay', 'SystemStartupOptions', 'SystemStartupSetting',
+        'SystemType', 'ThermalState', 'TotalPhysicalMemory', 'UserName', 'WakeUpType',
+        'Workgroup'
     ],
     [
-        u'3', u'1', u'1', u'1', u'', u'', u'1', u'<array>', u'Normal boot', u'SERG-DELL', u'3',
-        u'Notebook', u'Win32_ComputerSystem', u'60', u'0', u'AT/AT COMPATIBLE', u'SERG-DELL',
-        u'WORKGROUP', u'0', u'1', u'3', u'0', u'0', u'', u'', u'3', u'', u'Dell Inc.',
-        u'XPS 15 9570', u'SERG-DELL', u'', u'1', u'12', u'1', u'', u'<array>', u'0', u'-1', u'2',
-        u'2', u'', u'', u'3', u'0', u'3', u'', u'sk', u'1', u'-1', u'-1', u'<array>', u'OK', u'',
-        u'XPS', u'087C', u'', u'', u'', u'x64-based PC', u'3', u'34077048832', u'SERG-DELL\\sk',
-        u'6', u'WORKGROUP'
+        '3', '1', '1', '1', '', '', '1', '<array>', 'Normal boot', 'SERG-DELL', '3',
+        'Notebook', 'Win32_ComputerSystem', '60', '0', 'AT/AT COMPATIBLE', 'SERG-DELL',
+        'WORKGROUP', '0', '1', '3', '0', '0', '', '', '3', '', 'Dell Inc.',
+        'XPS 15 9570', 'SERG-DELL', '', '1', '12', '1', '', '<array>', '0', '-1', '2',
+        '2', '', '', '3', '0', '3', '', 'sk', '1', '-1', '-1', '<array>', 'OK', '',
+        'XPS', '087C', '', '', '', 'x64-based PC', '3', '34077048832', 'SERG-DELL\\sk',
+        '6', 'WORKGROUP'
     ]
 ]
 
 info_wmi_cpuload_3 = [
-    [u'[system_perf]'],
+    ['[system_perf]'],
     [
-        u'AlignmentFixupsPersec', u'Caption', u'ContextSwitchesPersec', u'Description',
-        u'ExceptionDispatchesPersec', u'FileControlBytesPersec', u'FileControlOperationsPersec',
-        u'FileDataOperationsPersec', u'FileReadBytesPersec', u'FileReadOperationsPersec',
-        u'FileWriteBytesPersec', u'FileWriteOperationsPersec', u'FloatingEmulationsPersec',
-        u'Frequency_Object', u'Frequency_PerfTime', u'Frequency_Sys100NS', u'Name',
-        u'PercentRegistryQuotaInUse', u'PercentRegistryQuotaInUse_Base', u'Processes',
-        u'ProcessorQueueLength', u'SystemCallsPersec', u'SystemUpTime', u'Threads',
-        u'Timestamp_Object', u'Timestamp_PerfTime', u'Timestamp_Sys100NS'
+        'AlignmentFixupsPersec', 'Caption', 'ContextSwitchesPersec', 'Description',
+        'ExceptionDispatchesPersec', 'FileControlBytesPersec', 'FileControlOperationsPersec',
+        'FileDataOperationsPersec', 'FileReadBytesPersec', 'FileReadOperationsPersec',
+        'FileWriteBytesPersec', 'FileWriteOperationsPersec', 'FloatingEmulationsPersec',
+        'Frequency_Object', 'Frequency_PerfTime', 'Frequency_Sys100NS', 'Name',
+        'PercentRegistryQuotaInUse', 'PercentRegistryQuotaInUse_Base', 'Processes',
+        'ProcessorQueueLength', 'SystemCallsPersec', 'SystemUpTime', 'Threads',
+        'Timestamp_Object', 'Timestamp_PerfTime', 'Timestamp_Sys100NS'
     ],
     [
-        u'0', u'', u'469922985', u'', u'222849', u'6503221217', u'72494625', u'75272330',
-        u'111617810637', u'68676492', u'34750951332', u'6595838', u'0', u'10000000', u'2156247',
-        u'10000000', u'', u'250803278', u'-1', u'384', u'0', u'2144858950', u'131983188065000000',
-        u'5534', u'131983336220258827', u'31947393930', u'131983372220250000'
-    ], [u'[computer_system]'], [u'WMItimeout']
+        '0', '', '469922985', '', '222849', '6503221217', '72494625', '75272330',
+        '111617810637', '68676492', '34750951332', '6595838', '0', '10000000', '2156247',
+        '10000000', '', '250803278', '-1', '384', '0', '2144858950', '131983188065000000',
+        '5534', '131983336220258827', '31947393930', '131983372220250000'
+    ], ['[computer_system]'], ['WMItimeout']
 ]
 
-info_wmi_cpuload_4 = [[u'[system_perf]'], [u'WMItimeout'], [u'[computer_system]'], [u'WMItimeout']]
+info_wmi_cpuload_4 = [['[system_perf]'], ['WMItimeout'], ['[computer_system]'], ['WMItimeout']]
 
 info_wmi_cpuload_5 = [
-    [u'[system_perf]'],
+    ['[system_perf]'],
     [
-        u'AlignmentFixupsPersec', u'Caption', u'ContextSwitchesPersec', u'Description',
-        u'ExceptionDispatchesPersec', u'FileControlBytesPersec', u'FileControlOperationsPersec',
-        u'FileDataOperationsPersec', u'FileReadBytesPersec', u'FileReadOperationsPersec',
-        u'FileWriteBytesPersec', u'FileWriteOperationsPersec', u'FloatingEmulationsPersec',
-        u'Frequency_Object', u'Frequency_PerfTime', u'Frequency_Sys100NS', u'Name',
-        u'PercentRegistryQuotaInUse', u'PercentRegistryQuotaInUse_Base', u'Processes',
-        u'ProcessorQueueLength', u'SystemCallsPersec', u'SystemUpTime', u'Threads',
-        u'Timestamp_Object', u'Timestamp_PerfTime', u'Timestamp_Sys100NS', u'WMIStatus'
+        'AlignmentFixupsPersec', 'Caption', 'ContextSwitchesPersec', 'Description',
+        'ExceptionDispatchesPersec', 'FileControlBytesPersec', 'FileControlOperationsPersec',
+        'FileDataOperationsPersec', 'FileReadBytesPersec', 'FileReadOperationsPersec',
+        'FileWriteBytesPersec', 'FileWriteOperationsPersec', 'FloatingEmulationsPersec',
+        'Frequency_Object', 'Frequency_PerfTime', 'Frequency_Sys100NS', 'Name',
+        'PercentRegistryQuotaInUse', 'PercentRegistryQuotaInUse_Base', 'Processes',
+        'ProcessorQueueLength', 'SystemCallsPersec', 'SystemUpTime', 'Threads',
+        'Timestamp_Object', 'Timestamp_PerfTime', 'Timestamp_Sys100NS', 'WMIStatus'
     ],
     [
-        u'0', u'', u'469922985', u'', u'222849', u'6503221217', u'72494625', u'75272330',
-        u'111617810637', u'68676492', u'34750951332', u'6595838', u'0', u'10000000', u'2156247',
-        u'10000000', u'', u'250803278', u'-1', u'384', u'0', u'2144858950', u'131983188065000000',
-        u'5534', u'131983336220258827', u'31947393930', u'131983372220250000', u'OK'
-    ], [u'[computer_system]'],
+        '0', '', '469922985', '', '222849', '6503221217', '72494625', '75272330',
+        '111617810637', '68676492', '34750951332', '6595838', '0', '10000000', '2156247',
+        '10000000', '', '250803278', '-1', '384', '0', '2144858950', '131983188065000000',
+        '5534', '131983336220258827', '31947393930', '131983372220250000', 'OK'
+    ], ['[computer_system]'],
     [
-        u'AdminPasswordStatus', u'AutomaticManagedPagefile', u'AutomaticResetBootOption',
-        u'AutomaticResetCapability', u'BootOptionOnLimit', u'BootOptionOnWatchDog',
-        u'BootROMSupported', u'BootStatus', u'BootupState', u'Caption', u'ChassisBootupState',
-        u'ChassisSKUNumber', u'CreationClassName', u'CurrentTimeZone', u'DaylightInEffect',
-        u'Description', u'DNSHostName', u'Domain', u'DomainRole', u'EnableDaylightSavingsTime',
-        u'FrontPanelResetStatus', u'HypervisorPresent', u'InfraredSupported', u'InitialLoadInfo',
-        u'InstallDate', u'KeyboardPasswordStatus', u'LastLoadInfo', u'Manufacturer', u'Model',
-        u'Name', u'NameFormat', u'NetworkServerModeEnabled', u'NumberOfLogicalProcessors',
-        u'NumberOfProcessors', u'OEMLogoBitmap', u'OEMStringArray', u'PartOfDomain',
-        u'PauseAfterReset', u'PCSystemType', u'PCSystemTypeEx', u'PowerManagementCapabilities',
-        u'PowerManagementSupported', u'PowerOnPasswordStatus', u'PowerState', u'PowerSupplyState',
-        u'PrimaryOwnerContact', u'PrimaryOwnerName', u'ResetCapability', u'ResetCount',
-        u'ResetLimit', u'Roles', u'Status', u'SupportContactDescription', u'SystemFamily',
-        u'SystemSKUNumber', u'SystemStartupDelay', u'SystemStartupOptions', u'SystemStartupSetting',
-        u'SystemType', u'ThermalState', u'TotalPhysicalMemory', u'UserName', u'WakeUpType',
-        u'Workgroup', u'WMIStatus'
+        'AdminPasswordStatus', 'AutomaticManagedPagefile', 'AutomaticResetBootOption',
+        'AutomaticResetCapability', 'BootOptionOnLimit', 'BootOptionOnWatchDog',
+        'BootROMSupported', 'BootStatus', 'BootupState', 'Caption', 'ChassisBootupState',
+        'ChassisSKUNumber', 'CreationClassName', 'CurrentTimeZone', 'DaylightInEffect',
+        'Description', 'DNSHostName', 'Domain', 'DomainRole', 'EnableDaylightSavingsTime',
+        'FrontPanelResetStatus', 'HypervisorPresent', 'InfraredSupported', 'InitialLoadInfo',
+        'InstallDate', 'KeyboardPasswordStatus', 'LastLoadInfo', 'Manufacturer', 'Model',
+        'Name', 'NameFormat', 'NetworkServerModeEnabled', 'NumberOfLogicalProcessors',
+        'NumberOfProcessors', 'OEMLogoBitmap', 'OEMStringArray', 'PartOfDomain',
+        'PauseAfterReset', 'PCSystemType', 'PCSystemTypeEx', 'PowerManagementCapabilities',
+        'PowerManagementSupported', 'PowerOnPasswordStatus', 'PowerState', 'PowerSupplyState',
+        'PrimaryOwnerContact', 'PrimaryOwnerName', 'ResetCapability', 'ResetCount',
+        'ResetLimit', 'Roles', 'Status', 'SupportContactDescription', 'SystemFamily',
+        'SystemSKUNumber', 'SystemStartupDelay', 'SystemStartupOptions', 'SystemStartupSetting',
+        'SystemType', 'ThermalState', 'TotalPhysicalMemory', 'UserName', 'WakeUpType',
+        'Workgroup', 'WMIStatus'
     ],
     [
-        u'3', u'1', u'1', u'1', u'', u'', u'1', u'<array>', u'Normal boot', u'SERG-DELL', u'3',
-        u'Notebook', u'Win32_ComputerSystem', u'60', u'0', u'AT/AT COMPATIBLE', u'SERG-DELL',
-        u'WORKGROUP', u'0', u'1', u'3', u'0', u'0', u'', u'', u'3', u'', u'Dell Inc.',
-        u'XPS 15 9570', u'SERG-DELL', u'', u'1', u'12', u'1', u'', u'<array>', u'0', u'-1', u'2',
-        u'2', u'', u'', u'3', u'0', u'3', u'', u'sk', u'1', u'-1', u'-1', u'<array>', u'OK', u'',
-        u'XPS', u'087C', u'', u'', u'', u'x64-based PC', u'3', u'34077048832', u'SERG-DELL\\sk',
-        u'6', u'WORKGROUP', u'OK'
+        '3', '1', '1', '1', '', '', '1', '<array>', 'Normal boot', 'SERG-DELL', '3',
+        'Notebook', 'Win32_ComputerSystem', '60', '0', 'AT/AT COMPATIBLE', 'SERG-DELL',
+        'WORKGROUP', '0', '1', '3', '0', '0', '', '', '3', '', 'Dell Inc.',
+        'XPS 15 9570', 'SERG-DELL', '', '1', '12', '1', '', '<array>', '0', '-1', '2',
+        '2', '', '', '3', '0', '3', '', 'sk', '1', '-1', '-1', '<array>', 'OK', '',
+        'XPS', '087C', '', '', '', 'x64-based PC', '3', '34077048832', 'SERG-DELL\\sk',
+        '6', 'WORKGROUP', 'OK'
     ]
 ]
 
 info_wmi_cpuload_6 = [
-    [u'[system_perf]'],
+    ['[system_perf]'],
     [
-        u'AlignmentFixupsPersec', u'Caption', u'ContextSwitchesPersec', u'Description',
-        u'ExceptionDispatchesPersec', u'FileControlBytesPersec', u'FileControlOperationsPersec',
-        u'FileDataOperationsPersec', u'FileReadBytesPersec', u'FileReadOperationsPersec',
-        u'FileWriteBytesPersec', u'FileWriteOperationsPersec', u'FloatingEmulationsPersec',
-        u'Frequency_Object', u'Frequency_PerfTime', u'Frequency_Sys100NS', u'Name',
-        u'PercentRegistryQuotaInUse', u'PercentRegistryQuotaInUse_Base', u'Processes',
-        u'ProcessorQueueLength', u'SystemCallsPersec', u'SystemUpTime', u'Threads',
-        u'Timestamp_Object', u'Timestamp_PerfTime', u'Timestamp_Sys100NS', u'WMIStatus'
+        'AlignmentFixupsPersec', 'Caption', 'ContextSwitchesPersec', 'Description',
+        'ExceptionDispatchesPersec', 'FileControlBytesPersec', 'FileControlOperationsPersec',
+        'FileDataOperationsPersec', 'FileReadBytesPersec', 'FileReadOperationsPersec',
+        'FileWriteBytesPersec', 'FileWriteOperationsPersec', 'FloatingEmulationsPersec',
+        'Frequency_Object', 'Frequency_PerfTime', 'Frequency_Sys100NS', 'Name',
+        'PercentRegistryQuotaInUse', 'PercentRegistryQuotaInUse_Base', 'Processes',
+        'ProcessorQueueLength', 'SystemCallsPersec', 'SystemUpTime', 'Threads',
+        'Timestamp_Object', 'Timestamp_PerfTime', 'Timestamp_Sys100NS', 'WMIStatus'
     ],
     [
-        u'0', u'', u'469922985', u'', u'222849', u'6503221217', u'72494625', u'75272330',
-        u'111617810637', u'68676492', u'34750951332', u'6595838', u'0', u'10000000', u'2156247',
-        u'10000000', u'', u'250803278', u'-1', u'384', u'0', u'2144858950', u'131983188065000000',
-        u'5534', u'131983336220258827', u'31947393930', u'131983372220250000', u'Timeout'
-    ], [u'[computer_system]'],
+        '0', '', '469922985', '', '222849', '6503221217', '72494625', '75272330',
+        '111617810637', '68676492', '34750951332', '6595838', '0', '10000000', '2156247',
+        '10000000', '', '250803278', '-1', '384', '0', '2144858950', '131983188065000000',
+        '5534', '131983336220258827', '31947393930', '131983372220250000', 'Timeout'
+    ], ['[computer_system]'],
     [
-        u'AdminPasswordStatus', u'AutomaticManagedPagefile', u'AutomaticResetBootOption',
-        u'AutomaticResetCapability', u'BootOptionOnLimit', u'BootOptionOnWatchDog',
-        u'BootROMSupported', u'BootStatus', u'BootupState', u'Caption', u'ChassisBootupState',
-        u'ChassisSKUNumber', u'CreationClassName', u'CurrentTimeZone', u'DaylightInEffect',
-        u'Description', u'DNSHostName', u'Domain', u'DomainRole', u'EnableDaylightSavingsTime',
-        u'FrontPanelResetStatus', u'HypervisorPresent', u'InfraredSupported', u'InitialLoadInfo',
-        u'InstallDate', u'KeyboardPasswordStatus', u'LastLoadInfo', u'Manufacturer', u'Model',
-        u'Name', u'NameFormat', u'NetworkServerModeEnabled', u'NumberOfLogicalProcessors',
-        u'NumberOfProcessors', u'OEMLogoBitmap', u'OEMStringArray', u'PartOfDomain',
-        u'PauseAfterReset', u'PCSystemType', u'PCSystemTypeEx', u'PowerManagementCapabilities',
-        u'PowerManagementSupported', u'PowerOnPasswordStatus', u'PowerState', u'PowerSupplyState',
-        u'PrimaryOwnerContact', u'PrimaryOwnerName', u'ResetCapability', u'ResetCount',
-        u'ResetLimit', u'Roles', u'Status', u'SupportContactDescription', u'SystemFamily',
-        u'SystemSKUNumber', u'SystemStartupDelay', u'SystemStartupOptions', u'SystemStartupSetting',
-        u'SystemType', u'ThermalState', u'TotalPhysicalMemory', u'UserName', u'WakeUpType',
-        u'Workgroup', u'WMIStatus'
+        'AdminPasswordStatus', 'AutomaticManagedPagefile', 'AutomaticResetBootOption',
+        'AutomaticResetCapability', 'BootOptionOnLimit', 'BootOptionOnWatchDog',
+        'BootROMSupported', 'BootStatus', 'BootupState', 'Caption', 'ChassisBootupState',
+        'ChassisSKUNumber', 'CreationClassName', 'CurrentTimeZone', 'DaylightInEffect',
+        'Description', 'DNSHostName', 'Domain', 'DomainRole', 'EnableDaylightSavingsTime',
+        'FrontPanelResetStatus', 'HypervisorPresent', 'InfraredSupported', 'InitialLoadInfo',
+        'InstallDate', 'KeyboardPasswordStatus', 'LastLoadInfo', 'Manufacturer', 'Model',
+        'Name', 'NameFormat', 'NetworkServerModeEnabled', 'NumberOfLogicalProcessors',
+        'NumberOfProcessors', 'OEMLogoBitmap', 'OEMStringArray', 'PartOfDomain',
+        'PauseAfterReset', 'PCSystemType', 'PCSystemTypeEx', 'PowerManagementCapabilities',
+        'PowerManagementSupported', 'PowerOnPasswordStatus', 'PowerState', 'PowerSupplyState',
+        'PrimaryOwnerContact', 'PrimaryOwnerName', 'ResetCapability', 'ResetCount',
+        'ResetLimit', 'Roles', 'Status', 'SupportContactDescription', 'SystemFamily',
+        'SystemSKUNumber', 'SystemStartupDelay', 'SystemStartupOptions', 'SystemStartupSetting',
+        'SystemType', 'ThermalState', 'TotalPhysicalMemory', 'UserName', 'WakeUpType',
+        'Workgroup', 'WMIStatus'
     ],
     [
-        u'3', u'1', u'1', u'1', u'', u'', u'1', u'<array>', u'Normal boot', u'SERG-DELL', u'3',
-        u'Notebook', u'Win32_ComputerSystem', u'60', u'0', u'AT/AT COMPATIBLE', u'SERG-DELL',
-        u'WORKGROUP', u'0', u'1', u'3', u'0', u'0', u'', u'', u'3', u'', u'Dell Inc.',
-        u'XPS 15 9570', u'SERG-DELL', u'', u'1', u'12', u'1', u'', u'<array>', u'0', u'-1', u'2',
-        u'2', u'', u'', u'3', u'0', u'3', u'', u'sk', u'1', u'-1', u'-1', u'<array>', u'OK', u'',
-        u'XPS', u'087C', u'', u'', u'', u'x64-based PC', u'3', u'34077048832', u'SERG-DELL\\sk',
-        u'6', u'WORKGROUP', u'OK'
+        '3', '1', '1', '1', '', '', '1', '<array>', 'Normal boot', 'SERG-DELL', '3',
+        'Notebook', 'Win32_ComputerSystem', '60', '0', 'AT/AT COMPATIBLE', 'SERG-DELL',
+        'WORKGROUP', '0', '1', '3', '0', '0', '', '', '3', '', 'Dell Inc.',
+        'XPS 15 9570', 'SERG-DELL', '', '1', '12', '1', '', '<array>', '0', '-1', '2',
+        '2', '', '', '3', '0', '3', '', 'sk', '1', '-1', '-1', '<array>', 'OK', '',
+        'XPS', '087C', '', '', '', 'x64-based PC', '3', '34077048832', 'SERG-DELL\\sk',
+        '6', 'WORKGROUP', 'OK'
     ]
 ]
 
 info_wmi_cpuload_7 = [
-    [u'[system_perf]'],
+    ['[system_perf]'],
     [
-        u'AlignmentFixupsPersec', u'Caption', u'ContextSwitchesPersec', u'Description',
-        u'ExceptionDispatchesPersec', u'FileControlBytesPersec', u'FileControlOperationsPersec',
-        u'FileDataOperationsPersec', u'FileReadBytesPersec', u'FileReadOperationsPersec',
-        u'FileWriteBytesPersec', u'FileWriteOperationsPersec', u'FloatingEmulationsPersec',
-        u'Frequency_Object', u'Frequency_PerfTime', u'Frequency_Sys100NS', u'Name',
-        u'PercentRegistryQuotaInUse', u'PercentRegistryQuotaInUse_Base', u'Processes',
-        u'ProcessorQueueLength', u'SystemCallsPersec', u'SystemUpTime', u'Threads',
-        u'Timestamp_Object', u'Timestamp_PerfTime', u'Timestamp_Sys100NS', u'WMIStatus'
+        'AlignmentFixupsPersec', 'Caption', 'ContextSwitchesPersec', 'Description',
+        'ExceptionDispatchesPersec', 'FileControlBytesPersec', 'FileControlOperationsPersec',
+        'FileDataOperationsPersec', 'FileReadBytesPersec', 'FileReadOperationsPersec',
+        'FileWriteBytesPersec', 'FileWriteOperationsPersec', 'FloatingEmulationsPersec',
+        'Frequency_Object', 'Frequency_PerfTime', 'Frequency_Sys100NS', 'Name',
+        'PercentRegistryQuotaInUse', 'PercentRegistryQuotaInUse_Base', 'Processes',
+        'ProcessorQueueLength', 'SystemCallsPersec', 'SystemUpTime', 'Threads',
+        'Timestamp_Object', 'Timestamp_PerfTime', 'Timestamp_Sys100NS', 'WMIStatus'
     ],
     [
-        u'0', u'', u'469922985', u'', u'222849', u'6503221217', u'72494625', u'75272330',
-        u'111617810637', u'68676492', u'34750951332', u'6595838', u'0', u'10000000', u'2156247',
-        u'10000000', u'', u'250803278', u'-1', u'384', u'0', u'2144858950', u'131983188065000000',
-        u'5534', u'131983336220258827', u'31947393930', u'131983372220250000', u'OK'
-    ], [u'[computer_system]'],
+        '0', '', '469922985', '', '222849', '6503221217', '72494625', '75272330',
+        '111617810637', '68676492', '34750951332', '6595838', '0', '10000000', '2156247',
+        '10000000', '', '250803278', '-1', '384', '0', '2144858950', '131983188065000000',
+        '5534', '131983336220258827', '31947393930', '131983372220250000', 'OK'
+    ], ['[computer_system]'],
     [
-        u'AdminPasswordStatus', u'AutomaticManagedPagefile', u'AutomaticResetBootOption',
-        u'AutomaticResetCapability', u'BootOptionOnLimit', u'BootOptionOnWatchDog',
-        u'BootROMSupported', u'BootStatus', u'BootupState', u'Caption', u'ChassisBootupState',
-        u'ChassisSKUNumber', u'CreationClassName', u'CurrentTimeZone', u'DaylightInEffect',
-        u'Description', u'DNSHostName', u'Domain', u'DomainRole', u'EnableDaylightSavingsTime',
-        u'FrontPanelResetStatus', u'HypervisorPresent', u'InfraredSupported', u'InitialLoadInfo',
-        u'InstallDate', u'KeyboardPasswordStatus', u'LastLoadInfo', u'Manufacturer', u'Model',
-        u'Name', u'NameFormat', u'NetworkServerModeEnabled', u'NumberOfLogicalProcessors',
-        u'NumberOfProcessors', u'OEMLogoBitmap', u'OEMStringArray', u'PartOfDomain',
-        u'PauseAfterReset', u'PCSystemType', u'PCSystemTypeEx', u'PowerManagementCapabilities',
-        u'PowerManagementSupported', u'PowerOnPasswordStatus', u'PowerState', u'PowerSupplyState',
-        u'PrimaryOwnerContact', u'PrimaryOwnerName', u'ResetCapability', u'ResetCount',
-        u'ResetLimit', u'Roles', u'Status', u'SupportContactDescription', u'SystemFamily',
-        u'SystemSKUNumber', u'SystemStartupDelay', u'SystemStartupOptions', u'SystemStartupSetting',
-        u'SystemType', u'ThermalState', u'TotalPhysicalMemory', u'UserName', u'WakeUpType',
-        u'Workgroup', u'WMIStatus'
+        'AdminPasswordStatus', 'AutomaticManagedPagefile', 'AutomaticResetBootOption',
+        'AutomaticResetCapability', 'BootOptionOnLimit', 'BootOptionOnWatchDog',
+        'BootROMSupported', 'BootStatus', 'BootupState', 'Caption', 'ChassisBootupState',
+        'ChassisSKUNumber', 'CreationClassName', 'CurrentTimeZone', 'DaylightInEffect',
+        'Description', 'DNSHostName', 'Domain', 'DomainRole', 'EnableDaylightSavingsTime',
+        'FrontPanelResetStatus', 'HypervisorPresent', 'InfraredSupported', 'InitialLoadInfo',
+        'InstallDate', 'KeyboardPasswordStatus', 'LastLoadInfo', 'Manufacturer', 'Model',
+        'Name', 'NameFormat', 'NetworkServerModeEnabled', 'NumberOfLogicalProcessors',
+        'NumberOfProcessors', 'OEMLogoBitmap', 'OEMStringArray', 'PartOfDomain',
+        'PauseAfterReset', 'PCSystemType', 'PCSystemTypeEx', 'PowerManagementCapabilities',
+        'PowerManagementSupported', 'PowerOnPasswordStatus', 'PowerState', 'PowerSupplyState',
+        'PrimaryOwnerContact', 'PrimaryOwnerName', 'ResetCapability', 'ResetCount',
+        'ResetLimit', 'Roles', 'Status', 'SupportContactDescription', 'SystemFamily',
+        'SystemSKUNumber', 'SystemStartupDelay', 'SystemStartupOptions', 'SystemStartupSetting',
+        'SystemType', 'ThermalState', 'TotalPhysicalMemory', 'UserName', 'WakeUpType',
+        'Workgroup', 'WMIStatus'
     ],
     [
-        u'3', u'1', u'1', u'1', u'', u'', u'1', u'<array>', u'Normal boot', u'SERG-DELL', u'3',
-        u'Notebook', u'Win32_ComputerSystem', u'60', u'0', u'AT/AT COMPATIBLE', u'SERG-DELL',
-        u'WORKGROUP', u'0', u'1', u'3', u'0', u'0', u'', u'', u'3', u'', u'Dell Inc.',
-        u'XPS 15 9570', u'SERG-DELL', u'', u'1', u'12', u'1', u'', u'<array>', u'0', u'-1', u'2',
-        u'2', u'', u'', u'3', u'0', u'3', u'', u'sk', u'1', u'-1', u'-1', u'<array>', u'OK', u'',
-        u'XPS', u'087C', u'', u'', u'', u'x64-based PC', u'3', u'34077048832', u'SERG-DELL\\sk',
-        u'6', u'WORKGROUP', u'Timeout'
+        '3', '1', '1', '1', '', '', '1', '<array>', 'Normal boot', 'SERG-DELL', '3',
+        'Notebook', 'Win32_ComputerSystem', '60', '0', 'AT/AT COMPATIBLE', 'SERG-DELL',
+        'WORKGROUP', '0', '1', '3', '0', '0', '', '', '3', '', 'Dell Inc.',
+        'XPS 15 9570', 'SERG-DELL', '', '1', '12', '1', '', '<array>', '0', '-1', '2',
+        '2', '', '', '3', '0', '3', '', 'sk', '1', '-1', '-1', '<array>', 'OK', '',
+        'XPS', '087C', '', '', '', 'x64-based PC', '3', '34077048832', 'SERG-DELL\\sk',
+        '6', 'WORKGROUP', 'Timeout'
     ]
 ]
 
 info_wmi_cpuload_8 = [
-    [u'[system_perf]'],
+    ['[system_perf]'],
     [
-        u'AlignmentFixupsPersec', u'Caption', u'ContextSwitchesPersec', u'Description',
-        u'ExceptionDispatchesPersec', u'FileControlBytesPersec', u'FileControlOperationsPersec',
-        u'FileDataOperationsPersec', u'FileReadBytesPersec', u'FileReadOperationsPersec',
-        u'FileWriteBytesPersec', u'FileWriteOperationsPersec', u'FloatingEmulationsPersec',
-        u'Frequency_Object', u'Frequency_PerfTime', u'Frequency_Sys100NS', u'Name',
-        u'PercentRegistryQuotaInUse', u'PercentRegistryQuotaInUse_Base', u'Processes',
-        u'ProcessorQueueLength', u'SystemCallsPersec', u'SystemUpTime', u'Threads',
-        u'Timestamp_Object', u'Timestamp_PerfTime', u'Timestamp_Sys100NS', u'WMIStatus'
+        'AlignmentFixupsPersec', 'Caption', 'ContextSwitchesPersec', 'Description',
+        'ExceptionDispatchesPersec', 'FileControlBytesPersec', 'FileControlOperationsPersec',
+        'FileDataOperationsPersec', 'FileReadBytesPersec', 'FileReadOperationsPersec',
+        'FileWriteBytesPersec', 'FileWriteOperationsPersec', 'FloatingEmulationsPersec',
+        'Frequency_Object', 'Frequency_PerfTime', 'Frequency_Sys100NS', 'Name',
+        'PercentRegistryQuotaInUse', 'PercentRegistryQuotaInUse_Base', 'Processes',
+        'ProcessorQueueLength', 'SystemCallsPersec', 'SystemUpTime', 'Threads',
+        'Timestamp_Object', 'Timestamp_PerfTime', 'Timestamp_Sys100NS', 'WMIStatus'
     ],
     [
-        u'0', u'', u'469922985', u'', u'222849', u'6503221217', u'72494625', u'75272330',
-        u'111617810637', u'68676492', u'34750951332', u'6595838', u'0', u'10000000', u'2156247',
-        u'10000000', u'', u'250803278', u'-1', u'384', u'0', u'2144858950', u'131983188065000000',
-        u'5534', u'131983336220258827', u'31947393930', u'131983372220250000', u'Timeout'
-    ], [u'[computer_system]'],
+        '0', '', '469922985', '', '222849', '6503221217', '72494625', '75272330',
+        '111617810637', '68676492', '34750951332', '6595838', '0', '10000000', '2156247',
+        '10000000', '', '250803278', '-1', '384', '0', '2144858950', '131983188065000000',
+        '5534', '131983336220258827', '31947393930', '131983372220250000', 'Timeout'
+    ], ['[computer_system]'],
     [
-        u'AdminPasswordStatus', u'AutomaticManagedPagefile', u'AutomaticResetBootOption',
-        u'AutomaticResetCapability', u'BootOptionOnLimit', u'BootOptionOnWatchDog',
-        u'BootROMSupported', u'BootStatus', u'BootupState', u'Caption', u'ChassisBootupState',
-        u'ChassisSKUNumber', u'CreationClassName', u'CurrentTimeZone', u'DaylightInEffect',
-        u'Description', u'DNSHostName', u'Domain', u'DomainRole', u'EnableDaylightSavingsTime',
-        u'FrontPanelResetStatus', u'HypervisorPresent', u'InfraredSupported', u'InitialLoadInfo',
-        u'InstallDate', u'KeyboardPasswordStatus', u'LastLoadInfo', u'Manufacturer', u'Model',
-        u'Name', u'NameFormat', u'NetworkServerModeEnabled', u'NumberOfLogicalProcessors',
-        u'NumberOfProcessors', u'OEMLogoBitmap', u'OEMStringArray', u'PartOfDomain',
-        u'PauseAfterReset', u'PCSystemType', u'PCSystemTypeEx', u'PowerManagementCapabilities',
-        u'PowerManagementSupported', u'PowerOnPasswordStatus', u'PowerState', u'PowerSupplyState',
-        u'PrimaryOwnerContact', u'PrimaryOwnerName', u'ResetCapability', u'ResetCount',
-        u'ResetLimit', u'Roles', u'Status', u'SupportContactDescription', u'SystemFamily',
-        u'SystemSKUNumber', u'SystemStartupDelay', u'SystemStartupOptions', u'SystemStartupSetting',
-        u'SystemType', u'ThermalState', u'TotalPhysicalMemory', u'UserName', u'WakeUpType',
-        u'Workgroup', u'WMIStatus'
+        'AdminPasswordStatus', 'AutomaticManagedPagefile', 'AutomaticResetBootOption',
+        'AutomaticResetCapability', 'BootOptionOnLimit', 'BootOptionOnWatchDog',
+        'BootROMSupported', 'BootStatus', 'BootupState', 'Caption', 'ChassisBootupState',
+        'ChassisSKUNumber', 'CreationClassName', 'CurrentTimeZone', 'DaylightInEffect',
+        'Description', 'DNSHostName', 'Domain', 'DomainRole', 'EnableDaylightSavingsTime',
+        'FrontPanelResetStatus', 'HypervisorPresent', 'InfraredSupported', 'InitialLoadInfo',
+        'InstallDate', 'KeyboardPasswordStatus', 'LastLoadInfo', 'Manufacturer', 'Model',
+        'Name', 'NameFormat', 'NetworkServerModeEnabled', 'NumberOfLogicalProcessors',
+        'NumberOfProcessors', 'OEMLogoBitmap', 'OEMStringArray', 'PartOfDomain',
+        'PauseAfterReset', 'PCSystemType', 'PCSystemTypeEx', 'PowerManagementCapabilities',
+        'PowerManagementSupported', 'PowerOnPasswordStatus', 'PowerState', 'PowerSupplyState',
+        'PrimaryOwnerContact', 'PrimaryOwnerName', 'ResetCapability', 'ResetCount',
+        'ResetLimit', 'Roles', 'Status', 'SupportContactDescription', 'SystemFamily',
+        'SystemSKUNumber', 'SystemStartupDelay', 'SystemStartupOptions', 'SystemStartupSetting',
+        'SystemType', 'ThermalState', 'TotalPhysicalMemory', 'UserName', 'WakeUpType',
+        'Workgroup', 'WMIStatus'
     ],
     [
-        u'3', u'1', u'1', u'1', u'', u'', u'1', u'<array>', u'Normal boot', u'SERG-DELL', u'3',
-        u'Notebook', u'Win32_ComputerSystem', u'60', u'0', u'AT/AT COMPATIBLE', u'SERG-DELL',
-        u'WORKGROUP', u'0', u'1', u'3', u'0', u'0', u'', u'', u'3', u'', u'Dell Inc.',
-        u'XPS 15 9570', u'SERG-DELL', u'', u'1', u'12', u'1', u'', u'<array>', u'0', u'-1', u'2',
-        u'2', u'', u'', u'3', u'0', u'3', u'', u'sk', u'1', u'-1', u'-1', u'<array>', u'OK', u'',
-        u'XPS', u'087C', u'', u'', u'', u'x64-based PC', u'3', u'34077048832', u'SERG-DELL\\sk',
-        u'6', u'WORKGROUP', u'Timeout'
+        '3', '1', '1', '1', '', '', '1', '<array>', 'Normal boot', 'SERG-DELL', '3',
+        'Notebook', 'Win32_ComputerSystem', '60', '0', 'AT/AT COMPATIBLE', 'SERG-DELL',
+        'WORKGROUP', '0', '1', '3', '0', '0', '', '', '3', '', 'Dell Inc.',
+        'XPS 15 9570', 'SERG-DELL', '', '1', '12', '1', '', '<array>', '0', '-1', '2',
+        '2', '', '', '3', '0', '3', '', 'sk', '1', '-1', '-1', '<array>', 'OK', '',
+        'XPS', '087C', '', '', '', 'x64-based PC', '3', '34077048832', 'SERG-DELL\\sk',
+        '6', 'WORKGROUP', 'Timeout'
     ]
 ]
 
@@ -338,7 +338,7 @@ discovered_wmi_cpuload_result = [(None, None)]
     ('wmi_cpuload', info_wmi_cpuload_6, discovered_wmi_cpuload_result),
     ('wmi_cpuload', info_wmi_cpuload_7, discovered_wmi_cpuload_result),
     ('wmi_cpuload', info_wmi_cpuload_8, discovered_wmi_cpuload_result),
-    ('dotnet_clrmemory', [[u'WMItimeout']], []),
+    ('dotnet_clrmemory', [['WMItimeout']], []),
 ])
 @pytest.mark.usefixtures("config_load_all_checks")
 def test_wmi_cpu_load_discovery(check_name, info, expected):

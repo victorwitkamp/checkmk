@@ -10,20 +10,20 @@
 checkname = 'cisco_cpu_memory'
 
 info = [
-    [[u'11000', u'3343553', u'565879', u'284872']],
+    [['11000', '3343553', '565879', '284872']],
     [
-        [u'1', u'Virtual Stack'],
-        [u'25', u'Switch1 Container of Power Supply Bay'],
-        [u'11000', u'Switch2 Supervisor 1 (virtual slot 11)']
+        ['1', 'Virtual Stack'],
+        ['25', 'Switch1 Container of Power Supply Bay'],
+        ['11000', 'Switch2 Supervisor 1 (virtual slot 11)']
     ]
 ]
 
-discovery = {'': [(u'Switch2 Supervisor 1 (virtual slot 11)', {})]}
+discovery = {'': [('Switch2 Supervisor 1 (virtual slot 11)', {})]}
 
 checks = {
     '': [
         (
-            u'Switch2 Supervisor 1 (virtual slot 11)', {}, [
+            'Switch2 Supervisor 1 (virtual slot 11)', {}, [
                 (
                     0, 'Usage: 92.81% - 3.46 GB of 3.73 GB',
                     [('mem_used_percent', 92.81207602536634, None, None, 0.0, None)]
@@ -31,7 +31,7 @@ checks = {
             ]
         ),
         (
-            u'Switch2 Supervisor 1 (virtual slot 11)', {
+            'Switch2 Supervisor 1 (virtual slot 11)', {
                 'levels': (-2000, -1000)
             }, [
                 (
@@ -47,7 +47,7 @@ checks = {
             ]
         ),
         (
-            u'Switch2 Supervisor 1 (virtual slot 11)', {
+            'Switch2 Supervisor 1 (virtual slot 11)', {
                 'levels': (50.0, 90.0)
             }, [
                 (
@@ -58,7 +58,7 @@ checks = {
             ]
         ),
         (
-            u'Switch2 Supervisor 1 (virtual slot 11)', {
+            'Switch2 Supervisor 1 (virtual slot 11)', {
                 'levels': (-20.0, -10.0)
             }, [
                 (

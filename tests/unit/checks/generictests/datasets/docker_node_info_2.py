@@ -29,7 +29,7 @@ discovery = {
 }
 
 checks = {
-    '': [(None, {}, [(0, u'Daemon running on host my_name', [])])],
+    '': [(None, {}, [(0, 'Daemon running on host my_name', [])])],
     'containers': [(None, {}, [
         (0, 'Containers: 15', [('containers', 15, None, None, None, None)]),
         (0, 'Running: 6', [('running', 6, None, None, None, None)]),

@@ -390,7 +390,7 @@ class NetAppResponse:
     # In that case replace them and try again.
     # According to https://www.w3.org/TR/xml/#charsets
     # these should never be in an XML output:
-    INVALID_XML = re.compile(u'[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F]')
+    INVALID_XML = re.compile('[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F]')
 
     def __init__(self, response, debug):
         self.status = None

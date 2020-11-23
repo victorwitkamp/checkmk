@@ -538,14 +538,14 @@ def test_grouped_rulespecs():
             'inv_parameters:inv_if',
         ],
         'static/virtualization': ['static_checks:vm_state',],
-        u'monconf/inventory_and_check_mk_settings': [
+        'monconf/inventory_and_check_mk_settings': [
             'only_hosts',
             'ignored_services',
             'ignored_checks',
             'clustered_services',
             'periodic_discovery',
         ],
-        u'monconf/various': [
+        'monconf/various': [
             'clustered_services_mapping',
             'extra_host_conf:service_period',
             'extra_service_conf:service_period',
@@ -1260,37 +1260,37 @@ def test_grouped_rulespecs():
 
 def _expected_rulespec_group_choices():
     expected = [
-        ('activechecks', u'HTTP, TCP, Email, ...'),
-        ('agent', u'Access to Agents'),
-        ('agent/check_mk_agent', u'&nbsp;&nbsp;\u2319 Checkmk Agent'),
-        ('agent/general_settings', u'&nbsp;&nbsp;\u2319 General Settings'),
-        ('agents', u'Monitoring Agents'),
-        ('agents/generic_options', u'&nbsp;&nbsp;\u2319 Generic Options'),
-        ('checkparams', u'Service discovery rules'),
-        ('checkparams/discovery', u'&nbsp;&nbsp;\u2319 Discovery of individual services'),
+        ('activechecks', 'HTTP, TCP, Email, ...'),
+        ('agent', 'Access to Agents'),
+        ('agent/check_mk_agent', '&nbsp;&nbsp;\u2319 Checkmk Agent'),
+        ('agent/general_settings', '&nbsp;&nbsp;\u2319 General Settings'),
+        ('agents', 'Monitoring Agents'),
+        ('agents/generic_options', '&nbsp;&nbsp;\u2319 Generic Options'),
+        ('checkparams', 'Service discovery rules'),
+        ('checkparams/discovery', '&nbsp;&nbsp;\u2319 Discovery of individual services'),
         ('checkparams/inventory_and_check_mk_settings',
-         u'&nbsp;&nbsp;\u2319 Discovery and Checkmk settings'),
-        ('datasource_programs', u'Other integrations'),
-        ('eventconsole', u'Event Console'),
-        ('grouping', u'Grouping'),
-        ('inventory', u'Hardware / Software Inventory'),
-        ('host_monconf', u'Host monitoring rules'),
-        ('host_monconf/host_checks', u'&nbsp;&nbsp;\u2319 Host checks'),
-        ('host_monconf/host_notifications', u'&nbsp;&nbsp;\u2319 Notifications'),
-        ('host_monconf/host_various', u'&nbsp;&nbsp;\u2319 Various'),
-        ('monconf', u'Service monitoring rules'),
-        ('monconf/applications', u'&nbsp;&nbsp;\u2319 Applications, Processes & Services'),
-        ('monconf/networking', u'&nbsp;&nbsp;\u2319 Networking'),
-        ('monconf/os', u'&nbsp;&nbsp;\u2319 Operating System Resources'),
-        ('monconf/printers', u'&nbsp;&nbsp;\u2319 Printers'),
-        ('monconf/storage', u'&nbsp;&nbsp;\u2319 Storage, Filesystems and Files'),
+         '&nbsp;&nbsp;\u2319 Discovery and Checkmk settings'),
+        ('datasource_programs', 'Other integrations'),
+        ('eventconsole', 'Event Console'),
+        ('grouping', 'Grouping'),
+        ('inventory', 'Hardware / Software Inventory'),
+        ('host_monconf', 'Host monitoring rules'),
+        ('host_monconf/host_checks', '&nbsp;&nbsp;\u2319 Host checks'),
+        ('host_monconf/host_notifications', '&nbsp;&nbsp;\u2319 Notifications'),
+        ('host_monconf/host_various', '&nbsp;&nbsp;\u2319 Various'),
+        ('monconf', 'Service monitoring rules'),
+        ('monconf/applications', '&nbsp;&nbsp;\u2319 Applications, Processes & Services'),
+        ('monconf/networking', '&nbsp;&nbsp;\u2319 Networking'),
+        ('monconf/os', '&nbsp;&nbsp;\u2319 Operating System Resources'),
+        ('monconf/printers', '&nbsp;&nbsp;\u2319 Printers'),
+        ('monconf/storage', '&nbsp;&nbsp;\u2319 Storage, Filesystems and Files'),
         ('monconf/environment',
-         u'&nbsp;&nbsp;\u2319 Temperature, Humidity, Electrical Parameters, etc.'),
-        ('monconf/hardware', u'&nbsp;&nbsp;\u2319 Hardware, BIOS'),
-        ('monconf/virtualization', u'&nbsp;&nbsp;\u2319 Virtualization'),
-        ('monconf/notifications', u'&nbsp;&nbsp;\u2319 Notifications'),
-        ('monconf/service_checks', u'&nbsp;&nbsp;\u2319 Service Checks'),
-        ('monconf/various', u'&nbsp;&nbsp;\u2319 Various'),
+         '&nbsp;&nbsp;\u2319 Temperature, Humidity, Electrical Parameters, etc.'),
+        ('monconf/hardware', '&nbsp;&nbsp;\u2319 Hardware, BIOS'),
+        ('monconf/virtualization', '&nbsp;&nbsp;\u2319 Virtualization'),
+        ('monconf/notifications', '&nbsp;&nbsp;\u2319 Notifications'),
+        ('monconf/service_checks', '&nbsp;&nbsp;\u2319 Service Checks'),
+        ('monconf/various', '&nbsp;&nbsp;\u2319 Various'),
         ('bi', 'Check state of BI aggregations'),
         ('custom_checks', 'Other services'),
         ('datasource_programs/apps', '&nbsp;&nbsp;⌙ Applications'),
@@ -1305,11 +1305,11 @@ def _expected_rulespec_group_choices():
 
     if not cmk_version.is_raw_edition():
         expected += [
-        ('agents/agent_plugins', u'&nbsp;&nbsp;\u2319 Agent Plugins'),
-        ('agents/automatic_updates', u'&nbsp;&nbsp;\u2319 Automatic Updates'),
-        ('agents/linux_agent', u'&nbsp;&nbsp;\u2319 Linux Agent'),
-        ('agents/windows_agent', u'&nbsp;&nbsp;\u2319 Windows Agent'),
-        ('agents/windows_modules', u'&nbsp;&nbsp;\u2319 Windows Modules'),
+        ('agents/agent_plugins', '&nbsp;&nbsp;\u2319 Agent Plugins'),
+        ('agents/automatic_updates', '&nbsp;&nbsp;\u2319 Automatic Updates'),
+        ('agents/linux_agent', '&nbsp;&nbsp;\u2319 Linux Agent'),
+        ('agents/windows_agent', '&nbsp;&nbsp;\u2319 Windows Agent'),
+        ('agents/windows_modules', '&nbsp;&nbsp;\u2319 Windows Modules'),
 
         ]
 
@@ -1545,8 +1545,8 @@ def test_legacy_register_rule_attributes(monkeypatch):
         help="help me!",
         itemspec=TextAscii(title="blub"),
         itemtype="service",
-        itemname=u"Blub",
-        itemhelp=u"Item help",
+        itemname="Blub",
+        itemhelp="Item help",
         match="dict",
         optional=True,
         deprecated=True,
@@ -1562,8 +1562,8 @@ def test_legacy_register_rule_attributes(monkeypatch):
     assert spec.help == "help me!"
     assert isinstance(spec.item_spec, TextAscii)
     assert spec.item_type == "service"
-    assert spec.item_name == u"Blub"
-    assert spec.item_help == u"Item help"
+    assert spec.item_name == "Blub"
+    assert spec.item_help == "Item help"
     assert spec.is_optional is True
     assert spec.is_deprecated is True
     assert spec.factory_default == "humpf"

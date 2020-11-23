@@ -11,7 +11,7 @@
 checkname = 'apt'
 
 info = [
-    [u'not found'],
+    ['not found'],
 ]
 
 discovery = {}

@@ -86,7 +86,7 @@ def lock_with_pid_file(path: Path) -> None:
     # Now that we have the lock we are allowed to write our pid to the file.
     # The pid can then be used by the init script.
     with path.open("w", encoding="utf-8") as f:
-        f.write(u"%d\n" % os.getpid())
+        f.write("%d\n" % os.getpid())
 
 
 def _cleanup_locked_pid_file(path: Path) -> None:

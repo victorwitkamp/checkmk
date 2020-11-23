@@ -647,7 +647,7 @@ class BuiltinTagConfig(TagConfig):
             {
                 'id': 'address_family',
                 'title': _('IP Address Family'),
-                'topic': u'Address',
+                'topic': 'Address',
                 'tags': [
                     {
                         'id': 'ip-v4-only',
@@ -722,38 +722,38 @@ def sample_tag_config():
                 'tags': [{
                     'aux_tags': [],
                     'id': 'prod',
-                    'title': u'Productive system'
+                    'title': 'Productive system'
                 }, {
                     'aux_tags': [],
                     'id': 'critical',
-                    'title': u'Business critical'
+                    'title': 'Business critical'
                 }, {
                     'aux_tags': [],
                     'id': 'test',
-                    'title': u'Test system'
+                    'title': 'Test system'
                 }, {
                     'aux_tags': [],
                     'id': 'offline',
-                    'title': u'Do not monitor this host'
+                    'title': 'Do not monitor this host'
                 }],
-                'title': u'Criticality'
+                'title': 'Criticality'
             },
             {
                 'id': 'networking',
                 'tags': [{
                     'aux_tags': [],
                     'id': 'lan',
-                    'title': u'Local network (low latency)'
+                    'title': 'Local network (low latency)'
                 }, {
                     'aux_tags': [],
                     'id': 'wan',
-                    'title': u'WAN (high latency)'
+                    'title': 'WAN (high latency)'
                 }, {
                     'aux_tags': [],
                     'id': 'dmz',
-                    'title': u'DMZ (low latency, secure access)'
+                    'title': 'DMZ (low latency, secure access)'
                 }],
-                'title': u'Networking Segment'
+                'title': 'Networking Segment'
             },
         ],
     }

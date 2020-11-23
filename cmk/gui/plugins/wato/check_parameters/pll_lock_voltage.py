@@ -26,11 +26,11 @@ def _parameter_valuespec_pll_lock_voltage():
         elements=[
             ("rx",
              ListOf(Tuple(elements=[
-                 Float(title=_("Frequencies up to"), unit=u"MHz"),
-                 Float(title=_("Warning below"), unit=u"V"),
-                 Float(title=_("Critical below"), unit=u"V"),
-                 Float(title=_("Warning at or above"), unit=u"V"),
-                 Float(title=_("Critical at or above"), unit=u"V"),
+                 Float(title=_("Frequencies up to"), unit="MHz"),
+                 Float(title=_("Warning below"), unit="V"),
+                 Float(title=_("Critical below"), unit="V"),
+                 Float(title=_("Warning at or above"), unit="V"),
+                 Float(title=_("Critical at or above"), unit="V"),
              ],),
                     title=_("Lock voltages for RX PLL"),
                     help=_("Specify frequency ranges by the upper boundary of the range "
@@ -39,11 +39,11 @@ def _parameter_valuespec_pll_lock_voltage():
                     movable=False)),
             ("tx",
              ListOf(Tuple(elements=[
-                 Float(title=_("Frequencies up to"), unit=u"MHz"),
-                 Float(title=_("Warning below"), unit=u"V"),
-                 Float(title=_("Critical below"), unit=u"V"),
-                 Float(title=_("Warning at or above"), unit=u"V"),
-                 Float(title=_("Critical at or above"), unit=u"V"),
+                 Float(title=_("Frequencies up to"), unit="MHz"),
+                 Float(title=_("Warning below"), unit="V"),
+                 Float(title=_("Critical below"), unit="V"),
+                 Float(title=_("Warning at or above"), unit="V"),
+                 Float(title=_("Critical at or above"), unit="V"),
              ],),
                     title=_("Lock voltages for TX PLL"),
                     help=_("Specify frequency ranges by the upper boundary of the range "

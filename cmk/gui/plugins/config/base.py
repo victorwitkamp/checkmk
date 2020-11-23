@@ -326,56 +326,56 @@ single_user_session = None
 password_policy: _Dict = {}
 
 user_localizations = {
-    u'Agent type': {
-        "de": u"Art des Agenten",
+    'Agent type': {
+        "de": "Art des Agenten",
     },
-    u'Business critical': {
-        "de": u"Geschäftskritisch",
+    'Business critical': {
+        "de": "Geschäftskritisch",
     },
-    u'Check_MK Agent (Server)': {
-        "de": u"Check_MK Agent (Server)",
+    'Check_MK Agent (Server)': {
+        "de": "Check_MK Agent (Server)",
     },
-    u'Criticality': {
-        "de": u"Kritikalität",
+    'Criticality': {
+        "de": "Kritikalität",
     },
-    u'DMZ (low latency, secure access)': {
-        "de": u"DMZ (geringe Latenz, hohe Sicherheit",
+    'DMZ (low latency, secure access)': {
+        "de": "DMZ (geringe Latenz, hohe Sicherheit",
     },
-    u'Do not monitor this host': {
-        "de": u"Diesen Host nicht überwachen",
+    'Do not monitor this host': {
+        "de": "Diesen Host nicht überwachen",
     },
-    u'Dual: Check_MK Agent + SNMP': {
-        "de": u"Dual: Check_MK Agent + SNMP",
+    'Dual: Check_MK Agent + SNMP': {
+        "de": "Dual: Check_MK Agent + SNMP",
     },
-    u'Legacy SNMP device (using V1)': {
-        "de": u"Alte SNMP-Geräte (mit Version 1)",
+    'Legacy SNMP device (using V1)': {
+        "de": "Alte SNMP-Geräte (mit Version 1)",
     },
-    u'Local network (low latency)': {
-        "de": u"Lokales Netzwerk (geringe Latenz)",
+    'Local network (low latency)': {
+        "de": "Lokales Netzwerk (geringe Latenz)",
     },
-    u'Networking Segment': {
-        "de": u"Netzwerksegment",
+    'Networking Segment': {
+        "de": "Netzwerksegment",
     },
-    u'No Agent': {
-        "de": u"Kein Agent",
+    'No Agent': {
+        "de": "Kein Agent",
     },
-    u'Productive system': {
-        "de": u"Produktivsystem",
+    'Productive system': {
+        "de": "Produktivsystem",
     },
-    u'Test system': {
-        "de": u"Testsystem",
+    'Test system': {
+        "de": "Testsystem",
     },
-    u'WAN (high latency)': {
-        "de": u"WAN (hohe Latenz)",
+    'WAN (high latency)': {
+        "de": "WAN (hohe Latenz)",
     },
-    u'monitor via Check_MK Agent': {
-        "de": u"Überwachung via Check_MK Agent",
+    'monitor via Check_MK Agent': {
+        "de": "Überwachung via Check_MK Agent",
     },
-    u'monitor via SNMP': {
-        "de": u"Überwachung via SNMP",
+    'monitor via SNMP': {
+        "de": "Überwachung via SNMP",
     },
-    u'SNMP (Networking device, Appliance)': {
-        "de": u"SNMP (Netzwerkgerät, Appliance)",
+    'SNMP (Networking device, Appliance)': {
+        "de": "SNMP (Netzwerkgerät, Appliance)",
     },
 }
 
@@ -483,9 +483,9 @@ wato_read_only: _Dict = {}
 wato_hide_folders_without_read_permissions = False
 wato_pprint_config = False
 wato_icon_categories = [
-    ("logos", u"Logos"),
-    ("parts", u"Parts"),
-    ("misc", u"Misc"),
+    ("logos", "Logos"),
+    ("parts", "Parts"),
+    ("misc", "Misc"),
 ]
 
 _ActivateChangesCommentMode = _Literal["enforce", "optional", "disabled"]

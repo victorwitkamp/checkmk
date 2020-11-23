@@ -190,7 +190,7 @@ def load_object_from_file(path: Union[Path, str], default: Any = None, lock: boo
     return ast.literal_eval(content)
 
 
-def load_text_from_file(path: Union[Path, str], default: str = u"", lock: bool = False) -> str:
+def load_text_from_file(path: Union[Path, str], default: str = "", lock: bool = False) -> str:
     content = cast(str, _load_data_from_file(path, lock=lock, encoding="utf-8"))
     if not content:
         return default
@@ -248,7 +248,7 @@ def save_object_to_file(path: Union[Path, str], data: Any, pretty: bool = False)
             # When writing a dict with unicode keys and normal strings with garbled
             # umlaut encoding pprint.pformat() fails with UnicodeDecodeError().
             # example:
-            #   pprint.pformat({'Z\xc3\xa4ug': 'on',  'Z\xe4ug': 'on', u'Z\xc3\xa4ugx': 'on'})
+            #   pprint.pformat({'Z\xc3\xa4ug': 'on',  'Z\xe4ug': 'on', 'Z\xc3\xa4ugx': 'on'})
             # Catch the exception and use repr() instead
             formatted_data = repr(data)
     else:

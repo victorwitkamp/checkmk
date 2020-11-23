@@ -417,10 +417,10 @@ def test_get_last_activity(with_user, session_valid):
 def test_user_attribute_sync_plugins(monkeypatch):
     monkeypatch.setattr(config, "wato_user_attrs", [{
         'add_custom_macro': False,
-        'help': u'VIP attribute',
+        'help': 'VIP attribute',
         'name': 'vip',
         'show_in_table': False,
-        'title': u'VIP',
+        'title': 'VIP',
         'topic': 'ident',
         'type': 'TextAscii',
         'user_editable': True

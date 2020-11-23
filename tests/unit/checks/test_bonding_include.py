@@ -17,13 +17,13 @@ pytestmark = pytest.mark.checks
             'ieee_302_3ad_agg_id_missmatch_state': 1
         },
         {
-            'aggregator_id': u'1',
+            'aggregator_id': '1',
             'interfaces': {
-                u'ens1f0': {
-                    'aggregator_id': u'1',
+                'ens1f0': {
+                    'aggregator_id': '1',
                 },
-                u'ens1f1': {
-                    'aggregator_id': u'1',
+                'ens1f1': {
+                    'aggregator_id': '1',
                 }
             },
         },
@@ -34,13 +34,13 @@ pytestmark = pytest.mark.checks
             'ieee_302_3ad_agg_id_missmatch_state': 1
         },
         {
-            'aggregator_id': u'1',
+            'aggregator_id': '1',
             'interfaces': {
-                u'ens1f0': {
-                    'aggregator_id': u'1',
+                'ens1f0': {
+                    'aggregator_id': '1',
                 },
-                u'ens1f1': {
-                    'aggregator_id': u'2',
+                'ens1f1': {
+                    'aggregator_id': '2',
                 }
             },
         },
@@ -54,11 +54,11 @@ pytestmark = pytest.mark.checks
         },
         {
             'interfaces': {
-                u'ens1f0': {
-                    'aggregator_id': u'1',
+                'ens1f0': {
+                    'aggregator_id': '1',
                 },
-                u'ens1f1': {
-                    'aggregator_id': u'1',
+                'ens1f1': {
+                    'aggregator_id': '1',
                 }
             },
         },
@@ -70,11 +70,11 @@ pytestmark = pytest.mark.checks
         },
         {
             'interfaces': {
-                u'ens1f0': {
-                    'aggregator_id': u'1',
+                'ens1f0': {
+                    'aggregator_id': '1',
                 },
-                u'ens1f1': {
-                    'aggregator_id': u'2',
+                'ens1f1': {
+                    'aggregator_id': '2',
                 }
             },
         },

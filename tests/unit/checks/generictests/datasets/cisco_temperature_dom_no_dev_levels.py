@@ -8,27 +8,27 @@
 # type: ignore
 
 
-checkname = u'cisco_temperature'
+checkname = 'cisco_temperature'
 
 parsed = {
     '14': {
-        u'NoLevels': {
+        'NoLevels': {
             'descr': '',
             'reading': 3.14,
-            'raw_dev_state': u'1',
+            'raw_dev_state': '1',
             'dev_state': (0, 'awesome'),
             'dev_levels': None
         }
     }
 }
 
-discovery = {'': [], 'dom': [(u'NoLevels', {})]}
+discovery = {'': [], 'dom': [('NoLevels', {})]}
 
 checks = {
     '': [],
     'dom': [
         (
-            u'NoLevels', {}, [
+            'NoLevels', {}, [
                 (0, 'Status: awesome', []),
                 (
                     0, 'Signal power: 3.14 dBm', [

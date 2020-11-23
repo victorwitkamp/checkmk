@@ -97,7 +97,7 @@ def _load_secret() -> str:
     htpasswd_path = Path(cmk.utils.paths.htpasswd_file)
     secret_path = htpasswd_path.parent.joinpath('auth.secret')
 
-    secret = u''
+    secret = ''
     if secret_path.exists():
         with secret_path.open(encoding="utf-8") as f:
             secret = f.read().strip()
@@ -289,7 +289,7 @@ def _check_auth(request: Request) -> Optional[UserId]:
             return None
         user_id = _check_auth_by_cookie()
 
-    if (user_id is not None and not isinstance(user_id, str)) or user_id == u'':
+    if (user_id is not None and not isinstance(user_id, str)) or user_id == '':
         raise MKInternalError(_("Invalid user authentication"))
 
     if user_id and not userdb.is_customer_user_allowed_to_login(user_id):

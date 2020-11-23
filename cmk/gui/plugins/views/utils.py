@@ -272,9 +272,9 @@ class PainterOptions:
 def row_id(view_spec: Dict[str, Any], row: Row) -> str:
     """Calculates a uniq id for each data row which identifies the current
     row accross different page loadings."""
-    key = u''
+    key = ''
     for col in data_source_registry[view_spec['datasource']]().id_keys:
-        key += u'~%s' % row[col]
+        key += '~%s' % row[col]
     return ensure_str(hashlib.sha256(key.encode('utf-8')).hexdigest())
 
 
@@ -1170,8 +1170,8 @@ def paint_age(timestamp: Timestamp,
     if mode == "abs" or (mode == "mixed" and abs(age) >= 48 * 3600):
         return "age", time.strftime(dateformat + " %H:%M:%S", time.localtime(timestamp))
 
-    warn_txt = u''
-    output_format = u"%s"
+    warn_txt = ''
+    output_format = "%s"
     if what == 'future' and age > 0:
         warn_txt = ' <b>%s</b>' % _('in the past!')
     elif what == 'past' and age < 0:
@@ -1764,7 +1764,7 @@ class Cell:
         # - Link to _self (Always link to the current frame)
         classes: List[str] = []
         onclick = ''
-        title = u''
+        title = ''
         if display_options.enabled(display_options.L) \
            and self._view.spec.get('user_sortable', False) \
            and _get_sorter_name_of_painter(self.painter_name()) is not None:
@@ -1994,7 +1994,7 @@ SorterEntry.__new__.__defaults__ = (None,) * len(SorterEntry._fields)  # type: i
 def _encode_sorter_url(sorters: List[SorterSpec]) -> str:
     p = []
     for s in sorters:
-        url = (u'-' if s.negate else u'') + s.sorter
+        url = ('-' if s.negate else '') + s.sorter
         if s.join_key:
             url += '~' + s.join_key
         p.append(url)

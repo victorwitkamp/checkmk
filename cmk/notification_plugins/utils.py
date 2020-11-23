@@ -50,7 +50,7 @@ def format_address(display_name: str, email_address: str) -> str:
     try:
         display_name.encode('ascii')
     except UnicodeEncodeError:
-        display_name = u'=?utf-8?q?%s?=' % encodestring(
+        display_name = '=?utf-8?q?%s?=' % encodestring(
             display_name.encode('utf-8')).decode('ascii')
     return formataddr((display_name, email_address))
 

@@ -9,7 +9,7 @@
 
 checkname = 'tplink_mem'
 
-info = [[u'50']]
+info = [['50']]
 
 discovery = {'': [(None, {})]}
 

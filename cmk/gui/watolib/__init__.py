@@ -353,7 +353,7 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
         groups = {
             "contact": {
                 'all': {
-                    'alias': u'Everything'
+                    'alias': 'Everything'
                 }
             },
         }
@@ -375,7 +375,7 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                 },
                 'value': True,
                 'options': {
-                    'description': u'Do not monitor hosts with the tag "offline"'
+                    'description': 'Do not monitor hosts with the tag "offline"'
                 },
             },],
 
@@ -394,7 +394,7 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                     'rta': (1500.0, 3000.0)
                 },
                 'options': {
-                    'description': u'Allow longer round trip times when pinging WAN hosts'
+                    'description': 'Allow longer round trip times when pinging WAN hosts'
                 },
             },],
 
@@ -411,7 +411,7 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                 },
                 'value': True,
                 'options': {
-                    'description': u'Hosts with the tag "snmp-v1" must not use bulkwalk'
+                    'description': 'Hosts with the tag "snmp-v1" must not use bulkwalk'
                 },
             },],
 
@@ -421,7 +421,7 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                 'condition': {},
                 'value': 'all',
                 'options': {
-                    'description': u'Put all hosts into the contact group "all"'
+                    'description': 'Put all hosts into the contact group "all"'
                 },
             },],
 
@@ -430,12 +430,12 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                 'id': '24da4ccd-0d1b-40e3-af87-0097df8668f2',
                 'condition': {
                     'host_labels': {
-                        u'cmk/docker_object': u'container'
+                        'cmk/docker_object': 'container'
                     }
                 },
-                'value': ('service', u'Docker container status'),
+                'value': ('service', 'Docker container status'),
                 'options': {
-                    'description': u'Make all docker container host states base on the "Docker container status" service',
+                    'description': 'Make all docker container host states base on the "Docker container status" service',
                 },
             },],
 
@@ -447,7 +447,7 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                         'id': '7ba2ac2a-5a49-47ce-bc3c-1630fb191c7f',
                         'condition': {
                             'host_labels': {
-                                u'cmk/docker_object': u'node',
+                                'cmk/docker_object': 'node',
                             }
                         },
                         'value': {
@@ -458,7 +458,7 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                         'id': 'b4b151f9-c7cc-4127-87a6-9539931fcd73',
                         'condition': {
                             'host_labels': {
-                                u'cmk/check_mk_server': u'yes',
+                                'cmk/check_mk_server': 'yes',
                             }
                         },
                         'value': {
@@ -479,7 +479,7 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                     },
                     'value': 1440,
                     'options': {
-                        'description': u'Restrict HW/SW-Inventory to once a day'
+                        'description': 'Restrict HW/SW-Inventory to once a day'
                     },
                 },],
             },
@@ -504,7 +504,7 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                     'inventory_check_do_scan': True
                 },
                 'options': {
-                    'description': u'Perform every two hours a service discovery'
+                    'description': 'Perform every two hours a service discovery'
                 },
             },],
 
@@ -513,12 +513,12 @@ class ConfigGeneratorBasicWATOConfig(SampleConfigGenerator):
                 'id': 'b0ee8a51-703c-47e4-aec4-76430281604d',
                 'condition': {
                     'host_labels': {
-                        u'cmk/check_mk_server': u'yes',
+                        'cmk/check_mk_server': 'yes',
                     },
                 },
                 'value': {
                     'ignore_fs_types': ['tmpfs', 'nfs', 'smbfs', 'cifs', 'iso9660'],
-                    'never_ignore_mountpoints': [u'~.*/omd/sites/[^/]+/tmp$']
+                    'never_ignore_mountpoints': ['~.*/omd/sites/[^/]+/tmp$']
                 }
             },],
         }

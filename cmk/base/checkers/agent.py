@@ -184,8 +184,8 @@ class AgentSummarizerDefault(AgentSummarizer):
     @staticmethod
     def _get_agent_info(cmk_section: Optional[AgentSectionContent],) -> Dict[str, Optional[str]]:
         agent_info: Dict[str, Optional[str]] = {
-            "version": u"unknown",
-            "agentos": u"unknown",
+            "version": "unknown",
+            "agentos": "unknown",
         }
         if not cmk_section:
             return agent_info
@@ -204,7 +204,7 @@ class AgentSummarizerDefault(AgentSummarizer):
 
         if expected_version and agent_version \
              and not AgentSummarizerDefault._is_expected_agent_version(agent_version, expected_version):
-            expected = u""
+            expected = ""
             # expected version can either be:
             # a) a single version string
             # b) a tuple of ("at_least", {'daily_build': '2014.06.01', 'release': '1.2.5i4'}

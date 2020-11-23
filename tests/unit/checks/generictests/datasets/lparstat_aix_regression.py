@@ -11,14 +11,14 @@ checkname = 'lparstat_aix'
 
 info = [
     [
-        u'System', u'configuration:', u'type=Shared', u'mode=Uncapped', u'smt=4', u'lcpu=8',
-        u'mem=16384MB', u'psize=4', u'ent=1.00'
+        'System', 'configuration:', 'type=Shared', 'mode=Uncapped', 'smt=4', 'lcpu=8',
+        'mem=16384MB', 'psize=4', 'ent=1.00'
     ],
     [
-        u'%user', u'%sys', u'%wait', u'%idle', u'physc', u'%entc', u'lbusy', u'app', u'vcsw',
-        u'phint', u'%nsp'
+        '%user', '%sys', '%wait', '%idle', 'physc', '%entc', 'lbusy', 'app', 'vcsw',
+        'phint', '%nsp'
     ],
-    [u'this line is ignored'],
+    ['this line is ignored'],
     ['0.2', '1.2', '0.2', '98.6', '0.02', '9.3', '0.1', '519', '0', '101', '0.00'],
 ]
 

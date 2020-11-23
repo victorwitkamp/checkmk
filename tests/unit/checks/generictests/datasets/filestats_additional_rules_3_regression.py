@@ -11,13 +11,13 @@ checkname = 'filestats'
 info = [
     ['[[[file_stats Filetransfer cofi-premium-world]]]'],
     [
-        "{'stat_status': None, 'age': 76216, 'mtime': 1603481501, 'path': u'/opt/filetransfer/data/akb/paag01/cofi#ak/incoming/premium-world-check-day.xml', 'type': 'file', 'size': 9249108}"
+        "{'stat_status': None, 'age': 76216, 'mtime': 1603481501, 'path': '/opt/filetransfer/data/akb/paag01/cofi#ak/incoming/premium-world-check-day.xml', 'type': 'file', 'size': 9249108}"
     ],
     [
-        "{'stat_status': None, 'age': 2025616, 'mtime': 1601532101, 'path': u'/opt/filetransfer/data/akb/paag01/cofi#ak/incoming/premium-world-check-month.xml', 'type': 'file', 'size': 271408990}"
+        "{'stat_status': None, 'age': 2025616, 'mtime': 1601532101, 'path': '/opt/filetransfer/data/akb/paag01/cofi#ak/incoming/premium-world-check-month.xml', 'type': 'file', 'size': 271408990}"
     ],
     [
-        "{'stat_status': None, 'age': 517260, 'mtime': 1603040457, 'path': u'/opt/filetransfer/data/akb/paag01/cofi#ak/incoming/premium-world-check-week.xml', 'type': 'file', 'size': 81099075}"
+        "{'stat_status': None, 'age': 517260, 'mtime': 1603040457, 'path': '/opt/filetransfer/data/akb/paag01/cofi#ak/incoming/premium-world-check-week.xml', 'type': 'file', 'size': 81099075}"
     ], ["{'count': 3, 'type': 'summary'}"]
 ]
 

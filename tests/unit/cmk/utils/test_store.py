@@ -67,7 +67,7 @@ def test_load_data_from_file_not_existing(tmp_path, path_type):
 @pytest.mark.parametrize("path_type", [str, Path])
 def test_load_data_from_file_empty(tmp_path, path_type):
     locked_file = tmp_path / "test"
-    locked_file.write_text(u"", encoding="utf-8")
+    locked_file.write_text("", encoding="utf-8")
     data = store.load_object_from_file(path_type(tmp_path / "x"), default="DEF")
     assert data == "DEF"
 
@@ -75,7 +75,7 @@ def test_load_data_from_file_empty(tmp_path, path_type):
 @pytest.mark.parametrize("path_type", [str, Path])
 def test_load_data_not_locked(tmp_path, path_type):
     locked_file = tmp_path / "locked_file"
-    locked_file.write_text(u"[1, 2]", encoding="utf-8")
+    locked_file.write_text("[1, 2]", encoding="utf-8")
 
     store.load_object_from_file(path_type(locked_file))
     assert store.have_lock(path_type(locked_file)) is False
@@ -84,7 +84,7 @@ def test_load_data_not_locked(tmp_path, path_type):
 @pytest.mark.parametrize("path_type", [str, Path])
 def test_load_data_from_file_locking(tmp_path, path_type):
     locked_file = tmp_path / "locked_file"
-    locked_file.write_text(u"[1, 2]", encoding="utf-8")
+    locked_file.write_text("[1, 2]", encoding="utf-8")
 
     data = store.load_object_from_file(path_type(locked_file), lock=True)
     assert data == [1, 2]
@@ -94,7 +94,7 @@ def test_load_data_from_file_locking(tmp_path, path_type):
 @pytest.mark.parametrize("path_type", [str, Path])
 def test_load_data_from_not_permitted_file(tmp_path, path_type):
     locked_file = tmp_path / "test"
-    locked_file.write_text(u"[1, 2]", encoding="utf-8")
+    locked_file.write_text("[1, 2]", encoding="utf-8")
     os.chmod(str(locked_file), 0o200)
 
     with pytest.raises(MKGeneralException) as e:
@@ -106,13 +106,13 @@ def test_load_data_from_not_permitted_file(tmp_path, path_type):
 @pytest.mark.parametrize("path_type", [str, Path])
 def test_load_data_from_file_dict(tmp_path, path_type):
     locked_file = tmp_path / "test"
-    locked_file.write_bytes(ensure_binary(repr({"1": 2, "ä": u"ß"})))
+    locked_file.write_bytes(ensure_binary(repr({"1": 2, "ä": "ß"})))
 
     data = store.load_object_from_file(path_type(locked_file))
     assert isinstance(data, dict)
     assert data["1"] == 2
     assert isinstance(data["ä"], str)
-    assert data["ä"] == u"ß"
+    assert data["ä"] == "ß"
 
 
 @pytest.mark.parametrize("path_type", [str, Path])
@@ -162,7 +162,7 @@ def test_save_data_to_file_not_pretty(tmp_path, path_type):
 @pytest.mark.parametrize("data", [
     None,
     [2, 3],
-    [u"föö"],
+    ["föö"],
     [b'foob\xc3\xa4r'],
 ])
 def test_save_data_to_file(tmp_path, path_type, data):
@@ -173,7 +173,7 @@ def test_save_data_to_file(tmp_path, path_type, data):
 
 @pytest.mark.parametrize("path_type", [str, Path])
 @pytest.mark.parametrize("data", [
-    u"föö",
+    "föö",
 ])
 def test_save_text_to_file(tmp_path, path_type, data):
     path = path_type(tmp_path / "lala")
@@ -206,7 +206,7 @@ def test_save_bytes_to_file(tmp_path, path_type, data):
 @pytest.mark.parametrize("path_type", [str, Path])
 @pytest.mark.parametrize("data", [
     None,
-    u"föö",
+    "föö",
 ])
 def test_save_bytes_to_file_unicode(tmp_path, path_type, data):
     path = path_type(tmp_path / "lala")
@@ -249,7 +249,7 @@ def test_locked(locked_file, path_type):
 @pytest.fixture(name="locked_file")
 def fixture_locked_file(tmp_path):
     locked_file = tmp_path / "locked_file"
-    locked_file.write_text(u"", encoding="utf-8")
+    locked_file.write_text("", encoding="utf-8")
     return locked_file
 
 
@@ -337,9 +337,9 @@ def test_release_lock_already_closed(locked_file, path_type):
 @pytest.mark.parametrize("path_type", [str, Path])
 def test_release_all_locks(tmp_path, path_type):
     locked_file1 = tmp_path / "locked_file1"
-    locked_file1.write_text(u"", encoding="utf-8")
+    locked_file1.write_text("", encoding="utf-8")
     locked_file2 = tmp_path / "locked_file2"
-    locked_file2.write_text(u"", encoding="utf-8")
+    locked_file2.write_text("", encoding="utf-8")
 
     path1 = path_type(locked_file1)
     path2 = path_type(locked_file2)

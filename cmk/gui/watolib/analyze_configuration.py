@@ -63,7 +63,7 @@ class ACResult:
 
     def status_name(self) -> str:
         if self.status is None:
-            return u""
+            return ""
         return cmk.utils.defines.short_service_state_name(self.status)
 
     @classmethod

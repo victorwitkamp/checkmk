@@ -23,8 +23,8 @@ def _parameter_valuespec_room_temperature():
                "for monitoring the temperature of a datacenter. An example "
                "is the webthem from W&T."),
         elements=[
-            Integer(title=_("warning at"), unit=u"°C", default_value=26),
-            Integer(title=_("critical at"), unit=u"°C", default_value=30),
+            Integer(title=_("warning at"), unit="°C", default_value=26),
+            Integer(title=_("critical at"), unit="°C", default_value=30),
         ],
     )
 

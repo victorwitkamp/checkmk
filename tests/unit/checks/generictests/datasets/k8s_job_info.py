@@ -13,7 +13,7 @@ from cmk.base.discovered_labels import HostLabel
 checkname = 'k8s_job_info'
 
 
-parsed = {u'active': 1, u'failed': 1, u'succeeded': 1}
+parsed = {'active': 1, 'failed': 1, 'succeeded': 1}
 
 
 discovery = {

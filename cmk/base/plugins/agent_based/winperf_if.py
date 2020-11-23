@@ -163,8 +163,8 @@ def _parse_winperf_if_agent_section_timestamp_and_instance_names(
     lines: Lines,
 ) -> Tuple[AgentTimestamp, NICNames]:
     # The lines containing timestamp and nic names are consecutive:
-    # [u'1418225545.73', u'510']
-    # [u'8', u'instances:', 'NAME', ...]
+    # ['1418225545.73', '510']
+    # ['8', 'instances:', 'NAME', ...]
     agent_timestamp = None
     try:
         # There may be other lines with same length but different

@@ -317,7 +317,7 @@ class PainterSiteIcon(Painter):
         return _("Site icon")
 
     def short_title(self, cell):
-        return u""
+        return ""
 
     @property
     def columns(self):
@@ -2620,7 +2620,7 @@ class PainterNumServices(Painter):
         return _("Number of services")
 
     def short_title(self, cell):
-        return u""
+        return ""
 
     @property
     def columns(self):
@@ -3248,7 +3248,7 @@ class PainterHgNumServices(Painter):
         return _("Number of services (Host Group)")
 
     def short_title(self, cell):
-        return u""
+        return ""
 
     @property
     def columns(self):
@@ -3516,7 +3516,7 @@ class PainterSgNumServices(Painter):
         return _("Number of services (Service Group)")
 
     def short_title(self, cell):
-        return u""
+        return ""
 
     @property
     def columns(self):
@@ -4340,7 +4340,7 @@ class PainterLogIcon(Painter):
         return _("Log: event icon")
 
     def short_title(self, cell):
-        return u""
+        return ""
 
     @property
     def columns(self):

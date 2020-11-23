@@ -198,11 +198,11 @@ def calculate_data_for_prediction(time_windows: TimeSlices,
     descriptors = data_stats(slices)
 
     return {
-        u"columns": [u"average", u"min", u"max", u"stdev"],
-        u"points": descriptors,
-        u"num_points": len(descriptors),
-        u"data_twindow": list(twindow[:2]),
-        u"step": twindow[2],
+        "columns": ["average", "min", "max", "stdev"],
+        "points": descriptors,
+        "num_points": len(descriptors),
+        "data_twindow": list(twindow[:2]),
+        "step": twindow[2],
     }
 
 
@@ -292,12 +292,12 @@ def get_levels(
         data_for_pred = calculate_data_for_prediction(time_windows, rrd_datacolumn)
 
         info: PredictionInfo = {
-            u"time": now,
-            u"range": time_windows[0],
-            u"cf": cf,
-            u"dsname": dsname,
-            u"slice": period_info["slice"],
-            u"params": params,
+            "time": now,
+            "range": time_windows[0],
+            "cf": cf,
+            "dsname": dsname,
+            "slice": period_info["slice"],
+            "params": params,
         }
         save_predictions(pred_file, info, data_for_pred)
 

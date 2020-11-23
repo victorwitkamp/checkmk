@@ -822,7 +822,7 @@ class ModeEditTimeperiod(WatoMode):
         html.end_form()
 
     # The timeperiod data structure for the Checkmk config looks like follows.
-    # { 'alias': u'eeee',
+    # { 'alias': 'eeee',
     #   'monday': [('00:00', '22:00')],
     #   'tuesday': [('00:00', '24:00')],
     #   'wednesday': [('00:00', '24:00')],

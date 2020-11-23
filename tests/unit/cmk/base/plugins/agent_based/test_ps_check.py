@@ -132,7 +132,7 @@ PS_DISCOVERY_WATO_RULES = [  # type: ignore[var-annotated]
         "match": "~.*(fire)fox",
         "descr": "firefox is on %s",
         "user": None,
-        "label": DiscoveredHostLabels(HostLabel(u'marco', u'polo'), HostLabel(u'peter', u'pan')),
+        "label": DiscoveredHostLabels(HostLabel('marco', 'polo'), HostLabel('peter', 'pan')),
     },
     {
         "default_params": {

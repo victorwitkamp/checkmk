@@ -13,7 +13,7 @@ from .utils import k8s
 
 def host_labels(section: Dict) -> HostLabelGenerator:
     if section:
-        yield HostLabel(u'cmk/kubernetes_object', u'daemonset')
+        yield HostLabel('cmk/kubernetes_object', 'daemonset')
 
 
 register.agent_section(

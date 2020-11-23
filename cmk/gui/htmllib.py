@@ -1656,7 +1656,7 @@ class html(ABCHTMLGenerator):
             self.begin_page_content()
 
     def body_start(self,
-                   title: str = u'',
+                   title: str = '',
                    javascripts: Optional[List[str]] = None,
                    force: bool = False) -> None:
         self.html_head(title, javascripts, force)
@@ -2009,7 +2009,7 @@ class html(ABCHTMLGenerator):
     # user errors are used by input elements to show invalid input
     def add_user_error(self, varname: Optional[str], msg_or_exc: Union[str, Exception]) -> None:
         if isinstance(msg_or_exc, Exception):
-            message: str = u"%s" % msg_or_exc
+            message: str = "%s" % msg_or_exc
         else:
             message = ensure_str(msg_or_exc)
 
@@ -2031,7 +2031,7 @@ class html(ABCHTMLGenerator):
 
     def text_input(self,
                    varname: str,
-                   default_value: str = u"",
+                   default_value: str = "",
                    cssclass: str = "text",
                    size: Union[None, str, int] = None,
                    label: Optional[str] = None,

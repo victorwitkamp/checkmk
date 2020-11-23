@@ -42,7 +42,7 @@ def cfg_setup_fixture(request, web, site):  # noqa: F811 # pylint: disable=redef
 globals().setdefault('custom_checks', [])
 
 custom_checks = [
-    ( {'service_description': u'CPU load', 'has_perfdata': True}, [], ALL_HOSTS, {} ),
+    ( {'service_description': 'CPU load', 'has_perfdata': True}, [], ALL_HOSTS, {} ),
 ] + custom_checks
 """)
 

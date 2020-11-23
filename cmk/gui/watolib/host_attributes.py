@@ -680,22 +680,22 @@ def transform_pre_16_host_topics(custom_attributes):
 
 def _transform_attribute_topic_title_to_id(topic_title):
     _topic_title_to_id_map = {
-        u"Basic settings": "basic",
-        u"Address": "address",
-        u"Data sources": "data_sources",
-        u"Management Board": "management_board",
-        u"Network Scan": "network_scan",
-        u"Custom attributes": "custom_attributes",
-        u"Host tags": "custom_attributes",
-        u"Tags": "custom_attributes",
-        u"Grundeinstellungen": "basic",
-        u"Adresse": "address",
-        u"Datenquellen": "data_sources",
-        u"Management-Board": "management_board",
-        u"Netzwerk-Scan": "network_scan",
-        u"Eigene Attribute": "custom_attributes",
-        u"Hostmerkmale": "custom_attributes",
-        u"Merkmale": "custom_attributes",
+        "Basic settings": "basic",
+        "Address": "address",
+        "Data sources": "data_sources",
+        "Management Board": "management_board",
+        "Network Scan": "network_scan",
+        "Custom attributes": "custom_attributes",
+        "Host tags": "custom_attributes",
+        "Tags": "custom_attributes",
+        "Grundeinstellungen": "basic",
+        "Adresse": "address",
+        "Datenquellen": "data_sources",
+        "Management-Board": "management_board",
+        "Netzwerk-Scan": "network_scan",
+        "Eigene Attribute": "custom_attributes",
+        "Hostmerkmale": "custom_attributes",
+        "Merkmale": "custom_attributes",
     }
 
     try:

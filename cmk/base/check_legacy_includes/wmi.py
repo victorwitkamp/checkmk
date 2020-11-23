@@ -120,14 +120,14 @@ class WMITable:
                 # Eg. skype
                 # tablename = [LS:WEB - EventChannel]
                 # header = [
-                #    u'instance', u'EventChannel - Pending Get', u' Timed Out Request Count',
-                #    u'EventChannel - Pending Get', u' Active Request Count', u'EventChannel - Push Events',
-                #    u' Channel Clients Active', u'EventChannel - Push Events', u' Channel Clients Disposed',
-                #    u'EventChannel - Push Events', u' Notification Requests Sent',
-                #    u'EventChannel - Push Events', u' Heartbeat Requests Sent', u'EventChannel - Push Events',
-                #    u' Requests Succeeded', u'EventChannel - Push Events', u' Requests Failed'
+                #    'instance', 'EventChannel - Pending Get', ' Timed Out Request Count',
+                #    'EventChannel - Pending Get', ' Active Request Count', 'EventChannel - Push Events',
+                #    ' Channel Clients Active', 'EventChannel - Push Events', ' Channel Clients Disposed',
+                #    'EventChannel - Push Events', ' Notification Requests Sent',
+                #    'EventChannel - Push Events', ' Heartbeat Requests Sent', 'EventChannel - Push Events',
+                #    ' Requests Succeeded', 'EventChannel - Push Events', ' Requests Failed'
                 # ]
-                # row = [u'"_Total"', u'259', u'1', u'0', u'0', u'0', u'0', u'0', u'0']
+                # row = ['"_Total"', '259', '1', '0', '0', '0', '0', '0', '0']
                 # Then we try to check last value of row
                 wmi_status = self._get_row_col_value(-1, -1)
             if wmi_status.lower() == "timeout":

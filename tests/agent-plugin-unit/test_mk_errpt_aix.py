@@ -12,12 +12,12 @@ from utils import plugin_path
 PLUGIN = os.path.join(plugin_path(), 'mk_errpt.aix')
 
 ERRPT_OUTPUT = [
-    u'IDENTIFIER TIMESTAMP  T C RESOURCE_NAME  DESCRIPTION',
-    u'8650BE3F   0820122810 I H ent2           ETHERCHANNEL RECOVERY',
-    u'F3846E13   0820122510 P H ent2           ETHERCHANNEL FAILOVER',
-    u'8650BE3F   0820104410 I H ent2           ETHERCHANNEL RECOVERY',
-    u'F3846E13   0820093810 P H ent2           ETHERCHANNEL FAILOVER',
-    u'8650BE3F   0820090910 I H ent2           ETHERCHANNEL RECOVERY',
+    'IDENTIFIER TIMESTAMP  T C RESOURCE_NAME  DESCRIPTION',
+    '8650BE3F   0820122810 I H ent2           ETHERCHANNEL RECOVERY',
+    'F3846E13   0820122510 P H ent2           ETHERCHANNEL FAILOVER',
+    '8650BE3F   0820104410 I H ent2           ETHERCHANNEL RECOVERY',
+    'F3846E13   0820093810 P H ent2           ETHERCHANNEL FAILOVER',
+    '8650BE3F   0820090910 I H ent2           ETHERCHANNEL RECOVERY',
 ]
 
 STATE_FILE_NAME = "mk_errpt_aix.last_reported"
@@ -52,7 +52,7 @@ def prepare_state(filepath, write_name, state):
 
     path = os.path.join(filepath, write_name)
     with open(path, 'w') as statefile:
-        statefile.write(u"%s\n" % state)
+        statefile.write("%s\n" % state)
 
 
 def read_state(filepath):
@@ -60,7 +60,7 @@ def read_state(filepath):
         path = os.path.join(filepath, STATE_FILE_NAME)
         with open(path) as statefile:
             new_state = statefile.read()
-            assert new_state[-1] == u"\n"
+            assert new_state[-1] == "\n"
             return new_state[:-1]
     except IOError:
         return None
@@ -79,19 +79,19 @@ def _format_expected(lines):
         (
             STATE_FILE_NAME,
             ERRPT_OUTPUT,
-            [None, u"", ERRPT_OUTPUT[3], ERRPT_OUTPUT[1], u"something else entirely"],
+            [None, "", ERRPT_OUTPUT[3], ERRPT_OUTPUT[1], "something else entirely"],
             [ERRPT_OUTPUT[1:], ERRPT_OUTPUT[1:], ERRPT_OUTPUT[1:3], [], ERRPT_OUTPUT[1:]],
         ),
         (
             STATE_FILE_NAME,
             ERRPT_OUTPUT[:1],  # no output, just header
-            [None, u"", u"what ever"],
+            [None, "", "what ever"],
             [[], [], []],
         ),
         (  # legacy statefile name:
             'mk_logwatch_aix.last_reported',
             ERRPT_OUTPUT,
-            [None, u"", ERRPT_OUTPUT[3], ERRPT_OUTPUT[1], u"something else entirely"],
+            [None, "", ERRPT_OUTPUT[3], ERRPT_OUTPUT[1], "something else entirely"],
             [ERRPT_OUTPUT[1:], ERRPT_OUTPUT[1:], ERRPT_OUTPUT[1:3], [], ERRPT_OUTPUT[1:]],
         ),
     ])

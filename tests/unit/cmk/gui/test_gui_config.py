@@ -58,31 +58,31 @@ def test_sorted_sites(mocker):
 
 def test_registered_permission_sections():
     expected_sections = [
-        ('bookmark_list', (50, u'Bookmark lists', True)),
-        ('custom_snapin', (50, u'Custom snapins', True)),
-        ('sidesnap', (50, u'Sidebar snapins', True)),
-        ('notification_plugin', (50, u'Notification plugins', True)),
-        ('wato', (50, u"WATO - Checkmk's Web Administration Tool", False)),
-        ('background_jobs', (50, u'Background jobs', False)),
-        ('bi', (50, u'BI - Checkmk Business Intelligence', False)),
-        ('general', (10, u'General Permissions', False)),
-        ('mkeventd', (50, u'Event Console', False)),
-        ('action', (50, u'Commands on host and services', True)),
-        ('dashboard', (50, u'Dashboards', True)),
-        ('nagvis', (50, u'NagVis', False)),
-        ('view', (50, u'Views', True)),
-        ('icons_and_actions', (50, u'Icons', True)),
-        ('pagetype_topic', (50, u'Topics', True)),
+        ('bookmark_list', (50, 'Bookmark lists', True)),
+        ('custom_snapin', (50, 'Custom snapins', True)),
+        ('sidesnap', (50, 'Sidebar snapins', True)),
+        ('notification_plugin', (50, 'Notification plugins', True)),
+        ('wato', (50, "WATO - Checkmk's Web Administration Tool", False)),
+        ('background_jobs', (50, 'Background jobs', False)),
+        ('bi', (50, 'BI - Checkmk Business Intelligence', False)),
+        ('general', (10, 'General Permissions', False)),
+        ('mkeventd', (50, 'Event Console', False)),
+        ('action', (50, 'Commands on host and services', True)),
+        ('dashboard', (50, 'Dashboards', True)),
+        ('nagvis', (50, 'NagVis', False)),
+        ('view', (50, 'Views', True)),
+        ('icons_and_actions', (50, 'Icons', True)),
+        ('pagetype_topic', (50, 'Topics', True)),
     ]
 
     if not cmk_version.is_raw_edition():
         expected_sections += [
-            ('custom_graph', (50, u'Custom Graphs', True)),
-            ('forecast_graph', (50, u'Forecast Graphs', True)),
-            ('graph_collection', (50, u'Graph Collections', True)),
-            ('graph_tuning', (50, u'Graph tunings', True)),
-            ('sla_configuration', (50, u'Service Level Agreements', True)),
-            ('report', (50, u'Reports', True)),
+            ('custom_graph', (50, 'Custom Graphs', True)),
+            ('forecast_graph', (50, 'Forecast Graphs', True)),
+            ('graph_collection', (50, 'Graph Collections', True)),
+            ('graph_tuning', (50, 'Graph tunings', True)),
+            ('sla_configuration', (50, 'Service Level Agreements', True)),
+            ('report', (50, 'Reports', True)),
         ]
 
     section_names = permission_section_registry.keys()
@@ -627,11 +627,11 @@ def test_declare_permission_section(monkeypatch):
     monkeypatch.setattr(permissions, "permission_section_registry",
                         permissions.PermissionSectionRegistry())
     assert "bla" not in permissions.permission_section_registry
-    config.declare_permission_section("bla", u"bla perm", do_sort=False)
+    config.declare_permission_section("bla", "bla perm", do_sort=False)
     assert "bla" in permissions.permission_section_registry
 
     section = permissions.permission_section_registry["bla"]()
-    assert section.title == u"bla perm"
+    assert section.title == "bla perm"
     assert section.sort_index == 50
     assert section.do_sort is False
 
@@ -640,18 +640,18 @@ def test_declare_permission(monkeypatch):
     monkeypatch.setattr(permissions, "permission_section_registry",
                         permissions.PermissionSectionRegistry())
     assert "bla" not in permissions.permission_section_registry
-    config.declare_permission_section("bla", u"bla perm", do_sort=False)
+    config.declare_permission_section("bla", "bla perm", do_sort=False)
     assert "bla" in permissions.permission_section_registry
 
     monkeypatch.setattr(permissions, "permission_registry", permissions.PermissionRegistry())
     assert "bla.blub" not in permissions.permission_registry
-    config.declare_permission("bla.blub", u"bla perm", u"descrrrrr", ["admin"])
+    config.declare_permission("bla.blub", "bla perm", "descrrrrr", ["admin"])
     assert "bla.blub" in permissions.permission_registry
 
     permission = permissions.permission_registry["bla.blub"]
     assert permission.section == permissions.permission_section_registry["bla"]
     assert permission.name == "bla.blub"
-    assert permission.title == u"bla perm"
+    assert permission.title == "bla perm"
     assert permission.description == "descrrrrr"
     assert permission.defaults == ["admin"]
 
@@ -871,7 +871,7 @@ def test_theme_choices_empty(theme_dirs):
 
 
 def test_theme_choices_normal(my_theme):
-    assert config.theme_choices() == [("my_theme", u"Määh Theme :-)")]
+    assert config.theme_choices() == [("my_theme", "Määh Theme :-)")]
 
 
 def test_theme_choices_local_theme(theme_dirs, my_theme):
@@ -883,8 +883,8 @@ def test_theme_choices_local_theme(theme_dirs, my_theme):
         str(json.dumps({"title": "Määh Bettr Theme :-D"})))
 
     assert config.theme_choices() == sorted([
-        ("my_theme", u"Määh Theme :-)"),
-        ("my_improved_theme", u"Määh Bettr Theme :-D"),
+        ("my_theme", "Määh Theme :-)"),
+        ("my_improved_theme", "Määh Bettr Theme :-D"),
     ])
 
 
@@ -897,7 +897,7 @@ def test_theme_choices_override(theme_dirs, my_theme):
                                  encoding="utf-8").write(str(json.dumps({"title": "Fixed theme"})))
 
     assert config.theme_choices() == sorted([
-        ("my_theme", u"Fixed theme"),
+        ("my_theme", "Fixed theme"),
     ])
 
 
@@ -906,7 +906,7 @@ def test_theme_broken_meta(my_theme):
                                    encoding="utf-8").write(str("{\"titlewrong\": xyz\"bla\"}"))
 
     assert config.theme_choices() == sorted([
-        ("my_theme", u"my_theme"),
+        ("my_theme", "my_theme"),
     ])
 
 
@@ -1088,11 +1088,11 @@ def test_logged_in_super_user_permissions(mocker):
 
 
 MONITORING_USER_CACHED_PROFILE = {
-    'alias': u'Test user',
+    'alias': 'Test user',
     'authorized_sites': ['heute', 'heute_slave_1'],
     'contactgroups': ['all'],
     'disable_notifications': {},
-    'email': u'test_user@tribe29.com',
+    'email': 'test_user@tribe29.com',
     'fallback_contact': False,
     'force_authuser': False,
     'locked': False,

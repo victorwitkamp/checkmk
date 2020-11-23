@@ -1414,9 +1414,9 @@ class EventServer(ECServerThread):
         line = line.rstrip()
         if self._config["debug_rules"]:
             if address:
-                self._logger.info(u"Processing message from %r: '%s'" % (address, line))
+                self._logger.info("Processing message from %r: '%s'" % (address, line))
             else:
-                self._logger.info(u"Processing message '%s'" % line)
+                self._logger.info("Processing message '%s'" % line)
 
         event = self._event_creator.create_event_from_line(line, address)
         self.process_event(event)
@@ -2191,7 +2191,7 @@ class EventCreator:
 
     def create_event_from_trap(self, trap, ipaddress):
         # use the trap-oid as application
-        application = u''
+        application = ''
         for index, (oid, _unused_val) in enumerate(trap):
             if oid in ['1.3.6.1.6.3.1.1.4.1.0', 'SNMPv2-MIB::snmpTrapOID.0']:
                 application = scrub_and_decode(trap.pop(index)[1])

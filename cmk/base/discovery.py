@@ -787,7 +787,7 @@ def check_discovery(
                 _set_rediscovery_flag(nodename)
         else:
             _set_rediscovery_flag(hostname)
-        infotexts.append(u"rediscovery scheduled")
+        infotexts.append("rediscovery scheduled")
 
     # Add data source information to check results
     for source, host_sections in result:
@@ -796,7 +796,7 @@ def check_discovery(
         # are shown by the "Check_MK" service
         if source_state != 0:
             status = max(status, source_state)
-            infotexts.append(u"[%s] %s" % (source.id, source_output))
+            infotexts.append("[%s] %s" % (source.id, source_output))
 
     return status, infotexts, long_infotexts, perfdata
 
@@ -835,14 +835,14 @@ def _check_service_lists(
             # in order to finalize service_description (translation, etc.).
             # Why do we use discovered_service.description here?
             long_infotexts.append(
-                u"%s: %s: %s" %
+                "%s: %s: %s" %
                 (title, discovered_service.check_plugin_name, discovered_service.description))
 
         if affected_check_plugin_names:
             info = ", ".join(["%s:%d" % e for e in affected_check_plugin_names.items()])
             st = params.get(params_key, default_state)
             status = cmk.base.utils.worst_service_state(status, st)
-            infotexts.append(u"%d %s services (%s)%s" % (
+            infotexts.append("%d %s services (%s)%s" % (
                 sum(affected_check_plugin_names.values()),
                 title,
                 info,
@@ -855,11 +855,11 @@ def _check_service_lists(
                   rediscovery_mode in ("remove", "fixall", "refresh")))):
                 need_rediscovery = True
         else:
-            infotexts.append(u"no %s services found" % title)
+            infotexts.append("no %s services found" % title)
 
     for discovered_service in services_by_transition.get("ignored", []):
         long_infotexts.append(
-            u"ignored: %s: %s" %
+            "ignored: %s: %s" %
             (discovered_service.check_plugin_name, discovered_service.description))
 
     return status, infotexts, long_infotexts, perfdata, need_rediscovery
@@ -1815,7 +1815,7 @@ def get_check_preview(
 
             if check_source in ['legacy', 'active', 'custom']:
                 exitcode = None
-                output = u"WAITING - %s check, cannot be done offline" % check_source.title()
+                output = "WAITING - %s check, cannot be done offline" % check_source.title()
                 perfdata: List[MetricTuple] = []
                 ruleset_name: Optional[RulesetName] = None
             else:

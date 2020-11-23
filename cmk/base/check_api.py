@@ -356,7 +356,7 @@ def _do_check_levels(value: Union[int, float], levels: Levels, human_readable_fu
 
 def _levelsinfo_ty(ty: str, warn: Warn, crit: Crit, human_readable_func: Callable,
                    unit_info: str) -> str:
-    return u" (warn/crit {0} {1}{3}/{2}{3})".format(ty, human_readable_func(warn),
+    return " (warn/crit {0} {1}{3}/{2}{3})".format(ty, human_readable_func(warn),
                                                     human_readable_func(crit), unit_info)
 
 

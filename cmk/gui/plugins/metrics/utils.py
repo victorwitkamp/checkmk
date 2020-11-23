@@ -330,7 +330,7 @@ def translate_metrics(perf_data: List[Tuple], check_command: str) -> TranslatedM
     """Convert Ascii-based performance data as output from a check plugin
     into floating point numbers, do scaling if necessary.
 
-    Simple example for perf_data: [(u'temp', u'48.1', u'', u'70', u'80', u'', u'')]
+    Simple example for perf_data: [('temp', '48.1', '', '70', '80', '', '')]
     Result for this example:
     { "temp" : {"value" : 48.1, "scalar": {"warn" : 70, "crit" : 80}, "unit" : { ... } }}
     """
@@ -720,10 +720,10 @@ def _filter_renderable_graph_metrics(metric_definitions, translated_metrics, opt
 
 
 def get_graph_data_from_livestatus(only_sites, host_name, service_description):
-    columns = [u'perf_data', u'metrics', u'check_command']
+    columns = ['perf_data', 'metrics', 'check_command']
     query = livestatus_lql([host_name], columns, service_description)
     what = 'host' if service_description == "_HOST_" else 'service'
-    labels = [u"site"] + [u"%s_%s" % (what, col) for col in columns]
+    labels = ["site"] + ["%s_%s" % (what, col) for col in columns]
 
     with sites.only_sites(only_sites), sites.prepend_site():
         info = dict(zip(labels, sites.live().query_row(query)))

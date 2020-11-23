@@ -228,7 +228,7 @@ def _get_generic_crash_info(type_name: str, details: Dict) -> Dict:
         try:
             exc_txt = exc_value.args[0].decode("utf-8")
         except UnicodeDecodeError:
-            exc_txt = u"b%s" % repr(exc_value.args[0])
+            exc_txt = "b%s" % repr(exc_value.args[0])
     elif len(exc_value.args) == 1:
         exc_txt = str(exc_value.args[0])
     else:

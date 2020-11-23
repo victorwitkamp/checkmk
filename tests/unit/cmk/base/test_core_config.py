@@ -31,8 +31,8 @@ def test_do_create_config_nagios(core_scenario):
 
 
 def test_active_check_arguments_basics():
-    assert core_config.active_check_arguments("bla", "blub", u"args 123 -x 1 -y 2") \
-        == u"args 123 -x 1 -y 2"
+    assert core_config.active_check_arguments("bla", "blub", "args 123 -x 1 -y 2") \
+        == "args 123 -x 1 -y 2"
 
     assert core_config.active_check_arguments("bla", "blub", ["args", "123", "-x", "1", "-y", "2"]) \
         == "'args' '123' '-x' '1' '-y' '2'"
@@ -45,7 +45,7 @@ def test_active_check_arguments_basics():
         core_config.active_check_arguments("bla", "blub", (1, 2))  # type: ignore[arg-type]
 
 
-@pytest.mark.parametrize("pw", ["abc", "123", "x'äd!?", u"aädg"])
+@pytest.mark.parametrize("pw", ["abc", "123", "x'äd!?", "aädg"])
 def test_active_check_arguments_password_store(monkeypatch, pw):
     monkeypatch.setattr(config, "stored_passwords", {"pw-id": {"password": pw,}})
     assert core_config.active_check_arguments("bla", "blub", ["arg1", ("store", "pw-id", "--password=%s"), "arg3"]) \
@@ -69,7 +69,7 @@ def test_active_check_arguments_wrong_types():
 
 def test_active_check_arguments_str():
     assert core_config.active_check_arguments("bla", "blub",
-                                              u"args 123 -x 1 -y 2") == 'args 123 -x 1 -y 2'
+                                              "args 123 -x 1 -y 2") == 'args 123 -x 1 -y 2'
 
 
 def test_active_check_arguments_list():
@@ -106,14 +106,14 @@ def test_get_host_attributes(fixup_ip_lookup, monkeypatch):
         '_ADDRESS_FAMILY': '4',
         '_FILENAME': '/wato/hosts.mk',
         '_TAGS': '/wato/ auto-piggyback ip-v4 ip-v4-only lan no-agent no-snmp prod site:unit',
-        u'__TAG_address_family': u'ip-v4-only',
-        u'__TAG_agent': u'no-agent',
-        u'__TAG_criticality': u'prod',
-        u'__TAG_ip-v4': u'ip-v4',
-        u'__TAG_networking': u'lan',
-        u'__TAG_piggyback': u'auto-piggyback',
-        u'__TAG_site': u'unit',
-        u'__TAG_snmp_ds': u'no-snmp',
+        '__TAG_address_family': 'ip-v4-only',
+        '__TAG_agent': 'no-agent',
+        '__TAG_criticality': 'prod',
+        '__TAG_ip-v4': 'ip-v4',
+        '__TAG_networking': 'lan',
+        '__TAG_piggyback': 'auto-piggyback',
+        '__TAG_site': 'unit',
+        '__TAG_snmp_ds': 'no-snmp',
         '__LABEL_ding': 'dong',
         '__LABELSOURCE_ding': 'explicit',
         'address': '0.0.0.0',
@@ -131,7 +131,7 @@ def test_get_host_attributes(fixup_ip_lookup, monkeypatch):
 @pytest.mark.parametrize("hostname,result", [
     ("localhost", {
         'check_interval': 1.0,
-        'contact_groups': u'ding',
+        'contact_groups': 'ding',
     }),
     ("blub", {
         'check_interval': 40.0
@@ -142,7 +142,7 @@ def test_get_cmk_passive_service_attributes(monkeypatch, hostname, result):
     ts.add_host("blub")
     ts.set_option(
         "extra_service_conf", {
-            "contact_groups": [(u'ding', ['localhost'], ["CPU load$"]),],
+            "contact_groups": [('ding', ['localhost'], ["CPU load$"]),],
             "check_interval": [
                 (40.0, ['blub'], ["Check_MK$"]),
                 (33.0, ['localhost'], ["CPU load$"]),
@@ -162,16 +162,16 @@ def test_get_cmk_passive_service_attributes(monkeypatch, hostname, result):
     "tg1": "val1",
     "tg2": "val1",
 }, {
-    u"__TAG_tg1": u"val1",
-    u"__TAG_tg2": u"val1",
+    "__TAG_tg1": "val1",
+    "__TAG_tg2": "val1",
 }), ({
-    u"täg-113232_eybc": u"äbcdef"
+    "täg-113232_eybc": "äbcdef"
 }, {
-    u"__TAG_täg-113232_eybc": u"äbcdef",
+    "__TAG_täg-113232_eybc": "äbcdef",
 }), ({
     "a.d B/E u-f N_A": "a.d B/E u-f N_A"
 }, {
-    u"__TAG_a.d B/E u-f N_A": "a.d B/E u-f N_A",
+    "__TAG_a.d B/E u-f N_A": "a.d B/E u-f N_A",
 })])
 def test_get_tag_attributes(tag_groups, result):
     attributes = core_config._get_tag_attributes(tag_groups, "TAG")

@@ -521,7 +521,7 @@ def get_attrs_from_uri(uri):
     """The uri contains info on subscription, resource group, provider.
     """
     attrs = {}
-    segments = uri.split(u'/')
+    segments = uri.split('/')
     for idx, segment in enumerate(segments):
         if segment in ("subscriptions", "providers"):
             attrs[segment[:-1]] = segments[idx + 1]

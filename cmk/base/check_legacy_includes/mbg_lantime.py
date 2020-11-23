@@ -55,6 +55,6 @@ def check_mbg_lantime_state_common(states, _no_item, params, info):
     elif pos_refclock_offset >= warn:
         state = 1
     if state != 0:
-        levels_text = u" (warn/crit at %s/%s µs)" % (warn, crit)
+        levels_text = " (warn/crit at %s/%s µs)" % (warn, crit)
     perfdata = [("offset", refclock_offset, warn, crit)]  # all in us
-    yield state, u"Reference clock offset: %g µs%s" % (refclock_offset, levels_text), perfdata
+    yield state, "Reference clock offset: %g µs%s" % (refclock_offset, levels_text), perfdata

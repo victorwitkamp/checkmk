@@ -10,10 +10,10 @@ import cmk.utils.prediction as prediction
 
 
 @pytest.mark.parametrize("filter_condition, values, join, result", [
-    (u"Filter: metrics =", [], u"And", u""),
-    (u"Filter: description =", [u"CPU load"], u"And", u"Filter: description = CPU load\n"),
-    (u"Filter: host_name =", [u'heute', u'beta'], u"Or",
-     u"Filter: host_name = heute\nFilter: host_name = beta\nOr: 2\n"),
+    ("Filter: metrics =", [], "And", ""),
+    ("Filter: description =", ["CPU load"], "And", "Filter: description = CPU load\n"),
+    ("Filter: host_name =", ['heute', 'beta'], "Or",
+     "Filter: host_name = heute\nFilter: host_name = beta\nOr: 2\n"),
 ])
 def test_lq_logic(filter_condition, values, join, result):
     assert prediction.lq_logic(filter_condition, values, join) == result

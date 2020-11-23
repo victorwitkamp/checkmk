@@ -10,22 +10,22 @@
 checkname = 'elasticsearch_indices'
 
 info = [
-    [u'.monitoring-kibana-6', u'971.0', u'765236.0'],
-    [u'filebeat', u'28298.0', u'21524354.0'],
-    [u'.monitoring-es-6', u'11986.0', u'15581765.0']
+    ['.monitoring-kibana-6', '971.0', '765236.0'],
+    ['filebeat', '28298.0', '21524354.0'],
+    ['.monitoring-es-6', '11986.0', '15581765.0']
 ]
 
 discovery = {
     '': [
-        (u'.monitoring-es-6', {}), (u'.monitoring-kibana-6', {}),
-        (u'filebeat', {})
+        ('.monitoring-es-6', {}), ('.monitoring-kibana-6', {}),
+        ('filebeat', {})
     ]
 }
 
 checks = {
     '': [
         (
-            u'.monitoring-es-6', {}, [
+            '.monitoring-es-6', {}, [
                 (
                     0, 'Total count: 11986 docs',
                     [('elasticsearch_count', 11986.0, None, None, None, None)]
@@ -53,7 +53,7 @@ checks = {
             ]
         ),
         (
-            u'.monitoring-kibana-6', {}, [
+            '.monitoring-kibana-6', {}, [
                 (
                     0, 'Total count: 971 docs', [
                         ('elasticsearch_count', 971.0, None, None, None, None)
@@ -78,7 +78,7 @@ checks = {
             ]
         ),
         (
-            u'filebeat', {}, [
+            'filebeat', {}, [
                 (
                     0, 'Total count: 28298 docs',
                     [('elasticsearch_count', 28298.0, None, None, None, None)]

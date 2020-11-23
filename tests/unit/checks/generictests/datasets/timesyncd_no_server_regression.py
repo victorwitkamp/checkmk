@@ -10,11 +10,11 @@
 
 checkname = 'timesyncd'
 
-info = [[u'Server:', u'(null)', u'(ntp.ubuntu.com)'],
+info = [['Server:', '(null)', '(ntp.ubuntu.com)'],
         [
-            u'Poll', u'interval:', u'0', u'(min:', u'32s;', u'max', u'34min',
-            u'8s)'
-        ], [u'Packet', u'count:', u'0'], [u'[[[1569922392.37]]]']]
+            'Poll', 'interval:', '0', '(min:', '32s;', 'max', '34min',
+            '8s)'
+        ], ['Packet', 'count:', '0'], ['[[[1569922392.37]]]']]
 
 discovery = {'': [(None, {})]}
 

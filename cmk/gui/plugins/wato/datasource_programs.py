@@ -761,12 +761,12 @@ def _valuespec_generic_metrics_prometheus():
                                   ListChoice(
                                       choices=[
                                           ("diskio", _("Disk IO")),
-                                          ("cpu", _("CPU utilization")),
+                                          ("cp", _("CPU utilization")),
                                           ("df", _("Filesystem")),
                                           ("if", _("Network")),
                                           ("memory", _("Memory")),
                                       ],
-                                      default_value=["diskio", "cpu", "df", "if", "memory"],
+                                      default_value=["diskio", "cp", "df", "if", "memory"],
                                       allow_empty=False,
                                       title=_("Retrieve information about..."),
                                       help=
@@ -776,7 +776,7 @@ def _valuespec_generic_metrics_prometheus():
                           ],
                           title=_("CAdvisor"),
                           validate=_check_not_empty_exporter_dict,
-                          optional_keys=["diskio", "cpu", "df", "if", "memory"],
+                          optional_keys=["diskio", "cp", "df", "if", "memory"],
                       )),
                  ]),
                  add_label=_("Add new Scrape Target"),

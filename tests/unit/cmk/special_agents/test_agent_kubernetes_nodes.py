@@ -12,7 +12,7 @@ from cmk.special_agents.agent_kubernetes import Node, NodeList
 
 
 def create_node(name, timestamp):
-    stats_template = u'{"stats": [{"timestamp": "%s"}]}'
+    stats_template = '{"stats": [{"timestamp": "%s"}]}'
     return Node(V1Node(metadata=V1ObjectMeta(name=name)), stats_template % timestamp)
 
 

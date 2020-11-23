@@ -857,7 +857,7 @@ class Overridable(Base):
 
         # First load builtin pages. Set username to ''
         for name, page_dict in cls.builtin_pages().items():
-            page_dict["owner"] = UserId(u'')  # might have been forgotten on copy action
+            page_dict["owner"] = UserId('')  # might have been forgotten on copy action
             page_dict["public"] = True
             page_dict["name"] = name
             page_dict = cls._transform_old_spec(page_dict)

@@ -13,13 +13,13 @@ from cmk.utils.exceptions import MKException
     ((123,), "123"),
     ((123.4,), "123.4"),
     ((b"h\xc3\xa9 \xc3\x9f\xc3\x9f",), "b'h\\xc3\\xa9 \\xc3\\x9f\\xc3\\x9f'"),
-    ((u"hé ßß",), u'hé ßß'),
+    (("hé ßß",), 'hé ßß'),
     ((b"sdffg\xed",), "b'sdffg\\xed'"),
     ((
         b"h\xc3\xa9 \xc3\x9f\xc3\x9f",
         123,
         123.4,
-        u"hé ßß",
+        "hé ßß",
         b"sdffg\xed",
     ), "(b'h\\xc3\\xa9 \\xc3\\x9f\\xc3\\x9f', 123, 123.4, 'hé ßß', b'sdffg\\xed')"),
 ])

@@ -1922,7 +1922,7 @@ class ModeEventConsoleRules(ABCEventConsoleMode):
                 # Move rule to other pack
                 if len(self._rule_packs) > 1:
                     table.cell(_("Move to pack..."))
-                    choices: Choices = [("", u"")]
+                    choices: Choices = [("", "")]
                     choices += [(pack["id"], pack["title"])
                                 for pack in self._rule_packs
                                 if pack is not self._rule_pack]
@@ -4278,7 +4278,7 @@ def mkeventd_update_notifiation_configuration(hosts):
         os.remove(path)
     elif contactgroup:
         store.save_text_to_file(
-            path, u"""# Created by Check_MK Event Console
+            path, """# Created by Check_MK Event Console
 # This configuration will send notifications about hosts and
 # services in the contact group '%(group)s' to the Event Console.
 

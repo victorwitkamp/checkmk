@@ -23,7 +23,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Network Address'
+        'topic': 'Network Address'
     },
     'additional_ipv6addresses': {
         'class_name': 'ValueSpecAttribute',
@@ -36,7 +36,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Network Address'
+        'topic': 'Network Address'
     },
     'alias': {
         'class_name': 'NagiosTextAttribute',
@@ -49,7 +49,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': True,
         'show_inherited_value': True,
-        'topic': u'Basic settings',
+        'topic': 'Basic settings',
     },
     'contactgroups': {
         'class_name': 'ContactGroupsAttribute',
@@ -62,7 +62,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Basic settings',
+        'topic': 'Basic settings',
     },
     'ipaddress': {
         'class_name': 'ValueSpecAttribute',
@@ -75,7 +75,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': True,
         'show_inherited_value': True,
-        'topic': u'Network Address'
+        'topic': 'Network Address'
     },
     'ipv6address': {
         'class_name': 'ValueSpecAttribute',
@@ -88,7 +88,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': True,
         'show_inherited_value': True,
-        'topic': u'Network Address'
+        'topic': 'Network Address'
     },
     'locked_attributes': {
         'class_name': 'ValueSpecAttribute',
@@ -101,7 +101,7 @@ expected_attributes = {
         'show_in_host_search': False,
         'show_in_table': False,
         'show_inherited_value': False,
-        'topic': u'Creation / Locking',
+        'topic': 'Creation / Locking',
     },
     'locked_by': {
         'class_name': 'ValueSpecAttribute',
@@ -114,7 +114,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': False,
-        'topic': u'Creation / Locking',
+        'topic': 'Creation / Locking',
     },
     'management_address': {
         'class_name': 'ValueSpecAttribute',
@@ -127,7 +127,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Management Board'
+        'topic': 'Management Board'
     },
     'management_ipmi_credentials': {
         'class_name': 'ValueSpecAttribute',
@@ -140,7 +140,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Management Board'
+        'topic': 'Management Board'
     },
     'management_protocol': {
         'class_name': 'ValueSpecAttribute',
@@ -153,7 +153,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Management Board'
+        'topic': 'Management Board'
     },
     'management_snmp_community': {
         'class_name': 'ValueSpecAttribute',
@@ -166,7 +166,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Management Board'
+        'topic': 'Management Board'
     },
     'meta_data': {
         'class_name': 'ValueSpecAttribute',
@@ -179,7 +179,7 @@ expected_attributes = {
         'show_in_host_search': False,
         'show_in_table': False,
         'show_inherited_value': False,
-        'topic': u'Creation / Locking'
+        'topic': 'Creation / Locking'
     },
     'network_scan': {
         'class_name': 'HostAttributeNetworkScan',
@@ -192,7 +192,7 @@ expected_attributes = {
         'show_in_host_search': False,
         'show_in_table': False,
         'show_inherited_value': False,
-        'topic': u'Network Scan'
+        'topic': 'Network Scan'
     },
     'network_scan_result': {
         'class_name': 'NetworkScanResultAttribute',
@@ -205,7 +205,7 @@ expected_attributes = {
         'show_in_host_search': False,
         'show_in_table': False,
         'show_inherited_value': False,
-        'topic': u'Network Scan'
+        'topic': 'Network Scan'
     },
     'parents': {
         'class_name': 'ParentsAttribute',
@@ -218,7 +218,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': True,
         'show_inherited_value': True,
-        'topic': u'Basic settings',
+        'topic': 'Basic settings',
     },
     'site': {
         'class_name': 'SiteAttribute',
@@ -231,7 +231,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': True,
         'show_inherited_value': True,
-        'topic': u'Basic settings',
+        'topic': 'Basic settings',
     },
     'snmp_community': {
         'class_name': 'ValueSpecAttribute',
@@ -244,7 +244,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Data sources',
+        'topic': 'Data sources',
     },
     'tag_address_family': {
         'depends_on_roles': [],
@@ -256,7 +256,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Network Address'
+        'topic': 'Network Address'
     },
     'tag_agent': {
         'depends_on_roles': [],
@@ -268,7 +268,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Data sources'
+        'topic': 'Data sources'
     },
     'tag_snmp_ds': {
         'depends_on_roles': [],
@@ -280,7 +280,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Data sources'
+        'topic': 'Data sources'
     },
     'tag_piggyback': {
         'depends_on_roles': [],
@@ -292,7 +292,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Data sources'
+        'topic': 'Data sources'
     },
     'labels': {
         'depends_on_roles': [],
@@ -304,7 +304,7 @@ expected_attributes = {
         'show_in_host_search': True,
         'show_in_table': False,
         'show_inherited_value': True,
-        'topic': u'Custom attributes'
+        'topic': 'Custom attributes'
     }
 }
 
@@ -375,7 +375,7 @@ def test_legacy_register_rulegroup_without_defaults(monkeypatch):
         show_in_table=False,
         show_in_folder=False,
         show_in_host_search=False,
-        topic=u"Xyz",
+        topic="Xyz",
         show_in_form=False,
         depends_on_tags=["xxx"],
         depends_on_roles=["guest"],
@@ -386,7 +386,7 @@ def test_legacy_register_rulegroup_without_defaults(monkeypatch):
     )
 
     topic = attrs.host_attribute_topic_registry["xyz"]()
-    assert topic.title == u"Xyz"
+    assert topic.title == "Xyz"
     assert topic.sort_index == 80
 
     attr = attrs.host_attribute_registry["lat"]()
@@ -396,7 +396,7 @@ def test_legacy_register_rulegroup_without_defaults(monkeypatch):
     assert attr.show_in_host_search() is False
     assert attr.show_in_form() is False
 
-    assert attr.topic()().title == u"Xyz"
+    assert attr.topic()().title == "Xyz"
     assert attr.depends_on_tags() == ["xxx"]
     assert attr.depends_on_roles() == ["guest"]
     assert attr.editable() is False
@@ -415,10 +415,10 @@ def test_legacy_register_rulegroup_without_defaults(monkeypatch):
 def test_custom_host_attribute_transform(old, new):
     attributes = [{
         'add_custom_macro': True,
-        'help': u'',
+        'help': '',
         'name': 'attr1',
         'show_in_table': True,
-        'title': u'Attribute 1',
+        'title': 'Attribute 1',
         'topic': old,
         'type': 'TextAscii',
     }]
@@ -436,25 +436,25 @@ def test_custom_host_attribute_transform(old, new):
 ])
 def test_host_attribute_topics(for_what):
     assert attrs.get_sorted_host_attribute_topics(for_what=for_what, new=False) == [
-        ("basic", u"Basic settings"),
-        ("address", u'Network Address'),
-        ("data_sources", u'Data sources'),
-        ('custom_attributes', u'Custom attributes'),
-        ("management_board", u'Management Board'),
-        ('meta_data', u'Creation / Locking'),
+        ("basic", "Basic settings"),
+        ("address", 'Network Address'),
+        ("data_sources", 'Data sources'),
+        ('custom_attributes', 'Custom attributes'),
+        ("management_board", 'Management Board'),
+        ('meta_data', 'Creation / Locking'),
     ]
 
 
 @pytest.mark.usefixtures("load_config")
 def test_host_attribute_topics_for_folders():
     assert attrs.get_sorted_host_attribute_topics("folder", new=False) == [
-        ("basic", u"Basic settings"),
-        ('address', u'Network Address'),
-        ('data_sources', u'Data sources'),
-        ('custom_attributes', u'Custom attributes'),
-        ('network_scan', u'Network Scan'),
-        ('management_board', u'Management Board'),
-        ('meta_data', u'Creation / Locking'),
+        ("basic", "Basic settings"),
+        ('address', 'Network Address'),
+        ('data_sources', 'Data sources'),
+        ('custom_attributes', 'Custom attributes'),
+        ('network_scan', 'Network Scan'),
+        ('management_board', 'Management Board'),
+        ('meta_data', 'Creation / Locking'),
     ]
 
 

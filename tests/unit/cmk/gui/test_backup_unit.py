@@ -41,7 +41,7 @@ def test_backup_key_create_web(register_builtin_html, site, monkeypatch):
 
     # First create a backup key
     mode._create_key({
-        "alias": u"älias",
+        "alias": "älias",
         "passphrase": "passphra$e",
     })
 

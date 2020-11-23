@@ -18,13 +18,13 @@ pytestmark = pytest.mark.checks
                 "stratum": (2, 3),
                 "offset": (10, 20),  # us
             },
-            (0, u'Reference clock offset: 0.9 \xb5s', [('offset', 0.9, 10, 20)])),
+            (0, 'Reference clock offset: 0.9 \xb5s', [('offset', 0.9, 10, 20)])),
         (
             {
                 "stratum": (2, 3),
                 "offset": (0.9, 20),  # us
             },
-            (1, u'Reference clock offset: 0.9 \xb5s (warn/crit at 0.9/20 \xb5s)', [
+            (1, 'Reference clock offset: 0.9 \xb5s (warn/crit at 0.9/20 \xb5s)', [
                 ('offset', 0.9, 0.9, 20)
             ])),
         (
@@ -32,12 +32,12 @@ pytestmark = pytest.mark.checks
                 "stratum": (2, 3),
                 "offset": (0.9, 0.9),  # us
             },
-            (2, u'Reference clock offset: 0.9 \xb5s (warn/crit at 0.9/0.9 \xb5s)', [
+            (2, 'Reference clock offset: 0.9 \xb5s (warn/crit at 0.9/0.9 \xb5s)', [
                 ('offset', 0.9, 0.9, 0.9)
             ])),
     ])
 @pytest.mark.usefixtures("config_load_all_checks")
 def test_mbg_lantime_ng_state_ref_clock(params, result):
     check = Check('mbg_lantime_ng_state')
-    ref_clock_result = list(check.run_check(None, params, [[u'2', u'1', u'GPS', u'0.0009']]))[-1]
+    ref_clock_result = list(check.run_check(None, params, [['2', '1', 'GPS', '0.0009']]))[-1]
     assert ref_clock_result == result

@@ -11,13 +11,13 @@ from checktestlib import DiscoveryResult, assertDiscoveryResultsEqual, \
 
 pytestmark = pytest.mark.checks
 
-meinberg_lantime_1 = [[u'1', u'14', u'3', u'2', u'3', u'0', u'12', u'0', u'0', u'0', u'2012-06-30']]
-meinberg_lantime_2 = [[u'1', u'28', u'3', u'1', u'52', u'62', u'100', u'101', u'127', u'0', u'0']]
+meinberg_lantime_1 = [['1', '14', '3', '2', '3', '0', '12', '0', '0', '0', '2012-06-30']]
+meinberg_lantime_2 = [['1', '28', '3', '1', '52', '62', '100', '101', '127', '0', '0']]
 meinberg_lantime_5 = [[
-    u'1', u'14', u'3', u'1', u'150', u'6', u'8', u'0', u'0', u'1', u'not announced'
+    '1', '14', '3', '1', '150', '6', '8', '0', '0', '1', 'not announced'
 ]]
 meinberg_lantime_6 = [[
-    u'1', u'30', u'3', u'1', u'155', u'0', u'8', u'0', u'0', u'0', u'2016-12-31'
+    '1', '30', '3', '1', '155', '0', '8', '0', '0', '0', '2016-12-31'
 ]]
 
 

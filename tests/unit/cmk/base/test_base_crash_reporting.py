@@ -82,8 +82,8 @@ def test_check_crash_report_from_exception(monkeypatch):
                 "params": None
             },
             is_manual_check=False,
-            description=u"Uptime",
-            text=u"Output",
+            description="Uptime",
+            text="Output",
         )
 
     _check_generic_crash_info(crash)
@@ -120,8 +120,8 @@ def test_check_crash_report_save(monkeypatch):
             check_plugin_name="uptime",
             check_plugin_kwargs={},
             is_manual_check=False,
-            description=u"Uptime",
-            text=u"Output",
+            description="Uptime",
+            text="Output",
         )
         store.save(crash)
 
@@ -139,7 +139,7 @@ def test_check_crash_report_read_agent_output(monkeypatch):
     cache_path = Path(cmk.utils.paths.tcp_cache_dir, "testhost")
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     with cache_path.open("w", encoding="utf-8") as f:
-        f.write(u"<<<abc>>>\nblablub\n")
+        f.write("<<<abc>>>\nblablub\n")
 
     try:
         raise Exception("DING")
@@ -149,8 +149,8 @@ def test_check_crash_report_read_agent_output(monkeypatch):
             check_plugin_name="uptime",
             check_plugin_kwargs={},
             is_manual_check=False,
-            description=u"Uptime",
-            text=u"Output",
+            description="Uptime",
+            text="Output",
         )
 
     assert isinstance(crash, crash_reporting.CheckCrashReport)
@@ -168,7 +168,7 @@ def test_check_crash_report_read_snmp_info(monkeypatch):
     cache_path = Path(cmk.utils.paths.data_source_cache_dir, "snmp", "testhost")
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     with cache_path.open("w", encoding="utf-8") as f:
-        f.write(u"[]\n")
+        f.write("[]\n")
 
     try:
         raise Exception("DING")
@@ -178,8 +178,8 @@ def test_check_crash_report_read_snmp_info(monkeypatch):
             check_plugin_name="snmp_uptime",
             check_plugin_kwargs={},
             is_manual_check=False,
-            description=u"Uptime",
-            text=u"Output",
+            description="Uptime",
+            text="Output",
         )
 
     assert isinstance(crash, crash_reporting.CheckCrashReport)

@@ -48,17 +48,17 @@ def _expected_visual_types():
         'add_visual_handler': 'popup_add_dashlet',
         'ident_attr': 'name',
         'multicontext_links': False,
-        'plural_title': u'dashboards',
+        'plural_title': 'dashboards',
         'show_url': 'dashboard.py',
-        'title': u'dashboard',
+        'title': 'dashboard',
     },
     'views': {
         'add_visual_handler': None,
         'ident_attr': 'view_name',
         'multicontext_links': False,
-        'plural_title': u'views',
+        'plural_title': 'views',
         'show_url': 'view.py',
-        'title': u'view',
+        'title': 'view',
     },
     }
 
@@ -68,9 +68,9 @@ def _expected_visual_types():
         'add_visual_handler': 'popup_add_element',
         'ident_attr': 'name',
         'multicontext_links': True,
-        'plural_title': u'reports',
+        'plural_title': 'reports',
         'show_url': 'report.py',
-        'title': u'report',
+        'title': 'report',
         },
         })
 
@@ -105,7 +105,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 103,
-        'title': u'Host address families'
+        'title': 'Host address families'
     },
     'address_family': {
         'comment': None,
@@ -114,7 +114,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 103,
-        'title': u'Host address family (Primary)'
+        'title': 'Host address family (Primary)'
     },
     'aggr_assumed_state': {
         'column': 'aggr_assumed_state',
@@ -144,7 +144,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'aggr_group',
         'link_columns': ['aggr_group'],
         'sort_index': 90,
-        'title': u'Aggregation group'
+        'title': 'Aggregation group'
     },
     'aggr_group_tree': {
         'column': 'aggr_group_tree',
@@ -154,16 +154,16 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'aggr_group',
         'link_columns': ['aggr_group_tree'],
         'sort_index': 91,
-        'title': u'Aggregation group tree'
+        'title': 'Aggregation group tree'
     },
     'aggr_hosts': {
-        'comment': u'Filter for all aggregations that base on status information of that host. Exact match (no regular expression)',
+        'comment': 'Filter for all aggregations that base on status information of that host. Exact match (no regular expression)',
         'filter_class': 'FilterAggrHosts',
         'htmlvars': ['aggr_host_site', 'aggr_host_host'],
         'info': 'aggr',
         'link_columns': [],
         'sort_index': 130,
-        'title': u'Affected hosts contain'
+        'title': 'Affected hosts contain'
     },
     'aggr_name': {
         'column': 'aggr_name',
@@ -173,7 +173,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'aggr',
         'link_columns': ['aggr_name'],
         'sort_index': 120,
-        'title': u'Aggregation name (exact match)'
+        'title': 'Aggregation name (exact match)'
     },
     'aggr_name_regex': {
         'column': 'aggr_name',
@@ -183,7 +183,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'aggr',
         'link_columns': ['aggr_name'],
         'sort_index': 120,
-        'title': u'Aggregation name'
+        'title': 'Aggregation name'
     },
     'aggr_output': {
         'column': 'aggr_output',
@@ -193,16 +193,16 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'aggr',
         'link_columns': ['aggr_output'],
         'sort_index': 121,
-        'title': u'Aggregation output'
+        'title': 'Aggregation output'
     },
     'aggr_service': {
-        'comment': u'Filter for all aggregations that are affected by one specific service on a specific host (no regular expression)',
+        'comment': 'Filter for all aggregations that are affected by one specific service on a specific host (no regular expression)',
         'filter_class': 'FilterAggrService',
         'htmlvars': ['aggr_service_site', 'aggr_service_host', 'aggr_service_service'],
         'info': 'aggr',
         'link_columns': [],
         'sort_index': 131,
-        'title': u'Affected by service'
+        'title': 'Affected by service'
     },
     'aggr_service_used': {
         'column': None,
@@ -212,7 +212,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 300,
-        'title': u'Used in BI aggregate'
+        'title': 'Used in BI aggregate'
     },
     'aggr_state': {
         'column': 'aggr_state',
@@ -231,7 +231,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 210,
-        'title': u'Service check command'
+        'title': 'Service check command'
     },
     'comment_author': {
         'column': 'comment_author',
@@ -241,7 +241,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'comment',
         'link_columns': ['comment_author'],
         'sort_index': 259,
-        'title': u'Author comment'
+        'title': 'Author comment'
     },
     'comment_comment': {
         'column': 'comment_comment',
@@ -251,7 +251,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'comment',
         'link_columns': ['comment_comment'],
         'sort_index': 258,
-        'title': u'Comment'
+        'title': 'Comment'
     },
     'comment_entry_time': {
         'column': 'comment_entry_time',
@@ -264,7 +264,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'comment',
         'link_columns': ['comment_entry_time'],
         'sort_index': 253,
-        'title': u'Time of comment'
+        'title': 'Time of comment'
     },
     'deployment_has_agent': {
         'column': None,
@@ -274,7 +274,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 502,
-        'title': u'Host has a baked agent'
+        'title': 'Host has a baked agent'
     },
     'deployment_has_downloaded': {
         'column': None,
@@ -284,7 +284,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 503,
-        'title': u'Host has downloaded an agent'
+        'title': 'Host has downloaded an agent'
     },
     'deployment_host_has_error': {
         'column': None,
@@ -294,7 +294,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 504,
-        'title': u'Host has deployment error'
+        'title': 'Host has deployment error'
     },
     'deployment_is_registered': {
         'column': None,
@@ -304,7 +304,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 500,
-        'title': u'Host has registered for deployment'
+        'title': 'Host has registered for deployment'
     },
     'deployment_last_contact': {
         'column': None,
@@ -317,7 +317,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [None],
         'sort_index': 505,
-        'title': u'Last contact of agent updater'
+        'title': 'Last contact of agent updater'
     },
     'deployment_last_download': {
         'column': None,
@@ -330,7 +330,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [None],
         'sort_index': 506,
-        'title': u'Last download of agent updater'
+        'title': 'Last download of agent updater'
     },
     'deployment_last_registered': {
         'column': None,
@@ -343,7 +343,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [None],
         'sort_index': 504,
-        'title': u'Time of registration'
+        'title': 'Time of registration'
     },
     'deployment_need_update': {
         'column': None,
@@ -353,7 +353,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 501,
-        'title': u'Host needs agent update'
+        'title': 'Host needs agent update'
     },
     'discovery_state': {
         'comment': None,
@@ -364,7 +364,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'discovery_state',
         'link_columns': [],
         'sort_index': 601,
-        'title': u'Discovery state'
+        'title': 'Discovery state'
     },
     'downtime_author': {
         'column': 'downtime_author',
@@ -374,7 +374,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'downtime',
         'link_columns': ['downtime_author'],
         'sort_index': 256,
-        'title': u'Downtime author'
+        'title': 'Downtime author'
     },
     'downtime_comment': {
         'column': 'downtime_comment',
@@ -384,7 +384,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'downtime',
         'link_columns': ['downtime_comment'],
         'sort_index': 254,
-        'title': u'Downtime comment'
+        'title': 'Downtime comment'
     },
     'downtime_entry_time': {
         'column': 'downtime_entry_time',
@@ -397,7 +397,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'downtime',
         'link_columns': ['downtime_entry_time'],
         'sort_index': 253,
-        'title': u'Time when downtime was created'
+        'title': 'Time when downtime was created'
     },
     'downtime_id': {
         'column': 'downtime_id',
@@ -407,7 +407,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'downtime',
         'link_columns': ['downtime_id'],
         'sort_index': 301,
-        'title': u'Downtime ID'
+        'title': 'Downtime ID'
     },
     'downtime_start_time': {
         'column': 'downtime_start_time',
@@ -420,7 +420,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'downtime',
         'link_columns': ['downtime_start_time'],
         'sort_index': 255,
-        'title': u'Start of downtime'
+        'title': 'Start of downtime'
     },
     'event_application': {
         'column': 'event_application',
@@ -430,7 +430,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_application'],
         'sort_index': 201,
-        'title': u'Application / Syslog-Tag'
+        'title': 'Application / Syslog-Tag'
     },
     'event_comment': {
         'column': 'event_comment',
@@ -440,7 +440,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_comment'],
         'sort_index': 201,
-        'title': u'Comment to the event'
+        'title': 'Comment to the event'
     },
     'event_contact': {
         'column': 'event_contact',
@@ -450,7 +450,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_contact'],
         'sort_index': 201,
-        'title': u'Contact Person'
+        'title': 'Contact Person'
     },
     'event_count': {
         'comment': None,
@@ -459,7 +459,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_count'],
         'sort_index': 205,
-        'title': u'Message count'
+        'title': 'Message count'
     },
     'event_facility': {
         'comment': None,
@@ -468,7 +468,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_facility'],
         'sort_index': 210,
-        'title': u'Syslog Facility'
+        'title': 'Syslog Facility'
     },
     'event_first': {
         'column': 'event_first',
@@ -481,7 +481,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_first'],
         'sort_index': 220,
-        'title': u'First occurrence of event'
+        'title': 'First occurrence of event'
     },
     'event_host': {
         'column': 'event_host',
@@ -491,7 +491,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_host'],
         'sort_index': 201,
-        'title': u'Hostname of event, exact match'
+        'title': 'Hostname of event, exact match'
     },
     'event_host_in_downtime': {
         'column': 'event_host_in_downtime',
@@ -501,7 +501,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': [],
         'sort_index': 223,
-        'title': u'Host in downtime during event creation'
+        'title': 'Host in downtime during event creation'
     },
     'event_host_regex': {
         'column': 'event_host',
@@ -511,7 +511,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_host'],
         'sort_index': 201,
-        'title': u'Hostname of original event'
+        'title': 'Hostname of original event'
     },
     'event_id': {
         'column': 'event_id',
@@ -521,7 +521,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_id'],
         'sort_index': 200,
-        'title': u'Event ID'
+        'title': 'Event ID'
     },
     'event_ipaddress': {
         'column': 'event_ipaddress',
@@ -531,7 +531,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_ipaddress'],
         'sort_index': 201,
-        'title': u'Original IP Address of event'
+        'title': 'Original IP Address of event'
     },
     'event_last': {
         'column': 'event_last',
@@ -543,7 +543,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_last'],
         'sort_index': 221,
-        'title': u'Last occurrance of event'
+        'title': 'Last occurrance of event'
     },
     'event_owner': {
         'column': 'event_owner',
@@ -553,7 +553,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_owner'],
         'sort_index': 201,
-        'title': u'Owner of event'
+        'title': 'Owner of event'
     },
     'event_phase': {
         'comment': None,
@@ -565,7 +565,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_phase'],
         'sort_index': 207,
-        'title': u'Phase'
+        'title': 'Phase'
     },
     'event_priority': {
         'comment': None,
@@ -577,7 +577,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_priority'],
         'sort_index': 209,
-        'title': u'Syslog Priority'
+        'title': 'Syslog Priority'
     },
     'event_rule_id': {
         'column': 'event_rule_id',
@@ -587,7 +587,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_rule_id'],
         'sort_index': 200,
-        'title': u'ID of rule'
+        'title': 'ID of rule'
     },
     'event_sl': {
         'comment': None,
@@ -596,7 +596,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_sl'],
         'sort_index': 211,
-        'title': u'Service Level at least'
+        'title': 'Service Level at least'
     },
     'event_sl_max': {
         'comment': None,
@@ -605,7 +605,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_sl'],
         'sort_index': 211,
-        'title': u'Service Level at most'
+        'title': 'Service Level at most'
     },
     'event_state': {
         'comment': None,
@@ -614,7 +614,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_state'],
         'sort_index': 206,
-        'title': u'State classification'
+        'title': 'State classification'
     },
     'event_text': {
         'column': 'event_text',
@@ -624,7 +624,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'event',
         'link_columns': ['event_text'],
         'sort_index': 201,
-        'title': u'Message/Text of event'
+        'title': 'Message/Text of event'
     },
     'has_inv': {
         'column': 'host_inventory',
@@ -634,7 +634,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 801,
-        'title': u'Has Inventory Data'
+        'title': 'Has Inventory Data'
     },
     'has_performance_data': {
         'column': None,
@@ -644,7 +644,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 251,
-        'title': u'Has performance data'
+        'title': 'Has performance data'
     },
     'history_line': {
         'column': 'history_line',
@@ -654,7 +654,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'history',
         'link_columns': ['history_line'],
         'sort_index': 222,
-        'title': u'Line number in history logfile'
+        'title': 'Line number in history logfile'
     },
     'history_time': {
         'column': 'history_time',
@@ -667,7 +667,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'history',
         'link_columns': ['history_time'],
         'sort_index': 222,
-        'title': u'Time of entry in event history'
+        'title': 'Time of entry in event history'
     },
     'history_what': {
         'comment': None,
@@ -682,7 +682,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'history',
         'link_columns': ['history_what'],
         'sort_index': 225,
-        'title': u'History action type'
+        'title': 'History action type'
     },
     'history_who': {
         'column': 'history_who',
@@ -692,17 +692,17 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'history',
         'link_columns': ['history_who'],
         'sort_index': 221,
-        'title': u'User that performed action'
+        'title': 'User that performed action'
     },
     'host': {
         'column': 'host_name',
-        'comment': u'Exact match, used for linking',
+        'comment': 'Exact match, used for linking',
         'filter_class': 'FilterText',
         'htmlvars': ['host', 'neg_host'],
         'info': 'host',
         'link_columns': ['host_name'],
         'sort_index': 101,
-        'title': u'Hostname (exact match)'
+        'title': 'Hostname (exact match)'
     },
     'host_acknowledged': {
         'column': 'host_acknowledged',
@@ -712,7 +712,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 131,
-        'title': u'Host problem has been acknowledged'
+        'title': 'Host problem has been acknowledged'
     },
     'host_active_checks_enabled': {
         'column': 'host_active_checks_enabled',
@@ -722,7 +722,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 132,
-        'title': u'Host active checks enabled'
+        'title': 'Host active checks enabled'
     },
     'host_address': {
         'comment': None,
@@ -731,7 +731,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': ['host_address'],
         'sort_index': 102,
-        'title': u'Host address (Primary)'
+        'title': 'Host address (Primary)'
     },
     'host_auxtags': {
         'comment': None,
@@ -743,7 +743,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 302,
-        'title': u'Host Auxiliary Tags'
+        'title': 'Host Auxiliary Tags'
     },
     'host_check_command': {
         'comment': None,
@@ -752,7 +752,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 110,
-        'title': u'Host check command'
+        'title': 'Host check command'
     },
     'host_ctc': {
         'column': 'host_contacts',
@@ -762,7 +762,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': ['host_contacts'],
         'sort_index': 107,
-        'title': u'Host Contact'
+        'title': 'Host Contact'
     },
     'host_ctc_regex': {
         'column': 'host_contacts',
@@ -772,7 +772,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': ['host_contacts'],
         'sort_index': 107,
-        'title': u'Host Contact (Regex)'
+        'title': 'Host Contact (Regex)'
     },
     'host_favorites': {
         'column': 'host_favorite',
@@ -792,7 +792,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 130,
-        'title': u'Host in notification period'
+        'title': 'Host in notification period'
     },
     'host_in_service_period': {
         'column': 'host_in_service_period',
@@ -802,7 +802,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 130,
-        'title': u'Host in service period'
+        'title': 'Host in service period'
     },
     'host_ipv4_address': {
         'comment': None,
@@ -811,7 +811,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 102,
-        'title': u'Host address (IPv4)'
+        'title': 'Host address (IPv4)'
     },
     'host_ipv6_address': {
         'comment': None,
@@ -820,7 +820,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 102,
-        'title': u'Host address (IPv6)'
+        'title': 'Host address (IPv6)'
     },
     'host_last_check': {
         'column': 'host_last_check',
@@ -833,7 +833,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': ['host_last_check'],
         'sort_index': 251,
-        'title': u'Last host check'
+        'title': 'Last host check'
     },
     'host_last_state_change': {
         'column': 'host_last_state_change',
@@ -846,7 +846,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': ['host_last_state_change'],
         'sort_index': 250,
-        'title': u'Last host state change'
+        'title': 'Last host state change'
     },
     'host_notif_number': {
         'column': 'current_notification_number',
@@ -856,7 +856,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 232,
-        'title': u'Current Host Notification Number'
+        'title': 'Current Host Notification Number'
     },
     'host_notifications_enabled': {
         'column': 'host_notifications_enabled',
@@ -866,7 +866,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 133,
-        'title': u'Host notifications enabled'
+        'title': 'Host notifications enabled'
     },
     'host_num_services': {
         'column': 'num_services',
@@ -876,7 +876,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 234,
-        'title': u'Number of Services of the Host'
+        'title': 'Number of Services of the Host'
     },
     'host_scheduled_downtime_depth': {
         'column': 'host_scheduled_downtime_depth',
@@ -886,7 +886,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 132,
-        'title': u'Host in downtime'
+        'title': 'Host in downtime'
     },
     'host_staleness': {
         'column': None,
@@ -896,7 +896,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 232,
-        'title': u'Host is stale'
+        'title': 'Host is stale'
     },
     'host_state_type': {
         'column': None,
@@ -906,7 +906,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 116,
-        'title': u'Host state type'
+        'title': 'Host state type'
     },
     'host_tags': {
         'comment': None,
@@ -918,57 +918,57 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 302,
-        'title': u'Host Tags'
+        'title': 'Host Tags'
     },
     'hostalias': {
         'column': 'host_alias',
-        'comment': u'Search field allowing regular expressions and partial matches',
+        'comment': 'Search field allowing regular expressions and partial matches',
         'filter_class': 'FilterUnicode',
         'htmlvars': ['hostalias', 'neg_hostalias'],
         'info': 'host',
         'link_columns': ['host_alias'],
         'sort_index': 102,
-        'title': u'Hostalias'
+        'title': 'Hostalias'
     },
     'hostgroup': {
-        'comment': u'Selection of the host group',
+        'comment': 'Selection of the host group',
         'filter_class': 'FilterGroupSelection',
         'htmlvars': ['hostgroup'],
         'info': 'hostgroup',
         'link_columns': [],
         'sort_index': 104,
-        'title': u'Host Group'
+        'title': 'Host Group'
     },
     'hostgroupnameregex': {
         'column': 'hostgroup_name',
-        'comment': u'Search field allowing regular expressions and partial matches on the names of hostgroups',
+        'comment': 'Search field allowing regular expressions and partial matches on the names of hostgroups',
         'filter_class': 'FilterText',
         'htmlvars': ['hostgroup_regex'],
         'info': 'hostgroup',
         'link_columns': ['hostgroup_name'],
         'sort_index': 101,
-        'title': u'Hostgroup (Regex)'
+        'title': 'Hostgroup (Regex)'
     },
     'hostgroups': {
-        'comment': u'Selection of multiple host groups',
+        'comment': 'Selection of multiple host groups',
         'filter_class': 'FilterMultigroup',
         'htmlvars': ['hostgroups', 'neg_hostgroups'],
         'info': 'host',
         'link_columns': [],
         'sort_index': 105,
-        'title': u'Several Host Groups'
+        'title': 'Several Host Groups'
     },
     'hostgroupvisibility': {
-        'comment': u'You can enable this checkbox to show empty hostgroups',
+        'comment': 'You can enable this checkbox to show empty hostgroups',
         'filter_class': 'FilterHostgroupVisibility',
         'htmlvars': ['hostgroupshowempty'],
         'info': 'hostgroup',
         'link_columns': [],
         'sort_index': 102,
-        'title': u'Empty Hostgroup Visibilitiy'
+        'title': 'Empty Hostgroup Visibilitiy'
     },
     'hostsgroups_having_problems': {
-        'comment': u'Selection of multiple host groups',
+        'comment': 'Selection of multiple host groups',
         'filter_class': 'FilterHostgroupProblems',
         'htmlvars': [
             'hostgroups_having_hosts_down',
@@ -982,27 +982,27 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'hostgroup',
         'link_columns': [],
         'sort_index': 103,
-        'title': u'Hostgroups having certain problems'
+        'title': 'Hostgroups having certain problems'
     },
     'hostnameoralias': {
         'column': ['host_alias', 'host_name'],
-        'comment': u'Search field allowing regular expressions and partial matches',
+        'comment': 'Search field allowing regular expressions and partial matches',
         'filter_class': 'FilterHostnameOrAlias',
         'htmlvars': ['hostnameoralias'],
         'info': 'host',
         'link_columns': ['host_alias', 'host_name'],
         'sort_index': 102,
-        'title': u'Hostname or Alias'
+        'title': 'Hostname or Alias'
     },
     'hostregex': {
         'column': 'host_name',
-        'comment': u'Search field allowing regular expressions and partial matches',
+        'comment': 'Search field allowing regular expressions and partial matches',
         'filter_class': 'FilterText',
         'htmlvars': ['host_regex', 'neg_host_regex'],
         'info': 'host',
         'link_columns': ['host_name'],
         'sort_index': 100,
-        'title': u'Hostname'
+        'title': 'Hostname'
     },
     'hosts_having_service_problems': {
         'comment': None,
@@ -1014,7 +1014,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 120,
-        'title': u'Hosts having certain service problems'
+        'title': 'Hosts having certain service problems'
     },
     'hoststate': {
         'comment': None,
@@ -1023,7 +1023,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 115,
-        'title': u'Host states'
+        'title': 'Host states'
     },
     'hst_service_level': {
         'comment': None,
@@ -1032,7 +1032,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 310,
-        'title': u'Host service level'
+        'title': 'Host service level'
     },
     'in_downtime': {
         'column': None,
@@ -1042,7 +1042,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 232,
-        'title': u'Host/service in downtime'
+        'title': 'Host/service in downtime'
     },
     'inv_hardware_cpu_arch': {
         'comment': None,
@@ -1051,7 +1051,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 CPU Architecture'
+        'title': 'Processor \u27a4 CPU Architecture'
     },
     'inv_hardware_cpu_bus_speed': {
         'comment': None,
@@ -1060,7 +1060,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Bus Speed'
+        'title': 'Processor \u27a4 Bus Speed'
     },
     'inv_hardware_cpu_cache_size': {
         'comment': None,
@@ -1069,7 +1069,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Cache Size'
+        'title': 'Processor \u27a4 Cache Size'
     },
     'inv_hardware_cpu_cores': {
         'comment': None,
@@ -1078,7 +1078,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Total Number of Cores'
+        'title': 'Processor \u27a4 Total Number of Cores'
     },
     'inv_hardware_cpu_cores_per_cpu': {
         'comment': None,
@@ -1087,7 +1087,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Cores per CPU'
+        'title': 'Processor \u27a4 Cores per CPU'
     },
     'inv_hardware_cpu_cpus': {
         'comment': None,
@@ -1096,7 +1096,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Number of physical CPUs'
+        'title': 'Processor \u27a4 Number of physical CPUs'
     },
     'inv_hardware_cpu_entitlement': {
         'comment': None,
@@ -1105,7 +1105,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 CPU Entitlement'
+        'title': 'Processor \u27a4 CPU Entitlement'
     },
     'inv_hardware_cpu_logical_cpus': {
         'comment': None,
@@ -1114,7 +1114,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Number of logical CPUs'
+        'title': 'Processor \u27a4 Number of logical CPUs'
     },
     'inv_hardware_cpu_max_speed': {
         'comment': None,
@@ -1123,7 +1123,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Maximum Speed'
+        'title': 'Processor \u27a4 Maximum Speed'
     },
     'inv_hardware_cpu_model': {
         'comment': None,
@@ -1132,7 +1132,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Model'
+        'title': 'Processor \u27a4 Model'
     },
     'inv_hardware_cpu_sharing_mode': {
         'comment': None,
@@ -1141,7 +1141,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 CPU sharing mode'
+        'title': 'Processor \u27a4 CPU sharing mode'
     },
     'inv_hardware_cpu_smt_threads': {
         'comment': None,
@@ -1150,7 +1150,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Simultaneous multithreading'
+        'title': 'Processor \u27a4 Simultaneous multithreading'
     },
     'inv_hardware_cpu_threads': {
         'comment': None,
@@ -1159,7 +1159,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Total Number of Hyperthreads'
+        'title': 'Processor \u27a4 Total Number of Hyperthreads'
     },
     'inv_hardware_cpu_threads_per_cpu': {
         'comment': None,
@@ -1170,7 +1170,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Hyperthreads per CPU'
+        'title': 'Processor \u27a4 Hyperthreads per CPU'
     },
     'inv_hardware_cpu_voltage': {
         'comment': None,
@@ -1179,7 +1179,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Processor \u27a4 Voltage'
+        'title': 'Processor \u27a4 Voltage'
     },
     'inv_hardware_memory_total_ram_usable': {
         'comment': None,
@@ -1190,7 +1190,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Memory (RAM) \u27a4 Total usable RAM'
+        'title': 'Memory (RAM) \u27a4 Total usable RAM'
     },
     'inv_hardware_memory_total_swap': {
         'comment': None,
@@ -1199,7 +1199,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Memory (RAM) \u27a4 Total swap space'
+        'title': 'Memory (RAM) \u27a4 Total swap space'
     },
     'inv_hardware_memory_total_vmalloc': {
         'comment': None,
@@ -1210,7 +1210,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Memory (RAM) \u27a4 Virtual addresses for mapping'
+        'title': 'Memory (RAM) \u27a4 Virtual addresses for mapping'
     },
     'inv_hardware_storage_controller_version': {
         'comment': None,
@@ -1219,7 +1219,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Controller \u27a4 Version'
+        'title': 'Controller \u27a4 Version'
     },
     'inv_hardware_system_expresscode': {
         'comment': None,
@@ -1228,7 +1228,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'System \u27a4 Express Servicecode'
+        'title': 'System \u27a4 Express Servicecode'
     },
     'inv_hardware_system_manufacturer': {
         'comment': None,
@@ -1237,7 +1237,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'System \u27a4 Manufacturer'
+        'title': 'System \u27a4 Manufacturer'
     },
     'inv_hardware_system_model': {
         'comment': None,
@@ -1246,7 +1246,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'System \u27a4 Model Name'
+        'title': 'System \u27a4 Model Name'
     },
     'inv_hardware_system_model_name': {
         'comment': None,
@@ -1255,7 +1255,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u"System \u27a4 Model Name - LEGACY, don't use"
+        'title': "System \u27a4 Model Name - LEGACY, don't use"
     },
     'inv_hardware_system_product': {
         'comment': None,
@@ -1264,7 +1264,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'System \u27a4 Product'
+        'title': 'System \u27a4 Product'
     },
     'inv_hardware_system_serial': {
         'comment': None,
@@ -1273,7 +1273,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'System \u27a4 Serial Number'
+        'title': 'System \u27a4 Serial Number'
     },
     'inv_hardware_system_serial_number': {
         'comment': None,
@@ -1282,7 +1282,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u"System \u27a4 Serial Number - LEGACY, don't use"
+        'title': "System \u27a4 Serial Number - LEGACY, don't use"
     },
     'inv_networking_available_ethernet_ports': {
         'comment': None,
@@ -1294,7 +1294,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Networking \u27a4 Ports available'
+        'title': 'Networking \u27a4 Ports available'
     },
     'inv_networking_total_ethernet_ports': {
         'comment': None,
@@ -1305,7 +1305,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Networking \u27a4 Ports'
+        'title': 'Networking \u27a4 Ports'
     },
     'inv_networking_total_interfaces': {
         'comment': None,
@@ -1314,7 +1314,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Networking \u27a4 Interfaces'
+        'title': 'Networking \u27a4 Interfaces'
     },
     'inv_networking_wlan': {
         'comment': None,
@@ -1323,7 +1323,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Networking \u27a4 WLAN'
+        'title': 'Networking \u27a4 WLAN'
     },
     'inv_networking_wlan_controller': {
         'comment': None,
@@ -1332,7 +1332,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'WLAN \u27a4 Controller'
+        'title': 'WLAN \u27a4 Controller'
     },
     'inv_software_applications_check_mk_cluster_is_cluster': {
         'column': 'inv_software_applications_check_mk_cluster_is_cluster',
@@ -1342,7 +1342,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Cluster \u27a4 Cluster host'
+        'title': 'Cluster \u27a4 Cluster host'
     },
     'inv_software_applications_citrix_controller_controller_version': {
         'comment': None,
@@ -1351,7 +1351,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Controller \u27a4 Controller Version'
+        'title': 'Controller \u27a4 Controller Version'
     },
     'inv_software_applications_citrix_vm_agent_version': {
         'comment': None,
@@ -1360,7 +1360,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Virtual Machine \u27a4 Agent Version'
+        'title': 'Virtual Machine \u27a4 Agent Version'
     },
     'inv_software_applications_citrix_vm_catalog': {
         'comment': None,
@@ -1369,7 +1369,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Virtual Machine \u27a4 Catalog'
+        'title': 'Virtual Machine \u27a4 Catalog'
     },
     'inv_software_applications_citrix_vm_desktop_group_name': {
         'comment': None,
@@ -1378,7 +1378,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Virtual Machine \u27a4 Desktop Group Name'
+        'title': 'Virtual Machine \u27a4 Desktop Group Name'
     },
     'inv_software_applications_docker_container_node_name': {
         'comment': None,
@@ -1387,7 +1387,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Container \u27a4 Node name'
+        'title': 'Container \u27a4 Node name'
     },
     'inv_software_applications_docker_num_containers_paused': {
         'comment': None,
@@ -1396,7 +1396,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker \u27a4 # Containers paused'
+        'title': 'Docker \u27a4 # Containers paused'
     },
     'inv_software_applications_docker_num_containers_running': {
         'comment': None,
@@ -1405,7 +1405,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker \u27a4 # Containers running'
+        'title': 'Docker \u27a4 # Containers running'
     },
     'inv_software_applications_docker_num_containers_stopped': {
         'comment': None,
@@ -1414,7 +1414,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker \u27a4 # Containers stopped'
+        'title': 'Docker \u27a4 # Containers stopped'
     },
     'inv_software_applications_docker_num_containers_total': {
         'comment': None,
@@ -1423,7 +1423,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker \u27a4 # Containers'
+        'title': 'Docker \u27a4 # Containers'
     },
     'inv_software_applications_docker_num_images': {
         'comment': None,
@@ -1432,7 +1432,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker \u27a4 # Images'
+        'title': 'Docker \u27a4 # Images'
     },
     'inv_software_bios_date': {
         'comment': None,
@@ -1441,7 +1441,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'BIOS \u27a4 Date'
+        'title': 'BIOS \u27a4 Date'
     },
     'inv_software_bios_vendor': {
         'comment': None,
@@ -1450,7 +1450,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'BIOS \u27a4 Vendor'
+        'title': 'BIOS \u27a4 Vendor'
     },
     'inv_software_bios_version': {
         'comment': None,
@@ -1459,7 +1459,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'BIOS \u27a4 Version'
+        'title': 'BIOS \u27a4 Version'
     },
     'inv_software_configuration_snmp_info_contact': {
         'comment': None,
@@ -1468,7 +1468,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'SNMP Information \u27a4 Contact'
+        'title': 'SNMP Information \u27a4 Contact'
     },
     'inv_software_configuration_snmp_info_location': {
         'comment': None,
@@ -1477,7 +1477,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'SNMP Information \u27a4 Location'
+        'title': 'SNMP Information \u27a4 Location'
     },
     'inv_software_configuration_snmp_info_name': {
         'comment': None,
@@ -1486,7 +1486,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'SNMP Information \u27a4 System name'
+        'title': 'SNMP Information \u27a4 System name'
     },
     'inv_software_firmware_platform_level': {
         'comment': None,
@@ -1495,7 +1495,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Firmware \u27a4 Platform Firmware level'
+        'title': 'Firmware \u27a4 Platform Firmware level'
     },
     'inv_software_firmware_vendor': {
         'comment': None,
@@ -1504,7 +1504,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Firmware \u27a4 Vendor'
+        'title': 'Firmware \u27a4 Vendor'
     },
     'inv_software_firmware_version': {
         'comment': None,
@@ -1513,7 +1513,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Firmware \u27a4 Version'
+        'title': 'Firmware \u27a4 Version'
     },
     'inv_software_os_arch': {
         'comment': None,
@@ -1522,7 +1522,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Operating System \u27a4 Kernel Architecture'
+        'title': 'Operating System \u27a4 Kernel Architecture'
     },
     'inv_software_os_install_date': {
         'comment': None,
@@ -1531,7 +1531,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Operating System \u27a4 Install Date'
+        'title': 'Operating System \u27a4 Install Date'
     },
     'inv_software_os_kernel_version': {
         'comment': None,
@@ -1540,7 +1540,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Operating System \u27a4 Kernel Version'
+        'title': 'Operating System \u27a4 Kernel Version'
     },
     'inv_software_os_name': {
         'comment': None,
@@ -1549,7 +1549,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Operating System \u27a4 Name'
+        'title': 'Operating System \u27a4 Name'
     },
     'inv_software_os_service_pack': {
         'comment': None,
@@ -1558,7 +1558,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Operating System \u27a4 Latest Service Pack'
+        'title': 'Operating System \u27a4 Latest Service Pack'
     },
     'inv_software_os_type': {
         'comment': None,
@@ -1567,7 +1567,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Operating System \u27a4 Type'
+        'title': 'Operating System \u27a4 Type'
     },
     'inv_software_os_vendor': {
         'comment': None,
@@ -1576,7 +1576,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Operating System \u27a4 Vendor'
+        'title': 'Operating System \u27a4 Vendor'
     },
     'inv_software_os_version': {
         'comment': None,
@@ -1585,7 +1585,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Operating System \u27a4 Version'
+        'title': 'Operating System \u27a4 Version'
     },
     'invbackplane_description': {
         'comment': None,
@@ -1594,7 +1594,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invbackplane',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Backplane: Description'
+        'title': 'Backplane: Description'
     },
     'invbackplane_index': {
         'comment': None,
@@ -1603,7 +1603,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invbackplane',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Backplane: Index'
+        'title': 'Backplane: Index'
     },
     'invbackplane_location': {
         'comment': None,
@@ -1612,7 +1612,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invbackplane',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Backplane: Location'
+        'title': 'Backplane: Location'
     },
     'invbackplane_manufacturer': {
         'comment': None,
@@ -1621,7 +1621,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invbackplane',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Backplane: Manufacturer'
+        'title': 'Backplane: Manufacturer'
     },
     'invbackplane_model': {
         'comment': None,
@@ -1630,7 +1630,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invbackplane',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Backplane: Model Name'
+        'title': 'Backplane: Model Name'
     },
     'invbackplane_name': {
         'comment': None,
@@ -1639,7 +1639,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invbackplane',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Backplane: Name'
+        'title': 'Backplane: Name'
     },
     'invbackplane_serial': {
         'comment': None,
@@ -1648,7 +1648,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invbackplane',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Backplane: Serial Number'
+        'title': 'Backplane: Serial Number'
     },
     'invbackplane_software': {
         'comment': None,
@@ -1657,7 +1657,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invbackplane',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Backplane: Software'
+        'title': 'Backplane: Software'
     },
     'invchassis_description': {
         'comment': None,
@@ -1666,7 +1666,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invchassis',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Chassis: Description'
+        'title': 'Chassis: Description'
     },
     'invchassis_index': {
         'comment': None,
@@ -1675,7 +1675,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invchassis',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Chassis: Index'
+        'title': 'Chassis: Index'
     },
     'invchassis_location': {
         'comment': None,
@@ -1684,7 +1684,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invchassis',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Chassis: Location'
+        'title': 'Chassis: Location'
     },
     'invchassis_manufacturer': {
         'comment': None,
@@ -1693,7 +1693,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invchassis',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Chassis: Manufacturer'
+        'title': 'Chassis: Manufacturer'
     },
     'invchassis_model': {
         'comment': None,
@@ -1702,7 +1702,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invchassis',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Chassis: Model Name'
+        'title': 'Chassis: Model Name'
     },
     'invchassis_name': {
         'comment': None,
@@ -1711,7 +1711,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invchassis',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Chassis: Name'
+        'title': 'Chassis: Name'
     },
     'invchassis_serial': {
         'comment': None,
@@ -1720,7 +1720,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invchassis',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Chassis: Serial Number'
+        'title': 'Chassis: Serial Number'
     },
     'invchassis_software': {
         'comment': None,
@@ -1729,7 +1729,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invchassis',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Chassis: Software'
+        'title': 'Chassis: Software'
     },
     'invcontainer_description': {
         'comment': None,
@@ -1738,7 +1738,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invcontainer',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'HW container: Description'
+        'title': 'HW container: Description'
     },
     'invcontainer_index': {
         'comment': None,
@@ -1747,7 +1747,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invcontainer',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'HW container: Index'
+        'title': 'HW container: Index'
     },
     'invcontainer_location': {
         'comment': None,
@@ -1756,7 +1756,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invcontainer',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'HW container: Location'
+        'title': 'HW container: Location'
     },
     'invcontainer_manufacturer': {
         'comment': None,
@@ -1765,7 +1765,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invcontainer',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'HW container: Manufacturer'
+        'title': 'HW container: Manufacturer'
     },
     'invcontainer_model': {
         'comment': None,
@@ -1774,7 +1774,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invcontainer',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'HW container: Model Name'
+        'title': 'HW container: Model Name'
     },
     'invcontainer_name': {
         'comment': None,
@@ -1783,7 +1783,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invcontainer',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'HW container: Name'
+        'title': 'HW container: Name'
     },
     'invcontainer_serial': {
         'comment': None,
@@ -1792,7 +1792,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invcontainer',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'HW container: Serial Number'
+        'title': 'HW container: Serial Number'
     },
     'invcontainer_software': {
         'comment': None,
@@ -1801,7 +1801,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invcontainer',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'HW container: Software'
+        'title': 'HW container: Software'
     },
     'invdockercontainers_creation': {
         'comment': None,
@@ -1810,7 +1810,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockercontainers',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker containers: Creation'
+        'title': 'Docker containers: Creation'
     },
     'invdockercontainers_id': {
         'comment': None,
@@ -1819,7 +1819,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockercontainers',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker containers: ID'
+        'title': 'Docker containers: ID'
     },
     'invdockercontainers_labels': {
         'comment': None,
@@ -1828,7 +1828,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockercontainers',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker containers: Labels'
+        'title': 'Docker containers: Labels'
     },
     'invdockercontainers_name': {
         'comment': None,
@@ -1837,7 +1837,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockercontainers',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker containers: Name'
+        'title': 'Docker containers: Name'
     },
     'invdockercontainers_repository': {
         'comment': None,
@@ -1846,7 +1846,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockercontainers',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker containers: Repository'
+        'title': 'Docker containers: Repository'
     },
     'invdockercontainers_status': {
         'comment': None,
@@ -1855,7 +1855,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockercontainers',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker containers: Status'
+        'title': 'Docker containers: Status'
     },
     'invdockercontainers_tag': {
         'comment': None,
@@ -1864,7 +1864,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockercontainers',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker containers: Tag'
+        'title': 'Docker containers: Tag'
     },
     'invdockerimages_amount_containers': {
         'comment': None,
@@ -1873,7 +1873,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockerimages',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker images: # Containers'
+        'title': 'Docker images: # Containers'
     },
     'invdockerimages_creation': {
         'comment': None,
@@ -1882,7 +1882,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockerimages',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker images: Creation'
+        'title': 'Docker images: Creation'
     },
     'invdockerimages_id': {
         'comment': None,
@@ -1891,7 +1891,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockerimages',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker images: ID'
+        'title': 'Docker images: ID'
     },
     'invdockerimages_labels': {
         'comment': None,
@@ -1900,7 +1900,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockerimages',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker images: Labels'
+        'title': 'Docker images: Labels'
     },
     'invdockerimages_repository': {
         'comment': None,
@@ -1909,7 +1909,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockerimages',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker images: Repository'
+        'title': 'Docker images: Repository'
     },
     'invdockerimages_size': {
         'comment': None,
@@ -1918,7 +1918,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockerimages',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker images: Size'
+        'title': 'Docker images: Size'
     },
     'invdockerimages_tag': {
         'comment': None,
@@ -1927,7 +1927,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invdockerimages',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Docker images: Tag'
+        'title': 'Docker images: Tag'
     },
     'invfan_description': {
         'comment': None,
@@ -1936,7 +1936,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invfan',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Fan: Description'
+        'title': 'Fan: Description'
     },
     'invfan_index': {
         'comment': None,
@@ -1945,7 +1945,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invfan',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Fan: Index'
+        'title': 'Fan: Index'
     },
     'invfan_location': {
         'comment': None,
@@ -1954,7 +1954,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invfan',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Fan: Location'
+        'title': 'Fan: Location'
     },
     'invfan_manufacturer': {
         'comment': None,
@@ -1963,7 +1963,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invfan',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Fan: Manufacturer'
+        'title': 'Fan: Manufacturer'
     },
     'invfan_model': {
         'comment': None,
@@ -1972,7 +1972,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invfan',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Fan: Model Name'
+        'title': 'Fan: Model Name'
     },
     'invfan_name': {
         'comment': None,
@@ -1981,7 +1981,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invfan',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Fan: Name'
+        'title': 'Fan: Name'
     },
     'invfan_serial': {
         'comment': None,
@@ -1990,7 +1990,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invfan',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Fan: Serial Number'
+        'title': 'Fan: Serial Number'
     },
     'invfan_software': {
         'comment': None,
@@ -1999,7 +1999,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invfan',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Fan: Software'
+        'title': 'Fan: Software'
     },
     'invinterface_admin_status': {
         'comment': None,
@@ -2008,7 +2008,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Administrative Status'
+        'title': 'Network interface: Administrative Status'
     },
     'invinterface_alias': {
         'comment': None,
@@ -2017,7 +2017,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Alias'
+        'title': 'Network interface: Alias'
     },
     'invinterface_available': {
         'comment': None,
@@ -2026,7 +2026,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Port Usage'
+        'title': 'Network interface: Port Usage'
     },
     'invinterface_description': {
         'comment': None,
@@ -2035,7 +2035,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Description'
+        'title': 'Network interface: Description'
     },
     'invinterface_index': {
         'comment': None,
@@ -2044,7 +2044,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Index'
+        'title': 'Network interface: Index'
     },
     'invinterface_last_change': {
         'comment': None,
@@ -2053,7 +2053,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Last Change'
+        'title': 'Network interface: Last Change'
     },
     'invinterface_oper_status': {
         'comment': None,
@@ -2067,7 +2067,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Operational Status'
+        'title': 'Network interface: Operational Status'
     },
     'invinterface_phys_address': {
         'comment': None,
@@ -2076,7 +2076,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Physical Address (MAC)'
+        'title': 'Network interface: Physical Address (MAC)'
     },
     'invinterface_port_type': {
         'comment': None,
@@ -2085,7 +2085,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Type'
+        'title': 'Network interface: Type'
     },
     'invinterface_speed': {
         'comment': None,
@@ -2094,7 +2094,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: Speed'
+        'title': 'Network interface: Speed'
     },
     'invinterface_vlans': {
         'comment': None,
@@ -2103,7 +2103,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: VLANs'
+        'title': 'Network interface: VLANs'
     },
     'invinterface_vlantype': {
         'comment': None,
@@ -2112,7 +2112,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invinterface',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Network interface: VLAN type'
+        'title': 'Network interface: VLAN type'
     },
     'invmodule_bootloader': {
         'comment': None,
@@ -2121,7 +2121,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Bootloader'
+        'title': 'Module: Bootloader'
     },
     'invmodule_description': {
         'comment': None,
@@ -2130,7 +2130,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Description'
+        'title': 'Module: Description'
     },
     'invmodule_firmware': {
         'comment': None,
@@ -2139,7 +2139,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Firmware'
+        'title': 'Module: Firmware'
     },
     'invmodule_index': {
         'comment': None,
@@ -2148,7 +2148,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Index'
+        'title': 'Module: Index'
     },
     'invmodule_location': {
         'comment': None,
@@ -2157,7 +2157,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Location'
+        'title': 'Module: Location'
     },
     'invmodule_manufacturer': {
         'comment': None,
@@ -2166,7 +2166,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Manufacturer'
+        'title': 'Module: Manufacturer'
     },
     'invmodule_model': {
         'comment': None,
@@ -2175,7 +2175,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Model Name'
+        'title': 'Module: Model Name'
     },
     'invmodule_name': {
         'comment': None,
@@ -2184,7 +2184,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Name'
+        'title': 'Module: Name'
     },
     'invmodule_serial': {
         'comment': None,
@@ -2193,7 +2193,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Serial Number'
+        'title': 'Module: Serial Number'
     },
     'invmodule_software': {
         'comment': None,
@@ -2202,7 +2202,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Software'
+        'title': 'Module: Software'
     },
     'invmodule_type': {
         'comment': None,
@@ -2211,7 +2211,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invmodule',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Module: Type'
+        'title': 'Module: Type'
     },
     'invoradataguardstats_db_unique': {
         'comment': None,
@@ -2220,7 +2220,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoradataguardstats',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle dataguard statistic: Name'
+        'title': 'Oracle dataguard statistic: Name'
     },
     'invoradataguardstats_role': {
         'comment': None,
@@ -2229,7 +2229,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoradataguardstats',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle dataguard statistic: Role'
+        'title': 'Oracle dataguard statistic: Role'
     },
     'invoradataguardstats_sid': {
         'comment': None,
@@ -2238,7 +2238,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoradataguardstats',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle dataguard statistic: SID'
+        'title': 'Oracle dataguard statistic: SID'
     },
     'invoradataguardstats_switchover': {
         'comment': None,
@@ -2247,7 +2247,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoradataguardstats',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle dataguard statistic: Switchover'
+        'title': 'Oracle dataguard statistic: Switchover'
     },
     'invorainstance_db_creation_time': {
         'comment': None,
@@ -2256,7 +2256,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorainstance',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle instance: Creation time'
+        'title': 'Oracle instance: Creation time'
     },
     'invorainstance_db_uptime': {
         'comment': None,
@@ -2265,7 +2265,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorainstance',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle instance: Uptime'
+        'title': 'Oracle instance: Uptime'
     },
     'invorainstance_logins': {
         'comment': None,
@@ -2274,7 +2274,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorainstance',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle instance: Logins'
+        'title': 'Oracle instance: Logins'
     },
     'invorainstance_logmode': {
         'comment': None,
@@ -2283,7 +2283,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorainstance',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle instance: Log mode'
+        'title': 'Oracle instance: Log mode'
     },
     'invorainstance_openmode': {
         'comment': None,
@@ -2292,7 +2292,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorainstance',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle instance: Open mode'
+        'title': 'Oracle instance: Open mode'
     },
     'invorainstance_sid': {
         'comment': None,
@@ -2301,7 +2301,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorainstance',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle instance: SID'
+        'title': 'Oracle instance: SID'
     },
     'invorainstance_version': {
         'comment': None,
@@ -2310,7 +2310,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorainstance',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle instance: Version'
+        'title': 'Oracle instance: Version'
     },
     'invorarecoveryarea_flashback': {
         'comment': None,
@@ -2319,7 +2319,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorarecoveryarea',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle recovery area: Flashback'
+        'title': 'Oracle recovery area: Flashback'
     },
     'invorarecoveryarea_sid': {
         'comment': None,
@@ -2328,7 +2328,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorarecoveryarea',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle recovery area: SID'
+        'title': 'Oracle recovery area: SID'
     },
     'invorasga_buf_cache_size': {
         'comment': None,
@@ -2337,7 +2337,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Buffer cache size'
+        'title': 'Oracle performance: Buffer cache size'
     },
     'invorasga_data_trans_cache_size': {
         'comment': None,
@@ -2346,7 +2346,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Data transfer cache size'
+        'title': 'Oracle performance: Data transfer cache size'
     },
     'invorasga_fixed_size': {
         'comment': None,
@@ -2355,7 +2355,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Fixed size'
+        'title': 'Oracle performance: Fixed size'
     },
     'invorasga_free_mem_avail': {
         'comment': None,
@@ -2364,7 +2364,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Free SGA memory available'
+        'title': 'Oracle performance: Free SGA memory available'
     },
     'invorasga_granule_size': {
         'comment': None,
@@ -2373,7 +2373,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Granule size'
+        'title': 'Oracle performance: Granule size'
     },
     'invorasga_in_mem_area_size': {
         'comment': None,
@@ -2382,7 +2382,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: In-memory area'
+        'title': 'Oracle performance: In-memory area'
     },
     'invorasga_java_pool_size': {
         'comment': None,
@@ -2391,7 +2391,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Java pool size'
+        'title': 'Oracle performance: Java pool size'
     },
     'invorasga_large_pool_size': {
         'comment': None,
@@ -2400,7 +2400,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Large pool size'
+        'title': 'Oracle performance: Large pool size'
     },
     'invorasga_max_size': {
         'comment': None,
@@ -2409,7 +2409,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Maximum size'
+        'title': 'Oracle performance: Maximum size'
     },
     'invorasga_redo_buffer': {
         'comment': None,
@@ -2418,7 +2418,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Redo buffers'
+        'title': 'Oracle performance: Redo buffers'
     },
     'invorasga_shared_io_pool_size': {
         'comment': None,
@@ -2427,7 +2427,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Shared pool size'
+        'title': 'Oracle performance: Shared pool size'
     },
     'invorasga_shared_pool_size': {
         'comment': None,
@@ -2436,7 +2436,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Shared pool size'
+        'title': 'Oracle performance: Shared pool size'
     },
     'invorasga_sid': {
         'comment': None,
@@ -2445,7 +2445,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: SID'
+        'title': 'Oracle performance: SID'
     },
     'invorasga_start_oh_shared_pool': {
         'comment': None,
@@ -2454,7 +2454,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Startup overhead in shared pool'
+        'title': 'Oracle performance: Startup overhead in shared pool'
     },
     'invorasga_streams_pool_size': {
         'comment': None,
@@ -2463,7 +2463,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invorasga',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle performance: Streams pool size'
+        'title': 'Oracle performance: Streams pool size'
     },
     'invoratablespace_autoextensible': {
         'comment': None,
@@ -2472,7 +2472,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Autoextensible'
+        'title': 'Oracle tablespace: Autoextensible'
     },
     'invoratablespace_current_size': {
         'comment': None,
@@ -2481,7 +2481,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Current size'
+        'title': 'Oracle tablespace: Current size'
     },
     'invoratablespace_free_space': {
         'comment': None,
@@ -2490,7 +2490,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Free space'
+        'title': 'Oracle tablespace: Free space'
     },
     'invoratablespace_increment_size': {
         'comment': None,
@@ -2499,7 +2499,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Increment size'
+        'title': 'Oracle tablespace: Increment size'
     },
     'invoratablespace_max_size': {
         'comment': None,
@@ -2508,7 +2508,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Max. size'
+        'title': 'Oracle tablespace: Max. size'
     },
     'invoratablespace_name': {
         'comment': None,
@@ -2517,7 +2517,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Name'
+        'title': 'Oracle tablespace: Name'
     },
     'invoratablespace_num_increments': {
         'comment': None,
@@ -2526,7 +2526,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Number of increments'
+        'title': 'Oracle tablespace: Number of increments'
     },
     'invoratablespace_sid': {
         'comment': None,
@@ -2535,7 +2535,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: SID'
+        'title': 'Oracle tablespace: SID'
     },
     'invoratablespace_type': {
         'comment': None,
@@ -2544,7 +2544,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Type'
+        'title': 'Oracle tablespace: Type'
     },
     'invoratablespace_used_size': {
         'comment': None,
@@ -2553,7 +2553,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Used size'
+        'title': 'Oracle tablespace: Used size'
     },
     'invoratablespace_version': {
         'comment': None,
@@ -2562,7 +2562,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invoratablespace',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Oracle tablespace: Version'
+        'title': 'Oracle tablespace: Version'
     },
     'invother_description': {
         'comment': None,
@@ -2571,7 +2571,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invother',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Other entity: Description'
+        'title': 'Other entity: Description'
     },
     'invother_index': {
         'comment': None,
@@ -2580,7 +2580,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invother',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Other entity: Index'
+        'title': 'Other entity: Index'
     },
     'invother_location': {
         'comment': None,
@@ -2589,7 +2589,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invother',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Other entity: Location'
+        'title': 'Other entity: Location'
     },
     'invother_manufacturer': {
         'comment': None,
@@ -2598,7 +2598,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invother',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Other entity: Manufacturer'
+        'title': 'Other entity: Manufacturer'
     },
     'invother_model': {
         'comment': None,
@@ -2607,7 +2607,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invother',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Other entity: Model Name'
+        'title': 'Other entity: Model Name'
     },
     'invother_name': {
         'comment': None,
@@ -2616,7 +2616,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invother',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Other entity: Name'
+        'title': 'Other entity: Name'
     },
     'invother_serial': {
         'comment': None,
@@ -2625,7 +2625,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invother',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Other entity: Serial Number'
+        'title': 'Other entity: Serial Number'
     },
     'invother_software': {
         'comment': None,
@@ -2634,7 +2634,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invother',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Other entity: Software'
+        'title': 'Other entity: Software'
     },
     'invpsu_description': {
         'comment': None,
@@ -2643,7 +2643,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invpsu',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Power supply: Description'
+        'title': 'Power supply: Description'
     },
     'invpsu_index': {
         'comment': None,
@@ -2652,7 +2652,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invpsu',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Power supply: Index'
+        'title': 'Power supply: Index'
     },
     'invpsu_location': {
         'comment': None,
@@ -2661,7 +2661,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invpsu',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Power supply: Location'
+        'title': 'Power supply: Location'
     },
     'invpsu_manufacturer': {
         'comment': None,
@@ -2670,7 +2670,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invpsu',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Power supply: Manufacturer'
+        'title': 'Power supply: Manufacturer'
     },
     'invpsu_model': {
         'comment': None,
@@ -2679,7 +2679,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invpsu',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Power supply: Model Name'
+        'title': 'Power supply: Model Name'
     },
     'invpsu_name': {
         'comment': None,
@@ -2688,7 +2688,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invpsu',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Power supply: Name'
+        'title': 'Power supply: Name'
     },
     'invpsu_serial': {
         'comment': None,
@@ -2697,7 +2697,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invpsu',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Power supply: Serial Number'
+        'title': 'Power supply: Serial Number'
     },
     'invpsu_software': {
         'comment': None,
@@ -2706,7 +2706,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invpsu',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Power supply: Software'
+        'title': 'Power supply: Software'
     },
     'invsensor_description': {
         'comment': None,
@@ -2715,7 +2715,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invsensor',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Sensor: Description'
+        'title': 'Sensor: Description'
     },
     'invsensor_index': {
         'comment': None,
@@ -2724,7 +2724,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invsensor',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Sensor: Index'
+        'title': 'Sensor: Index'
     },
     'invsensor_location': {
         'comment': None,
@@ -2733,7 +2733,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invsensor',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Sensor: Location'
+        'title': 'Sensor: Location'
     },
     'invsensor_manufacturer': {
         'comment': None,
@@ -2742,7 +2742,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invsensor',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Sensor: Manufacturer'
+        'title': 'Sensor: Manufacturer'
     },
     'invsensor_model': {
         'comment': None,
@@ -2751,7 +2751,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invsensor',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Sensor: Model Name'
+        'title': 'Sensor: Model Name'
     },
     'invsensor_name': {
         'comment': None,
@@ -2760,7 +2760,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invsensor',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Sensor: Name'
+        'title': 'Sensor: Name'
     },
     'invsensor_serial': {
         'comment': None,
@@ -2769,7 +2769,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invsensor',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Sensor: Serial Number'
+        'title': 'Sensor: Serial Number'
     },
     'invsensor_software': {
         'comment': None,
@@ -2778,7 +2778,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invsensor',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Sensor: Software'
+        'title': 'Sensor: Software'
     },
     'invstack_description': {
         'comment': None,
@@ -2787,7 +2787,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invstack',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Stack: Description'
+        'title': 'Stack: Description'
     },
     'invstack_index': {
         'comment': None,
@@ -2796,7 +2796,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invstack',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Stack: Index'
+        'title': 'Stack: Index'
     },
     'invstack_location': {
         'comment': None,
@@ -2805,7 +2805,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invstack',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Stack: Location'
+        'title': 'Stack: Location'
     },
     'invstack_manufacturer': {
         'comment': None,
@@ -2814,7 +2814,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invstack',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Stack: Manufacturer'
+        'title': 'Stack: Manufacturer'
     },
     'invstack_model': {
         'comment': None,
@@ -2823,7 +2823,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invstack',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Stack: Model Name'
+        'title': 'Stack: Model Name'
     },
     'invstack_name': {
         'comment': None,
@@ -2832,7 +2832,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invstack',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Stack: Name'
+        'title': 'Stack: Name'
     },
     'invstack_serial': {
         'comment': None,
@@ -2841,7 +2841,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invstack',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Stack: Serial Number'
+        'title': 'Stack: Serial Number'
     },
     'invstack_software': {
         'comment': None,
@@ -2850,7 +2850,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invstack',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Stack: Software'
+        'title': 'Stack: Software'
     },
     'invswpac': {
         'comment': None,
@@ -2862,7 +2862,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 801,
-        'title': u'Host has software package'
+        'title': 'Host has software package'
     },
     'invswpac_arch': {
         'comment': None,
@@ -2871,7 +2871,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Architecture'
+        'title': 'Software package: Architecture'
     },
     'invswpac_install_date': {
         'comment': None,
@@ -2880,7 +2880,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Install Date'
+        'title': 'Software package: Install Date'
     },
     'invswpac_name': {
         'comment': None,
@@ -2889,7 +2889,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Name'
+        'title': 'Software package: Name'
     },
     'invswpac_package_type': {
         'comment': None,
@@ -2898,7 +2898,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Type'
+        'title': 'Software package: Type'
     },
     'invswpac_package_version': {
         'comment': None,
@@ -2907,7 +2907,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Package Version'
+        'title': 'Software package: Package Version'
     },
     'invswpac_path': {
         'comment': None,
@@ -2916,7 +2916,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Path'
+        'title': 'Software package: Path'
     },
     'invswpac_size': {
         'comment': None,
@@ -2925,7 +2925,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Size'
+        'title': 'Software package: Size'
     },
     'invswpac_summary': {
         'comment': None,
@@ -2934,7 +2934,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Description'
+        'title': 'Software package: Description'
     },
     'invswpac_vendor': {
         'comment': None,
@@ -2943,7 +2943,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Publisher'
+        'title': 'Software package: Publisher'
     },
     'invswpac_version': {
         'comment': None,
@@ -2952,7 +2952,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invswpac',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Software package: Version'
+        'title': 'Software package: Version'
     },
     'invunknown_description': {
         'comment': None,
@@ -2961,7 +2961,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invunknown',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Unknown entity: Description'
+        'title': 'Unknown entity: Description'
     },
     'invunknown_index': {
         'comment': None,
@@ -2970,7 +2970,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invunknown',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Unknown entity: Index'
+        'title': 'Unknown entity: Index'
     },
     'invunknown_location': {
         'comment': None,
@@ -2979,7 +2979,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invunknown',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Unknown entity: Location'
+        'title': 'Unknown entity: Location'
     },
     'invunknown_manufacturer': {
         'comment': None,
@@ -2988,7 +2988,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invunknown',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Unknown entity: Manufacturer'
+        'title': 'Unknown entity: Manufacturer'
     },
     'invunknown_model': {
         'comment': None,
@@ -2997,7 +2997,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invunknown',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Unknown entity: Model Name'
+        'title': 'Unknown entity: Model Name'
     },
     'invunknown_name': {
         'comment': None,
@@ -3006,7 +3006,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invunknown',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Unknown entity: Name'
+        'title': 'Unknown entity: Name'
     },
     'invunknown_serial': {
         'comment': None,
@@ -3015,7 +3015,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invunknown',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Unknown entity: Serial Number'
+        'title': 'Unknown entity: Serial Number'
     },
     'invunknown_software': {
         'comment': None,
@@ -3024,7 +3024,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'invunknown',
         'link_columns': [],
         'sort_index': 800,
-        'title': u'Unknown entity: Software'
+        'title': 'Unknown entity: Software'
     },
     'log_class': {
         'comment': None,
@@ -3036,7 +3036,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'log',
         'link_columns': [],
         'sort_index': 255,
-        'title': u'Logentry class'
+        'title': 'Logentry class'
     },
     'log_command_name_regex': {
         'column': 'log_command_name',
@@ -3046,17 +3046,17 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'log',
         'link_columns': ['log_command_name'],
         'sort_index': 262,
-        'title': u'Log: command'
+        'title': 'Log: command'
     },
     'log_contact_name': {
         'column': 'log_contact_name',
-        'comment': u'Exact match, used for linking',
+        'comment': 'Exact match, used for linking',
         'filter_class': 'FilterText',
         'htmlvars': ['log_contact_name'],
         'info': 'log',
         'link_columns': ['log_contact_name'],
         'sort_index': 260,
-        'title': u'Log: contact name (exact match)'
+        'title': 'Log: contact name (exact match)'
     },
     'log_contact_name_regex': {
         'column': 'log_contact_name',
@@ -3066,7 +3066,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'log',
         'link_columns': ['log_contact_name'],
         'sort_index': 261,
-        'title': u'Log: contact name'
+        'title': 'Log: contact name'
     },
     'log_notification_phase': {
         'column': 'log_command_name',
@@ -3076,7 +3076,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'log',
         'link_columns': [],
         'sort_index': 271,
-        'title': u'Notification phase'
+        'title': 'Notification phase'
     },
     'log_plugin_output': {
         'column': 'log_plugin_output',
@@ -3086,7 +3086,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'log',
         'link_columns': ['log_plugin_output'],
         'sort_index': 202,
-        'title': u'Log: plugin output'
+        'title': 'Log: plugin output'
     },
     'log_state': {
         'comment': None,
@@ -3097,7 +3097,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'log',
         'link_columns': [],
         'sort_index': 270,
-        'title': u'Type of alerts of hosts and services'
+        'title': 'Type of alerts of hosts and services'
     },
     'log_state_type': {
         'column': 'log_state_type',
@@ -3107,7 +3107,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'log',
         'link_columns': ['log_state_type'],
         'sort_index': 204,
-        'title': u'Log: state type'
+        'title': 'Log: state type'
     },
     'log_type': {
         'column': 'log_type',
@@ -3117,7 +3117,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'log',
         'link_columns': ['log_type'],
         'sort_index': 203,
-        'title': u'Log: message type'
+        'title': 'Log: message type'
     },
     'logtime': {
         'column': 'log_time',
@@ -3127,7 +3127,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'log',
         'link_columns': ['log_time'],
         'sort_index': 252,
-        'title': u'Time of log entry'
+        'title': 'Time of log entry'
     },
     'optevent_effective_contactgroup': {
         'comment': None,
@@ -3138,43 +3138,43 @@ expected_filters: Dict[str, Dict[str, Any]] = {
             'event_contact_groups', 'event_contact_groups_precedence', 'host_contact_groups'
         ],
         'sort_index': 212,
-        'title': u'Contact group (effective)'
+        'title': 'Contact group (effective)'
     },
     'opthost_contactgroup': {
-        'comment': u'Optional selection of host contact group',
+        'comment': 'Optional selection of host contact group',
         'filter_class': 'FilterGroupCombo',
         'htmlvars': ['opthost_contact_group', 'neg_opthost_contact_group'],
         'info': 'host',
         'link_columns': ['host_contactgroup_name'],
         'sort_index': 106,
-        'title': u'Host Contact Group'
+        'title': 'Host Contact Group'
     },
     'opthostgroup': {
-        'comment': u'Optional selection of host group',
+        'comment': 'Optional selection of host group',
         'filter_class': 'FilterGroupCombo',
         'htmlvars': ['opthost_group', 'neg_opthost_group'],
         'info': 'host',
         'link_columns': ['hostgroup_name'],
         'sort_index': 104,
-        'title': u'Host is in Group'
+        'title': 'Host is in Group'
     },
     'optservice_contactgroup': {
-        'comment': u'Optional selection of service contact group',
+        'comment': 'Optional selection of service contact group',
         'filter_class': 'FilterGroupCombo',
         'htmlvars': ['optservice_contact_group', 'neg_optservice_contact_group'],
         'info': 'service',
         'link_columns': ['service_contactgroup_name'],
         'sort_index': 206,
-        'title': u'Service Contact Group'
+        'title': 'Service Contact Group'
     },
     'optservicegroup': {
-        'comment': u'Optional selection of service group',
+        'comment': 'Optional selection of service group',
         'filter_class': 'FilterGroupCombo',
         'htmlvars': ['optservice_group', 'neg_optservice_group'],
         'info': 'service',
         'link_columns': ['servicegroup_name'],
         'sort_index': 204,
-        'title': u'Service is in Group'
+        'title': 'Service is in Group'
     },
     'output': {
         'column': 'service_plugin_output',
@@ -3184,17 +3184,17 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': ['service_plugin_output'],
         'sort_index': 202,
-        'title': u'Status detail'
+        'title': 'Status detail'
     },
     'service': {
         'column': 'service_description',
-        'comment': u'Exact match, used for linking',
+        'comment': 'Exact match, used for linking',
         'filter_class': 'FilterUnicode',
         'htmlvars': ['service'],
         'info': 'service',
         'link_columns': ['service_description'],
         'sort_index': 201,
-        'title': u'Service (exact match)'
+        'title': 'Service (exact match)'
     },
     'service_acknowledged': {
         'column': 'service_acknowledged',
@@ -3204,7 +3204,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 230,
-        'title': u'Problem acknowledged'
+        'title': 'Problem acknowledged'
     },
     'service_active_checks_enabled': {
         'column': 'service_active_checks_enabled',
@@ -3214,7 +3214,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 233,
-        'title': u'Active checks enabled'
+        'title': 'Active checks enabled'
     },
     'service_ctc': {
         'column': 'service_contacts',
@@ -3224,7 +3224,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': ['service_contacts'],
         'sort_index': 207,
-        'title': u'Service Contact'
+        'title': 'Service Contact'
     },
     'service_ctc_regex': {
         'column': 'service_contacts',
@@ -3234,17 +3234,17 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': ['service_contacts'],
         'sort_index': 207,
-        'title': u'Service Contact (Regex)'
+        'title': 'Service Contact (Regex)'
     },
     'service_display_name': {
         'column': 'service_display_name',
-        'comment': u'Alternative display name of the service, regex match',
+        'comment': 'Alternative display name of the service, regex match',
         'filter_class': 'FilterUnicode',
         'htmlvars': ['service_display_name'],
         'info': 'service',
         'link_columns': ['service_display_name'],
         'sort_index': 202,
-        'title': u'Service alternative display name'
+        'title': 'Service alternative display name'
     },
     'service_favorites': {
         'column': 'service_favorite',
@@ -3264,7 +3264,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 231,
-        'title': u'Service in notification period'
+        'title': 'Service in notification period'
     },
     'service_in_service_period': {
         'column': 'service_in_service_period',
@@ -3274,7 +3274,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 231,
-        'title': u'Service in service period'
+        'title': 'Service in service period'
     },
     'service_is_flapping': {
         'column': 'service_is_flapping',
@@ -3284,7 +3284,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 236,
-        'title': u'Flapping'
+        'title': 'Flapping'
     },
     'service_notifications_enabled': {
         'column': 'service_notifications_enabled',
@@ -3294,7 +3294,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 234,
-        'title': u'Notifications enabled'
+        'title': 'Notifications enabled'
     },
     'service_process_performance_data': {
         'column': 'service_process_performance_data',
@@ -3304,7 +3304,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 250,
-        'title': u'Processes performance data'
+        'title': 'Processes performance data'
     },
     'service_scheduled_downtime_depth': {
         'column': 'service_scheduled_downtime_depth',
@@ -3314,7 +3314,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 231,
-        'title': u'Service in downtime'
+        'title': 'Service in downtime'
     },
     'service_staleness': {
         'column': None,
@@ -3324,7 +3324,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 232,
-        'title': u'Service is stale'
+        'title': 'Service is stale'
     },
     'service_state_type': {
         'column': None,
@@ -3334,73 +3334,73 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 217,
-        'title': u'Service state type'
+        'title': 'Service state type'
     },
     'servicegroup': {
-        'comment': u'Selection of the service group',
+        'comment': 'Selection of the service group',
         'filter_class': 'FilterGroupSelection',
         'htmlvars': ['servicegroup'],
         'info': 'servicegroup',
         'link_columns': [],
         'sort_index': 104,
-        'title': u'Service Group'
+        'title': 'Service Group'
     },
     'servicegroupname': {
         'column': 'servicegroup_name',
-        'comment': u'Exact match, used for linking',
+        'comment': 'Exact match, used for linking',
         'filter_class': 'FilterText',
         'htmlvars': ['servicegroup_name'],
         'info': 'servicegroup',
         'link_columns': ['servicegroup_name'],
         'sort_index': 101,
-        'title': u'Servicegroup (enforced)'
+        'title': 'Servicegroup (enforced)'
     },
     'servicegroupnameregex': {
         'column': 'servicegroup_name',
-        'comment': u'Search field allowing regular expression and partial matches',
+        'comment': 'Search field allowing regular expression and partial matches',
         'filter_class': 'FilterText',
         'htmlvars': ['servicegroup_regex', 'neg_servicegroup_regex'],
         'info': 'servicegroup',
         'link_columns': ['servicegroup_name'],
         'sort_index': 101,
-        'title': u'Servicegroup (Regex)'
+        'title': 'Servicegroup (Regex)'
     },
     'servicegroups': {
-        'comment': u'Selection of multiple service groups',
+        'comment': 'Selection of multiple service groups',
         'filter_class': 'FilterMultigroup',
         'htmlvars': ['servicegroups', 'neg_servicegroups'],
         'info': 'service',
         'link_columns': [],
         'sort_index': 205,
-        'title': u'Several Service Groups'
+        'title': 'Several Service Groups'
     },
     'serviceregex': {
         'column': 'service_description',
-        'comment': u'Search field allowing regular expressions and partial matches',
+        'comment': 'Search field allowing regular expressions and partial matches',
         'filter_class': 'FilterUnicode',
         'htmlvars': ['service_regex', 'neg_service_regex'],
         'info': 'service',
         'link_columns': ['service_description'],
         'sort_index': 200,
-        'title': u'Service'
+        'title': 'Service'
     },
     'site': {
-        'comment': u'Selection of site is enforced, use this filter for joining',
+        'comment': 'Selection of site is enforced, use this filter for joining',
         'filter_class': 'FilterSite',
         'htmlvars': ['site'],
         'info': 'host',
         'link_columns': [],
         'sort_index': 501,
-        'title': u'Site (enforced)'
+        'title': 'Site (enforced)'
     },
     'siteopt': {
-        'comment': u'Optional selection of a site',
+        'comment': 'Optional selection of a site',
         'filter_class': 'FilterSiteOpt',
         'htmlvars': ['site'],
         'info': 'host',
         'link_columns': [],
         'sort_index': 500,
-        'title': u'Site'
+        'title': 'Site'
     },
     'svc_last_check': {
         'column': 'service_last_check',
@@ -3413,7 +3413,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': ['service_last_check'],
         'sort_index': 251,
-        'title': u'Last service check'
+        'title': 'Last service check'
     },
     'svc_last_state_change': {
         'column': 'service_last_state_change',
@@ -3426,7 +3426,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': ['service_last_state_change'],
         'sort_index': 250,
-        'title': u'Last service state change'
+        'title': 'Last service state change'
     },
     'svc_notif_number': {
         'column': 'current_notification_number',
@@ -3436,7 +3436,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 232,
-        'title': u'Current Service Notification Number'
+        'title': 'Current Service Notification Number'
     },
     'svc_service_level': {
         'comment': None,
@@ -3445,7 +3445,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 310,
-        'title': u'Service service level'
+        'title': 'Service service level'
     },
     'svchardstate': {
         'comment': None,
@@ -3454,7 +3454,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 216,
-        'title': u'Service hard states'
+        'title': 'Service hard states'
     },
     'svcstate': {
         'comment': None,
@@ -3463,7 +3463,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'service',
         'link_columns': [],
         'sort_index': 215,
-        'title': u'Service states'
+        'title': 'Service states'
     },
     'wato_folder': {
         'comment': None,
@@ -3472,7 +3472,7 @@ expected_filters: Dict[str, Dict[str, Any]] = {
         'info': 'host',
         'link_columns': [],
         'sort_index': 10,
-        'title': u'WATO Folder'
+        'title': 'WATO Folder'
     },
 }
 
@@ -3504,177 +3504,177 @@ def test_registered_filters(load_plugins):
 expected_infos: Dict[str, Dict[str, Any]] = {
     'aggr': {
         'single_spec': [('aggr_name', 'TextUnicode')],
-        'title': u'BI Aggregation',
-        'title_plural': u'BI Aggregations'
+        'title': 'BI Aggregation',
+        'title_plural': 'BI Aggregations'
     },
     'aggr_group': {
         'single_spec': [('aggr_group', 'TextUnicode')],
-        'title': u'BI Aggregation Group',
-        'title_plural': u'BI Aggregation Groups'
+        'title': 'BI Aggregation Group',
+        'title_plural': 'BI Aggregation Groups'
     },
     'command': {
         'single_spec': [('command_name', 'TextUnicode')],
-        'title': u'Command',
-        'title_plural': u'Commands'
+        'title': 'Command',
+        'title_plural': 'Commands'
     },
     'comment': {
         'single_spec': [('comment_id', 'Integer')],
-        'title': u'Comment',
-        'title_plural': u'Comments'
+        'title': 'Comment',
+        'title_plural': 'Comments'
     },
     'contact': {
         'single_spec': [('log_contact_name', 'TextUnicode')],
-        'title': u'Contact',
-        'title_plural': u'Contacts'
+        'title': 'Contact',
+        'title_plural': 'Contacts'
     },
     'discovery': {
         'single_spec': None,
-        'title': u'Discovery Output',
-        'title_plural': u'Discovery Outputs'
+        'title': 'Discovery Output',
+        'title_plural': 'Discovery Outputs'
     },
     'downtime': {
         'single_spec': [('downtime_id', 'Integer')],
-        'title': u'Downtime',
-        'title_plural': u'Downtimes'
+        'title': 'Downtime',
+        'title_plural': 'Downtimes'
     },
     'event': {
         'single_spec': [('event_id', 'Integer')],
-        'title': u'Event Console Event',
-        'title_plural': u'Event Console Events'
+        'title': 'Event Console Event',
+        'title_plural': 'Event Console Events'
     },
     'history': {
         'single_spec': [('event_id', 'Integer'), ('history_line', 'Integer')],
-        'title': u'Historic Event Console Event',
-        'title_plural': u'Historic Event Console Events'
+        'title': 'Historic Event Console Event',
+        'title_plural': 'Historic Event Console Events'
     },
     'host': {
         'multiple_site_filters': ['hostgroup'],
         'single_spec': [('host', 'TextUnicode')],
-        'title': u'Host',
-        'title_plural': u'Hosts'
+        'title': 'Host',
+        'title_plural': 'Hosts'
     },
     'hostgroup': {
         'single_site': False,
         'single_spec': [('hostgroup', 'TextUnicode')],
-        'title': u'Host Group',
-        'title_plural': u'Host Groups'
+        'title': 'Host Group',
+        'title_plural': 'Host Groups'
     },
     'invbackplane': {
         'single_spec': None,
-        'title': u'Backplane',
-        'title_plural': u'Backplanes'
+        'title': 'Backplane',
+        'title_plural': 'Backplanes'
     },
     'invchassis': {
         'single_spec': None,
-        'title': u'Chassis',
-        'title_plural': u'Chassis'
+        'title': 'Chassis',
+        'title_plural': 'Chassis'
     },
     'invcontainer': {
         'single_spec': None,
-        'title': u'HW container',
-        'title_plural': u'HW containers'
+        'title': 'HW container',
+        'title_plural': 'HW containers'
     },
     'invdockercontainers': {
         'single_spec': None,
-        'title': u'Docker containers',
-        'title_plural': u'Docker containers'
+        'title': 'Docker containers',
+        'title_plural': 'Docker containers'
     },
     'invdockerimages': {
         'single_spec': None,
-        'title': u'Docker images',
-        'title_plural': u'Docker images'
+        'title': 'Docker images',
+        'title_plural': 'Docker images'
     },
     'invfan': {
         'single_spec': None,
-        'title': u'Fan',
-        'title_plural': u'Fans'
+        'title': 'Fan',
+        'title_plural': 'Fans'
     },
     'invhist': {
         'single_spec': None,
-        'title': u'Inventory History',
-        'title_plural': u'Inventory Historys'
+        'title': 'Inventory History',
+        'title_plural': 'Inventory Historys'
     },
     'invinterface': {
         'single_spec': None,
-        'title': u'Network interface',
-        'title_plural': u'Network interfaces'
+        'title': 'Network interface',
+        'title_plural': 'Network interfaces'
     },
     'invmodule': {
         'single_spec': None,
-        'title': u'Module',
-        'title_plural': u'Modules'
+        'title': 'Module',
+        'title_plural': 'Modules'
     },
     'invoradataguardstats': {
         'single_spec': None,
-        'title': u'Oracle dataguard statistic',
-        'title_plural': u'Oracle dataguard statistics'
+        'title': 'Oracle dataguard statistic',
+        'title_plural': 'Oracle dataguard statistics'
     },
     'invorainstance': {
         'single_spec': None,
-        'title': u'Oracle instance',
-        'title_plural': u'Oracle instances'
+        'title': 'Oracle instance',
+        'title_plural': 'Oracle instances'
     },
     'invorarecoveryarea': {
         'single_spec': None,
-        'title': u'Oracle recovery area',
-        'title_plural': u'Oracle recovery areas'
+        'title': 'Oracle recovery area',
+        'title_plural': 'Oracle recovery areas'
     },
     'invorasga': {
         'single_spec': None,
-        'title': u'Oracle performance',
-        'title_plural': u'Oracle performance'
+        'title': 'Oracle performance',
+        'title_plural': 'Oracle performance'
     },
     'invoratablespace': {
         'single_spec': None,
-        'title': u'Oracle tablespace',
-        'title_plural': u'Oracle tablespaces'
+        'title': 'Oracle tablespace',
+        'title_plural': 'Oracle tablespaces'
     },
     'invother': {
         'single_spec': None,
-        'title': u'Other entity',
-        'title_plural': u'Other entities'
+        'title': 'Other entity',
+        'title_plural': 'Other entities'
     },
     'invpsu': {
         'single_spec': None,
-        'title': u'Power supply',
-        'title_plural': u'Power supplies'
+        'title': 'Power supply',
+        'title_plural': 'Power supplies'
     },
     'invsensor': {
         'single_spec': None,
-        'title': u'Sensor',
-        'title_plural': u'Sensors'
+        'title': 'Sensor',
+        'title_plural': 'Sensors'
     },
     'invstack': {
         'single_spec': None,
-        'title': u'Stack',
-        'title_plural': u'Stacks'
+        'title': 'Stack',
+        'title_plural': 'Stacks'
     },
     'invswpac': {
         'single_spec': None,
-        'title': u'Software package',
-        'title_plural': u'Software packages'
+        'title': 'Software package',
+        'title_plural': 'Software packages'
     },
     'invunknown': {
         'single_spec': None,
-        'title': u'Unknown entity',
-        'title_plural': u'Unknown entities'
+        'title': 'Unknown entity',
+        'title_plural': 'Unknown entities'
     },
     'log': {
         'single_spec': None,
-        'title': u'Log Entry',
-        'title_plural': u'Log Entries'
+        'title': 'Log Entry',
+        'title_plural': 'Log Entries'
     },
     'service': {
         'multiple_site_filters': ['servicegroup'],
         'single_spec': [('service', 'TextUnicode')],
-        'title': u'Service',
-        'title_plural': u'Services'
+        'title': 'Service',
+        'title_plural': 'Services'
     },
     'servicegroup': {
         'single_site': False,
         'single_spec': [('servicegroup', 'TextUnicode')],
-        'title': u'Service Group',
-        'title_plural': u'Service Groups'
+        'title': 'Service Group',
+        'title_plural': 'Service Groups'
     },
 }
 
@@ -3725,7 +3725,7 @@ def test_registered_info_attributes():
     # Single host context, missing filter -> no failure
     ({"single_infos": ["host"], "context": {}}, []),
     # Single host + service context
-    ({"single_infos": ["host", "service"], "context": {"host": "abc", "service": u"äää"}},
+    ({"single_infos": ["host", "service"], "context": {"host": "abc", "service": "äää"}},
         [("host", "abc"), ("service", "äää")]),
 ])
 def test_add_context_to_uri_vars(register_builtin_html, visual, expected_vars):
@@ -3750,8 +3750,8 @@ def test_add_context_to_uri_vars(register_builtin_html, visual, expected_vars):
     # Single host context, missing filter -> no failure
     ({"single_infos": ["host"], "context": {}}, []),
     # Single host + service context
-    ({"single_infos": ["host", "service"], "context": {"host": "abc", "service": u"äää"}},
-        [("host", "abc"), ("service", u"äää")]),
+    ({"single_infos": ["host", "service"], "context": {"host": "abc", "service": "äää"}},
+        [("host", "abc"), ("service", "äää")]),
 ])
 def test_get_context_uri_vars(register_builtin_html, visual, expected_vars):
     context_vars = visuals.get_context_uri_vars(visual["context"], visual["single_infos"])
@@ -3772,7 +3772,7 @@ def test_get_context_uri_vars(register_builtin_html, visual, expected_vars):
     # Single host context -> empty set
     (["host"], ["host"], [("host", "")], {}),
     # Single host context with non-ascii char
-    (["host"], ["host"], [("host", "äbc")], {"host": u"äbc"}),
+    (["host"], ["host"], [("host", "äbc")], {"host": "äbc"}),
     # Single host context, multiple services
     (["host", "service"], ["host"], [("host", "aaa"), ("service_regex", "äbc")], {"host": "aaa",
         'serviceregex': {'service_regex': 'äbc'}}),

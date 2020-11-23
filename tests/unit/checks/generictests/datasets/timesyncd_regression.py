@@ -12,16 +12,16 @@ checkname = 'timesyncd'
 
 freeze_time = '2019-10-02 07:34:59'
 
-info = [[u'Server:', u'91.189.91.157', u'(ntp.ubuntu.com)'],
+info = [['Server:', '91.189.91.157', '(ntp.ubuntu.com)'],
         [
-            u'Poll', u'interval:', u'32s', u'(min:', u'32s;', u'max', u'34min',
-            u'8s)'
-        ], [u'Leap:', u'normal'], [u'Version:', u'4'], [u'Stratum:', u'2'],
-        [u'Reference:', u'C0248F97'], [u'Precision:', u'1us', u'(-24)'],
-        [u'Root', u'distance:', u'87.096ms', u'(max:', u'5s)'],
-        [u'Offset:', u'-53.991ms'], [u'Delay:', u'208.839ms'],
-        [u'Jitter:', u'0'], [u'Packet', u'count:', u'1'],
-        [u'Frequency:', u'-500,000ppm'], [u'[[[1569922392.37]]]']]
+            'Poll', 'interval:', '32s', '(min:', '32s;', 'max', '34min',
+            '8s)'
+        ], ['Leap:', 'normal'], ['Version:', '4'], ['Stratum:', '2'],
+        ['Reference:', 'C0248F97'], ['Precision:', '1us', '(-24)'],
+        ['Root', 'distance:', '87.096ms', '(max:', '5s)'],
+        ['Offset:', '-53.991ms'], ['Delay:', '208.839ms'],
+        ['Jitter:', '0'], ['Packet', 'count:', '1'],
+        ['Frequency:', '-500,000ppm'], ['[[[1569922392.37]]]']]
 
 discovery = {'': [(None, {})]}
 
@@ -33,12 +33,12 @@ checks = {
             'quality_levels': (200.0, 500.0),
             'stratum_level': 10
          }, [
-             (0, u'Offset: 54 microseconds', [('time_offset', 5.3991e-05, 0.2, 0.5)]),
+             (0, 'Offset: 54 microseconds', [('time_offset', 5.3991e-05, 0.2, 0.5)]),
              (2, ('Time since last sync: 22 hours 1 minute '
                  '(warn/crit at 1 hour 0 minutes/2 hours 0 minutes)'), []),
              (0, 'Stratum: 2.00', []),
              (0, 'Jitter: 0.00 s', [('jitter', 0.0, 0.2, 0.5)]),
-             (0, u'synchronized on 91.189.91.157', []),
+             (0, 'synchronized on 91.189.91.157', []),
         ]),
     ],
 }

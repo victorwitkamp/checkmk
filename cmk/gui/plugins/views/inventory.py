@@ -691,7 +691,7 @@ def _inv_titleinfo_long(invpath, node):
     parent = inventory.parent_path(invpath)
     if parent:
         _icon, parent_title = _inv_titleinfo(parent, None)
-        return parent_title + u" ➤ " + last_title
+        return parent_title + " ➤ " + last_title
     return last_title
 
 
@@ -1866,7 +1866,7 @@ class DeltaNodeRenderer(NodeRenderer):
             html.open_span(class_="invold")
             self._show_child_value(old, hint)
             html.close_span()
-            html.write(u" → ")
+            html.write(" → ")
             html.open_span(class_="invnew")
             self._show_child_value(new, hint)
             html.close_span()

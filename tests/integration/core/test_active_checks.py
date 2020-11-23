@@ -48,7 +48,7 @@ def test_active_check_execution(test_cfg, site, web):  # noqa: F811 # pylint: di
                     # Main folder
                     api_str_type(""): [{
                         api_str_type("value"): {
-                            api_str_type('service_description'): u'\xc4ctive-Check',
+                            api_str_type('service_description'): '\xc4ctive-Check',
                             api_str_type('command_line'): api_str_type('echo "123"')
                         },
                         api_str_type("condition"): {},
@@ -58,15 +58,15 @@ def test_active_check_execution(test_cfg, site, web):  # noqa: F811 # pylint: di
             })
         web.activate_changes()
 
-        site.schedule_check("test-host", u'\xc4ctive-Check', 0)
+        site.schedule_check("test-host", '\xc4ctive-Check', 0)
 
         result = site.live.query_row(
-            u"GET services\nColumns: host_name description state plugin_output has_been_checked\nFilter: host_name = test-host\nFilter: description = \xc4ctive-Check"
+            "GET services\nColumns: host_name description state plugin_output has_been_checked\nFilter: host_name = test-host\nFilter: description = \xc4ctive-Check"
         )
         print("Result: %r" % result)
         assert result[4] == 1
         assert result[0] == "test-host"
-        assert result[1] == u'\xc4ctive-Check'
+        assert result[1] == '\xc4ctive-Check'
         assert result[2] == 0
         assert result[3] == "123"
     finally:

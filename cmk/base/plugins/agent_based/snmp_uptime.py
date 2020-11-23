@@ -21,7 +21,7 @@ def parse_snmp_uptime(string_table: List[StringTable]) -> Optional[uptime.Sectio
         Section(uptime_sec=22973315, message=None)
         >>> parse_snmp_uptime([[['124:21:26:42.03', '124:21:29:01.14']]])
         Section(uptime_sec=10790941, message=None)
-        >>> None is parse_snmp_uptime([[[u'', u'Fortigate 80C']]])  # nonsense
+        >>> None is parse_snmp_uptime([[['', 'Fortigate 80C']]])  # nonsense
         True
 
     """

@@ -112,11 +112,11 @@ def test_config_cache_tag_to_group_map(monkeypatch):
             "aux_tags": [],
             "tag_groups": [{
                 'id': 'dingeling',
-                'title': u'Dung',
+                'title': 'Dung',
                 'tags': [{
                     'aux_tags': [],
                     'id': 'dong',
-                    'title': u'ABC'
+                    'title': 'ABC'
                 },],
             }],
         })
@@ -1381,11 +1381,11 @@ def test_host_labels_of_host_discovered_labels(monkeypatch, tmp_path):
     monkeypatch.setattr(cmk.utils.paths, "discovered_host_labels_dir", tmp_path)
     host_file = (tmp_path / "test-host").with_suffix(".mk")
     with host_file.open(mode="w", encoding="utf-8") as f:
-        f.write(ensure_str(repr({u"äzzzz": {"value": u"eeeeez", "plugin_name": "ding123"}}) + "\n"))
+        f.write(ensure_str(repr({"äzzzz": {"value": "eeeeez", "plugin_name": "ding123"}}) + "\n"))
 
     config_cache = ts.apply(monkeypatch)
-    assert config_cache.get_host_config("test-host").labels == {u"äzzzz": u"eeeeez"}
-    assert config_cache.get_host_config("test-host").label_sources == {u"äzzzz": u"discovered"}
+    assert config_cache.get_host_config("test-host").labels == {"äzzzz": "eeeeez"}
+    assert config_cache.get_host_config("test-host").label_sources == {"äzzzz": "discovered"}
 
 
 def test_service_label_rules_default():
@@ -1426,21 +1426,21 @@ def test_labels_of_service_discovered_labels(monkeypatch, tmp_path):
     monkeypatch.setattr(cmk.utils.paths, "autochecks_dir", str(tmp_path))
     autochecks_file = Path(cmk.utils.paths.autochecks_dir, "test-host.mk")
     with autochecks_file.open("w", encoding="utf-8") as f:
-        f.write(u"""[
-    {'check_plugin_name': 'cpu_loads', 'item': None, 'parameters': (5.0, 10.0), 'service_labels': {u'äzzzz': u'eeeeez'}},
+        f.write("""[
+    {'check_plugin_name': 'cpu_loads', 'item': None, 'parameters': (5.0, 10.0), 'service_labels': {'äzzzz': 'eeeeez'}},
 ]""")
 
     config_cache = ts.apply(monkeypatch)
 
     service = config_cache.get_autochecks_of("test-host")[0]
-    assert service.description == u"CPU load"
+    assert service.description == "CPU load"
 
-    assert config_cache.labels_of_service("xyz", u"CPU load") == {}
-    assert config_cache.label_sources_of_service("xyz", u"CPU load") == {}
+    assert config_cache.labels_of_service("xyz", "CPU load") == {}
+    assert config_cache.label_sources_of_service("xyz", "CPU load") == {}
 
-    assert config_cache.labels_of_service("test-host", service.description) == {u"äzzzz": u"eeeeez"}
+    assert config_cache.labels_of_service("test-host", service.description) == {"äzzzz": "eeeeez"}
     assert config_cache.label_sources_of_service("test-host", service.description) == {
-        u"äzzzz": u"discovered"
+        "äzzzz": "discovered"
     }
 
 
@@ -1746,22 +1746,22 @@ def test_host_ruleset_match_object_of_service(monkeypatch):
             None,
             "CPU load",
             "{}",
-            service_labels=DiscoveredServiceLabels(ServiceLabel(u"abc", u"xä"),),
+            service_labels=DiscoveredServiceLabels(ServiceLabel("abc", "xä"),),
         )
     ])
     config_cache = ts.apply(monkeypatch)
 
-    obj = config_cache.ruleset_match_object_of_service("xyz", u"bla blä")
+    obj = config_cache.ruleset_match_object_of_service("xyz", "bla blä")
     assert isinstance(obj, RulesetMatchObject)
     assert obj.to_dict() == {
         "host_name": "xyz",
-        "service_description": u"bla blä",
+        "service_description": "bla blä",
         "service_labels": {},
-        "service_cache_id": (u'bla blä', None),
+        "service_cache_id": ('bla blä', None),
     }
 
     obj = config_cache.ruleset_match_object_of_service("test-host", "CPU load")
-    service_labels = {u"abc": u"xä"}
+    service_labels = {"abc": "xä"}
     assert isinstance(obj, RulesetMatchObject)
     assert obj.to_dict() == {
         "host_name": "test-host",
@@ -1844,7 +1844,7 @@ def test_host_config_add_discovery_check(monkeypatch, params, ignored, ping, res
                 {
                     'condition': {
                         'service_description': [{
-                            '$regex': u'Check_MK Discovery'
+                            '$regex': 'Check_MK Discovery'
                         }],
                         'host_name': ['xyz'],
                     },
@@ -1914,7 +1914,7 @@ def folder_path_test_config_fixture(monkeypatch):
     config_dir.mkdir(parents=True, exist_ok=True)
 
     with Path(cmk.utils.paths.main_config_file).open("w", encoding="utf-8") as f:
-        f.write(u"""
+        f.write("""
 all_hosts += ['%(name)s']
 
 host_tags.update({'%(name)s': {}})
@@ -1981,7 +1981,7 @@ cmc_host_rrd_config = [
 
 def _add_host_in_folder(folder_path, name):
     with (folder_path / "hosts.mk").open("w", encoding="utf-8") as f:
-        f.write(u"""
+        f.write("""
 all_hosts += ['%(name)s']
 
 host_tags.update({'%(name)s': {}})
@@ -2012,7 +2012,7 @@ def _add_rule_in_folder(folder_path, value):
         else:
             condition = "{'host_folder': '/%s/' % FOLDER_PATH}"
 
-        f.write(u"""
+        f.write("""
 cmc_host_rrd_config = [
 {'condition': %s, 'value': '%s'},
 ] + cmc_host_rrd_config

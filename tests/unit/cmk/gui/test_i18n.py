@@ -35,7 +35,7 @@ def compile_builtin_po_files(locale_paths):
 
 @pytest.fixture()
 def local_translation():
-    _add_local_translation("de", u"Äxtended German", texts={"bla": "blub"})
+    _add_local_translation("de", "Äxtended German", texts={"bla": "blub"})
     _add_local_translation("xz", "Xz", texts={"bla": "blub"})
     # Add one package localization
     _add_local_translation("packages/pkg_name/de", "pkg_name German", texts={"pkg1": "lala"})
@@ -48,10 +48,10 @@ def _add_local_translation(lang, alias, texts):
     mo_file = local_dir / "multisite.mo"
 
     with (local_dir.parent / "alias").open("w", encoding="utf-8") as f:
-        f.write(u"%s\n" % alias)
+        f.write("%s\n" % alias)
 
     with po_file.open(mode="w", encoding="utf-8") as f:
-        f.write(u'''
+        f.write('''
 msgid ""
 msgstr ""
 "Project-Id-Version: Locally modified Check_MK translation\\n"
@@ -65,7 +65,7 @@ msgstr ""
 ''')
 
         for key, val in texts.items():
-            f.write(u"""
+            f.write("""
 msgid "%s"
 msgstr "%s"
 """ % (key, val))
@@ -76,7 +76,7 @@ msgstr "%s"
 def test_underscore_without_localization():
     assert i18n.get_current_language() is None
     assert isinstance(i18n._("bla"), str)
-    assert i18n._("bla") == u"bla"
+    assert i18n._("bla") == "bla"
 
 
 def test_underscore_localization():
@@ -161,7 +161,7 @@ def test_get_language_alias():
 
 def test_get_language_local_alias(local_translation):
     assert isinstance(i18n.get_language_alias("de"), str)
-    assert i18n.get_language_alias("de") == u"Äxtended German"
+    assert i18n.get_language_alias("de") == "Äxtended German"
 
 
 def test_get_languages():
@@ -177,5 +177,5 @@ def test_get_languages_new_local_language(local_translation):
         ("", "English"),
         ("ro", "Romanian"),
         ("xz", "Xz"),
-        ('de', u'\xc4xtended German'),
+        ('de', '\xc4xtended German'),
     ]

@@ -48,7 +48,7 @@ def main():
     complete_url = "https://" + context["MONITORING_HOST"]
     if "OMD_SITE" in context:
         complete_url += "/" + context["OMD_SITE"]
-    complete_url += context.get("SERVICEURL", context.get("HOSTURL", u''))
+    complete_url += context.get("SERVICEURL", context.get("HOSTURL", ''))
 
     oids = {
         base_oid + ".1": context['MONITORING_HOST'],

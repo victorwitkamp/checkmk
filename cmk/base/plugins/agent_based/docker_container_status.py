@@ -100,7 +100,7 @@ def host_labels_docker_container_status(section) -> HostLabelGenerator:
     if ':' in image:
         image_name, image_version = image.rsplit(':', 1)
         yield HostLabel("cmk/docker_image_name", "%s" % image_name)
-        yield HostLabel(u"cmk/docker_image_version", "%s" % image_version)
+        yield HostLabel("cmk/docker_image_version", "%s" % image_version)
     else:
         yield HostLabel("cmk/docker_image_name", "%s" % image)
 

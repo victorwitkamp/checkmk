@@ -105,7 +105,7 @@ class RulespecSubGroup(RulespecBaseGroup, metaclass=abc.ABCMeta):
 
     @property
     def choice_title(self) -> str:
-        return u"&nbsp;&nbsp;⌙ %s" % self.title
+        return "&nbsp;&nbsp;⌙ %s" % self.title
 
     @property
     def help(self) -> None:

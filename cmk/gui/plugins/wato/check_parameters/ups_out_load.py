@@ -25,8 +25,8 @@ def _item_spec_ups_out_load():
 
 def _parameter_valuespec_ups_out_load():
     return Tuple(elements=[
-        Integer(title=_("warning at"), unit=u"%", default_value=85),
-        Integer(title=_("critical at"), unit=u"%", default_value=90),
+        Integer(title=_("warning at"), unit="%", default_value=85),
+        Integer(title=_("critical at"), unit="%", default_value=90),
     ],)
 
 

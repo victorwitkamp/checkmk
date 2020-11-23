@@ -9,7 +9,7 @@
 
 
 
-checkname = u'kemp_loadmaster_services'
+checkname = 'kemp_loadmaster_services'
 
 
 info = [['Foo', '1', '0'], ['Bar', '8', '0']]

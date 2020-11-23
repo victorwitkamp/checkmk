@@ -9,7 +9,7 @@
 
 checkname = 'tplink_cpu'
 
-info = [[u'100']]
+info = [['100']]
 
 discovery = {'': [(None, {})]}
 

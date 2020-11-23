@@ -10,48 +10,48 @@
 checkname = 'wmi_cpuload'
 
 info = [
-    [u'[system_perf]'],
+    ['[system_perf]'],
     [
-        u'AlignmentFixupsPersec', u'Caption', u'ContextSwitchesPersec', u'Description',
-        u'ExceptionDispatchesPersec', u'FileControlBytesPersec', u'FileControlOperationsPersec',
-        u'FileDataOperationsPersec', u'FileReadBytesPersec', u'FileReadOperationsPersec',
-        u'FileWriteBytesPersec', u'FileWriteOperationsPersec', u'FloatingEmulationsPersec',
-        u'Frequency_Object', u'Frequency_PerfTime', u'Frequency_Sys100NS', u'Name',
-        u'PercentRegistryQuotaInUse', u'PercentRegistryQuotaInUse_Base', u'Processes',
-        u'ProcessorQueueLength', u'SystemCallsPersec', u'SystemUpTime', u'Threads',
-        u'Timestamp_Object', u'Timestamp_PerfTime', u'Timestamp_Sys100NS'
+        'AlignmentFixupsPersec', 'Caption', 'ContextSwitchesPersec', 'Description',
+        'ExceptionDispatchesPersec', 'FileControlBytesPersec', 'FileControlOperationsPersec',
+        'FileDataOperationsPersec', 'FileReadBytesPersec', 'FileReadOperationsPersec',
+        'FileWriteBytesPersec', 'FileWriteOperationsPersec', 'FloatingEmulationsPersec',
+        'Frequency_Object', 'Frequency_PerfTime', 'Frequency_Sys100NS', 'Name',
+        'PercentRegistryQuotaInUse', 'PercentRegistryQuotaInUse_Base', 'Processes',
+        'ProcessorQueueLength', 'SystemCallsPersec', 'SystemUpTime', 'Threads',
+        'Timestamp_Object', 'Timestamp_PerfTime', 'Timestamp_Sys100NS'
     ],
     [
-        u'0', u'', u'-69479562', u'', u'14178685', u'804099358366', u'-783070306', u'1533491993',
-        u'154737860718293', u'422989950', u'3094169943814', u'1110502043', u'0', u'10000000',
-        u'2734511', u'10000000', u'', u'152069756', u'2147483647', u'132', u'0', u'-655373265',
-        u'131051948225967966', u'2964', u'131096941722079880', u'12303331974804',
-        u'131097013722070000'
-    ], [u'[computer_system]'],
+        '0', '', '-69479562', '', '14178685', '804099358366', '-783070306', '1533491993',
+        '154737860718293', '422989950', '3094169943814', '1110502043', '0', '10000000',
+        '2734511', '10000000', '', '152069756', '2147483647', '132', '0', '-655373265',
+        '131051948225967966', '2964', '131096941722079880', '12303331974804',
+        '131097013722070000'
+    ], ['[computer_system]'],
     [
-        u'AdminPasswordStatus', u'AutomaticManagedPagefile', u'AutomaticResetBootOption',
-        u'AutomaticResetCapability', u'BootOptionOnLimit', u'BootOptionOnWatchDog',
-        u'BootROMSupported', u'BootupState', u'Caption', u'ChassisBootupState',
-        u'CreationClassName', u'CurrentTimeZone', u'DaylightInEffect', u'Description',
-        u'DNSHostName', u'Domain', u'DomainRole', u'EnableDaylightSavingsTime',
-        u'FrontPanelResetStatus', u'InfraredSupported', u'InitialLoadInfo', u'InstallDate',
-        u'KeyboardPasswordStatus', u'LastLoadInfo', u'Manufacturer', u'Model', u'Name',
-        u'NameFormat', u'NetworkServerModeEnabled', u'NumberOfLogicalProcessors',
-        u'NumberOfProcessors', u'OEMLogoBitmap', u'OEMStringArray', u'PartOfDomain',
-        u'PauseAfterReset', u'PCSystemType', u'PowerManagementCapabilities',
-        u'PowerManagementSupported', u'PowerOnPasswordStatus', u'PowerState', u'PowerSupplyState',
-        u'PrimaryOwnerContact', u'PrimaryOwnerName', u'ResetCapability', u'ResetCount',
-        u'ResetLimit', u'Roles', u'Status', u'SupportContactDescription', u'SystemStartupDelay',
-        u'SystemStartupOptions', u'SystemStartupSetting', u'SystemType', u'ThermalState',
-        u'TotalPhysicalMemory', u'UserName', u'WakeUpType', u'Workgroup'
+        'AdminPasswordStatus', 'AutomaticManagedPagefile', 'AutomaticResetBootOption',
+        'AutomaticResetCapability', 'BootOptionOnLimit', 'BootOptionOnWatchDog',
+        'BootROMSupported', 'BootupState', 'Caption', 'ChassisBootupState',
+        'CreationClassName', 'CurrentTimeZone', 'DaylightInEffect', 'Description',
+        'DNSHostName', 'Domain', 'DomainRole', 'EnableDaylightSavingsTime',
+        'FrontPanelResetStatus', 'InfraredSupported', 'InitialLoadInfo', 'InstallDate',
+        'KeyboardPasswordStatus', 'LastLoadInfo', 'Manufacturer', 'Model', 'Name',
+        'NameFormat', 'NetworkServerModeEnabled', 'NumberOfLogicalProcessors',
+        'NumberOfProcessors', 'OEMLogoBitmap', 'OEMStringArray', 'PartOfDomain',
+        'PauseAfterReset', 'PCSystemType', 'PowerManagementCapabilities',
+        'PowerManagementSupported', 'PowerOnPasswordStatus', 'PowerState', 'PowerSupplyState',
+        'PrimaryOwnerContact', 'PrimaryOwnerName', 'ResetCapability', 'ResetCount',
+        'ResetLimit', 'Roles', 'Status', 'SupportContactDescription', 'SystemStartupDelay',
+        'SystemStartupOptions', 'SystemStartupSetting', 'SystemType', 'ThermalState',
+        'TotalPhysicalMemory', 'UserName', 'WakeUpType', 'Workgroup'
     ],
     [
-        u'3', u'0', u'1', u'1', u'', u'', u'1', u'Normal boot', u'ROZRHPDB09', u'3',
-        u'Win32_ComputerSystem', u'120', u'1', u'AT/AT COMPATIBLE', u'ROZRHPDB09',
-        u'testch.testint.net', u'3', u'1', u'3', u'0', u'', u'', u'3', u'', u'HP',
-        u'ProLiant DL380 G6', u'ROZRHPDB09', u'', u'1', u'16', u'2', u'', u'<array>', u'1', u'-1',
-        u'0', u'', u'', u'3', u'0', u'3', u'', u'test International', u'1', u'-1', u'-1',
-        u'<array>', u'OK', u'', u'', u'', u'', u'x64-based PC', u'3', u'77298651136', u'', u'6', u''
+        '3', '0', '1', '1', '', '', '1', 'Normal boot', 'ROZRHPDB09', '3',
+        'Win32_ComputerSystem', '120', '1', 'AT/AT COMPATIBLE', 'ROZRHPDB09',
+        'testch.testint.net', '3', '1', '3', '0', '', '', '3', '', 'HP',
+        'ProLiant DL380 G6', 'ROZRHPDB09', '', '1', '16', '2', '', '<array>', '1', '-1',
+        '0', '', '', '3', '0', '3', '', 'test International', '1', '-1', '-1',
+        '<array>', 'OK', '', '', '', '', 'x64-based PC', '3', '77298651136', '', '6', ''
     ]
 ]
 

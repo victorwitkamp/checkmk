@@ -989,7 +989,7 @@ class AutomationGetRealTimeChecks(Automation):
                         raise
 
                 rt_checks.append(
-                    (check_plugin_name, u"%s - %s" % (ensure_str(check_plugin_name), title)))
+                    (check_plugin_name, "%s - %s" % (ensure_str(check_plugin_name), title)))
 
         return rt_checks
 
@@ -1137,7 +1137,7 @@ class AutomationDiagHost(Automation):
         cmd: str,
         tcp_connect_timeout: Optional[float],
     ) -> Tuple[int, str]:
-        state, output = 0, u""
+        state, output = 0, ""
         for source in checkers.make_sources(
                 host_config,
                 ipaddress,
@@ -1429,7 +1429,7 @@ class AutomationGetAgentOutput(Automation):
         host_config = config.HostConfig.make_host_config(hostname)
 
         success = True
-        output = u""
+        output = ""
         info = b""
 
         try:

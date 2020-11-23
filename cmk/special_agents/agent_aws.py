@@ -168,7 +168,7 @@ def _get_ec2_piggyback_hostname(inst, region):
     # In this case we do not deliever any data for this piggybacked host such that
     # the services go stable and Check_MK service reports "CRIT - Got not information".
     try:
-        return u"%s-%s-%s" % (inst['PrivateIpAddress'], region, inst['InstanceId'])
+        return "%s-%s-%s" % (inst['PrivateIpAddress'], region, inst['InstanceId'])
     except KeyError:
         return
 

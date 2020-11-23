@@ -86,7 +86,7 @@ class DummyBackgroundJob(gui_background_job.GUIBackgroundJob):
 
     @classmethod
     def gui_title(cls):
-        return u"Dummy Job"
+        return "Dummy Job"
 
     def __init__(self):
         kwargs = {}

@@ -22,25 +22,25 @@ from cmk.base.plugins.agent_based.agent_based_api.v1 import Attributes
         ]),
         (
             {
-                'ServerVersion': u'1.17',
-                'IndexServerAddress': u'https://registry.access.redhat.com/v1/',
-                u'Containers': 11,
-                u'ContainersPaused': 0,
-                u'ContainersRunning': 11,
-                u'ContainersStopped': 0,
-                u'Images': 22,
-                u'Swarm': {
-                    'LocalNodeState': u'active',
-                    'NodeID': u'Hier koennte ihre Werbung stehen.'
+                'ServerVersion': '1.17',
+                'IndexServerAddress': 'https://registry.access.redhat.com/v1/',
+                'Containers': 11,
+                'ContainersPaused': 0,
+                'ContainersRunning': 11,
+                'ContainersStopped': 0,
+                'Images': 22,
+                'Swarm': {
+                    'LocalNodeState': 'active',
+                    'NodeID': 'Hier koennte ihre Werbung stehen.'
                 },
             },
             [
                 Attributes(path=["software", "applications", "docker"])._replace(
                     inventory_attributes={
                         "version": "1.17",
-                        "registry": u'https://registry.access.redhat.com/v1/',
+                        "registry": 'https://registry.access.redhat.com/v1/',
                         "swarm_state": "active",
-                        "swarm_node_id": u'Hier koennte ihre Werbung stehen.',
+                        "swarm_node_id": 'Hier koennte ihre Werbung stehen.',
                     },
                     status_attributes={
                         "num_containers_total": 11,  # type: ignore[dict-item]

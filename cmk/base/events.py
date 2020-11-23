@@ -165,7 +165,7 @@ def pipe_decode_raw_context(raw_context: EventContext) -> None:
     gibberish output when deliered via a notification plugin.
     """
     def _remove_pipe_encoding(value):
-        return value.replace(u"\u2758", u"|")
+        return value.replace("\u2758", "|")
 
     output = raw_context.get('SERVICEOUTPUT')
     if output:

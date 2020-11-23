@@ -832,11 +832,11 @@ class BulkEmailContent(EmailContent):
             subject=(utils.get_bulk_notification_subject(contexts, hosts)
                      if len(contexts) > 1 else context['SUBJECT']),
             from_address=utils.format_address(
-                context.get("PARAMETER_FROM_DISPLAY_NAME", u""),
+                context.get("PARAMETER_FROM_DISPLAY_NAME", ""),
                 # TODO: Correct context parameter???
                 context.get("PARAMETER_FROM", utils.default_from_address())),
-            reply_to=utils.format_address(context.get("PARAMETER_REPLY_TO_DISPLAY_NAME", u""),
-                                          context.get("PARAMETER_REPLY_TO", u"")),
+            reply_to=utils.format_address(context.get("PARAMETER_REPLY_TO_DISPLAY_NAME", ""),
+                                          context.get("PARAMETER_REPLY_TO", "")),
             content_txt=content_txt,
             content_html=content_html,
             attachments=attachments,
@@ -858,10 +858,10 @@ class SingleEmailContent(EmailContent):
             mailto=context['CONTACTEMAIL'],
             subject=context['SUBJECT'],
             from_address=utils.format_address(
-                context.get("PARAMETER_FROM_DISPLAY_NAME", u""),
+                context.get("PARAMETER_FROM_DISPLAY_NAME", ""),
                 context.get("PARAMETER_FROM_ADDRESS", utils.default_from_address())),
-            reply_to=utils.format_address(context.get("PARAMETER_REPLY_TO_DISPLAY_NAME", u""),
-                                          context.get("PARAMETER_REPLY_TO_ADDRESS", u"")),
+            reply_to=utils.format_address(context.get("PARAMETER_REPLY_TO_DISPLAY_NAME", ""),
+                                          context.get("PARAMETER_REPLY_TO_ADDRESS", "")),
             content_txt=content_txt,
             content_html=content_html,
             attachments=attachments,

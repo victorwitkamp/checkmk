@@ -169,7 +169,7 @@ def perfometer_ipmi_sensors(row, check_command, perf_data):
         unit = "°C"
     else:
         unit = ""
-    return (u"%d%s" % (int(value), unit)), render_perfometer(data)
+    return ("%d%s" % (int(value), unit)), render_perfometer(data)
 
 
 perfometers["check_mk-ipmi_sensors"] = perfometer_ipmi_sensors
@@ -178,7 +178,7 @@ perfometers["check_mk-ipmi_sensors"] = perfometer_ipmi_sensors
 def perfometer_temperature(row, check_command, perf_data):
     color = "#39f"
     value = float(perf_data[0][1])
-    return u"%d °C" % int(value), perfometer_logarithmic(value, 40, 1.2, color)
+    return "%d °C" % int(value), perfometer_logarithmic(value, 40, 1.2, color)
 
 
 perfometers["check_mk-nvidia.temp"] = perfometer_temperature
@@ -282,7 +282,7 @@ perfometers["check_mk-sentry_pdu"] = perfometer_power_simple
 def perfometer_users(row, check_command, perf_data):
     color = "#39f"
     value = float(perf_data[0][1])
-    return u"%d users" % int(value), perfometer_logarithmic(value, 50, 2, color)
+    return "%d users" % int(value), perfometer_logarithmic(value, 50, 2, color)
 
 
 perfometers["check_mk-hitachi_hnas_cifs"] = perfometer_users
@@ -838,14 +838,14 @@ perfometers['check_mk-knuerr_rms_humidity'] = perfometer_humidity
 
 
 def perfometer_eaton(row, command, perf):
-    return u"%s°C" % str(perf[0][1]), perfometer_linear(float(perf[0][1]), 'silver')
+    return "%s°C" % str(perf[0][1]), perfometer_linear(float(perf[0][1]), 'silver')
 
 
 perfometers['check_mk-ups_eaton_enviroment'] = perfometer_eaton
 
 
 def perfometer_battery(row, command, perf):
-    return u"%s%%" % str(perf[0][1]), perfometer_linear(float(perf[0][1]), '#C98D5C')
+    return "%s%%" % str(perf[0][1]), perfometer_linear(float(perf[0][1]), '#C98D5C')
 
 
 perfometers['check_mk-emc_datadomain_nvbat'] = perfometer_battery
@@ -1199,7 +1199,7 @@ perfometers["check_mk-f5_bigip_vserver"] = perfometer_f5_bigip_vserver
 
 def perfometer_nfsiostat(row, check_command, perf_data):
     for pd in perf_data:
-        if pd[0] == u'op_s':
+        if pd[0] == 'op_s':
             ops = float(pd[1])
             color = '#ff6347'
             return '%d op/s' % ops, perfometer_linear(ops, color)

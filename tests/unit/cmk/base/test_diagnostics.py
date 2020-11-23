@@ -145,7 +145,7 @@ def test_diagnostics_element_local_files_content(tmp_path, _collectors):
         check_dir.mkdir(parents=True, exist_ok=True)
 
         with check_dir.joinpath(name).open("w", encoding="utf-8") as f:
-            f.write(u"test-check\n")
+            f.write("test-check\n")
 
         package_info = packaging.get_initial_package_info(name)
         package_info["files"] = {

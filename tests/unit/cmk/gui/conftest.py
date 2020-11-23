@@ -118,8 +118,8 @@ def _mk_user_obj(username, password, automation=False):
 
 @contextlib.contextmanager
 def _create_and_destroy_user(automation=False, role="user"):
-    username = u'test123-' + get_random_string(size=5, from_ascii=ord('a'), to_ascii=ord('z'))
-    password = u'Ischbinwischtisch'
+    username = 'test123-' + get_random_string(size=5, from_ascii=ord('a'), to_ascii=ord('z'))
+    password = 'Ischbinwischtisch'
     edit_users(_mk_user_obj(username, password, automation=automation))
     config.load_config()
 
@@ -127,10 +127,10 @@ def _create_and_destroy_user(automation=False, role="user"):
     profile_path.joinpath('cached_profile.mk').write_text(
         str(
             repr({
-                'alias': u'Test user',
+                'alias': 'Test user',
                 'contactgroups': ['all'],
                 'disable_notifications': {},
-                'email': u'test_user_%s@tribe29.com' % username,
+                'email': 'test_user_%s@tribe29.com' % username,
                 'fallback_contact': False,
                 'force_authuser': False,
                 'locked': False,

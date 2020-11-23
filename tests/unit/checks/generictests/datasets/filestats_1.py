@@ -59,20 +59,20 @@ info = [
     ["{'type': 'summary', 'count': 17}"],
     ['[[[single_file file1.txt]]]'],
     [
-        "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': u'/home/file1.txt', 'type': 'file', 'size': 3804}"
+        "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': '/home/file1.txt', 'type': 'file', 'size': 3804}"
     ],
     ['[[[single_file file2.txt]]]'],
     [
-        "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': u'/home/file2.txt', 'type': 'file', 'size': 3804}"
+        "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': '/home/file2.txt', 'type': 'file', 'size': 3804}"
     ],
     ['[[[single_file file3.txt]]]'],
     [
-        "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': u'/home/file3.txt', 'type': 'file', 'size': 3804}"
+        "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': '/home/file3.txt', 'type': 'file', 'size': 3804}"
     ],
     ['[[[single_file multiple-stats-per-single-service]]]'],
     [
-        "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': u'/home/file3.txt', 'type': 'file', 'size': 3804}"],
-    [    "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': u'/home/file3.txt', 'type': 'file', 'size': 3804}"
+        "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': '/home/file3.txt', 'type': 'file', 'size': 3804}"],
+    [    "{'stat_status': 'ok', 'age': 52456, 'mtime': 1583771842, 'path': '/home/file3.txt', 'type': 'file', 'size': 3804}"
     ]
 ]
 

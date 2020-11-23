@@ -30,7 +30,7 @@ def get_subject(context):
 
     notification_type = context["NOTIFICATIONTYPE"]
     if notification_type in ["PROBLEM", "RECOVERY"]:
-        s += u"$PREVIOUS@HARDSHORTSTATE$ \u2192 $@SHORTSTATE$"
+        s += "$PREVIOUS@HARDSHORTSTATE$ \u2192 $@SHORTSTATE$"
 
     elif notification_type.startswith("FLAP"):
         if "START" in notification_type:

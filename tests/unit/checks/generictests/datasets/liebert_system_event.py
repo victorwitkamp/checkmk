@@ -13,10 +13,10 @@ checkname = 'liebert_system_events'
 
 
 info = [
-    [u'Ambient Air Temperature Sensor Issue', u'Inactive Event'],
-    [u'Supply Fluid Over Temp', u'Inactive Event'],
-    [u'Supply Fluid Under Temp', u'Inactive Event'],
-    [u'Supply Fluid Temp Sensor Issue', u'Active Warning'],
+    ['Ambient Air Temperature Sensor Issue', 'Inactive Event'],
+    ['Supply Fluid Over Temp', 'Inactive Event'],
+    ['Supply Fluid Under Temp', 'Inactive Event'],
+    ['Supply Fluid Temp Sensor Issue', 'Active Warning'],
 ]
 
 
@@ -30,7 +30,7 @@ discovery = {
 checks = {
     '': [
         (None, {}, [
-            (2, u'Supply Fluid Temp Sensor Issue: Active Warning', []),
+            (2, 'Supply Fluid Temp Sensor Issue: Active Warning', []),
         ]),
     ],
 }

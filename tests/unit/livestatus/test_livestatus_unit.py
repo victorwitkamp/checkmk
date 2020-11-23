@@ -41,18 +41,18 @@ def sock_path(monkeypatch, tmp_path):
 
 @pytest.mark.parametrize("query_part", [
     "xyz\nabc",
-    u"xyz\nabc",
+    "xyz\nabc",
     b"xyz\nabc",
 ])
 def test_lqencode(query_part):
     result = livestatus.lqencode(query_part)
-    assert result == u"xyzabc"
+    assert result == "xyzabc"
 
 
 @pytest.mark.parametrize("inp,expected_result", [
-    ("ab c", u"'ab c'"),
-    ("ab'c", u"'ab''c'"),
-    (u"ä \nabc", u"'ä \nabc'"),
+    ("ab c", "'ab c'"),
+    ("ab'c", "'ab''c'"),
+    ("ä \nabc", "'ä \nabc'"),
 ])
 def test_quote_dict(inp, expected_result):
     result = livestatus.quote_dict(inp)

@@ -1351,7 +1351,7 @@ def _output_availability_csv(what: AVObjectType, av_data: AVData, avoptions: AVO
 
             if "summary" in av_table:
                 row_object: AVObjectCells = [(_("Summary"), "")]
-                row_object += [(u"", "")] * pad
+                row_object += [("", "")] * pad
                 cells_from_row(
                     table,
                     group_titles,

@@ -685,7 +685,7 @@ class CommentsIcon(Icon):
     def render(self, what, row, tags, custom_vars):
         comments = row[what + "_comments_with_extra_info"]
         if len(comments) > 0:
-            text = u""
+            text = ""
             for c in sorted(comments, key=lambda x: x[4]):
                 _id, author, comment, _ty, timestamp = c
                 comment = comment.replace("\n", "<br>")
@@ -1060,7 +1060,7 @@ class AggregationIcon(Icon):
 
     def render(self, what, row, tags, custom_vars):
         # service_check_command looks like:
-        # u"check_mk_active-bi_aggr!... '-b' 'http://localhost/$HOSTNAME$' ... '-a' 'Host foobar' ..."
+        # "check_mk_active-bi_aggr!... '-b' 'http://localhost/$HOSTNAME$' ... '-a' 'Host foobar' ..."
         if what == "service" and row.get("service_check_command",
                                          "").startswith("check_mk_active-bi_aggr!"):
             args = row['service_check_command']

@@ -172,12 +172,12 @@ class BookmarkList(pagetypes.Overridable):
     @classmethod
     def add_default_bookmark_list(cls):
         attrs = {
-            "title": u"My Bookmarks",
+            "title": "My Bookmarks",
             "public": False,
             "owner": config.user.id,
             "name": "my_bookmarks",
-            "description": u"Your personal bookmarks",
-            "default_topic": u"My Bookmarks",
+            "description": "Your personal bookmarks",
+            "default_topic": "My Bookmarks",
             "bookmarks": [],
         }
 

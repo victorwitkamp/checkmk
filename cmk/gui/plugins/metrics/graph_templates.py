@@ -143,8 +143,8 @@ def metric_expression_to_graph_recipe_expression(expression, translated_metrics,
         '+',
         [('rrd',
             'heute',
-            u'heute',
-            u'CPU utilization',
+            'heute',
+            'CPU utilization',
 ...."""
     rrd_base_element = ("rrd", lq_row["site"], lq_row["host_name"],
                         lq_row.get('service_description', "_HOST_"))

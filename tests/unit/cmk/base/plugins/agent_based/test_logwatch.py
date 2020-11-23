@@ -22,8 +22,8 @@ pytestmark = pytest.mark.checks
         'plain_group': {('*jack*', '')},
     }),
     ([('plain_group', ('*jack*', '*.log'))], 'lumberjacks.log', {}),
-    ([('plain_group', (u'~.*\\..*', ''))], 'lumberjacks.log', {
-        'plain_group': {(u'~.*\\..*', '')}
+    ([('plain_group', ('~.*\\..*', ''))], 'lumberjacks.log', {
+        'plain_group': {('~.*\\..*', '')}
     }),
     ([('%s_group', ('~.{6}(.ack)', ''))], 'lumberjacks.log', {
         'jack_group': {('~.{6}jack', '')},
@@ -146,7 +146,7 @@ def test_logwatch_discover_single_restrict(monkeypatch):
     monkeypatch.setattr(
         logwatch.logwatch,
         'get_ec_rule_params',
-        lambda: [Parameters({'restrict_logfiles': [u'.*2']})],
+        lambda: [Parameters({'restrict_logfiles': ['.*2']})],
     )
     assert sorted(
         logwatch.discover_logwatch_single(SECTION2),

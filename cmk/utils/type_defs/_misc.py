@@ -134,7 +134,7 @@ HostKey = NamedTuple("HostKey", [
 
 # TODO: We should really parse our configuration file and use a
 # class/NamedTuple, see above.
-def timeperiod_spec_alias(timeperiod_spec: TimeperiodSpec, default: str = u"") -> str:
+def timeperiod_spec_alias(timeperiod_spec: TimeperiodSpec, default: str = "") -> str:
     alias = timeperiod_spec.get("alias", default)
     if isinstance(alias, str):
         return alias

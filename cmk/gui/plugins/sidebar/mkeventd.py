@@ -98,12 +98,12 @@ class SidebarSnapinCustomers(SidebarSnapin):
         for index, title, name in time_columns:
             value = status.get("status_average_%s_time" % name)
             if value:
-                entries.append((index, title, u"%.3f ms" % (value * 1000)))
+                entries.append((index, title, "%.3f ms" % (value * 1000)))
             elif name != "sync":
                 entries.append((index, title, _("-.-- ms")))
 
         # Load
-        entries.append((6, "Processing load", u"%.0f%%" % (min(
+        entries.append((6, "Processing load", "%.0f%%" % (min(
             100.0, status["status_average_processing_time"] *
             status["status_average_message_rate"] * 100.0))))
 

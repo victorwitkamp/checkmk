@@ -83,8 +83,8 @@ def test_apispec_plugin_value_typed_dict(spec):
 
     schemas = spec.to_dict()['components']['schemas']
     assert schemas['Movies'] == {
-        u'type': u'object',
-        u'additionalProperties': {
+        'type': 'object',
+        'additionalProperties': {
             '$ref': '#/components/schemas/Movie'
         }
     }

@@ -60,7 +60,7 @@ def create_check_crash_dump(
     of the check. The GUI (cmk.gui.crash_reporting) is able to parse it and send it to
     the Checkmk team.
     """
-    text = u"check failed - please submit a crash report!"
+    text = "check failed - please submit a crash report!"
     try:
         crash = CheckCrashReport.from_exception_and_context(
             hostname=hostname,

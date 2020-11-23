@@ -745,7 +745,7 @@ def compute_graph_t_axis(start_time, end_time, width, step):
     if start_date == end_date:
         title_label = str(cmk.utils.render.date(start_time))
     else:
-        title_label = u"%s \u2014 %s" % (
+        title_label = "%s \u2014 %s" % (
             str(cmk.utils.render.date(start_time)),
             str(cmk.utils.render.date(end_time)),
         )

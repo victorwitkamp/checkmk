@@ -680,7 +680,7 @@ def get_host_attributes(hostname: HostName, config_cache: ConfigCache) -> Object
 
 def _get_tag_attributes(collection: Union[Tags, Labels, LabelSources],
                         prefix: str) -> ObjectAttributes:
-    return {u"__%s_%s" % (prefix, k): str(v) for k, v in collection.items()}
+    return {"__%s_%s" % (prefix, k): str(v) for k, v in collection.items()}
 
 
 def get_cluster_attributes(config_cache: config.ConfigCache, host_config: config.HostConfig,

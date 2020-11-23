@@ -9,10 +9,10 @@
 
 
 
-checkname = u'oracle_sessions'
+checkname = 'oracle_sessions'
 
 
-info = [[u'foo', u'FAILURE'], [u'bar', u'FAILURE']]
+info = [['foo', 'FAILURE'], ['bar', 'FAILURE']]
 
 
 discovery = {'': []}

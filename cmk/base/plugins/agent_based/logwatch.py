@@ -322,7 +322,7 @@ class LogwatchBlock:
 
     def finalize(self):
         state_str = LogwatchBlock.STATE_TO_STR.get(self.worst, "CRIT")
-        header = u"<<<%s %s>>>\n" % (self._timestamp, state_str)
+        header = "<<<%s %s>>>\n" % (self._timestamp, state_str)
         return [header] + self.lines
 
     def add_line(self, line, skip_reclassification):
@@ -347,7 +347,7 @@ class LogwatchBlock:
             self.states_counter[level] += 1
 
         if not skip_reclassification and level != "I":
-            self.lines.append(u"%s %s\n" % (level, text))
+            self.lines.append("%s %s\n" % (level, text))
 
 
 class LogwatchBlockCollector:
@@ -481,7 +481,7 @@ def check_logwatch_generic(item, patterns, loglines, found) -> CheckResult:
     if not skip_reclassification and block_collector.get_lines():
         logmsg_file_handle.seek(0)
         logmsg_file_handle.truncate()
-        logmsg_file_handle.write(u"[[[%s]]]\n" % pattern_hash)
+        logmsg_file_handle.write("[[[%s]]]\n" % pattern_hash)
 
     for line in block_collector.get_lines():
         logmsg_file_handle.write(line)

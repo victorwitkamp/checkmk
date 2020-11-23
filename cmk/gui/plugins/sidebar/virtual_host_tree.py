@@ -164,7 +164,7 @@ class VirtualHostTree(SidebarSnapin):
         return self._is_tag_subdir(path[1:], cwd[1:])
 
     def _tag_tree_bullet(self, state, path, leaf):
-        code = (u'<div class="tagtree %sstatebullet state%d">&nbsp;</div>' %
+        code = ('<div class="tagtree %sstatebullet state%d">&nbsp;</div>' %
                 ((leaf and "leaf " or ""), state))
         if not leaf:
             code = ('<a title="%s" href="javascript:virtual_host_tree_enter(\'%s\');">%s</a>' %

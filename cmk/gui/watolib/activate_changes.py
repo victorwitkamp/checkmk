@@ -1379,7 +1379,7 @@ class ActivateChangesSite(multiprocessing.Process, ActivateChanges):
             self._set_result(PHASE_DONE, _("Success"), state=STATE_SUCCESS)
 
     def _render_warnings(self, configuration_warnings: ConfigWarnings) -> str:
-        html_code = u"<div class=warning>"
+        html_code = "<div class=warning>"
         html_code += "<b>%s</b>" % _("Warnings:")
         html_code += "<ul>"
         for domain, warnings in sorted(configuration_warnings.items()):
@@ -1859,7 +1859,7 @@ def _create_distributed_wato_file_for_dcd(base_dir: Path) -> None:
     with base_dir.joinpath("etc/check_mk/dcd.d/wato/distributed.mk").open(mode="w",
                                                                           encoding="utf-8") as f:
         f.write(ensure_str(wato_fileheader()))
-        f.write(u"dcd_is_wato_remote_site = True\n")
+        f.write("dcd_is_wato_remote_site = True\n")
 
 
 def create_site_globals_file(site_id: SiteId, tmp_dir: str,

@@ -13,27 +13,27 @@ from cmk.base.plugins.agent_based.utils.k8s import parse_json
 pytestmark = pytest.mark.checks
 
 info_unavailable_ok = [[
-    u'{"strategy_type": "RollingUpdate", "replicas": 2, "paused": null, "max_unavailable": 1, "ready_replicas": 1, "max_surge": "25%"}'
+    '{"strategy_type": "RollingUpdate", "replicas": 2, "paused": null, "max_unavailable": 1, "ready_replicas": 1, "max_surge": "25%"}'
 ]]
 
 info_surge_ok = [[
-    u'{"strategy_type": "RollingUpdate", "replicas": 2, "paused": null, "max_unavailable": 1, "ready_replicas": 3, "max_surge": 1}'
+    '{"strategy_type": "RollingUpdate", "replicas": 2, "paused": null, "max_unavailable": 1, "ready_replicas": 3, "max_surge": 1}'
 ]]
 
 info_unavailable_crit = [[
-    u'{"strategy_type": "RollingUpdate", "replicas": 2, "paused": null, "max_unavailable": 1, "ready_replicas": 0, "max_surge": "25%"}'
+    '{"strategy_type": "RollingUpdate", "replicas": 2, "paused": null, "max_unavailable": 1, "ready_replicas": 0, "max_surge": "25%"}'
 ]]
 
 info_surge_crit = [[
-    u'{"strategy_type": "RollingUpdate", "replicas": 2, "paused": false, "max_unavailable": 1, "ready_replicas": 4, "max_surge": "25%"}'
+    '{"strategy_type": "RollingUpdate", "replicas": 2, "paused": false, "max_unavailable": 1, "ready_replicas": 4, "max_surge": "25%"}'
 ]]
 
 info_paused = [[
-    u'{"strategy_type": "RollingUpdate", "replicas": 2, "paused": true, "max_unavailable": 1, "ready_replicas": 4, "max_surge": "25%"}'
+    '{"strategy_type": "RollingUpdate", "replicas": 2, "paused": true, "max_unavailable": 1, "ready_replicas": 4, "max_surge": "25%"}'
 ]]
 
 info_recreate = [[
-    u'{"strategy_type": "Recreate", "replicas": 10, "paused": null, "max_unavailable": null, "ready_replicas": 0, "max_surge": null}'
+    '{"strategy_type": "Recreate", "replicas": 10, "paused": null, "max_unavailable": null, "ready_replicas": 0, "max_surge": null}'
 ]]
 
 
@@ -45,7 +45,7 @@ info_recreate = [[
                 ('ready_replicas', 1, None, 4.0, None, None),
                 ('total_replicas', 2, None, None, None, None),
             ]),
-            (0, u'Strategy: RollingUpdate (max unavailable: 1, max surge: 25%)', []),
+            (0, 'Strategy: RollingUpdate (max unavailable: 1, max surge: 25%)', []),
         ],
     ),
     (
@@ -55,7 +55,7 @@ info_recreate = [[
                 ('ready_replicas', 3, None, 4.0, None, None),
                 ('total_replicas', 2, None, None, None, None),
             ]),
-            (0, u'Strategy: RollingUpdate (max unavailable: 1, max surge: 1)', []),
+            (0, 'Strategy: RollingUpdate (max unavailable: 1, max surge: 1)', []),
         ],
     ),
     (
@@ -65,7 +65,7 @@ info_recreate = [[
                 ('ready_replicas', 0, None, 4.0, None, None),
                 ('total_replicas', 2, None, None, None, None),
             ]),
-            (0, u'Strategy: RollingUpdate (max unavailable: 1, max surge: 25%)', []),
+            (0, 'Strategy: RollingUpdate (max unavailable: 1, max surge: 25%)', []),
         ],
     ),
     (
@@ -75,7 +75,7 @@ info_recreate = [[
                 ('ready_replicas', 4, None, 4.0, None, None),
                 ('total_replicas', 2, None, None, None, None),
             ]),
-            (0, u'Strategy: RollingUpdate (max unavailable: 1, max surge: 25%)', []),
+            (0, 'Strategy: RollingUpdate (max unavailable: 1, max surge: 25%)', []),
         ],
     ),
     (
@@ -85,7 +85,7 @@ info_recreate = [[
                 ('ready_replicas', 4, None, None, None, None),
                 ('total_replicas', 2, None, None, None, None),
             ]),
-            (0, u'Strategy: RollingUpdate (max unavailable: 1, max surge: 25%)', []),
+            (0, 'Strategy: RollingUpdate (max unavailable: 1, max surge: 25%)', []),
         ],
     ),
     (
@@ -95,7 +95,7 @@ info_recreate = [[
                 ('ready_replicas', 0, None, None, None, None),
                 ('total_replicas', 10, None, None, None, None),
             ]),
-            (0, u'Strategy: Recreate', []),
+            (0, 'Strategy: Recreate', []),
         ],
     ),
 ])
