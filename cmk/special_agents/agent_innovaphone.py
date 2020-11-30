@@ -9,9 +9,6 @@ import sys
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as etree
 
-from six import ensure_binary, ensure_str
-
-
 def get_informations(credentials, name, xml_id, org_name):
     server, address, user, password = credentials
     data_url = "/LOG0/CNT/mod_cmd.xml?cmd=xml-count&x="
@@ -60,8 +57,8 @@ def get_licenses(credentials):
 
 def get_url(address, user, password):
     request = Request(address)
-    base64string = base64.encodebytes(ensure_binary('%s:%s' % (user, password))).replace(b'\n', b'')
-    request.add_header("Authorization", "Basic %s" % ensure_str(base64string))
+    base64string = base64.encodebytes('%s:%s' % (user, password)).replace(b'\n', b'')
+    request.add_header("Authorization", "Basic %s" % base64string)
     return urlopen(request)
 
 

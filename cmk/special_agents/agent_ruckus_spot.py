@@ -10,8 +10,6 @@ import socket
 from typing import NoReturn
 
 import requests
-from six import ensure_str
-
 
 def usage() -> NoReturn:
     sys.stderr.write("""Check_MK Ruckus Spot Agent
@@ -95,7 +93,7 @@ def main(sys_argv=None):
 
         if agent_port is not None:
             hostname = address.split(":")[0]
-            sys.stdout.write(ensure_str(get_agent_info_tcp(hostname)))
+            sys.stdout.write(get_agent_info_tcp(hostname))
 
     except Exception as e:
         sys.stderr.write("Connection error %s" % e)

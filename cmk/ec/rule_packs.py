@@ -18,8 +18,6 @@ import pprint
 from typing import Any, Dict, Iterable, List, Optional, Union
 from pathlib import Path
 
-from six import ensure_str
-
 import cmk.utils.log
 import cmk.utils.paths
 import cmk.utils.store as store
@@ -272,7 +270,7 @@ def save_rule_packs(rule_packs: ECRulePacks,
     if not dir_:
         dir_ = rule_pack_dir()
     dir_.mkdir(parents=True, exist_ok=True)
-    store.save_text_to_file(dir_ / "rules.mk", ensure_str(output))
+    store.save_text_to_file(dir_ / "rules.mk", output)
 
 
 # NOTE: It is essential that export_rule_pack() is called *before*

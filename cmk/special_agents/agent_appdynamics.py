@@ -12,8 +12,6 @@ from typing import Any, Dict
 from base64 import b64encode
 from http.client import HTTPConnection
 
-from six import ensure_binary, ensure_str
-
 
 def usage():
     sys.stderr.write("""Check_MK AppDynamics special agent
@@ -121,8 +119,8 @@ def main(sys_argv=None):  # pylint: disable=too-many-branches
                 sys.stdout.write('Connecting to %s:%s...\n' % (arg_host, opt_port))
             connection.connect()
 
-            auth = b64encode(ensure_binary('%s:%s' % (opt_username, opt_password)))
-            headers = {'Authorization': 'Basic ' + ensure_str(auth)}
+            auth = b64encode('%s:%s' % (opt_username, opt_password))
+            headers = {'Authorization': 'Basic ' + auth}
             for obj in ['Agent', '*|*']:
                 connection.request('GET',
                                    url % {

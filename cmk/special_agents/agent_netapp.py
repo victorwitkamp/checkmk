@@ -61,7 +61,6 @@ import warnings
 from xml.dom import minidom  # type: ignore[import]
 
 import requests
-from six import ensure_str
 import urllib3  # type: ignore[import]
 
 from cmk.special_agents.utils import vcrtrace
@@ -540,7 +539,7 @@ def format_config(instances,
                 if value and (extra_info_report == "all" or key in extra_info_report):
                     line.append("%s %s" % (key, value))
 
-        result.append(("%s" % delimeter).join(ensure_str(x) for x in line))
+        result.append(("%s" % delimeter).join(x for x in line))
     return "\n".join(result)
 
 
